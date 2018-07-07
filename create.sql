@@ -187,6 +187,78 @@ CREATE TABLE `wd_member` (
 ) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
 
+
+--用户表
+CREATE TABLE `wd_member` (
+  `id` int(11)  NOT NULL AUTO_INCREMENT,
+  `username` varchar(255)   DEFAULT '' COMMENT '用户名',
+  `password` varchar(255)   DEFAULT '' COMMENT '密码',
+  `openid` varchar(255)   DEFAULT '' COMMENT '微信openid',
+  `photo` varchar(255)   DEFAULT '' COMMENT '头像',
+  `phone` varchar(255)   DEFAULT '' COMMENT '绑定手机号',
+  `province` varchar(255)   DEFAULT '' COMMENT '所在地省份',
+  `city` varchar(255)   DEFAULT '' COMMENT '所在地城市',
+  `home_province` varchar(255)   DEFAULT '' COMMENT '家乡省份',
+  `home_city` varchar(255)   DEFAULT '' COMMENT '家乡城市',
+  `is_auth` char(1)   DEFAULT '0' COMMENT '1代表已实名认证。0代表没',
+  `auth_name` varchar(255)   DEFAULT '' COMMENT '实名 姓名',
+  `auth_id` varchar(255)   DEFAULT '' COMMENT '身份证号',
+  `auth_date` varchar(255)   DEFAULT '' COMMENT '实名时间',
+  `express_address` varchar(255)   DEFAULT '' COMMENT '收件地址',
+  `remark` varchar(255)   DEFAULT '' COMMENT '备注',
+  `is_admin` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否是后台用户',
+  `last_login` int(10) NOT NULL DEFAULT '0' COMMENT '最后登录时间',
+  `first_login_time` int(11)     COMMENT '首次进入系统时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+
+
+
+
+
+
+
+--贷款人信息
+CREATE TABLE `wd_loan_info` (
+  `id` int(11)  NOT NULL AUTO_INCREMENT,
+  `user_id` varchar(255)   DEFAULT '' COMMENT '用户id',
+  `name` varchar(255)   DEFAULT '' COMMENT '姓名',
+  `phone` varchar(255)   DEFAULT '' COMMENT '手机号',
+  `auth_id` varchar(255)   DEFAULT '' COMMENT '身份证号',
+  `status` varchar(255)   DEFAULT '' COMMENT '状态，1：已申请  2：审核信息，验证中   3.已放贷    4.已还清    5.其它',
+  `remark` varchar(255)   DEFAULT '' COMMENT '备注信息',
+  `social_security` varchar(255)   DEFAULT '' COMMENT '社保',
+  `fund` varchar(255)   DEFAULT '' COMMENT '公积金',
+  `credit` varchar(255)   DEFAULT '' COMMENT '信用卡',
+  `house_loan` varchar(255)   DEFAULT '' COMMENT '房贷情况',
+  `car_loan` varchar(255)   DEFAULT '' COMMENT '车贷情况',
+  `safe` varchar(255)   DEFAULT '' COMMENT '人寿保险',
+  `work_province` varchar(255)   DEFAULT '' COMMENT '工作地省份',
+  `work_city` varchar(255)   DEFAULT '' COMMENT '工作地城市',
+  `type` char(1)   DEFAULT '1' COMMENT '贷款类型，  1详细贷款申请   2.六大板块 ',
+  `work_type` char(1)   DEFAULT '' COMMENT '工作类型，  1企业家   2.上班族 ',
+  `create_date` int(11)   DEFAULT '' COMMENT '贷款提交资料时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+
+
+--贷款需要信息
+CREATE TABLE `wd_loan_need` (
+  `id` int(11)  NOT NULL AUTO_INCREMENT,
+  `condition` text   DEFAULT '' COMMENT '条件',
+  `apply_data` varchar(800)   DEFAULT '' COMMENT '申请资料',
+  `group` varchar(800)   DEFAULT '' COMMENT '适合群体',
+  `type` varchar(800)   DEFAULT '' COMMENT '1.房供贷  2.保单贷 3.车供贷 4.流水贷  5.公务贷  6.学历贷',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+
+
+
+
+
+
+
+
 --爱心宣扬
 CREATE TABLE `wd_announce` (
   `id` int(11)  NOT NULL AUTO_INCREMENT,
