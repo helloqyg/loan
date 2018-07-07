@@ -1,0 +1,352 @@
+<extend name="Public:base" />
+<block name='main'>
+<style type="text/css">.index .box1 {
+height: 3rem;
+overflow-y: scroll;
+}
+
+.index .box11 {
+display: flex;
+padding: 0.2rem;
+align-items: center;
+}
+
+.index .box11 .img {
+width: 0.8rem;
+height: 0.8rem;
+margin: 0;
+}
+
+.index_box{
+padding: 0.2rem;
+height:4rem;
+}
+.index_box>div{
+height: 100%;
+display:flex;
+align-items: flex-end;
+overflow-x: scroll;
+overflow-y: hidden;
+white-space: nowrap;
+}
+.index_box>div::-webkit-scrollbar {
+display: none;
+}
+.index_boxC{
+flex-shrink: 0; 
+width: 1.5rem;
+display:flex;
+flex-direction: column;
+align-items: center;
+}
+.index_boxC>span{
+font-size: 0.2rem;
+}
+.index_img{
+width: 0.6rem;
+height:0.6rem;
+margin: 0.1rem 0;
+}
+.index_boxC p{
+width: 0.25rem;
+margin: 0.1rem 0;
+height: 2rem;
+background: #eee;
+position: relative;
+border-radius: 0.1rem;
+}
+.index_boxC .icon-zan-copy-copy{
+font-size: 0.3rem;
+margin-left: 0.1rem;
+}
+.index_boxC p span{
+position: absolute;
+width: 100%;
+background: #fd9826;
+left:0;
+bottom:0;
+}
+.index .box11 .r {
+flex-grow: 1;
+margin: 0 0.1rem;
+display: flex;
+justify-content: space-between;
+}</style>
+<div class="index">
+    <header class="header">
+        <span>公司宣传语</span>
+        <span>今日累计筹款额<{:get_today_donor()}></span>
+    </header>
+    <main class="main">
+        <ul class="nav">
+            <a href="<{:U('mutual/index')}>">
+                <li>
+                   <i class="iconfont icon-xiangmu"></i>
+                    <span>轻松互助</span>
+                </li>
+            </a>
+            <a href="<{:U('favorable/index')}>">
+                <li>
+                    <i class="iconfont icon-aihao"></i>
+                    <span>轻松公益</span>
+                </li>
+            </a>
+
+            <a href="<{:U('dream/index')}>">
+                <li>
+                    <i class="iconfont icon-jineng"></i>
+                    <span>梦想清单</span>
+                </li>
+            </a>
+        </ul>
+
+</style>
+        <div class="once">
+            <volist name='recommend' id='v'>
+
+                    <a href="<{:U('loveRelife',array('id'=>$v['id']))}>">
+                        <div class="box">
+                            <div class="img">
+                                <span><{:get_recomend_tag($v['tag'])}></span>
+                                <img src="<{:get_first_img($v['personal_img'])}>" alt="">
+                            </div>
+                            <p style="width: 100px" class="tit"> <{$v.title}></p>
+                            <div class="schedule">
+                                <p>
+                                    <span class="bac" style="width: <{:get_money_ratio($v['id'],1)}>%;"></span>
+                                    <span class="b" style="left:<{:get_money_ratio($v['id'],1)}>%;"><{:get_money_ratio($v['id'],1)}>%</span>
+                                </p>
+                            </div>
+                            <div class="bottom">
+                                <span>已筹<{:get_sum_money($v['id'],1)}>元</span>
+                            </div>
+                        </div>
+                    </a>
+            </volist>
+
+        </div>
+
+
+
+
+
+        <!--明星慈善活动-->
+        <div class="star">
+            <div class="top">
+                <p>
+                    <span>明星慈善活动 <span style="color: red;font-size: 6px">(每个用户每24小时内只可以点击一次)</span> </span>
+                    <span>Star Charity </span>
+                </p>
+                <i class="iconfont icon-gengduo-tianchong"></i>
+            </div>
+
+            <div class="index_box">
+            <div>
+
+         <volist name='star' id='s'>
+            <div class="index_boxC">     <!-- icon-zan zan2 -->
+            <span> <span id="span_<{$s.id}>"><{:get_star_good_cnt($s['id'])}></span>
+
+                <i id="<{$s.id}>" class="iconfont 
+
+                            <if condition="get_current_good_star($s['id']) eq 0">
+
+                            icon-zan-copy-copy zan1 " onclick="greatClick(<{$s.id}>)"></i>
+
+                                <else />
+                        icon-zan zan2  " onclick="cancleClick(<{$s.id}>)"></i>
+                    </if></span>
+            <p><span style="height:<{:get_star_ratio($s['id'])}>%;"></span></p >
+            <div class="index_img"><img src="<{$s.img}>" alt=""></div>
+            <span><{$s.name}></span>
+            </div>
+        </volist>
+
+
+            </div>
+            </div>
+
+<!-- 
+           <div class="box1">
+
+            <volist name='star' id='s'>
+               <div class="box11">
+                    <div class="img">
+                        <img src="<{$s.img}>" alt="">
+                    </div>
+
+                    <div class="r">
+                        <span><{$s.name}></span>
+                        <p>
+                        <span>
+                            <i id="<{$s.id}>" class="iconfont 
+
+                            <if condition="get_current_good_star($s['id']) eq 0">
+
+                            icon-zan-copy-copy zan1 " onclick="greatClick(<{$s.id}>)"></i>
+
+                                <else />
+                        icon-zan zan2  " onclick="cancleClick(<{$s.id}>)"></i>
+                    </if>
+
+                            <span id="span_<{$s.id}>"><{:get_star_good_cnt($s['id'])}></span>
+                        </span>
+                           
+                        </p >
+                    </div>
+                </div>
+              </volist>
+           </div> -->
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--成功案例-->
+        <div class="success">
+            <div class="top">
+                <p>
+                    <span>成功案例</span>
+                    <span>Success case</span>
+                </p>
+                <i class="iconfont icon-gengduo-tianchong"></i>
+            </div>
+            <div class="back swiper-container">
+                <div class="swiper-wrapper">
+                    
+
+                    <volist name='successCase' id='v'>
+                    <div class="swiper-slide">
+                        <div class="back">
+                            <div class="middle">
+                            <a href="<{:U('loveRelife',array('id'=>$v['id']))}>">
+                                    <div class="imgBox" style="background-size: 100%; background: url(<{:get_first_img($v['personal_img'])}>)">
+                                        <span><{$v.title}></span>
+                                    </div>
+                                </a>
+                                <div class="schedule">
+                                    <p>
+                                        <span class="bac" style="width: <{:get_money_ratio($v['id'],1)}>%;"></span>
+                                        <span class="b" style="left:<{:get_money_ratio($v['id'],1)}>%;"><{:get_money_ratio($v['id'],1)}>%</span>
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <span>已筹<{:get_sum_money($v['id'],1)}>元</span>
+                                    <span>目标<{$v.target_money}>元</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </volist>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!--爱心救助-->
+        <div class="love">
+            <div class="top">
+                <p>
+                    <span>爱心救助</span>
+                    <span>Love rescue</span>
+                </p>
+                <i class="iconfont icon-gengduo-tianchong"></i>
+            </div>
+
+           <volist name="relifeInfo" id="v">
+
+            <div class="cont">
+                <div class="unifo">
+                        <span class="img">
+                            <img src="<{:get_user_img($v['user_id'])}>" alt="">
+                        </span>
+                    <!--<i class="iconfont icon-nan"></i>-->
+                    <{:get_username($v['user_id'])}>
+                </div>
+                <a href="<{:U('loveRelife',array('id'=>$v['id']))}>">
+                    <div class="container">
+                        <div class="left">
+                            <img src="<{:get_first_img($v['personal_img'])}>" alt="">
+                        </div>
+                        <div class="right">
+                            <p  class="tit"> <{$v.title}></p>
+                            <div>
+                                <div class="schedule">
+                                    <p>
+                                        <span class="bac" style="width: <{:get_money_ratio($v['id'],1)}>%;"></span>
+                                        <span class="b" style="left:<{:get_money_ratio($v['id'],1)}>%;"><{:get_money_ratio($v['id'],1)}>%</span>
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <span>已筹<{:get_sum_money($v['id'],1)}>元</span>
+                                    <span>目标 <{$v.target_money}>元</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+           </volist>
+
+
+        </div>
+    </main>
+</block>
+
+<block name='js'>
+    //点赞
+    function greatClick(id){
+    $('#'+id).removeClass('icon-zan-copy-copy')
+    $('#'+id).removeClass('zan1')
+    $('#'+id).addClass('icon-zan')
+    $('#'+id).addClass('zan2')
+    $('#'+id).removeAttr('onclick')
+    $('#'+id).attr('onclick','cancleClick('+id+')')
+
+
+   var num = $('#span_'+id).text()*1;
+        $('#span_'+id).text(num+1)
+
+
+
+     $.ajax({
+        type:'POST',
+        url :"<{:U('index/add_star')}>",
+        data:{'star_id':id},
+        success:function(msg){
+            if(msg != 0){
+            //window.location.href='/release/step2/id/'+msg+'.html'
+            }
+
+            }
+        })
+
+}
+
+
+
+    </block>
+}

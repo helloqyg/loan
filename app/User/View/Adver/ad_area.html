@@ -1,0 +1,46 @@
+<extend name="Public:base" />
+<block name="main">
+
+<div class="main_exhi">
+<div class="main_view">
+  <div class="main_view_top">
+    <div style="width: 160px"><{$title}></div>
+  </div>
+<!-- 此循环后续需要更改,需要写死 -->
+  <div class="main_view_left fl">
+      <img src="__HOME__/images/note_tishi.jpg">
+
+      <div class="note_tishi_ad">
+      <table >
+      	<tr >
+      		<td style="width: 65px; height: 60px; font-weight: bold;">区域一：</td>
+      		<td>7.2与8.2展馆广告。包括围栏广告、馆内指引牌广告、吊旗广告等</td>
+      	</tr>
+      		<tr>
+      		<td style="font-weight: bold;">区域二：</td>
+      		<td>南广场外围广告。包括围栏广告、馆内指引牌广告、吊旗广告等</td>
+      	</tr>
+      		<tr>
+      		<td style="font-weight: bold;">区域三：</td>
+      		<td>5.2与6.2广告。包括围栏广告、馆内指引牌广告、吊旗广告等</td>
+      	</tr>
+      		<tr>
+      		<td style="font-weight: bold;">区域四：</td>
+      		<td>西面展馆外围广告。包括围栏广告、馆内指引牌广告、吊旗广告等</td>
+      	</tr>
+      		<tr>
+      		<td style="font-weight: bold;">区域五：</td>
+      		<td>4.2展馆广告。包括围栏广告、馆内指引牌广告、吊旗广告等</td>
+      	</tr>
+      </table>
+      </div>
+  </div>
+  <div class="ad_view_right fr">
+    <img src="__HOME__/images/ad_area.jpg" usemap="#map">
+    <map name="map">
+        <area shape="polygon" coords="262,238,237,292,251,310,363,255,355,243,288,226" alt="Sun" href="<{:U('/user/adver/ad_list')}>">
+      </map>
+  </div>
+  </div>
+</div>
+</block>

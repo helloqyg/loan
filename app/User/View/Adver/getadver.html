@@ -1,0 +1,19 @@
+     <volist name="goods" id="v">
+     <if condition="$v.get_ad_bot_count neq 0 " >
+       <div class="ad_booth">
+        <div class="exhi_img">
+          <img src="<{$v.goods_locale_logo}>">
+        </div>
+        <div class="detail_ad">
+          <p>名称：<{$v.goods_name|mb_substr=###,0,13,'utf-8'}>  </p>
+          <p>位置：<{$v.goods_address|mb_substr=###,0,13,'utf-8'}>  </p>
+          <p>数量：<{:get_ad_bot_count($v['goods_id'])}>/<{:get_ad_count($v['goods_id'])}></p>
+          <p>行式: <{:get_ad_cat($v['cat_id'])}></p>
+          <p>优势: <{$v.goods_introduce|mb_substr=###,0,10,'utf-8'}>...</p>
+        </div>
+        <div class="btn">
+          <a href="<{:U('user/adver/detail',array('goods_id'=>$v['goods_id']))}>">详细了解</a>
+        </div>
+      </div>
+    </if>
+      </volist>

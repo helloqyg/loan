@@ -1,0 +1,276 @@
+<extend name="Public:base" />
+<block name="css">
+<link rel="stylesheet" href="__PUBLIC__/admin/css/lightbox.css">
+</block>
+<block name="content">
+<div class="row">
+<div class="col-sm-12">
+	<div class="panel panel-color panel-info">
+		<div class="panel-heading">
+			企业信息
+		</div>
+		<div class="panel-body">
+			<div class="row">
+					<table class="table table-striped">
+						<tbody>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">企业名称:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['company_name']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">企业英文名称:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['english']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">注 册 号:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['register_num']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">扫 描 件:</span>
+									<div class="col-sm-5 col-xs-8">
+										<a class="example-image-link" href="<{$company_info['scan_part']}>" data-lightbox="example-1">
+											<img class="example-image" src="<{$company_info['scan_part']}>" alt="image-1"  width="232px"/>
+										</a>
+									</div>
+								</div>
+							</td>
+						</tr>						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">证件住所:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['residence']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>						
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">通讯地址:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['address']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>						
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">经营范围:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['scope']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">参展面积:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['area']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>							
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">参展类型:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{:get_chart_type($company_info['type'])}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>						
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">法人姓名:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['c_name']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>						
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">法人电话:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['c_tel']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>						
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">法人邮箱:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['c_email']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">法人职务:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['c_duties']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">法人手机:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['c_phone']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">法人传真:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['c_fax']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">联系人姓名:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['f_name']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>						
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">联系人电话:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['f_tel']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>						
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">联系人邮箱:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['f_email']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">联系人职务:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['f_duties']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">联系人手机:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['f_phone']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">联系人传真:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$company_info['f_fax']}>" disabled>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<notempty name="id">
+						<form role="form" class="form-horizontal" id="form" method="post" action="">
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">汇款银行</span>
+									<div class="col-sm-5 col-xs-8">
+										<select name="bid" class="form-control">
+											<volist name="bank" id="b">
+												<option value="<{$key}>" selected=""><{$b['name']}>-<{$b['number']}></option>
+											</volist>
+										</select>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">审核用户</span>
+									<div class="col-sm-5 col-xs-8">
+										<label class="radio-inline">
+											<input type="radio" name="status" value="1" /> 通过
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="status" value="2" /> 不通过
+										</label>
+									</div>
+								</div>
+							</td>
+						</tr>
+						</notempty>
+					</tbody>
+				</table>
+				<notempty name="id">
+				<div class="form-group text-center">
+					<input type="hidden" name="id" value="<{$id}>"/>
+					<button type="submit" class="btn btn-success btn-single pull-center ajax-post" data-dir='2' target-form="form-horizontal">审核</button>
+				</form>
+				</div>
+				</notempty>
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+</block>
+<block name="script">
+<script src="__PUBLIC__/admin/js/lightbox.js"></script>
+</block>

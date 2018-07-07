@@ -1,0 +1,152 @@
+<extend name="Public:base" />
+<block name="css">
+<link type="text/css" href="__CSS__/zw_select.css"  rel="stylesheet" />
+<link type="text/css" href="__CSS__/zw_select1.css"  rel="stylesheet" />
+<style type="text/css">
+#weee_area{
+  float: right;
+  padding-right: 30px;
+}
+#weee_area #search{
+  margin-left: 5px;
+  background-color:#23ac38;
+  color:#eee;
+  height: 26px;
+}
+#weee_area label{
+  color:#666;
+  margin-bottom:2px;
+  padding:8px 3px; 0 20px;
+}
+#weee_area input{
+  width: 45px;
+  text-align: center;
+  border:solid 1px #ccc;
+  color:#BDBDBD;
+}
+</style>
+</block>
+<block name="main">
+<div class="main" style="padding-top:2px;">
+  <div class="weee_tit">
+    <{:get_chart_type($company_info['hall_type'])}>馆 — <{$company_info['hall_num']}>馆
+    <div id="weee_area">
+      <form method="GET" action="">
+      <label>展位搜索：</label><input type="text" id="s_area" name="s_area" value="<{$s_area}>"> - <input type="text" id="e_area" name="e_area" value="<{$e_area}>"> (平米数) <input type="submit" value="搜索" id="search">
+      </form>
+    </div>
+  </div>
+  <div class="weee_con" style="padding: 0; background:url(/public/images/select_bg.jpg) no-repeat;">
+    <!--展馆选择-->
+    <div class="zw_select">
+      <div class="shiyitu" style="float: left;width: 630px;z-index: 99999;position: relative;" onclick="$('#shiyitu').toggle('slow');">
+        <input type="submit" value="查看展馆示意图" style="
+            float: left;
+            margin-top: 40px;
+            width: 120px;
+            height: 30px;
+            background-color: #359704;
+            border: solid 1px #037d00;
+            border-radius: 6px;
+            color:white;
+            font-weight: bold;
+        ">
+        <img src="__IMAGES__/52shiyi.png" style="float: left;margin-top: 12px;display:none;" id="shiyitu">
+      </div>
+      <div class="zw_5201"></div>
+      <div class="zw_5202"></div>
+      <div class="zw_5203"></div>
+      <div class="zw_5205"></div>
+      <div class="zw_5206"></div>
+      <div class="zw_5207"></div>
+      <div class="zw_5208"></div>
+      <div class="zw_5209"></div>
+      <div class="zw_5210"></div>
+      <div class="zw_5211"></div>
+      <div class="zw_5212"></div>
+      <div class="zw_5213"></div>
+      <div class="zw_5215"></div>
+      <div class="zw_5216"></div>
+      <div class="zw_5217"></div>
+      <div class="zw_5218"></div>
+      <div class="zw_5219"></div>
+      <div class="zw_5220"></div>
+      <div class="zw_5221"></div>
+      <div class="zw_5222"></div>
+      <div class="zw_5223"></div>
+      <div class="zw_5225"></div>
+      <div class="zw_5226"></div>
+      <div class="zw_5227"></div>
+      <div class="zw_5228"></div>
+      <div class="zw_5229"></div>
+      <div class="zw_5230"></div>
+      <div class="zw_5231"></div>
+      <div class="zw_5232"></div>
+      <div class="zw_5233"></div>
+      <div class="zw_5235"></div>
+      <div class="zw_5236"></div>
+      <div class="zw_5237"></div>
+      <div class="zw_5238"></div>
+      <div class="zw_5239"></div>
+      <div class="zw_5250"></div>
+      <div class="zw_5251"></div>
+      <div class="zw_5252"></div>
+    </div>
+    <!--展馆选结束择-->
+    <div class="clear"></div>
+  </div>
+</div>
+</block>
+<block name="seajs">
+seajs.use('jquery',function($){
+  $(function(){
+    var bid = <{$booth}>;
+    if(bid.length == 0){
+      $('.zw_select div').each(function(){
+        $class = $(this).attr('class');
+        $id = $class.split("_")[1];
+         $(".zw_"+$id).css('background','url(__IMAGES__/zw/'+$id+'-1.png) no-repeat'); 
+      });
+      alert('没有足够的展位！！');
+    }else{
+      for(var i =0 ;i<bid.length ;i++){
+        if(bid[i].status == 0 || bid[i].status == 2 ){   
+            $(".zw_"+bid[i].booth_num).css('background','url(__IMAGES__/zw/'+bid[i].booth_num+'-1.png) no-repeat'); 
+        }else{
+            $(".zw_"+bid[i].booth_num).append('<a href="/user/booth/order/'+bid[i].url+'.html"></a>');
+            $(".zw_"+bid[i].booth_num).after('<span class="zw_'+bid[i].booth_num+'_h" >'+bid[i].booth_num+'展位</span>'); 
+        }
+      }
+    }
+    
+    
+    var s_class='';
+    $('.zw_select div').hover(function(){
+        t_class = $(this).attr('class');
+        s_class = "."+t_class+"_h";
+        $(s_class).show();
+        var pos = parseInt($(s_class).css('left'));
+        $(s_class).animate( {left: pos-8},120 ).animate( {left: pos+8},120 )
+    },function(){
+         $(s_class).removeAttr("style");
+         $(s_class).hide();
+    });
+
+    //area search
+    $('form').submit(function(){
+        if($('#e_area').val() == 0 || $('#e_area').val() == ""){
+            alert('请输入面积区间');
+            $('#e_area').val("");
+            $('#e_area').focus();
+            return false;
+        }
+
+        if( parseInt($('#s_area').val()) > parseInt($('#e_area').val()) ){
+          alert('请输入正确的面积区间');
+          return false;
+        }
+    });
+  });
+});
+
+</block>

@@ -1,0 +1,43 @@
+section,figure,aside{padding:0;margin:0;border:none;}
+/*---common---*/
+.art_box{border:solid 1px #dddddd;}
+.art_title{height:30px;line-height:30px;padding:0 10px;border-bottom:solid 1px #dddddd;background:url(../images/help.png) 0px 0px repeat-x;font-size:12px;}
+/*---main---*/
+section.art_main{height:auto;}
+/*aside nav*/
+aside.art_nav{width:220px;height:auto; float:left;}
+aside h2{color:#c5c5c5;}
+span.aside_txt{font-size:15px;color:#666;}
+aside section{height:auto;padding:10px;}
+aside section dl{padding:10px 0;}
+aside section dl dt,aside section dl dd{padding:0 10px;overflow:hidden;}
+aside section dl dt{height:20px;padding:5px 10px;border-bottom:dotted 1px #d7d7d7;}
+span.dt_ico,span.dt_txt{display:inline-block;float:left;}
+span.dt_ico{width:16px;height:16px;margin:2px 0;overflow:hidden;}
+span.dt_txt{line-height:20px;padding-left:10px;font-size:14px;font-weight:bold;color:#444444;}
+.art_ico1{background-position:0px -93px!important;}
+.art_ico2{background-position:-16px -93px!important;}
+.art_ico3{background-position:-32px -93px!important;}
+.art_ico4{background-position:-48px -93px!important;}
+.art_ico5{background-position:-64px -93px!important;}
+aside section dl dd{height:20px;line-height:20px;margin-top:10px;}
+aside section dl dd a,aside section dl dd a:hover{display:block;height:20px;line-height:20px;padding-left:20px;background:url(../images/help.png);text-decoration:none;overflow:hidden;}
+aside section dl dd a{background-position:0px -30px;color:#666666;}
+aside section dl dd a:hover{background-position:0px -50px;color:#ffffff!important;}
+aside section dl dd .current{color:#a10000!important;}
+/*aside content*/
+.art_content{width:960px;height:auto;line-height:24px;border:1px solid #ebebeb; float:right;}
+.art_content h2,.art_content h2 a{color:#777777;}
+.art_content article{padding:20px;}
+.art_header{height:23px;padding:5px 0 10px;border-bottom:dotted 1px #d5d5d5;margin-bottom:15px;}
+.art_header span{display:inline-block;float:left;}
+span.header_box{height:23px;}
+span.header_txt,span.header_space{height:22px;line-height:22px;padding-bottom:1px;background:url(../images/help.png) repeat-x;}
+span.header_txt{background-position:0px -70px;padding-left:15px;font-size:15px;font-weight:bold;color:#ffffff;}
+span.header_space{background-position:right -93px;width:15px;}
+
+.hit_position_bg{ width:100%; height:32px; background:#0097f4;}
+.hit_position{ width:1200px; height:24px; padding:6px 0 0 0px; color:#FFFFFF; font-size:12px; margin:0 auto;}
+.hit_position a{ color:#FFFFFF;}
+.list_main{width:1200px;padding:10px 0; margin:0 auto;}
+.footer{ width:1120px; margin:0 auto; height:30px; font-size:12px; color:#CCCCCC; border-top:1px #ebebeb solid; padding:5px 0; font-weight:normal; font-family:"宋体"; margin-top:15px;}

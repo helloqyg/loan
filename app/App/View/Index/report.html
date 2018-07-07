@@ -1,0 +1,144 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="report">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>实名举报</span>
+            </p>
+        </header>
+        <main class="main">
+            <div class="banner"></div>
+            <form id="mainForm" action="" method="post">
+                <div class="container">
+                    <span style="color: #2ab2f6;">照片上传</span>
+                   <ul class="imgBox" id="1">
+
+
+                    <li class="up">
+                        <span><i class="iconfont icon-plus-bold"></i></span>
+                        <input  type="file" name="img" class="file">
+                    </li>
+                </ul>
+                    <ul>
+                        <li><span class="tit">姓名</span><input name="auth_name" type="text" placeholder="请输入姓名"></li>
+                        <li><span class="tit">身份证号</span><input name="auth_id" type="text" placeholder="请输入身份证号"></li>
+                    </ul>
+                    <div>
+                        <p style="color: #2ab2f6;">举报理由</p>
+                        <textarea name="content" rows="5"></textarea> 
+                    </div>
+                </div>
+        </main>
+        <!--底部导航-->
+        <footer class="footer">
+            <p> <input type="button" class="submit"  value="提交"  ></input></p>
+        </footer>
+            </form>
+    </div>
+</body>
+</block>
+<script src="scripts/rem.js"></script>
+<script src="scripts/jquery.min.js"></script>
+</html>
+<block name="js">
+     $('.icon-fanhui').click(function(){window.history.go(-1)})
+    
+
+    var flag = 0;
+    $('.submit').click(function(){
+        //判断表单数据是否为空
+      var t = $('form').serializeArray();
+        $.each(t,function(i,item){
+            if(item['value'] == '') {
+                console.log('信息不可为空') 
+                showMsg('信息不可为空')
+                flag = 1;
+                return false
+            } else {
+            flag = 0;
+        }
+        })
+
+        if(flag == 0){
+            var prtt = /^[0-9]+$/
+               var string = $('input[name=auth_id]').val();
+                 var data =  prtt.test(string)
+                if(!data){
+
+                showMsg('请输入正确的身份证号')
+                return false
+            }
+
+            var len = $('.imgBox li').length
+            var item_id = '<{$_GET.id}>'
+            var type = '<{$_GET.type}>'
+            var array= [];
+            for(var i = 0; i<len-1;i++){
+                    array.push($('.imgBox li:eq('+i+') img').attr('src'))
+                   // array +=  $('.imgBox li:eq('+i+') img').attr('src')+',';
+            }
+            $.ajax({
+                type:'POST',
+                url :"<{:U('index/report')}>",
+                 data:$.param({'array':array,'type':type,'item_id':item_id})+'&'+$('form').serialize(),  
+                success:function(msg){
+                    console.log(msg)
+                if(msg != 0){
+                if(type == 1){$action = 'loveRelife';$controller = 'Index'}
+                if(type == 2){$action = 'detail';$controller = 'Dream'}
+                if(type == 3){$action = 'detail';$controller = 'Favorable'}
+
+                showAlert('谢谢您的举报！后台人员将全力审核！','/'+$controller+'/'+$action+'/id/'+item_id+'.html')
+                       // window.location.href='/release/step2/id/'+msg+'.html'
+                }
+
+            }
+        })
+        }
+    })
+
+
+
+    //=======================================================
+    var imgarr = [];
+    $('.file').on('change',function(e){
+       var inp = $(this);
+       var up = $(e.currentTarget).parents('li');
+        $("#mainForm").ajaxSubmit({
+        url : "<{:U('Release/ajaxUpload')}>", // 请求的url  
+        type : "post", // 请求方式  
+        dataType : "json", // 响应的数据类型  
+        async :true, // 异步  
+        success: function (data1) { 
+            // alert(data1);
+            // $('.uploadImg').empty();
+           var ele = "\
+            <li class='img'>\
+                <img src='"+data1+"'>\
+                <i class='iconfont icon-delete2' onclick='remove(this)'></i>\
+            </li>";
+            //$('.imgBox').before(ele);
+            up.before(ele)
+            $('#mainForm').find('input[name=image]').val(data1);
+            imgarr.push(data1);
+        },  
+        error : function(){  
+            alert("数据加载失败！"); 
+        }  
+         });     
+
+
+    });
+            $('#mainForm').submit(function(){
+        
+        $('.file').remove();
+    });
+ function remove(obj){
+        var pid = $(obj).parents('.imgBox').attr('id');
+        $(obj).parents('li').remove();
+        if($('.imgBox[id='+pid+']').find('.img').length < 5){
+            $('.imgBox[id='+pid+']').find('.up').show();
+        }
+    }
+</block>

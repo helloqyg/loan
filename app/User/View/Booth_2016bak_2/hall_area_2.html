@@ -1,0 +1,186 @@
+<extend name="Public:base" />
+<block name="css">
+<link type="text/css" href="__CSS__/zw_select.css"  rel="stylesheet" />
+<link type="text/css" href="__CSS__/zw_select1.css"  rel="stylesheet" />
+<style type="text/css">
+#weee_area{
+  float: right;
+  padding-right: 30px;
+}
+#weee_area #search{
+  margin-left: 5px;
+  background-color:#23ac38;
+  color:#eee;
+  height: 26px;
+}
+#weee_area label{
+  color:#666;
+  margin-bottom:2px;
+  padding:8px 3px; 0 20px;
+}
+#weee_area input{
+  width: 45px;
+  text-align: center;
+  border:solid 1px #ccc;
+  color:#BDBDBD;
+}
+</style>
+</block>
+<block name="main">
+<div class="main" style="padding-top:2px;">
+  <div class="weee_tit">
+    <{:get_chart_type($company_info['hall_type'])}>馆 — <{$company_info['hall_num']}>馆
+    <div id="weee_area">
+      <form method="GET" action="">
+      <label>展位搜索：</label><input type="text" id="s_area" name="s_area" value="<{$s_area}>"> - <input type="text" id="e_area" name="e_area" value="<{$e_area}>"> (平米数) <input type="submit" value="搜索" id="search">
+      </form>
+    </div>
+  </div>
+<div class="weee_con" style="padding: 0; background:url(__PUBLIC__/images/select_bg.jpg) no-repeat;">
+    <!--展馆选择-->
+    <div class="zw_select"  style=" background:url(__PUBLIC__/images/hall_bg2.png) no-repeat;height:760px;">
+   <!--    <div class="shiyitu" style="float: left;width: 630px;z-index: 99999;position: relative;" onclick="$('#shiyitu').toggle('slow');">
+        <input type="submit" value="查看展馆示意图" style="
+            float: left;
+            margin-top: 40px;
+            width: 120px;
+            height: 30px;
+            background-color: #359704;
+            border: solid 1px #037d00;
+            border-radius: 6px;
+            color:white;
+            font-weight: bold;
+        ">
+        <img src="images/52shiyi.png" style="float: left;margin-top: 12px;display:none;" id="shiyitu">
+      </div> -->
+	  <div class="zw_7g29"></div>
+	  <div class="zw_7g30"></div>
+	  
+		<div class="zw_7e75"></div>
+    <div class="zw_7e77"></div>
+    <div class="zw_7e79"></div>
+    <div class="zw_7e80"></div>
+    <div class="zw_7257"></div>
+    <div class="zw_7258"></div>
+    
+
+    <div class="zw_7256"></div>
+    <div class="zw_723p"></div>
+    <div class="zw_7255"></div>
+    <div class="zw_725a"></div>
+  
+  
+  
+    <div class="zw_7a85"></div>
+    <div class="zw_7a87"></div>
+    <div class="zw_7a83"></div>
+    <div class="zw_7a81"></div>
+    <div class="zw_7259"></div>
+    <div class="zw_7260"></div>
+    <div class="zw_7a76"></div>    
+    <div class="zw_7a78"></div>
+    <div class="zw_7262"></div>
+    <div class="zw_7261"></div>
+    <div class="zw_7263"></div>
+    <div class="zw_723u"></div>
+    <div class="zw_7a89"></div>
+    <div class="zw_7a92"></div>
+    <div class="zw_7b02"></div>
+    <div class="zw_7a99"></div>
+    <div class="zw_7285"></div>
+    <div class="zw_7283"></div>
+    <div class="zw_7a97"></div>
+    <div class="zw_7b03"></div>
+    <div class="zw_7b06"></div>
+    <div class="zw_7281"></div>
+    <div class="zw_7282"></div>
+    <div class="zw_7b10"></div>
+    <div class="zw_7280"></div>
+    <div class="zw_723v"></div>
+    
+    <div class="zw_7e86"></div>
+    <div class="zw_7e87"></div>
+    <div class="zw_7e88"></div>
+    <div class="zw_7e89"></div>
+    <div class="zw_725d"></div>
+    <div class="zw_725e"></div>
+    <div class="zw_725b"></div>
+    
+
+    <div class="zw_7e95"></div>
+    <div class="zw_7e96"></div>
+    
+    <div class="zw_725c"></div>
+    <div class="zw_727e"></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="zw_7289"></div>
+    </div>
+    <!--展馆选结束择-->
+    <div class="clear"></div>
+  </div>
+
+  </div>
+</div>
+</block>
+<block name="seajs">
+seajs.use('jquery',function($){
+  $(function(){
+    var bid = <{$booth}>;
+    if(bid.length == 0){
+      $('.zw_select div').each(function(){
+        $class = $(this).attr('class');
+        $id = $class.split("_")[1];
+         $(".zw_"+$id).css('background','url(__IMAGES__/zw2/'+$id+'-1.png) no-repeat'); 
+      });
+      alert('没有足够的展位！！');
+    }else{
+      for(var i =0 ;i<bid.length ;i++){
+        if(bid[i].status == 0 || bid[i].status == 2 ){   
+            $(".zw_"+bid[i].booth_num).css('background','url(__IMAGES__/zw2/'+bid[i].booth_num+'-1.png) no-repeat'); 
+        }else{
+            $(".zw_"+bid[i].booth_num).append('<a href="/user/booth/order/'+bid[i].url+'.html"></a>');
+            //$(".zw_"+bid[i].booth_num).after('<span class="zw_'+bid[i].booth_num+'_h" >'+bid[i].booth_num+'展位</span>'); 
+			 $(".zw_"+bid[i].booth_num).after('<span class="zw_'+bid[i].booth_num+'_h" >'+bid[i].area+'平米</span>');
+        }
+      }
+    }
+    
+    
+    var s_class='';
+    $('.zw_select div').hover(function(){
+        t_class = $(this).attr('class');
+        s_class = "."+t_class+"_h";
+        $(s_class).show();
+        //var pos = parseInt($(s_class).css('left'));
+        //$(s_class).animate( {left: pos-8},120 ).animate( {left: pos+8},120 )
+    },function(){
+         $(s_class).removeAttr("style");
+         $(s_class).hide();
+    });
+
+    //area search
+    $('form').submit(function(){
+        if($('#e_area').val() == 0 || $('#e_area').val() == ""){
+            alert('请输入面积区间');
+            $('#e_area').val("");
+            $('#e_area').focus();
+            return false;
+        }
+
+        if( parseInt($('#s_area').val()) > parseInt($('#e_area').val()) ){
+          alert('请输入正确的面积区间');
+          return false;
+        }
+    });
+  });
+});
+
+</block>

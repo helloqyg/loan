@@ -1,0 +1,53 @@
+<extend name="Public:base" />
+<block name="css">
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link type="text/css" href="__CSS__/login.css"  rel="stylesheet" />
+  <link type="text/css" href="/public/css/style.css"  rel="stylesheet" />
+</block>
+<block name="main">
+<div class="main" style="padding:20px 0 50px 0; background-color: #ffffff">
+  <div class="wrap">
+    <div class="pic">
+      <img src="__HOME__/images/login_banner.jpg">
+    </div>
+    <div class="login1">
+      <div class="hd">账户登录</div>
+      <div class="bd">
+        <div class="" style="height:30px;line-height:30px;" id="error_str"></div>
+        <div class="form">
+          	<form method="post" action="" id="form" class="regform">
+            <div class="item" style="width:300px;">
+              <div class="input-box"><i class="icon icon-user"></i>
+                <input type="text" placeholder="请输入登陆账号" id="username" name="username" class="ipt" datatype="*" nullmsg="帐号不能为空！" sucmsg="输入正确">
+              </div>
+            </div>
+            <div class="item" style="width:300px;">
+              <div class="input-box"><i class="icon icon-psw"></i>
+                <input onpaste="return false" type="password" placeholder="请输入登录密码" id="password" name="password" class="ipt" datatype="*" nullmsg="密码不能为空！" sucmsg="输入正确">
+              </div>
+            </div>
+			     <div class="item" style="width:300px;">
+              <div class="input-box">
+               <img class="verifyimg" alt="点击切换" src="<{:U('Login/verify')}>">
+                <input onpaste="return false" type="text" placeholder="请输入验证码" class="ipt" id="verifyimg" style="width:100px;" datatype="*" nullmsg="验证码不能为空！">
+              </div>
+            </div>
+            <div class="btn-box">
+               <div class="labels">
+                <a href="<{:('/user/confirm/forgot')}>" class="fr">忘记密码？</a>
+               </div>
+               <input name="login_step1" id="login_button" type="submit" value="登录" class="ui-btn btn" style="background:#21a901">
+              <div class="tx-c">没有账号？<a href="<{:U('/user/reg',array('step'=>1))}>" >免费注册&gt;&gt;</a></div>
+            </div>
+          </form>
+		  
+        </div>
+      </div>
+    </div>
+	<div class="clear"></div>
+  </div>
+</div>
+</block>
+<block name="seajs">
+seajs.use("login");
+</block>

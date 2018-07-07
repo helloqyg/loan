@@ -1,0 +1,150 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <style>
+        .container{
+            padding: 0.2rem;
+        }
+        textarea {
+            width: 100%;
+            margin-top: 0.15rem;
+            border-bottom: 1px solid #ccc;
+        }
+        .icon-guanzhu1{
+            color: #999;
+        }
+    </style>
+    <div class="shim">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>请转发此页面给好友进行担保</span>
+            </p>
+        </header>
+        <main class="main">
+            <ul>
+                <li><span class="tex">目标金额</span><input disabled="disabled" value="<{$result.target_money}>" type="text"></li>
+                <li><span class="tex">筹款标题</span><input disabled="disabled" value="<{$result.title}>" type="text"></li>
+                <div class="container">
+                    <p class="tex">求助内容</p>
+                    <textarea rows="5" disabled="disabled"><{$result.summary}></textarea>
+                </div>
+                <li><span class="tex">身份证号</span><input disabled="disabled" value="<{$result.me_id}>"  type="text"></li>
+                <li><span class="tex">联系电话</span><input disabled="disabled"  value="<{$result.me_tel}>" type="text"></li>
+                <li><span class="tex">电子邮箱</span><input disabled="disabled"  value="<{$result.me_email}>" type="text"></li>
+                <!-- <li><span class="tex">银行卡号</span><input type="text"></li> -->
+                <li><span class="tex">组织机构认证</span><input disabled="disabled"  value="<{:get_organization($result['organization'])}>" type="text"></li>
+                <li><span class="tex">委员会人员职位</span><input disabled="disabled"  value="<{:get_committee($result['committee'])}>" type="text"></li>
+            </ul> 
+
+            <div class="top">
+                    <span style="color: red">此处信息请转发给权威人士进行填写!</span>
+                   
+            </div>
+            <div class="top">
+                <p>
+                    <span>权威认证</span>
+                    <span>Authority</span>
+                </p>
+            </div>
+            <form action="">
+                <ul>
+                <li>
+                    <span>名称</span>
+                    <input type="text" name="name" placeholder="请输入名称">
+                </li>
+                <li>
+                    <span>电话</span>
+                    <input type="text" name="tel"  placeholder="请输入电话">
+                </li>
+                <li>
+                    <span>职位</span>
+                    <input type="text" name="title"  placeholder="请输入职位">
+                </li>
+                <li>
+                    <span>评价</span>
+                    <div class="right">
+                        <i class="iconfont icon-guanzhu1" score='1'></i>
+                        <i class="iconfont icon-guanzhu1" score='2'></i>
+                        <i class="iconfont icon-guanzhu1" score='3'></i>
+                        <i class="iconfont icon-guanzhu1" score='4'></i>
+                        <i class="iconfont icon-guanzhu1" score='5'></i>
+                    </div>
+                </li>
+            </ul>
+
+            <input type="hidden" name="item_user_id" value="<{$result.user_id}>">
+            <input type="hidden" name="item_id" value="<{$result.id}>">
+            </form>
+        </main>
+
+                <if condition='$Think.session.user_id neq $result["user_id"]'>
+        <footer class="footer">
+            <p>
+                <a class="sub">提交</a>
+            </p>
+        </footer>
+            </if>
+    </div>
+</body>
+</html>
+</block>
+<block name="js">
+    $('.icon-fanhui').click(function(){
+        window.history.go(-1);
+    })
+
+     $(function(){
+        $status = "<{$witness}>";
+        if($status  >= 2){
+        showAlert('已有2人提交信息！请勿再次提交。点击跳转回主页 ','/release/index.html');
+        }
+    })
+    var score;
+    $('.icon-guanzhu1').click(function(){
+        score = $(this).attr('score');
+        $(this).css('color','#fd9826')
+        $(this).prevAll().css('color','#fd9826')
+        $(this).nextAll().css('color','#999')
+    })
+    $('.sub').click(function(){
+        console.log(score)
+    })
+
+
+    var flag = 0;
+    $('.sub').click(function(){
+          //判断表单数据是否为空
+      var t = $('form').serializeArray();
+        $.each(t,function(i,item){
+            if(item['name'] != 'id'){
+
+                if(item['value'] == '' && item['name'] != 'user_item_id' && item['name'] != 'item_id') {
+                    console.log(item['name']+'信息不可为空') 
+                    showMsg('信息不可为空')
+                    flag = 1;
+                    return false
+                    } else {
+                    flag = 0;
+                }
+            }
+        })
+        if(flag == 0){
+       $.ajax({
+                type:'POST',
+                url :"<{:U('release/share')}>",
+                data:$.param({score:score})+'&'+$('form').serialize(),
+                success:function(msg){
+                    console.log(msg)
+                if(msg == 1){ 
+                    showAlert('非常感谢您的信息，后台将会进行审核。点击跳转回主页','/index/index.html');
+                         <!-- setTimeout(function(){window.location.href="/Release/share_success"},0000); -->
+                       
+                }else{
+                    showMsg('失败')
+                }
+
+            }
+        })
+    }
+    })
+</block>

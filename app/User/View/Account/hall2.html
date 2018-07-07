@@ -1,0 +1,75 @@
+<extend name="Public:base" />
+<block name="css">
+<link type="text/css" href="__CSS__/zw_hall2.css"  rel="stylesheet" />
+</block>
+<block name="main">
+<div class="main" style="padding-top:2px;">
+  <div class="weee_tit"><{:get_chart_type($hall_info['hall_type'])}>馆 — <{$hall_info['hall_num']}>馆</div>
+  <div class="weee_con" style="padding: 0; background:url(/public/images/select_bg.jpg) no-repeat;">
+    <!--展馆选择-->
+    <div class="zw_select">
+    <div class="shiyitu" style="float: left;width: 630px;z-index: 99999;position: relative;" onclick="$('#shiyitu').toggle('slow');">
+        <input type="submit" value="查看展馆示意图" style="
+            float: left;
+            margin-top: 40px;
+            width: 120px;
+            height: 30px;
+            background-color: #359704;
+            border: solid 1px #037d00;
+            border-radius: 6px;
+            color:white;
+            font-weight: bold;
+        ">
+        <img src="__IMAGES__/52shiyi.png" style="float: left;margin-top: 12px;display:none;" id="shiyitu">
+      </div>
+      <div class="zw_5201"></div>
+      <div class="zw_5202"></div>
+      <div class="zw_5203"></div>
+      <div class="zw_5205"></div>
+      <div class="zw_5206"></div>
+      <div class="zw_5207"></div>
+      <div class="zw_5208"></div>
+      <div class="zw_5209"></div>
+      <div class="zw_5210"></div>
+      <div class="zw_5211"></div>
+      <div class="zw_5212"></div>
+      <div class="zw_5213"></div>
+      <div class="zw_5215"></div>
+      <div class="zw_5216"></div>
+      <div class="zw_5217"></div>
+      <div class="zw_5218"></div>
+      <div class="zw_5219"></div>
+      <div class="zw_5220"></div>
+      <div class="zw_5221"></div>
+      <div class="zw_5222"></div>
+      <div class="zw_5223"></div>
+      <div class="zw_5225"></div>
+      <div class="zw_5226"></div>
+      <div class="zw_5227"></div>
+      <div class="zw_5228"></div>
+      <div class="zw_5229"></div>
+      <div class="zw_5230"></div>
+      <div class="zw_5231"></div>
+      <div class="zw_5232"></div>
+      <div class="zw_5233"></div>
+      <div class="zw_5235"></div>
+      <div class="zw_5236"></div>
+      <div class="zw_5237"></div>
+      <div class="zw_5238"></div>
+      <div class="zw_5239"></div>
+      <div class="zw_5250"></div>
+      <div class="zw_5251"></div>
+      <div class="zw_5252"></div>
+    </div>
+    <!--展馆选结束择-->
+    <div class="clear"></div>
+  </div>
+</div>
+</block>
+<block name="seajs">
+seajs.use('jquery',function($){
+  var bid = <{$booth}>;
+  $(".zw_"+bid).css('background','url(__IMAGES__/zw/'+bid+'.png) no-repeat');  
+});
+
+</block>

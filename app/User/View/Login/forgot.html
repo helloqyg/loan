@@ -1,0 +1,45 @@
+<extend name="Public:base" />
+<block name="css">
+	<link type="text/css" href="__CSS__/login.css"  rel="stylesheet" />
+</block>
+<block name="main">
+<div class="main" style="padding:20px 0 50px 0;">
+  <div class="wrap">
+    <div class="pic">
+      <img src="__IMAGES__/login_banner.jpg">
+    </div>
+    <div class="login">
+      <div class="hd">找回密码</div>
+      <div class="bd">
+        <div class="tip-text" id="error_str" style="display:none;">错误提示信息显示</div>
+        <div class="form">
+          	<form method="post" action="" id="form">
+            <div class="item">
+              <div class="input-box"><i class="icon icon-mail"></i>
+                <input type="text" placeholder="请输入邮箱" id="email" name="email" class="ipt">
+              </div>
+            </div>
+			 <div class="item">
+              <div class="input-box">
+               <img class="verifyimg" alt="点击切换" src="<{:U('Login/verify')}>">
+                <input onpaste="return false" type="text" placeholder="请输入验证码" class="ipt" id="verifyimg" style="width:100px;">
+              </div>
+            </div>
+            <div class="btn-box">
+               <div class="labels">
+                <!-- <a href="#" class="fr">忘记密码？</a>-->
+               </div>
+               <input name="login_step1" id="login_button" type="submit" value="登录" class="ui-btn btn-green">
+              <div class="tx-c">没有账号？<a href="<{:U('/user/reg',array('step'=>1))}>" >免费注册&gt;&gt;</a></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+	<div class="clear"></div>
+  </div>
+</div>
+</block>
+<block name="seajs">
+seajs.use("login");
+</block>

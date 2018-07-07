@@ -1,0 +1,62 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="add">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>添加回报</span>
+            </p>
+        </header>
+        <main class="main">
+            <form action=" " method="">
+            <div class="money">
+                <span>支付金额</span>
+                <input type="number" name="a"  id="return_money" placeholder="请输入支付金额">
+                <span>元</span>
+            </div>
+    <!--         <div class="address">
+                <span>收货地址</span>
+                <div class="right">
+                    <select name="" id="">
+                        <option>省</option>
+                    </select>
+                    <select name="" id="">
+                        <option>区</option>
+                    </select>
+                </div>                
+            </div>
+            <input type="text" placeholder="请填写具体地址" class="addr"> -->
+            <textarea name="b" id="return_content" rows="5" placeholder="请添加回报内容（最多48字）" maxlength="48"></textarea>
+        </main>
+        </form>
+        <footer class="footer">
+            <p onclick="save()">
+               保存
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+</block>
+<block name='js'>
+     var flag = 0;
+    function save(){
+     var t = $('form').serializeArray();
+        $.each(t,function(i,item){
+            if(item['value'] == '' ) {
+                console.log('信息不可为空') 
+                showMsg('信息不可为空')
+                flag = 1;
+                return false
+            } else {
+            flag = 0;
+        }
+        })
+        if(flag == 0){
+         localStorage.setItem("return_money", $('#return_money').val());
+        localStorage.setItem("return_content", $('#return_content').val());
+        window.location.href='/dream/release.html'
+    }
+  
+    }
+</block>

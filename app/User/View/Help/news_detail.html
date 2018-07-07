@@ -1,0 +1,35 @@
+<extend name="Public:base" />
+<block name="css">
+	<link type="text/css" href="__CSS__/usercenter.css"  rel="stylesheet" />
+	<style type="text/css">
+		.attest-success .attest-seal{
+			position: absolute;
+		    top: 80px;
+		    left: 120px;
+		    width: 97px;
+		    height: 98px;
+		    overflow: hidden;
+		    background: url(__IMAGES__/<eq name="company_info.status" value='0'>z2.png<else/>z1.png</eq>) no-repeat;   
+		}
+	</style>
+</block>
+<block name="main">
+<div class="main_page">
+<div class="big_main">
+<include file="Public/left_1" />
+	<div class="side_right fr" style="height:auto">
+		
+		<div class="detail_con" style="padding:5px 20px;">
+
+    <p align="center" style=" padding-top:20px; font-size:18px;"><strong><{$detail.title}></strong></p>
+    
+
+    
+     <p align="left" ><font face="Verdana" >　<{$detail.content|default=''|htmlspecialchars_decode}>　</font></p>
+
+  </div>
+	</div>
+</div>
+
+</div>
+</block>

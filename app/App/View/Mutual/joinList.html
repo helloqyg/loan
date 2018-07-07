@@ -1,0 +1,50 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="join">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>轻松互助</span>
+            </p>
+        </header>
+        <main class="main">
+            <div class="top">
+                <!--<img src="img/s.png" alt="">-->
+                <!-- <a href="family.html"> -->
+                <a href="bulletin.html">
+                    <!-- <span class="btn">加入家人互助</span> -->
+                    <span class="btn">查看互助公示</span>
+                </a>
+            </div>
+
+            <volist name='result' id='v'>
+            <div class="container">
+                <div class="left">
+                    <img src="<{$v.img}>" alt="">
+                </div>
+                <div class="right">
+                    <p><{$v.title}></p>
+                    <p><{$v.list_tagone}></p>
+                    <p><{$v.list_tagtwo}></p>
+                    <p>
+                        <a href="<{:U('detail',array('id'=>$v['id']))}>">
+                            <span>立即加入</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </volist>
+        </main>
+        <!--底部导航-->
+        <footer class="footer"></footer>
+    </div>
+</body>
+<script src="scripts/rem.js"></script>
+<script src="scripts/jquery.min.js"></script>
+</html>
+</block>
+<script>
+    $('.icon-fanhui').click(function(){
+        window.history.go(-1);
+    })
+</script>

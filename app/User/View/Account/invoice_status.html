@@ -1,0 +1,17 @@
+<extend name="Public:base" />
+<block name="main">
+<div class="main" style="padding-top:8px; min-height:450px;">
+<div class="user_center">
+<include file="Public/left" />
+	    <div class="user_right">
+      <div class="user_right_tit">发票申请</div>
+            <div class="user_right_con" style="padding-top:20px; min-height:295px;"><span style="font-weight:bold; font-size:14px; color:#FF0000;"><{$info|default='申请成功'}></span></div>
+    </div>
+    <!--right end-->
+    <div class="clear"></div>
+  	</div>
+</div>
+</block>
+<block name="seajs">
+seajs.use('invoice');
+</block>

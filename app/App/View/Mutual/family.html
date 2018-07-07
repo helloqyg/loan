@@ -1,0 +1,40 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="family">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>为家人加入</span>
+            </p>
+        </header>
+        <main class="main">
+            <div class="top"></div>
+            <div class="container">
+                <div class="left">
+                    <img src="__HOME__/img/join1.png" alt="">
+                </div>
+                <div class="right">
+                    <p>百万终身大病互助行动</p>
+                    <p>最高获得<b>111万</b>大病互助</p>
+                    <p>出生后28天~50周岁</p>
+                    <p>
+                        <a href="familyAttend.html">
+                            <span>立即加入</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </main>
+        <!--底部导航-->
+        <footer class="footer"></footer>
+    </div>
+</body>
+<script src="scripts/rem.js"></script>
+<script src="scripts/jquery.min.js"></script>
+</html>
+</block>
+<script>
+    $('.icon-fanhui').click(function(){
+        window.history.go(-1);
+    })
+</script>

@@ -1,0 +1,28 @@
+<extend name="Public:base" />
+<block name="main">
+
+<div class="main_exhi">
+<div class="main_view">
+  <div class="main_view_top">
+    <div><{$title}></div>
+  </div>
+<!-- 此循环后续需要更改,需要写死 -->
+  <div class="main_view_left fl">
+      <img src="__HOME__/images/note_tishi.jpg">
+
+      <div class="note_tishi">
+        <p>整机馆:5.2号馆 6.2号馆</p>
+        <p>部件馆:4.2号馆 7.2号馆 8.2号馆</p>
+      </div>
+  </div>
+  <div class="main_view_right fr">
+    <img src="__HOME__/images/exhi_tu.jpg" usemap="#map">
+    <map name="map">
+<volist name="hall" id="v">
+        <area shape="polygon" coords="<{$v.position}>" alt="Sun" href="<{:U('/user/booth/select',array('id'=>$v['id'],'status'=>1))}>">
+  </volist> 
+      </map>
+  </div>
+  </div>
+</div>
+</block>

@@ -1,0 +1,58 @@
+<extend name="Public:base" />
+<block name="css">
+  <link type="text/css" href="__CSS__/login.css"  rel="stylesheet" />
+  <style>
+    .success-tip{
+      font-size: 16px;
+      margin:70px 30px 40px 50px;
+      color:#24B18D;
+      display: none;
+    }
+  </style>
+</block>
+<block name="main">
+<div class="main" style="padding:20px 0 50px 0;">
+  <div class="wrap">
+    <div class="pic">
+      <img src="__IMAGES__/login_banner.jpg">
+    </div>
+    <div class="login1">
+      <div class="hd">重置密码</div>
+      <div class="bd">
+        <div class="tip-text" id="error_str" >请输入注册时的邮箱</div>
+        </br></br>
+        <div class="form">
+            <div class="item">
+              <div class="success-tip" id="success-tip">
+              </div>
+            </div>
+            <form method="post" action="" id="form">
+            <div class="item">
+              <div class="input-box"><i class="icon icon-mail"></i>
+                <input type="text" placeholder="请输入负责人邮箱" id="email" name="email" class="ipt">
+              </div>
+            </div>
+            <div class="item">
+              <div class="input-box">
+               <img class="verifyimg" alt="点击切换" src="<{:U('Login/verify')}>">
+                <input onpaste="return false" type="text" placeholder="请输入验证码" class="ipt" id="verifyimg" style="width:100px;">
+              </div>
+            </div>
+            <div class="btn-box">
+               <div class="labels">
+                <!-- <a href="#" class="fr">忘记密码？</a>-->
+               </div>
+               <input name="login_step1" id="login_button" type="submit" value="提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交" class="ui-btn btn-green">
+              <div class="tx-c">没有账号？<a href="<{:U('/user/reg',array('step'=>1))}>" >免费注册&gt;&gt;</a></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  <div class="clear"></div>
+  </div>
+</div>
+</block>
+<block name="seajs">
+seajs.use("forgot");
+</block>

@@ -1,0 +1,54 @@
+<extend name="Public:base" />
+<block name="css">
+<style type="text/css"> 
+table{ font-size:12px; table-layout:fixed; empty-cells:show; border-collapse: collapse;margin:0 auto; } 
+td{ height:30px; text-align: center;} 
+h1,h2,h3{ font-size:12px; margin:0; padding:0; } 
+.table{ border:1px solid #cad9ea; color:#666; } 
+.table th { background-repeat:repeat-x; height:30px; } 
+.table td,.table th{ border:1px solid #cad9ea; padding:0 1em 0; } 
+.table tr.alter{ background-color:#f5fafe; } 
+#ad_notice{width:100%;height:100px;line-height:80px;float:left;text-align:center;color:#A59C9C;font-size:16px;font-weight:500;}
+</style>
+</block>
+<block name="main">
+<div class="main" style="padding-top:8px; min-height:450px;">
+<div class="user_center">
+<include file="Public/left" />
+	    <div class="user_right">
+      <div class="user_right_tit">申请合同</div>
+			<div class="ad_div">
+				<eq name="apply_status.status" value="1">
+				<div id="ad_notice">
+					<span style="color:#ff5600;font-size:22px;font-weight:bold;">正在申请中</span>
+				</div>
+				<else/>
+				<div id="ad_notice">
+					<span style="color:#ff5600;font-size:22px;font-weight:bold;">合同申请成功</span>
+				</div>
+				<div id="ad_show">
+					<table width="60%" class="table"> 
+						<tbody>
+						<tr> 
+							<th style="background-color:#f5fafe;">发送方式</th> 
+							<th><eq name="apply_status.type" value="1">邮箱发送<else/>快递发送</eq></th>  
+						</tr> 
+						<tr> 
+							<th style="background-color:#f5fafe;"><eq name="apply_status.type" value="1">邮箱地址<else/>快递单号(EMS)</eq></th> 
+							<th><eq name="apply_status.type" value="1"><{$apply_status.email}><else/><{$apply_status.express}></eq></th>  
+						</tr>				
+						</tbody>
+					</table> 
+				</div>
+				</eq>
+			</div>
+		</div>
+    <!--</div>-->
+    <!--right end-->
+    <div class="clear"></div>
+  	</div>
+</div>
+</block>
+<block name="seajs">
+seajs.use('invoice');
+</block>

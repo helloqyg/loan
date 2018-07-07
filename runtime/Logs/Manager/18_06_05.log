@@ -1,0 +1,434 @@
+[ 2018-06-05T10:45:14+08:00 ] 127.0.0.1 /manager/donor/del.html?id=173
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Manager\Controller\MainController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `wd_donor` [ RunTime:0.0000s ]
+SQL: DELETE FROM `wd_donor` WHERE `id` = 173 [ RunTime:0.0000s ]
+
+[ 2018-06-05T10:45:17+08:00 ] 127.0.0.1 /manager/donor/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Manager\Controller\MainController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `wd_donor` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wd_donor` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_donor` ORDER BY date desc LIMIT 15,15   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: member_total D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\116f2446b08699c3803eab123e050784.php 第 218 行.
+SQL: SHOW COLUMNS FROM `wd_member` [ RunTime:0.0100s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 73 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wd_rescue` [ RunTime:0.0090s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 73 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 73 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wd_gongyi` [ RunTime:0.0060s ]
+SQL: SELECT `title` FROM `wd_gongyi` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wd_dream` [ RunTime:0.0070s ]
+SQL: SELECT `title` FROM `wd_dream` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 137 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 142 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-06-05T11:53:27+08:00 ] 127.0.0.1 /manager/donor/index/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Manager\Controller\MainController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `wd_donor` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wd_donor` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_donor` ORDER BY date desc LIMIT 30,15   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: member_total D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\116f2446b08699c3803eab123e050784.php 第 218 行.
+SQL: SHOW COLUMNS FROM `wd_member` [ RunTime:0.0080s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wd_rescue` [ RunTime:0.0070s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 142 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wd_dream` [ RunTime:0.0070s ]
+SQL: SELECT `title` FROM `wd_dream` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_dream` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_dream` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_dream` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wd_gongyi` [ RunTime:0.0070s ]
+SQL: SELECT `title` FROM `wd_gongyi` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_gongyi` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_gongyi` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_gongyi` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_gongyi` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `wd_gongyi` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title` FROM `wd_gongyi` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-06-05T13:34:09+08:00 ] 127.0.0.1 /manager/jiuzhu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Manager\Controller\MainController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `wd_rescue` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wd_rescue` LIMIT 1   [ RunTime:0.0000s ]
+SQL: select * from wd_rescue where target_money between 0 and 9999999999  and title like '%%' order by create_date desc  limit  0 , 15   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: member_total D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\43b5f81b080c4672a761618064007d3b.php 第 218 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\43b5f81b080c4672a761618064007d3b.php 第 351 行.
+NOTIC: [8] Undefined index: min_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\43b5f81b080c4672a761618064007d3b.php 第 352 行.
+NOTIC: [8] Undefined index: max_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\43b5f81b080c4672a761618064007d3b.php 第 353 行.
+NOTIC: [8] Undefined index: rep_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\43b5f81b080c4672a761618064007d3b.php 第 354 行.
+SQL: SHOW COLUMNS FROM `wd_member` [ RunTime:0.0080s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wd_donor` [ RunTime:0.0070s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 182 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 182 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 181 AND `type` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 181 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 181 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 180 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 180 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 180 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 179 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 179 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 179 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 178 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 178 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 178 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 177 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 177 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 177 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 138 AND `type` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 138 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 138 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wd_tag` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `wd_tag` WHERE `id` = 52 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 174 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 174 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 174 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 137 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 137 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 137 AND `type` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wd_tag` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 140 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 140 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 140 AND `type` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wd_tag` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 141 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 141 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 141 AND `type` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `wd_tag` WHERE `id` = 52 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 142 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 142 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 142 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_tag` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 139 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_rescue` WHERE `id` = 139 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 139 AND `type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_tag` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-06-05T13:34:20+08:00 ] 127.0.0.1 /manager/relaxed/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Manager\Controller\MainController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `wd_gongyi` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wd_gongyi` LIMIT 1   [ RunTime:0.0000s ]
+SQL: select * from wd_gongyi where target_money between 0 and 9999999999  and title like '%%' and ins_name like '%%' order by create_date desc  limit  0 , 15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: member_total D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 218 行.
+NOTIC: [8] Undefined index: ins_name D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 353 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 354 行.
+NOTIC: [8] Undefined index: min_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 355 行.
+NOTIC: [8] Undefined index: max_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 356 行.
+NOTIC: [8] Undefined index: rep_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 357 行.
+SQL: SHOW COLUMNS FROM `wd_donor` [ RunTime:0.0070s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 53 AND `type` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `target_money` FROM `wd_gongyi` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 53 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: return_content D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+NOTIC: [8] Undefined index: return_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 52 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_gongyi` WHERE `id` = 52 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 52 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Division by zero D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Common\Common\function.php 第 575 行.
+NOTIC: [8] Undefined index: return_content D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+NOTIC: [8] Undefined index: return_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 50 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_gongyi` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 50 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: return_content D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+NOTIC: [8] Undefined index: return_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 51 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_gongyi` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 51 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Division by zero D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Common\Common\function.php 第 575 行.
+NOTIC: [8] Undefined index: return_content D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+NOTIC: [8] Undefined index: return_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-06-05T14:41:53+08:00 ] 127.0.0.1 /manager/dream/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Manager\Controller\MainController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `wd_dream_type` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `wd_dream_type`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `wd_dream` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wd_dream` LIMIT 1   [ RunTime:0.0000s ]
+SQL: select * from wd_dream where target_money between 0 and 9999999999  and title like '%%' order by date desc  limit  0 , 15   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: member_total D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\9709e6a599309e7eb5b9ceee8638ab37.php 第 218 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\9709e6a599309e7eb5b9ceee8638ab37.php 第 352 行.
+NOTIC: [8] Undefined index: min_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\9709e6a599309e7eb5b9ceee8638ab37.php 第 353 行.
+NOTIC: [8] Undefined index: max_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\9709e6a599309e7eb5b9ceee8638ab37.php 第 354 行.
+NOTIC: [8] Undefined index: rep_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\9709e6a599309e7eb5b9ceee8638ab37.php 第 355 行.
+SQL: SHOW COLUMNS FROM `wd_member` [ RunTime:0.0090s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `wd_donor` [ RunTime:0.0090s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 97 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 97 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 97 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 96 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 96 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 96 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 95 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 95 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 94 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 94 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 94 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 93 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 93 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 93 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 92 AND `type` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 92 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 92 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 91 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 91 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 91 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 90 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 90 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 90 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 89 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 89 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 89 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 88 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 88 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 88 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 87 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 87 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 87 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 86 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 86 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 86 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 85 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 85 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 84 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 84 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 84 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Division by zero D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Common\Common\function.php 第 564 行.
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `wd_member` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 82 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_dream` WHERE `id` = 82 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 82 AND `type` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Division by zero D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Common\Common\function.php 第 564 行.
+SQL: SELECT * FROM `wd_dream_type` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-06-05T15:38:12+08:00 ] 127.0.0.1 /manager/relaxed/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Manager\Controller\MainController.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `wd_gongyi` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wd_gongyi` LIMIT 1   [ RunTime:0.0000s ]
+SQL: select * from wd_gongyi where target_money between 0 and 9999999999  and title like '%%' and ins_name like '%%' order by create_date desc  limit  0 , 15   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: member_total D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 218 行.
+NOTIC: [8] Undefined index: ins_name D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 353 行.
+NOTIC: [8] Undefined index: title D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 354 行.
+NOTIC: [8] Undefined index: min_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 355 行.
+NOTIC: [8] Undefined index: max_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 356 行.
+NOTIC: [8] Undefined index: rep_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 357 行.
+SQL: SHOW COLUMNS FROM `wd_donor` [ RunTime:0.0170s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 53 AND `type` = 3 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `target_money` FROM `wd_gongyi` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 53 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: return_content D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+NOTIC: [8] Undefined index: return_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 52 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_gongyi` WHERE `id` = 52 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 52 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Division by zero D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Common\Common\function.php 第 575 行.
+NOTIC: [8] Undefined index: return_content D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+NOTIC: [8] Undefined index: return_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 50 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `target_money` FROM `wd_gongyi` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 50 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: return_content D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+NOTIC: [8] Undefined index: return_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 51 AND `type` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `target_money` FROM `wd_gongyi` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `wd_donor` WHERE `item_id` = 51 AND `type` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Division by zero D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\Common\Common\function.php 第 575 行.
+NOTIC: [8] Undefined index: return_content D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+NOTIC: [8] Undefined index: return_money D:\phpStudy\PHPTutorial\WWW\crowdFunding\runtime\Cache\Manager\ac496937ac0a60d2e84f1dff63911d4a.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

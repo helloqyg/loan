@@ -1,0 +1,92 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="committee">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>筹款委员会信息</span>
+            </p>
+        </header>
+        <main class="main">
+            <div class="top">
+                <p>
+                    <span>委员会人员职位</span>
+                    <span>Committee personnel</span>
+                </p>
+                <span class="child">委员会人员必须是权威的</span>
+            </div>
+            <div class="check">
+                <form action="" method="post">
+                    <volist name="commitInfo" id="v">
+                <label><input type="radio" name="committee"
+                        <if condition="$result['committee'] eq $v['id']">
+                        checked
+                        </if>
+                 name="committee" value="<{$v.id}>"><{$v.name}></label>
+                    </volist>
+            </div>
+      <!--       <div class="top">
+                <p>
+                    <span>权威认证</span>
+                    <span>Authority</span>
+                </p>
+                <i class="iconfont icon-gengduo-tianchong"></i>
+                <span class="child">需转发给权威人士填写，至少两位</span>
+            </div>
+            <ul>
+                <li>
+                    <span>名称</span>
+                    <input type="text" placeholder="请输入名称">
+                </li>
+                <li>
+                    <span>电话</span>
+                    <input type="text" placeholder="请输入电话">
+                </li>
+                <li>
+                    <span>职位</span>
+                    <input type="text" placeholder="请输入职位">
+                </li>
+                <li>
+                    <span>评价</span>
+                    <div class="right">
+                        <i class="iconfont icon-guanzhu"></i>
+                        <i class="iconfont icon-guanzhu"></i>
+                        <i class="iconfont icon-guanzhu"></i>
+                        <i class="iconfont icon-guanzhu"></i>
+                        <i class="iconfont icon-guanzhu"></i>
+                    </div>
+                </li>
+            </ul> -->
+        </main>
+        <footer class="footer">
+            <p class="sub">
+                <input type="hidden" name="id" value="<{$_GET.id}>">
+                <!--<input type="hidden" name="personal_img" value="<{$_GET.id}>">-->
+                <button type="submit"> 提交</button>
+            </p>
+        </footer>
+        </form>
+        <div class="dailog" style="display:none;">
+            <p>
+                <i class="iconfont icon-QQ"></i>
+                <span>QQ</span>
+            </p>
+            <p>
+                <i class="iconfont icon-weixin"></i>
+                <span>微信</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+</block>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/swiper.min.js"></script>
+<block name="js">
+
+
+   $('.icon-fanhui').click(function(){window.history.go(-1); }) 
+    $('.icon-gengduo-tianchong').click(function(){
+        $('.dailog').show()
+    })
+</block>

@@ -1,0 +1,53 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="helped">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>我帮助的</span>
+            </p>
+        </header>
+        <main class="main">
+            <ul class="top">
+                <li class="h">已帮助人员</li>
+                <li>关注人员</li>
+                <li>举报人员</li>
+            </ul>
+
+
+            <volist name="result" id="v">
+
+                
+            <ul class="container">
+                <li class="x">
+                    <div class="img">
+                        <img src="<{:get_user_img($v['item_id'],'123')}>" alt="">
+                    </div><{:get_username($v['item_id'],'123')}>
+                </li>
+                <!--<li>34岁</li>-->
+                <li><{$v.price}>元</li>
+                <li><{$v.date|date="Y-m-d",###}></li>
+                <li>
+                    <i class="iconfont icon-xiangyoujiantou"></i>
+                </li>
+            </ul>
+
+            </volist>
+
+
+
+        </main>
+
+    </block>
+    </div>
+</body>
+<script src="scripts/rem.js"></script>
+<script src="scripts/jquery.min.js"></script>
+</html>
+
+<block name='js'>
+
+      $('.top li').click(function(){
+        $(this).addClass('h').siblings().removeClass('h')
+    })
+</block>

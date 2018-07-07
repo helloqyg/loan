@@ -1,0 +1,123 @@
+<extend name="Public:base" />
+<block name="css">
+<link type="text/css" href="__CSS__/zw_select.css"  rel="stylesheet" />
+<link type="text/css" href="__CSS__/zw_select1.css"  rel="stylesheet" />
+<style type="text/css">
+#weee_area{
+  float: right;
+  padding-right: 30px;
+}
+#weee_area #search{
+  margin-left: 5px;
+  background-color:#23ac38;
+  color:#eee;
+  height: 26px;
+}
+#weee_area label{
+  color:#666;
+  margin-bottom:2px;
+  padding:8px 3px; 0 20px;
+}
+#weee_area input{
+  width: 45px;
+  text-align: center;
+  border:solid 1px #ccc;
+  color:#BDBDBD;
+}
+</style>
+</block>
+<block name="main">
+<div class="main" style="padding-top:2px;">
+  <div class="weee_tit">
+    部件馆 — 7.2馆
+    <div id="weee_area">
+      <form method="GET" action="">
+      <label>展位搜索：</label><input type="text" id="s_area" name="s_area" value="<{$s_area}>"> - <input type="text" id="e_area" name="e_area" value="<{$e_area}>"> (平米数) <input type="submit" value="搜索" id="search">
+      </form>
+    </div>
+  </div>
+<div class="weee_con" style="padding: 0; background:url(__PUBLIC__/images/select_bg.jpg) no-repeat;">
+    <!--展馆选择-->
+    <div class="zw_select"  style=" background:url(__PUBLIC__/images/hall_bg1.png) no-repeat;height:760px;">
+   <!--    <div class="shiyitu" style="float: left;width: 630px;z-index: 99999;position: relative;" onclick="$('#shiyitu').toggle('slow');">
+        <input type="submit" value="查看展馆示意图" style="
+            float: left;
+            margin-top: 40px;
+            width: 120px;
+            height: 30px;
+            background-color: #359704;
+            border: solid 1px #037d00;
+            border-radius: 6px;
+            color:white;
+            font-weight: bold;
+        ">
+        <img src="images/52shiyi.png" style="float: left;margin-top: 12px;display:none;" id="shiyitu">
+      </div> -->
+		<div class="zw_7f33"></div>
+    <div class="zw_7f35"></div>
+    <div class="zw_7f36"></div>
+    <div class="zw_7f37"></div>
+    <div class="zw_7f38"></div>
+    <div class="zw_7f39"></div>
+    <div class="zw_7f50"></div>
+    <div class="zw_7f51"></div>
+    <div class="zw_7f52"></div>
+    <div class="zw_7f53"></div>
+    <div class="zw_7f55"></div>
+    <div class="zw_7f56"></div>
+    <div class="zw_7f57"></div>
+    <div class="zw_7f58"></div>
+
+    <div class="zw_7205"></div>
+    <div class="zw_723b"></div>
+    <div class="zw_7212"></div>  
+    <div class="zw_7a07"></div>
+    <div class="zw_7211"></div>
+    <div class="zw_7a05"></div>
+    <div class="zw_7a01"></div>
+    <div class="zw_7210"></div>
+    <div class="zw_7209"></div>
+    <div class="zw_723c"></div>
+    <div class="zw_7213"></div>
+    <div class="zw_7a21"></div>
+    <div class="zw_7215"></div>
+    <div class="zw_7a19"></div>
+    <div class="zw_7a16"></div> 
+    <div class="zw_7216"></div>
+    <div class="zw_7217"></div>
+    <div class="zw_723d"></div>
+    <div class="zw_7230"></div>  
+    <div class="zw_7a25"></div>
+    <div class="zw_7229"></div>
+    <div class="zw_7a27"></div>
+    <div class="zw_7a30"></div>
+    <div class="zw_7228"></div>
+    <div class="zw_7227"></div>
+    <div class="zw_723e"></div>
+    <div class="zw_7231"></div>
+    <div class="zw_7232"></div>
+    <div class="zw_7233"></div>
+    <div class="zw_723n"></div>
+    <div class="zw_723f"></div>
+    <div class="zw_7235"></div>
+    </div>
+    <!--展馆选结束择-->
+    <div class="clear"></div>
+  </div>
+
+  </div>
+</div>
+</block>
+<block name="seajs">
+seajs.use('jquery',function($){
+	$(function(){
+		$('.zw_select div').each(function(){
+			$class = $(this).attr('class');
+			$id = $class.split("_")[1];
+			$(".zw_"+$id).css('background','url(__IMAGES__/zw1/'+$id+'-1.png) no-repeat'); 
+		});    
+		var bid = "<{$booth}>";
+		$(".zw_"+bid).css('background','url(__IMAGES__/zw1/'+bid+'.png) no-repeat'); 
+	}); 
+});
+</block>

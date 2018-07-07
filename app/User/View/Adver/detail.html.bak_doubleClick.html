@@ -1,0 +1,73 @@
+<extend name="Public:base" />
+<block name="main">
+
+<div class="main_exhi" style="height: 600px">
+<div class="main_view" style="height: 600px; background-color:#f1f1f1">
+  <div class="main_v_t">
+    <div class="main_view_top_d" style="background-color: #ffffff; height: 50px ">
+      <div class="not_vt" style="width:80px"><{$title}></div>
+    </div>
+  </div>
+  <div class="datail_left fl">
+    <img src="__HOME__/images/ad_detail.jpg ">
+  </div>
+  <div class="detail_right fr">
+      <div class="datail_rt"><img width="371" height="176" src="__HOME__/images/right_ad1.jpg"></div>
+      <div class="detail_mid">
+        <ul>
+          <li class="d-title" style="border: 0">编号：</li>
+          <volist name="goods_detail" id="v">
+          <li class="" ondblclick="doubleClick(<{$v.ar_id}>)" onclick="clickProduct(<{$v.ar_id}>)"><{$v.ar_encode}></li>
+          </volist>
+        </ul>
+        <input  type="submit" value="确认支付" class="ad_detail_sub">
+      </div>
+      <div class="d-bottom">
+      <tbody>
+        
+        <table>
+         <tr>
+        
+        </table>
+      </tbody>
+
+      </div>
+  </div>
+  </div>
+</div>
+</block>
+
+
+
+<block name="seajs">
+// <script type="text/javascript">
+  var detail = <{$detail}>;
+
+  function clickProduct(id){
+    $.each(detail,function(k,n){
+    if (n['ar_id'] == id) {
+      var k = k+1;
+      $('.detail_mid li:eq('+k+')').addClass('goods_select')
+      $('.detail_mid li:eq('+k+')').css('border','1px solid red')
+      $('.d-bottom tbody').html(' <table> <tr> <td width="60">价钱：</td> <td width="250">'+n.ar_price+'元</td> </tr> <tr> <td width="60">位置：</td> <td width="250">'+n.goods_address+'</td> </tr> <tr> <td>数量：</td> <td>'+n.goods_number+'</td> </tr> <tr> <td>尺寸：</td> <td>'+n.ar_height+'M（H）* '+n.ar_width+'M（W）</td> </tr> <tr> <td>形式：</td> <td>围栏看板</td> </tr> <tr> <td>说明：</td> <td>'+n.goods_introduce+'</td> </tr> </table> ')
+    }
+   })
+  }
+
+  function doubleClick(id){
+
+    $.each(detail,function(k,n){
+    if (n['ar_id'] == id) {
+      var k = k+1;
+      $('.detail_mid li:eq('+k+')').addClass('goods_select')
+      var attr = $('.detail_mid li:eq('+k+')')
+
+      $('.detail_mid li:eq('+k+')').css('border','1px solid red')
+
+     
+    }
+   })
+  }
+
+
+</block>

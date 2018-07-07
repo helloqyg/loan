@@ -1,0 +1,56 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="foundation">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>轻松公益</span>
+            </p>
+        </header>
+        <main class="main">
+
+
+            <volist name='result' id ='v'>
+            <a href="<{:U('detail',array('id'=>$v['id']))}>">
+                <div class="cont">
+                    <!--信息-->
+                    <div class="unifo">
+                        <span class="img" style="margin-right:0.1rem;">
+                            <img src="<{:get_img($v['ins_logo'])}>" alt="">
+                        </span>
+                         <{$v.ins_name}>
+                    </div>
+                    <!--内容-->
+                    <div class="container">
+                        <div class="left">
+                            <img src="<{:get_first_img($v['personal_img'])}>" alt="">
+                        </div>
+                        <div class="right">
+                            <p class="tit">慈善募捐 | <{$v.title}></p>
+                            <!--进度条-->
+                            <div class="schedule">
+                                <p>
+                                    <span class="bac" style="width: <{:get_money_ratio($v['id'],3)}>%;"></span>
+                                </p>
+                                <span><{:get_money_ratio($v['id'],3)}>%</span>
+                            </div>
+                            <div class="bottom">
+                               <span>已筹<{:get_sum_money($v['id'],3)}>元</span>
+                                    <span>目标 <{$v.target_money}>元</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+</volist>
+
+
+
+        </main>
+        <footer class="footer"></footer>
+</body>
+</html>
+</block>
+<block name='js'>
+
+</block>

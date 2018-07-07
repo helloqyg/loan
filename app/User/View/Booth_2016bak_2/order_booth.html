@@ -1,0 +1,97 @@
+<extend name="Public:base" />
+<block name="css">
+	<link rel="stylesheet" href="__PUBLIC__/css/ui-dialog.css">
+</block>
+<block name="main">
+<div class="main" style="padding-top:8px; min-height:450px;">
+    <div class="weee_tit">订单提交<span>* 请认真核对以下信息</span></div>
+	<div class="paydetail">
+	<table>
+	<tr>
+	<td width="219"><strong>商品名称</strong></td>
+	<td width="82"><strong>展馆类型</strong></td>
+	<td width="78"><strong>展馆</strong></td>
+	<td width="83"><strong>展位号</strong></td>
+	<td width="95"><strong>面积</strong></td>
+	<!--<td width="85"><strong>总额（元）</strong></td>-->
+	<td width="98"><strong>展位定金（元）</strong></td>
+
+	</tr>
+	<tr>
+	<td width="219">2016中国国际电梯展览会展位</td>
+	<td width="82"><{:get_chart_type($booth_info['hall_type'])}></td>
+	<td width="78"><{$hall}></td>
+	<td width="83"><{:strtoupper($booth_info['booth_num'])}></td>
+	<td width="95"><{$booth_info['area']}></td>
+	<!--<td width="85"><span id="price_1"><{$booth_info['payment']}></span></td>-->
+	<td width="98"><span id="price_2"><{$booth_info['price']}></span></td>
+	
+	</tr>
+	</table>
+	<style>
+	table{ width:1100px; margin:0 auto;border-collapse:collapse;}
+	table tr{ height:36px;}
+	table tr td{ font-size:16px; color: #000000; border-top:1px #666666 solid; padding-left:5px;}
+	</style>
+	<div class="alipay">
+		<span>支付方式：</span>
+			<label>
+				<input type="radio" name="type" value="1" style="margin:6px 10px 0px 11px;" id="alipay_bank" checked="checked">
+			</label>
+			<img src="__IMAGES__/pay_ico.jpg" />
+			<label>
+				<input type="radio" name="type" value="2" style="margin:6px 10px 0px 11px;" id="blank_select" > 银行汇款
+			</label>
+			
+	</div>
+	  <div class="clear"></div>
+	  <div class="alipay"><span>备注：</span> 
+	  	<textarea onpaste="return false" placeholder=""  cols="43" rows="3" name="remark" ></textarea>
+	  </div>
+	  <div class="clear"></div>
+	  <input type="hidden" name="aid" value="<{$aid}>" />
+	  <div class="pay_sl">实付款：<font><span id="price_3"><{$booth_info['price']}></span></font> 元<p><input name="login_step1" id="order_trade" type="submit" value="确认支付" class="reg_next"></p></div>
+	</div>
+</div>
+<div id="info" style="display:none;"></div>
+</block>
+<block name="js">
+<script src="/public/admin/js/jquery-1.11.1.min.js"></script>
+<script src="/public/js/dialog.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var d = dialog({
+			title: '预定提醒',
+			content: '<font color="red" style="font-weight:bold;">如果您选择（银行汇款）方式进行付款，由于转帐延时，请在至少两个工作日前进行付款，再预定展位。<br/><p>如果我方核对转帐电子凭证时，确认未收到预付款，我方将取消订单。</font>',
+			cancelValue: '确定',
+			cancel: function (){  
+			}
+		});
+	d.show();
+	$('#blank_select').click(function(){ 
+		$("#alipay_bank").removeAttr("checked");
+		$("#blank_select").prop("checked", true);
+		var aid = $("input[name='aid']").val();
+		var d = dialog({
+			title: '汇款提示',
+		 	<php> $bank_info = get_bank($bank);</php>
+			content: '<font color="red" style="font-weight:bold;">特别提醒：选择银行汇款，请先汇款，并留存电子凭证，再进行展位预定。</font><br/><br/>收   款   方：<{$bank_info['name']}>（请将汇款凭证截图或者扫描，点击下一步上传凭证）<br/><br/>开户银行：<{$bank_info['bank']}><br/><br/>收款帐号：<font color="red"><{$bank_info['number']}></font>',
+			okValue: '下一步',
+			ok: function () {
+			    window.location.href="/user/booth/pay_up/id/"+aid+".html"
+			    return false;
+			},
+			cancelValue: '取消',
+			cancel: function (){
+				$("#blank_select").removeAttr("checked");
+				$("#alipay_bank").prop("checked",true);  
+			}
+		});
+		d.show();
+	});
+})
+</script>
+</block>
+<block name="seajs">
+seajs.use('order');
+</block>

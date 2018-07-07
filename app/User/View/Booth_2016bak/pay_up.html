@@ -1,0 +1,135 @@
+<extend name="Public:base1" />
+<block name="css">
+	<link rel="stylesheet" href="__PUBLIC__/js/uploadify/uploadify.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/skin/layer.css">
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<script src="__PUBLIC__/js/layer.js"></script>
+	<style>
+	.xing{width: auto;}
+	.upload-pre-item{float:left;width:318px;height:auto;}
+	</style>
+</block>
+<block name="main">
+<form method="post" action="" id="form" class="regform">
+<div class="main" style="padding:20px 0 50px 0;">
+  <div class="reg_head"> 企业汇款凭证 </div>
+  <div class="reg_pro1">
+    <div class="item">
+      <div class="label">企业名称：</div>
+      <div class="input-box">
+        <input onpaste="return false" type="text" placeholder="" id="company" name="company" value="<{$company_name}>" class="ipt" readonly >
+      </div>
+      <div class="xing">*</div>
+      <div class="clear"></div>
+    </div>
+    <div class="item">
+      <div class="label">付款总额：</div>
+      <div class="input-box">
+        <input  type="text"  id="price" name="price" value="<{$price}>" class="ipt" readonly >
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="item">
+      <div class="label">付款凭证：</div>
+      <div style="border:none;" class="input-box">
+			<div id="queue"></div>
+			<input id="file_upload" name="fukuan" type="file" class="ipt" multiple="true">
+			<div class="upload-pre-item" style="display:none;"></div>
+			<input type="hidden" id="scan_part" name="fukuan" value="" >
+      </div>
+      <div class="xing">* 请保证上传文件在3M以内</div>
+      <div class="clear"></div>
+    </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="reg_btn1" style="padding-right:190px;">
+    	<input type="hidden" name="type" value="<{$type}>">
+		<input type="hidden" name="pid" value="<{$pid}>">
+      <input name="login_step1" id="login_button" type="button" value="提&nbsp;&nbsp;交" class="reg_back">
+    </div>
+  </div>
+  </form>
+</div>
+<script src="__PUBLIC__/js/uploadify/jquery.uploadify.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	window.layer = layer;
+	$("#login_button").click(function(){
+		if($('#scan_part').val() == ""){
+			layer.msg('图片没有上传成功', {icon: 5});
+			return false;
+		}else{
+			var self = $("form");
+			$.ajax({ 
+				url: self.attr("action"), 
+				type : "POST",  
+				dataType : "json",
+				data:self.serialize(),
+				beforeSend:function(){
+					//layer.msg('正在查询请稍等', {icon: 16});
+					layer.load();
+				},
+				success: function(data){
+					setTimeout(function(){
+						layer.closeAll('loading');
+					}, 1);
+					if( data.status == 0 ){
+						layer.msg(data.info,{icon: 5});
+					}else{
+						window.location.href="/user/apply/checks.html";
+					}
+				}
+			});
+		}
+		return false;
+	});
+		
+		/*
+	$(".regform").Validform({
+		tiptype:function(msg,o,cssctl){
+			var objtip = o.obj.parent().siblings().eq(1);
+			cssctl(objtip,o.type);
+			objtip.text(msg);
+		},
+		label:".label",
+		showAllError:true,
+		ajaxPost:true,
+		callback:function(data){
+			if(data.status == 1 ){
+				
+			}else{
+				alert(data.msg);
+			}
+		}
+
+	});
+	
+	*/
+	// image upload
+	$('#file_upload').uploadify({
+		"width"       : 318,
+		"height"	  : 36 ,
+		"fileObjName" : "upfile",
+		"swf"         : "__PUBLIC__/js/uploadify/uploadify.swf",
+		"uploader"    : "<{:U('Reg/upload')}>",
+		"buttonText"  : "上传扫描件",
+		"fileTypeExts": "*.jpeg;*.gif; *.jpg; *.png", 
+		"onUploadSuccess" : uploadPicturecover,
+	});
+
+	// upload success callback function
+	function uploadPicturecover(file,data){
+		var obj = eval( "(" + data + ")" );
+		if(obj.state == 'SUCCESS'){
+			$(".upload-pre-item").css('display','block');
+			var html = '<img src="/upload/' + obj.url + '" width="318px;" /></br>';
+			$(".upload-pre-item").append(html); 
+			$("#scan_part").val("/upload/"+obj.url);
+		}
+	}
+
+});
+</script>
+</block>

@@ -1,0 +1,355 @@
+<extend name="Public:base" />
+<block name="css">
+<link type="text/css" href="__CSS__/zw_select.css"  rel="stylesheet" />
+<!-- notic小提示平米数 -->
+<link type="text/css" href="__CSS__/zw_select1.css"  rel="stylesheet" />
+<style type="text/css">
+#weee_area{
+  float: right;
+  padding-right: 30px;
+}
+#weee_area #search{
+  margin-left: 5px;
+  background-color:#23ac38;
+  color:#eee;
+  height: 26px;
+}
+#weee_area label{
+  color:#666;
+  margin-bottom:2px;
+  padding:8px 3px; 0 20px;
+}
+#weee_area input{
+  width: 45px;
+  text-align: center;
+  border:solid 1px #ccc;
+  color:#BDBDBD;
+}
+</style>
+</block>
+<block name="main">
+<div class="main" style="padding-top:2px;">
+  <div class="weee_tit">
+    <{:get_chart_type($company_info['hall_type'])}>馆 — <{$company_info['hall_num']}>馆
+    <!--<div id="weee_area">
+      <form method="GET" action="">
+      <label>展位搜索：</label><input type="text" id="s_area" name="s_area" value="<{$s_area}>"> - <input type="text" id="e_area" name="e_area" value="<{$e_area}>"> (平米数) <input type="submit" value="搜索" id="search">
+      </form>
+    </div>-->
+  </div>
+<div class="weee_con" style="padding: 0; ">
+    <!--展馆选择-->
+    <div  class="zw_select"  style=" background:url(__HOME__/images/quyuE.jpg) no-repeat;height:834px;">
+   <!--    <div class="shiyitu" style="float: left;width: 630px;z-index: 99999;position: relative;" onclick="$('#shiyitu').toggle('slow');">
+        <input type="submit" value="查看展馆示意图" style="
+            float: left;
+            margin-top: 40px;
+            width: 120px;
+            height: 30px;
+            background-color: #359704;
+            border: solid 1px #037d00;
+            border-radius: 6px;
+            color:white;
+            font-weight: bold;
+        ">
+        <img src="images/52shiyi.png" style="float: left;margin-top: 12px;display:none;" id="shiyitu">
+      </div> -->
+  <style type="text/css">
+  .zw_select  a:hover{color:#ffffff}
+  .zw_select  a{color:#000000}
+  </style>
+
+
+<div class="zw_8709"></div>
+<div class="zw_8E08"></div>
+<div class="zw_8E07"></div>
+<div class="zw_8E06"></div>
+<div class="zw_8E05"></div>
+<div class="zw_8E03"></div>
+<div class="zw_8E02"></div>
+<div class="zw_8E01"></div>
+<div class="zw_8710"></div>
+<div class="zw_8708"></div>
+<div class="zw_8693"></div>
+<div class="zw_8677"></div>
+<div class="zw_8662"></div>
+<div class="zw_8661"></div>
+<div class="zw_8637"></div>
+<div class="zw_8636"></div>
+<div class="zw_8621"></div>
+<div class="zw_8692"></div>
+<div class="zw_8678"></div>
+
+<div class="zw_8631"></div>
+<div class="zw_8610"></div>
+<div class="zw_8616"></div>
+<div class="zw_8626"></div>
+<div class="zw_8617"></div>
+<div class="zw_8620"></div>
+<div class="zw_8606"></div>
+<div class="zw_8605"></div>
+<div class="zw_8601"></div>
+<div class="zw_8711"></div>
+<div class="zw_8707"></div>
+<div class="zw_8695"></div>
+<div class="zw_8691"></div>
+<div class="zw_8679"></div>
+<div class="zw_8676"></div>
+<div class="zw_8663"></div>
+<div class="zw_8660"></div>
+<div class="zw_8638"></div>
+<div class="zw_8635"></div>
+<div class="zw_8622"></div>
+<div class="zw_8619"></div>
+<div class="zw_8607"></div>
+<div class="zw_8603"></div>
+<div class="zw_8712"></div>
+<div class="zw_8706"></div>
+<div class="zw_8696"></div>
+<div class="zw_8690"></div>
+<div class="zw_8680"></div>
+<div class="zw_8675"></div>
+<div class="zw_8665"></div>
+<div class="zw_8659"></div>
+<div class="zw_8639"></div>
+<div class="zw_8633"></div>
+<div class="zw_8623"></div>
+<div class="zw_8618"></div>
+<div class="zw_8608"></div>
+<div class="zw_8602"></div>
+<div class="zw_8713"></div>
+<div class="zw_8705"></div>
+<div class="zw_8697"></div>
+<div class="zw_8689"></div>
+<div class="zw_8681"></div>
+<div class="zw_8673"></div>
+<div class="zw_8666"></div>
+<div class="zw_8658"></div>
+<div class="zw_8650"></div>
+<div class="zw_8632"></div>
+<div class="zw_8625"></div>
+<div class="zw_9617"></div>
+<div class="zw_8609"></div>
+<div class="zw_8E09"></div>
+<div class="zw_8715"></div>
+<div class="zw_8703"></div>
+<div class="zw_8698"></div>
+<div class="zw_8688"></div>
+<div class="zw_8682"></div>
+<div class="zw_8672"></div>
+<div class="zw_8667"></div>
+<div class="zw_8657"></div>
+<div class="zw_8651"></div>
+<div class="zw_8731"></div>
+<div class="zw_8726"></div>
+<div class="zw_8716"></div>
+<div class="zw_8710"></div>
+<div class="zw_8716"></div>
+<div class="zw_8702"></div>
+<div class="zw_8699"></div>
+<div class="zw_8687"></div>
+<div class="zw_8683"></div>
+<div class="zw_8671"></div>
+<div class="zw_8668"></div>
+<div class="zw_8656"></div>
+<div class="zw_8653"></div>
+<div class="zw_8652"></div>
+<div class="zw_8630"></div>
+<div class="zw_8627"></div>
+<div class="zw_8615"></div>
+<div class="zw_8611"></div>
+<div class="zw_8E10"></div>
+<div class="zw_8717"></div>
+<div class="zw_8701"></div>
+<div class="zw_8700"></div>
+<div class="zw_8686"></div>
+<div class="zw_8685"></div>
+<div class="zw_8670"></div>
+<div class="zw_8669"></div>
+<div class="zw_8655"></div>
+<div class="zw_8629"></div>
+<div class="zw_8628"></div>
+<div class="zw_8613"></div>
+<div class="zw_8612"></div>
+<div class="zw_8718"></div>
+<div class="zw_8719"></div>
+<div class="zw_8720"></div>
+<div class="zw_8721"></div>
+<div class="zw_8722"></div>
+<div class="zw_8723"></div>
+<div class="zw_8725"></div>
+<div class="zw_8726"></div>
+<div class="zw_8727"></div>
+<div class="zw_8728"></div>
+<div class="zw_8729"></div>
+<div class="zw_8730"></div>
+
+
+
+    </div>
+    <!--展馆选结束择-->
+    <div class="clear"></div>
+  </div>
+<style type="text/css">
+</style>
+  </div>
+</div>
+</block>
+<block name="seajs">
+// <script type="text/javascript">
+seajs.use('jquery',function($){
+
+  $(function(){
+    var bid = <{$booth}>;
+    if(bid.length == 0){
+      $('.zw_select div').each(function(){
+        $class = $(this).attr('class');
+        $id = $class.split("_")[1];
+        //已售出状态
+         $(".zw_"+$id).css('background','url(/public/home/images/status0.jpg)'); 
+         $(".zw_"+$id).css('background-size','100% 100%')
+      });
+      alert('没有足够的展位！！');
+    }else{
+         for(var i =0 ;i<bid.length ;i++){
+          var width = bid[i].width * 12;
+          var height = bid[i].height * 12;
+        // $class = $(this).attr('class');
+        // $id = $class.split("_")[1];
+        if(bid[i].status == 0 || bid[i].status == 2 ){   
+          //已售出改变为灰色
+           $(".zw_"+bid[i].booth_num).css({'background':'url(/public/home/images/status0.jpg)',
+                                            'width':width+'px',
+                                            'height':height+'px',
+                                            'position':'absolute',
+                                            'font-size':'12px'
+                                      }); 
+           $(".zw_"+bid[i].booth_num).css('background-size','100% 100%')
+           $(".zw_"+bid[i].booth_num).css('line-height','40px')
+           $(".zw_"+bid[i].booth_num).html(bid[i].booth_num)
+        }else if(bid[i].status == 1 ){
+          //正常售卖改变为绿色并增加hover事件
+          var a = bid[i].area;
+          var a1 = bid[i].booth_num;
+          console.log(bid[i]);
+           $(".zw_"+bid[i].booth_num).css({'background':'url(/public/home/images/status1.jpg)',
+                                            'line-height':'40px',
+                                            'width':width+'px',
+                                            'height':height+'px',
+                                            'position':'absolute',
+                                            'font-size':'12px'
+                                        })
+            // $(".zw_"+bid[i].booth_num).html(bid[i].booth_num)
+           $(".zw_"+bid[i].booth_num).css('background-size','100% 100%')
+           //给每个展位追加一个a链接到付款界面
+            $(".zw_"+bid[i].booth_num).append('<a href="/user/booth/order/'+bid[i].url+'.html">'+bid[i].booth_num+'</a>');
+            $(".zw_"+bid[i].booth_num).append('<div class="notic_hover">'+bid[i].area+'(平米)</div> ')
+            //样式必须写在js里,不可写在css文件里.
+            $('.notic_hover').css({'background':'url(/public/home/images/hover.png) no-repeat',
+                                    'top'     : '-48px',
+                                    'left'    : '-72px',
+                                    'z-index' : '300',
+                                    'display' : 'none',
+                                    'line-height': '20px'
+                                  })
+            //给摊位改变鼠标放上状态增加提示框,并从数据库当前展位的面积信息予以提示
+            // $('.zw_'+bid[i].booth_num).after('<div class="notic_hover">'+bid[i].area+'</div> ')
+            $(".zw_"+bid[i].booth_num).hover(function(){
+
+                $(this).css('background','url(/public/home/images/status2.jpg)')
+                $(this).css('background-size','100% 100%')
+                $(this).find('.notic_hover').show();
+                //ajax通过booth_num得到展位的面积
+                /*$(this).after('<div class="notic_hover"></div> ')
+                $.ajax                                                                             ({
+                   type: "get",
+                   url: "<{:U('booth/get_area')}>",
+                   data: "booth_num="+$(this).attr('class'),
+
+                   success: function(msg){
+                   var msg = JSON.parse(msg)
+                   var attr = 'zw_'+msg.booth_num;
+                   console.log(msg.area) ;
+
+                    $('.notic_hover').html(msg.area+'(平米)')
+                   },
+                   complete: function(xhr, textStatus) { } 
+
+                })
+                //获得当前绿色div的决定定位坐标给橘黄色提示信息绝对定位
+                var x = $(this).position().top-50;
+                var y = $(this).position().left-66;
+                $('.notic_hover').css('top',' '+x+'px')
+                $('.notic_hover').css('left',' '+y+'px')
+                //上方的橘黄色div的png背景图片
+                $('.notic_hover').css('background','url(/public/home/images/hover.png) no-repeat')
+                $('.notic_hover').css('z-index','300')*/
+          },function(){
+            //移除放上状态
+            $(this).css('background','url(/public/home/images/status1.jpg)')
+            $(this).css('background-size','100% 100%')
+             $('.notic_hover').hide();
+          })
+
+
+        }
+
+      };
+
+
+
+
+
+
+
+
+    }
+    
+
+    //area search
+    $('form').submit(function(){
+        if($('#e_area').val() == 0 || $('#e_area').val() == ""){
+            alert('请输入面积区间');
+            $('#e_area').val("");
+            $('#e_area').focus();
+            return false;
+        }
+
+        if( parseInt($('#s_area').val()) > parseInt($('#e_area').val()) ){
+          alert('请输入正确的面积区间');
+          return false;
+        }
+    });
+
+
+  //展位推荐功能
+  $(function(){
+    var url = location.href;
+    indexof = url.indexOf('/flag/') +6;
+ var sub = url.substr(indexof,4)
+  if (url.indexOf('/flag/') >=1) {
+  
+    $top = $('.zw_'+sub).position().top - 100;
+    $left = $('.zw_'+sub).position().left + 20 ;
+    console.log($top,$left);
+    $('.zw_'+sub).after('<div class="jiantou"> <img alt="箭头" id="guanbiimg" title="点击关闭" src="/public/home/images/jiantou.png" width="200" alt="Planets" usemap="#planetmap"></div>')
+     $('.jiantou').css({             'top'    : $top+'px',
+                                    'left'    : $left+'px',
+                                    'z-index' : '390',
+                                    'position':'absolute'
+                                  })
+     $('#guanbiimg').click(function(){
+      $('.jiantou').hide();
+     })
+
+     }
+  })
+                                  
+
+
+
+  });
+});
+
+
+</block>

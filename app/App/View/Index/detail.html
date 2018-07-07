@@ -1,0 +1,169 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="detail">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>标题</span>
+                <i class="iconfont icon-fenxiang"></i>
+            </p>
+        </header>
+        <main class="main">
+            <ul class="unifo">
+               <!-- <li>
+                    <p class="img1">
+                        <img src="img/touxiang-1@2x.png" alt="">
+                    </p>
+                    <i class="iconfont icon-nv"></i>
+                    步枪和小米
+                </li>-->
+                <li>
+                    <p class="img1">
+                        <img src="img/icon-1@2x.png" alt="">
+                    </p>
+                    北京天使妈妈慈善基金会
+                </li>
+                <li>
+                    <i class="iconfont icon-shijian"></i>
+                    剩余<b>20</b>天
+                </li>
+            </ul>
+            <div class="top1">
+                <p class="tit">91岁抗战英雄患病，今需要好心人救助！</p>
+                <div class="img2">
+                    <img src="img/three@2x.png" alt="">
+                </div>
+                <!--已经筹款-->
+                <div>
+                    <p class="jin">
+                        <span style="width: 40%;"></span>
+                        <i class="iconfont icon-woniu" style="left:40%;"></i>
+                    </p>
+                    <p class="tex1">
+                        <span>已筹款60000元</span><span>需筹60000元</span>
+                    </p>
+                </div>
+                <!--已经帮助的-->
+                <div>
+                    <!--进度条-->
+                    <p class="jin">
+                        <span style="width: 40%;"></span>
+                        <i class="iconfont icon-woniu" style="left:40%;"></i>
+                    </p>
+                    <p class="nums"><span>已帮助666次</span></p>                     
+                </div>
+                <!--排行榜-->
+                <div class="ranking">
+                    <p class="left">
+                        <i class="iconfont icon-gushi"></i>
+                        爱心贡献榜
+                    </p>
+                    <p class="right">
+                        <span>
+                            <img src="img/touxiang-3@2x.png" alt="">
+                            <i class="iconfont icon-guanjun"></i>
+                        </span>
+                        <span>
+                            <img src="img/touxiang-3@2x.png" alt="">
+                            <i class="iconfont icon-jijun"></i>
+                        </span>
+                        <span>
+                            <img src="img/touxiang-3@2x.png" alt="">
+                            <i class="iconfont icon-yajun"></i>
+                        </span>
+                        <a href="aixin.html"><i class="iconfont icon-xiangyoujiantou"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="center">
+                <div class="top">
+                    <p>
+                        <span>项目详情</span>
+                        <span>Project details</span>
+                    </p>
+                </div>
+                <p class="cont">
+                    照片中的这个人曾经是一位抗战英雄照片中的这个人曾经是一位抗战英雄
+                </p>
+            </div>
+            <div class="bottom">
+                <div class="top">
+                    <p>
+                        <span>TA的帮助</span><span>Help from Ta</span>
+                    </p>
+                </div>
+                <ul>
+                    <li>
+                        <img src="img/touxiang-3@2x.png" alt="">
+                    </li>
+                    <li>
+                        <div class="tot">
+                            <p><span style="color:#2ab2f6;">太阳张</span>支持了<span style="color:#ff2b2b;">100元</span></p>
+                            <p style="color:#939393;">10分钟前</p>
+                        </div>
+                        <p class="bob">
+                            <span>
+                                <i class="iconfont icon-xin d1" style="display:none;"></i>
+                                <i class="iconfont icon-heart d2"></i>
+                                <span style="margin:0;">4789</span>
+                            </span>
+                            <span><i class="iconfont icon-pinglun"></i>521</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="foot">
+                <a href="report.html">
+                    <span>
+                        <i class="iconfont icon-jubao"></i>举报
+                    </span>
+                </a>
+                <a>
+                    <span>
+                        <i class="iconfont icon-guanzhu"></i><i class="iconfont icon-guanzhu1" style="display: none;"></i>关注
+                    </span>
+                </a>
+                <a href="">
+                    <span>
+                        <i class="iconfont icon-heart"></i>爱心
+                    </span>
+                </a>
+            </div>
+            <p>
+                <a href="helpIt.html">
+                    帮助TA
+                </a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+</block>
+<script>
+    $('.icon-fanhui').click(function(){
+        window.history.go(-1);
+    })
+    // 点赞
+    $('.d2').click(function(){
+        var num = $(this).parent().find('span').text()*1;
+        $(this).parent().find('span').text(num+1)
+        $(this).hide().prev().show();
+    })
+    // 取消点赞
+    $('.d1').click(function(){
+        var num = $(this).parent().find('span').text()*1;
+        console.log(num)
+        $(this).parent().find('span').text(num-1);
+        $(this).hide().next().show();
+    })
+    // 关注
+    $('.icon-guanzhu').click(function(){
+        $(this).hide().parent().find('.icon-guanzhu1').show();
+    })
+    // 取消关注
+    $('.icon-guanzhu1').click(function(){
+        $(this).hide().parent().find('.icon-guanzhu').show();
+    })
+</script>

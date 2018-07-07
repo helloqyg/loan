@@ -1,0 +1,22 @@
+<extend name="Public:base" />
+<block name="main">
+<div class="main" style="padding-top:8px; min-height:450px;">
+  <div class="pay_css">
+<div class="pay_succ"><span><img src="__IMAGES__/pay.jpg" /></span><label style="font-size:18px;line-height:40px;">您预定的展位已经提交,审核完成后进行购买！</label></div>
+<div class="clear"></div>
+<div class="pay_menu"><span>所属展馆：</span><label><{:get_hall_name($bid)}> 号馆</label></div>
+<div class="clear"></div>
+<div class="pay_menu"><span>展位号码：</span><label><{:get_booth($bid);}> 号</label></div>
+<div class="clear"></div>
+<!-- <div class="pay_menu"><span>订单号：</span><label><{$info['out_trade_no']}></label></div> -->
+<div class="clear"></div>
+<!-- <div class="pay_menu"><span>支付金额：</span><label><font><{$info['price']}></font> 元</label></div> -->
+	<div class="clear"></div>
+	<div class="reg_btn1" style="width:350px;">
+		<a href="<{:U('/user/index')}>" class="s_btn">会员中心</a>
+		<a  onclick="javascript:window.open('http://wpa.qq.com/msgrd?V=3&uin=23169450&Site=中国国际电梯网客服&Menu=yes', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" class="s_btn">联系客服 </a>
+	</div>
+    <div class="clear"></div>
+  </div>
+</div>
+</block>

@@ -1,0 +1,151 @@
+<extend name="Public:base" />
+<block name="content">
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><{$header_title}></h3>		
+				<div class="panel-options">
+				<div class="vertical-top">
+				</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+
+							<!-- 搜索 -->
+					<style type="text/css"> form{display: flex; } form input{margin-right: 30px; height: 25px; } form select{height: 25px; margin-right: 30px; } form input,form select,form button{flex-grow: 1; } </style>
+					<div class="col-md-12 ">
+						<form class="form-search" id="search" method="get" action="">
+					 <input type="text" name="title" value="<{$_GET.title}>"  placeholder="标题">
+						  <input type="text" name="min_money" value="<{$_GET.min_money}>" placeholder="目标金额(开始)">
+						  <input type="text" name="max_money" value="<{$_GET.max_money}>" placeholder="目标金额(结束)">
+						  <!-- <input type="text" name="rep_money"  value="<{$_GET.rep_money}>" placeholder="已筹金额"> -->
+						  <select name="status"  >
+										<option value="" >请选择状态</option>
+										<option value="2" >隐藏</option>
+										<option value="3" >筹款中</option>
+										<option value="4" >已结束</option>
+										
+									</select>
+									 <select name="is_top"  >
+										<option value="" >是否置顶</option>
+										<option value="1" >已置顶</option>
+										<option value="0" >未置顶</option>
+										
+									</select>
+									 <select name="type"  >
+										<option value="" >项目类型</option>
+										<volist name='dreamType' id='d'>
+											<option value="<{$d.id}>" ><{$d.name}></option>
+										</volist>
+										
+									</select>
+						  <button type="submit" class="btn">搜索</button>
+						</form>
+					</div>
+
+
+					<div class="col-md-12">
+						<table class="table table-bordered table-striped table-hover">
+							<thead>
+								<tr>
+									<th>用户</th>
+									<th>项目类型</th>
+									<th>项目名称</th>
+									<th>已筹金额</th>
+									<th>已打款金额</th>
+									<th>用户已提现金额</th>
+									<th>用钱申请时间</th>
+									<th class="col-md-2 text-center">
+										操作
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<volist name="result" id="m">
+								<tr>
+									<td><{:get_username($m['user_id'])}></td>
+									<td>
+										<if condition="$m.type eq 1"> 爱心救助
+											<elseif condition="$m.type eq 2"/>梦想清单
+											<elseif condition="$m.type eq 3"/>轻松公益
+											<else /> 
+											</if>
+									</td>
+									<td>
+										<a style="text-decoration:underline;" href="
+										<if condition="$m.type eq 1"> <{:U('jiuzhu/edit',array('id'=>$m['item_id']))}>
+											<elseif condition="$m.type eq 2"/><{:U('Dream/edit',array('id'=>$m['item_id']))}>
+											<elseif condition="$m.type eq 3"/><{:U('Relaxed/add',array('id'=>$m['item_id']))}>
+											<else /> 
+											</if>
+
+										"> <{:get_item_name($m['type'],$m['item_id'])}> </a>
+
+									<td> <a style="text-decoration:underline;" href="<{:U('Donor/item_detail',array('item_id'=>$m['item_id'],'type'=>$m['type']))}>"> <{:get_sum_money($m['item_id'],$m['type'])}>&nbsp;&nbsp;&nbsp;(<{:get_money_ratio($m['item_id'],$m['type'])}>%)</a></td>
+										</td>
+										<td>
+
+											<{$m.pay_price|default='未打款'}>
+
+										</td>
+										<td><{$m.use_price|default='未提现'}></td>
+									<td><{$m.date|date='Y-m-d',###}></td>
+									<td>
+										<a class="btn btn-info" href="<{:U('money/detail',array('id'=>$m['id']))}>" role="button">详情</a>
+										<a class="btn btn-warning" href="javascript:void(0);" onClick="del(<{$m.id}>)" role="button">删除</a>
+									</td>
+								</tr>
+								</volist>
+							</tbody>
+						</table>			
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<ul class="pagination">
+							<{$page}>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+<script type="text/javascript">
+function myrefresh(){window.location.reload();}
+//删除
+function del(aid){
+	if (confirm("确认删除吗")) {
+
+
+	var opts = {
+			"closeButton": true,
+			"debug": false,
+			"positionClass": "toast-top-full-width",
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": "2000",
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+		};
+	$.get("<{:U('Dream/del')}>", {id:aid},function(data){
+		if(data.status == 1){
+			toastr.success(data.info, opts);
+			setTimeout('myrefresh()',2000);
+		}else{
+			toastr.error(data.info, opts);
+		}
+
+	});
+	}
+}
+</script>
+</block>

@@ -1,0 +1,136 @@
+<extend name="Public:base" />
+<block name="css">
+<link type="text/css" href="__CSS__/zw_select.css"  rel="stylesheet" />
+<link type="text/css" href="__CSS__/zw_select1.css"  rel="stylesheet" />
+<style type="text/css">
+#weee_area{
+  float: right;
+  padding-right: 30px;
+}
+#weee_area #search{
+  margin-left: 5px;
+  background-color:#23ac38;
+  color:#eee;
+  height: 26px;
+}
+#weee_area label{
+  color:#666;
+  margin-bottom:2px;
+  padding:8px 3px; 0 20px;
+}
+#weee_area input{
+  width: 45px;
+  text-align: center;
+  border:solid 1px #ccc;
+  color:#BDBDBD;
+}
+</style>
+</block>
+<block name="main">
+<div class="main" style="padding-top:2px;">
+  <div class="weee_tit">
+   部件馆 — 7.2馆
+    <div id="weee_area">
+      <form method="GET" action="">
+      <label>展位搜索：</label><input type="text" id="s_area" name="s_area" value="<{$s_area}>"> - <input type="text" id="e_area" name="e_area" value="<{$e_area}>"> (平米数) <input type="submit" value="搜索" id="search">
+      </form>
+    </div>
+  </div>
+<div class="weee_con" style="padding: 0; background:url(__PUBLIC__/images/select_bg.jpg) no-repeat;">
+    <!--展馆选择-->
+    <div class="zw_select"  style=" background:url(__PUBLIC__/images/hall_bg5.png) no-repeat;height:760px;">
+   <!--    <div class="shiyitu" style="float: left;width: 630px;z-index: 99999;position: relative;" onclick="$('#shiyitu').toggle('slow');">
+        <input type="submit" value="查看展馆示意图" style="
+            float: left;
+            margin-top: 40px;
+            width: 120px;
+            height: 30px;
+            background-color: #359704;
+            border: solid 1px #037d00;
+            border-radius: 6px;
+            color:white;
+            font-weight: bold;
+        ">
+        <img src="images/52shiyi.png" style="float: left;margin-top: 12px;display:none;" id="shiyitu">
+      </div> -->
+		<div class="zw_7253"></div>
+    <div class="zw_7252"></div>
+    <div class="zw_723r"></div>
+    <div class="zw_7251"></div>
+    <div class="zw_723s"></div>
+    <div class="zw_7250"></div>
+    <div class="zw_7a58"></div>
+    <div class="zw_7a60"></div>
+    <div class="zw_7265"></div>
+    <div class="zw_723t"></div>
+    <div class="zw_7266"></div>
+    <div class="zw_7267"></div>
+    <div class="zw_7a71"></div>
+
+    <div class="zw_7a73"></div>
+    <div class="zw_7269"></div>
+    <div class="zw_7268"></div>
+    <div class="zw_7a70"></div>
+    <div class="zw_7a68"></div>
+    <div class="zw_7270"></div>
+    <div class="zw_7271"></div>
+    <div class="zw_7a62"></div>
+    <div class="zw_7a65"></div>
+    <div class="zw_7279"></div>
+    <div class="zw_723w"></div>
+    <div class="zw_7277"></div>
+    <div class="zw_7278"></div>
+    <div class="zw_7b11"></div>
+    <div class="zw_7b13"></div>
+    <div class="zw_7b16"></div>
+    <div class="zw_7276"></div>
+    <div class="zw_7275"></div>
+    <div class="zw_7b26"></div>
+      <div class="zw_7b23"></div>
+    <div class="zw_7b21"></div>   
+    <div class="zw_7272"></div>
+    <div class="zw_7273"></div>
+    <div class="zw_7b28"></div>
+    <div class="zw_7b33"></div>
+    <div class="zw_7b30"></div>
+    <div class="zw_7290"></div>
+    <div class="zw_723z"></div>
+    
+    <div class="zw_7291"></div> 
+    <div class="zw_723y"></div> 
+    <div class="zw_7d12"></div> 
+    <div class="zw_7d13"></div> 
+    
+    <div class="zw_7292"></div>
+      <div class="zw_723x"></div>
+    <div class="zw_7d06"></div>
+    <div class="zw_7d07"></div>
+    <div class="zw_7d02"></div>
+    <div class="zw_7d03"></div>
+    <div class="zw_7d01"></div>
+    <div class="zw_7d05"></div> 
+    
+   
+    <div class="zw_7b35"></div>
+    <div class="zw_7b37"></div>
+    </div>
+    <!--展馆选结束择-->
+    <div class="clear"></div>
+  </div>
+
+  </div>
+</div>
+</block>
+<block name="seajs">
+seajs.use('jquery',function($){
+	$(function(){
+		$('.zw_select div').each(function(){
+			$class = $(this).attr('class');
+			$id = $class.split("_")[1];
+			$(".zw_"+$id).css('background','url(__IMAGES__/zw5/'+$id+'-1.png) no-repeat'); 
+		});    
+		var bid = "<{$booth}>";
+		$(".zw_"+bid).css('background','url(__IMAGES__/zw5/'+bid+'.png) no-repeat'); 
+	}); 
+});
+</block>

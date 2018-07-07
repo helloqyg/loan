@@ -1,0 +1,156 @@
+<extend name="Public:base" />
+<block name="content">
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><{$header_title}></h3>		
+				<div class="panel-options">
+				<div class="vertical-top">
+				</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<!-- 搜索 -->
+					<style type="text/css"> form{display: flex; } form input{margin-right: 30px; height: 25px; } form select{height: 25px; margin-right: 30px; } form input,form select,form button{flex-grow: 1; } </style>
+					<div class="col-md-12 ">
+						<form class="form-search" id="search" method="get" action="">
+					 <input type="text" name="title" value="<{$_GET.title}>"  placeholder="标题">
+						  <input type="text" name="min_money" value="<{$_GET.min_money}>" placeholder="目标金额(开始)">
+						  <input type="text" name="max_money" value="<{$_GET.max_money}>" placeholder="目标金额(结束)">
+						  <!-- <input type="text" name="rep_money"  value="<{$_GET.rep_money}>" placeholder="已筹金额"> -->
+						  <select name="status"  >
+										<option value="" >状态</option>
+										<option value="0" >正在填写中</option>
+										<option value="1" >证明人未提交信息</option>
+										<option value="2" >等待审核中</option>
+										<option value="3" >筹款中</option>
+										<option value="4" >已结束</option>
+										
+									</select>
+									 <select name="recommend"  >
+										<option value="" >是否推荐</option>
+										<option value="1" >已推荐</option>
+										<option value="0" >未推荐</option>
+										
+									</select>
+									 <select name="is_success"  >
+										<option value="" >是否展示成功案例</option>
+										<option value="1" >是</option>
+										<option value="0" >否</option>
+										
+									</select>
+						  <button type="submit" class="btn">搜索</button>
+						</form>
+					</div>
+
+
+
+
+					<div class="col-md-12">
+						<table class="table table-bordered table-striped table-hover">
+							<thead>
+								<tr>
+									<th>用户</th>
+									<th>求助标题</th>
+									<th>目标金额</th>
+									<th>已筹金额</th>
+									<th>是否推荐</th>
+									<th>主页展示成功案例</th>
+									<th>发布时间</th>
+									<th>状态</th>
+									<th class="col-md-2 text-center">
+										操作
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<volist name="list" id="m">
+								<tr>
+									<td><{:get_username($m['user_id'])}></td>
+									<td><{$m.title|default='未填'}></td>
+									<td><{$m.target_money}></td>
+									<td> <a style="text-decoration:underline;" href="<{:U('Donor/item_detail',array('item_id'=>$m['id'],'type'=>1))}>"> <{:get_sum_money($m['id'],1)}>&nbsp;&nbsp;&nbsp;(<{:get_money_ratio($m['id'],1)}>%)</a></td>
+								
+									<th>
+										<if condition='$m.recommend eq 1'>
+											<span style="color: red">已推荐【<{:get_recomend_tag($m['tag'])}>】</span>
+											<else/>
+												未推荐
+										</if>
+										</th>
+										<th>
+										<if condition='$m.is_success eq 1'>
+											<span style="color: red">已展示</span>
+											<else/>
+												未展示
+										</if>
+										</th>
+									<td><{$m.create_date|date='Y-m-d',###}></td>
+									<td>
+										<if condition="$m.status eq 3"> 筹款中
+											<elseif condition="$m.status eq 4"/>已结束
+											<elseif condition="$m.status eq 2"/>等待审核中
+											<elseif condition="$m.status eq 1"/>证明人未提交信息
+											<elseif condition="$m.status eq 0"/>正在填写中
+											<else /> 
+											</if>
+									</td>
+									<td>
+										<a class="btn btn-info" href="<{:U('jiuzhu/edit',array('id'=>$m['id']))}>" role="button">修改</a>
+										<a class="btn btn-warning" href="javascript:void(0);" onClick="del(<{$m.id}>)" role="button">删除</a>
+									</td>
+								</tr>
+								</volist>
+							</tbody>
+						</table>			
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<ul class="pagination">
+							<{$page}>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+<script type="text/javascript">
+function myrefresh(){window.location.reload();}
+//删除
+function del(aid){
+	if (confirm("确认删除吗")) {
+
+
+	var opts = {
+			"closeButton": true,
+			"debug": false,
+			"positionClass": "toast-top-full-width",
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": "2000",
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+		};
+	$.get("<{:U('jiuzhu/del')}>", {id:aid},function(data){
+		if(data.status == 1){
+			toastr.success(data.info, opts);
+			setTimeout('myrefresh()',2000);
+		}else{
+			toastr.error(data.info, opts);
+		}
+
+	});
+	}
+}
+</script>
+</block>

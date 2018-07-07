@@ -1,0 +1,44 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="myLove">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>我的爱心</span>
+            </p>
+        </header>
+        <main class="main">
+            <ul class="top">
+                <li>
+                    <i class="iconfont icon-kehuqunzu"></i>
+                    <span>帮助地区</span>
+                </li>
+                <li>
+                    <i class="iconfont icon-icon2"></i>
+                    <span>爱心数量</span>
+                </li>
+                <li>
+                    <i class="iconfont icon-qian2"></i>
+                    <span>捐赠总额</span>
+                </li>
+            </ul>
+            <volist name='result' id='v'>
+            <ul class="container">
+                <li>
+                    
+                    <span><{:get_province($v['province'])}> - <{:get_city($v['city'])}></span>
+                </li>
+                <li><{$v.item_count}>个</li>
+                <li><{$v['item_count']*$v['single_price']}>元</li>
+            </ul>
+            </volist>
+        </main>
+    </block>
+    </div>
+</body>
+<script src="scripts/rem.js"></script>
+<script src="scripts/jquery.min.js"></script>
+</html>
+<block name='js'>
+
+</block>

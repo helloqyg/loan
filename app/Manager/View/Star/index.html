@@ -1,0 +1,144 @@
+<extend name="Public:base"/>
+<block name="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><{$header_title}></h3>
+                    <div class="panel-options">
+                        <div class="vertical-top">
+                        </div>
+                        <div style="float: right;"><button type="button"  class="btn aaa submit btn-info btn-single pull-center ajax-post"  target-form="form-horizontal">添加</button></div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <!-- 搜索 -->
+                        <style type="text/css"> form {
+                            display: flex;
+                        }
+
+                        form input {
+                            margin-right: 30px;
+                            height: 25px;
+                        }
+
+                        form select {
+                            height: 25px;
+                            margin-right: 30px;
+                        }
+
+                        form input, form select, form button {
+                            flex-grow: 1;
+                        } </style>
+                        <!--<div class="col-md-12 ">-->
+                            <!--<form class="form-search" id="search" method="get" action="">-->
+                                <!--<input type="text" name="title" value="<{$_GET.title}>" placeholder="标题">-->
+                                <!--<input type="text" name="min_money" value="<{$_GET.min_money}>" placeholder="目标金额(开始)">-->
+                                <!--<input type="text" name="max_money" value="<{$_GET.max_money}>" placeholder="目标金额(结束)">-->
+                                <!--&lt;!&ndash; <input type="text" name="rep_money"  value="<{$_GET.rep_money}>" placeholder="已筹金额"> &ndash;&gt;-->
+                                <!--<select name="status">-->
+                                    <!--<option value="">状态</option>-->
+                                    <!--<option value="0">正在填写中</option>-->
+                                    <!--<option value="1">证明人未提交信息</option>-->
+                                    <!--<option value="2">等待审核中</option>-->
+                                    <!--<option value="3">筹款中</option>-->
+                                    <!--<option value="4">已结束</option>-->
+
+                                <!--</select>-->
+                                <!--<select name="recommend">-->
+                                    <!--<option value="">是否推荐</option>-->
+                                    <!--<option value="1">已推荐</option>-->
+                                    <!--<option value="0">未推荐</option>-->
+
+                                <!--</select>-->
+                                <!--<button type="submit" class="btn">搜索</button>-->
+                            <!--</form>-->
+                        <!--</div>-->
+
+
+                        <div class="col-md-12">
+                            <table class="table table-bordered table-striped table-hover">
+                                <thead>
+                                <tr>
+                                    <th>明星</th>
+                                    <th>头像</th>
+                                    <th>点赞次数</th>
+                                    <th class="col-md-2 text-center">
+                                        操作
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <volist name="list" id="m">
+                                    <tr>
+                                        <td><{$m.name}></td>
+                                        <td><img style="height: 50px;" src="<{$m.img}>" alt=""></td>
+                                        <td><{:get_star_good_cnt($m['id'])}></td>
+
+                                        <td>
+                                            <a class="btn btn-info" href="<{:U('Star/add',array('id'=>$m['id']))}>"
+                                               role="button">修改</a>
+                                            <a class="btn btn-warning" href="javascript:void(0);"
+                                               onClick="del(<{$m.id}>)" role="button">删除</a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <ul class="pagination">
+                                <{$page}>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="script">
+    <script type="text/javascript">
+        $('.aaa').click(function(){
+            window.location.href="<{:U('Star/add')}>"
+        })
+
+        function myrefresh() {
+            window.location.reload();
+        }
+
+        //删除
+        function del(aid) {
+            if (confirm("确认删除吗")) {
+
+
+                var opts = {
+                    "closeButton": true,
+                    "debug": false,
+                    "positionClass": "toast-top-full-width",
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "2000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
+                $.get("<{:U('star/del')}>", {id: aid}, function (data) {
+                    if (data.status == 1) {
+                        toastr.success(data.info, opts);
+                        setTimeout('myrefresh()', 2000);
+                    } else {
+                        toastr.error(data.info, opts);
+                    }
+
+                });
+            }
+        }
+    </script>
+</block>

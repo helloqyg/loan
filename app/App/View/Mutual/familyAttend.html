@@ -1,0 +1,130 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="attend">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>加入互助</span>
+            </p>
+        </header>
+        <main class="main">
+            <form action="" method="post" onsubmit="return checkFrom()">
+                <div class="container" id="1">
+                    <input type="hidden" name="mutual_id" value="<{$_GET['id']}>">
+                    <p class="sort">
+                        <span>第1位</span>
+                        <i class="iconfont icon-delete2" onclick='fn(this)'></i>
+                    </p>
+                    <ul>
+                        <li>
+                            <span>姓名</span>
+                            <input type="text" name="auth_name[]" attr='1' placeholder="请输入姓名">
+                        </li>
+                        <li>
+                            <span>身份证</span>
+                            <input type="text" name="auth_id[]" attr='1' placeholder="请输入身份证号码">
+                        </li>
+                    </ul>
+                </div>
+                <p class="btn">
+                    <span>+为家人加入</span>
+                </p>
+
+                <label for="" class="check" >
+                    <input type="checkbox" name="check" value="我同意加入会员身体健康，无癌症或其他重大疾病史，并同意xx条款"/>我同意加入会员身体健康，无癌症或其他重大疾病史，并同意xx条款            
+                </label>
+        </main>
+        <!--底部导航-->
+        <footer class="footer">
+          <p>
+                <!-- <a href="/Mutual/helpIt.html"> -->
+                <!-- <a class="submit" href="javascript:void(0)"> -->
+                    <input type="submit"   >
+                <!-- <a class="submit" href="<{:U('Mutual/helpIt',array('id'=>$_GET['id']))}>"> -->
+                    <!-- 立即加入 -->
+                </a>
+            </p>
+            </form>
+        </footer>
+    </div>
+</body>
+<script src="scripts/rem.js"></script>
+<script src="scripts/jquery.min.js"></script>
+</html>
+</block>
+<block name='js'>
+    $('.icon-fanhui').click(function(){
+        window.history.go(-1);
+    })
+    var num = 1;
+    $('.btn').click(function(){
+        var n = ++num;
+        var ele = `
+            <div class="container" id=${n}>
+                <p class="sort">
+                    <span>第${n}位</span>
+                    <i class="iconfont icon-delete2" onclick='fn(this)'></i>
+                </p>
+                <ul>
+                    <li>
+                        <span>姓名</span>
+                        <input name='auth_name[]' attr=${n} type="text" placeholder="请输入姓名">
+                    </li>
+                    <li>
+                        <span>身份证</span>
+                        <input name="auth_id[]" attr=${n}  type="text" placeholder="请输入身份证号码">
+                    </li>
+                </ul>
+            </div>
+        `;
+        $(this).before(ele);
+        $('.icon-delete2').show();
+    })
+    // 删除
+    function fn(obj){
+        $(obj).parents('.container').remove();
+        // 获取container
+        $('.container').each(function(index, val){
+            var len = index+1;
+            $(val).find('.sort').find('span').text('第'+len+'位')
+        })
+        if($('.container').length == 1){
+            $('.icon-delete2').hide();
+        }
+    }
+
+    //-----------
+  var flag = 0;
+   function checkFrom(){
+
+ //判断表单数据是否为空
+  var t = $('form').serializeArray();
+    $.each(t,function(i,item){
+        if(item['value'] == '') {
+            console.log('信息不可为空') 
+            showMsg('信息不可为空')
+            flag = 1;
+            return false
+        } else {
+        flag = 0;
+    }
+    })
+$xieyi =  $('input[name=check]').prop('checked')
+           if(!$xieyi){
+                flag = 1;
+                showMsg('请阅读协议')
+                return false
+         }
+  if(flag == 0){
+
+
+           // showMsg('添加成功')
+            //sleep(100);
+    return true;
+}else{
+    return false
+}
+}
+
+</block>
+ 

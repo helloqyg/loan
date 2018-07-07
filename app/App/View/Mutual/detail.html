@@ -1,0 +1,59 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="activity">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>百万终身大病互助行动</span>
+            </p>
+        </header>
+        <main class="main">
+            <div class="banner"></div>
+            <div class="top">
+                <p>
+                    <span>活动介绍</span>
+                    <span>Application Details</span>
+                </p>
+            </div>
+            <div class="container">
+                <div class="cont">
+                    <p><{$result.detail}></p>
+                </div>
+            </div>
+
+
+
+             <div class="top">
+                <p>
+                    <span>申请条件</span>
+                    <span>Application Details</span>
+                </p>
+            </div>
+            <div class="container">
+                <div class="cont">
+                    <p><{$result.apply_condition}></p>
+                </div>
+            </div>
+
+
+        </main>
+        <!--底部导航-->
+        <footer class="footer">
+             <p>
+                <!-- <a href="/Mutual/helpIt.html"> -->
+                <a href="<{:U('Mutual/familyAttend',array('id'=>$_GET['id']))}>">
+                    立即加入
+                </a>
+            </p>
+        </footer>
+    </div>
+</body>
+<script src="scripts/rem.js"></script>
+<script src="scripts/jquery.min.js"></script>
+</html>
+</block>
+<script>
+    $('.icon-fanhui').click(function(){
+        window.history.go(-1);
+    })
+</script>

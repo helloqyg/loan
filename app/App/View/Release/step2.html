@@ -1,0 +1,209 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="shim">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>实名认证 </span>
+            </p>
+        </header>
+        <main class="main">
+            <div class="top">
+                <p>
+                    <span>个人信息认证</span>
+                    <span>Personal information</span>
+                </p>
+            </div>
+            <form id="mainForm" action="" method="post">
+            <ul>
+                <li><span class="tex">身份证号</span><input value="<{$result.me_id}>" type="text" name="me_id" id="me_id" placeholder="请输入身份证号码"></li>
+                <li><span class="tex">联系电话</span><input value="<{$result.me_tel}>" type="text"  name="me_tel"  id="me_tel" placeholder="请输入联系电话"></li>
+                <li><span class="tex">电子邮箱</span><input value="<{$result.me_email}>" type="text"  name="me_email" id="me_email"  placeholder="请输入电子邮箱"></li>
+                <li><span class="tex">银行卡号</span><input value="<{$result.me_bank}>" type="text"  name="me_bank" id="me_bank"  placeholder="请输入银行卡号"></li>
+            </ul>
+            <div class="top">
+                <p>
+                    <span>家人信息认证</span>
+                    <span>Family information</span>
+                </p>
+            </div>
+            <ul>
+                <li><span class="tex">身份证号</span><input  value="<{$result.family_id}>" type="text"  id="family_id" name="family_id" placeholder="请输入身份证号码"></li>
+                <li><span class="tex">联系电话</span><input  value="<{$result.family_tel}>" type="text" id="family_tel"  name="family_tel" placeholder="请输入联系电话"></li>
+            </ul>
+            <div class="top">
+                <p>
+                    <span>组织机构认证</span>
+                    <span>Organization certification</span>
+                </p>
+            </div>
+            <div class="check">
+                <volist name='organInfo' id='v'>
+                <label>
+                    <input type="radio"<if condition = "$result['organization'] eq $v['id']"> checked </if> name="organization" value="<{$v.id}>"><{$v.name}>
+                  </label>
+            </volist>
+            </div>
+            <style type="text/css">
+                .imgBox li{
+                    border: none;
+                }
+            </style>
+            <p style="padding-left:0.3rem;font-size:0.15rem;opacity: .7;margin-top:0.15rem;">请上传证明资料，可以添加5张图片</p >
+            <ul class="imgBox" id="1">
+                 <volist name="imgArray" id="v">
+                    <li class="img">
+                        <img src="<{$v.url}>" alt="">
+                        <i class="iconfont icon-delete2" onclick="remove(this)"></i>
+                    </li>
+
+                    </volist>
+                <li class="up">
+                    <span><i class="iconfont icon-plus-bold"></i></span>
+                        <input  type="file" name="img" class="file">
+                </li>
+            </ul>
+        </main>
+        <footer class="footer">
+            <input type="hidden" id="id" name="id" value="<{$_GET.id}>">
+            <p>
+                <input type="button" class="submit"  value="下一步" id="agreementSub" ></input>
+            </p>
+            </form>
+        </footer>
+    </div>
+</body>
+</html>
+</block>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/swiper.min.js"></script>
+<block name="js">
+
+
+       $('.icon-fanhui').click(function(){window.history.go(-1); }) 
+    // $('.file').change(function(e){
+    // var up = $(e.currentTarget).parents('li');
+    // fn(this.files[0],up);
+    // })
+    // function fn(da, up){
+    // var r = new FileReader();
+    // r.readAsDataURL(da);
+    // r.onload = function(e){
+    // var src = this.result;
+    // var ele = `
+    // <li class="img">
+    //     <img src="${src}" alt="">
+    //     <i class="iconfont icon-delete2" onclick="remove(this)"></i>
+    // </li>`;
+    // up.before(ele)
+    // if(up.parents('.imgBox').find('.img').length == 5){
+    // up.hide();
+    // }
+    // }
+    // }
+    function remove(obj){
+    var pid = $(obj).parents('.imgBox').attr('id');
+    $(obj).parents('li').remove();
+    console.log($('.imgBox[id='+pid+']').find('.img').length )
+    if($('.imgBox[id='+pid+']').find('.img').length < 5){
+    $('.imgBox[id='+pid+']').find('.up').show();
+    }
+    }
+
+     var flag = 0;
+    $('.submit').click(function(){
+       //判断表单数据是否为空
+      var t = $('form').serializeArray();
+        $.each(t,function(i,item){
+            if(item['value'] == '') {
+                console.log('信息不可为空') 
+                showMsg('信息不可为空')
+                flag = 1;
+                return false
+            } else {
+            flag = 0;
+        }
+        })
+
+
+        if(flag == 0){
+           
+            var len = $('.imgBox li').length
+            var count = 0;
+            var me_id = document.getElementById('me_id').value;
+            var me_tel = document.getElementById('me_tel').value;
+            var me_email = document.getElementById('me_email').value;
+            var me_bank = document.getElementById('me_bank').value;
+            var id = document.getElementById('id').value;
+            var family_id = document.getElementById('family_id').value;
+            var family_tel = document.getElementById('family_tel').value;
+            var organization = $('input:radio:checked').val();
+            var array= [];
+        for(var i = 0; i<len-1;i++){
+            array.push($('.imgBox li:eq('+i+') img').attr('src'))
+            // array +=  $('.imgBox li:eq('+i+') img').attr('src')+',';
+            //console.log($('.imgBox li:eq('+i+') img').attr('src'))
+        }
+        console.log(array);
+        $.ajax({
+            type:'POST',
+            url :"<{:U('release/step2')}>",
+            data:{
+                'array':array,
+                'me_id':me_id,
+                'me_tel':me_tel,
+                'me_email':me_email,
+                'me_bank':me_bank,
+                'family_id':family_id,
+                'family_tel':family_tel,
+                'organization':organization,
+                'id':id
+
+            },
+                success:function(msg){
+                console.log(msg)
+                if(msg != 0){
+                    window.location.href='/release/step3/id/'+msg+'.html'
+                }
+
+            }
+        })
+    }
+    })
+
+ //=======================================================
+    var imgarr = [];
+    $('.file').on('change',function(e){
+       var inp = $(this);
+       var up = $(e.currentTarget).parents('li');
+        $("#mainForm").ajaxSubmit({
+        url : "<{:U('Release/ajaxUpload')}>", // 请求的url  
+        type : "post", // 请求方式  
+        dataType : "json", // 响应的数据类型  
+        async :true, // 异步  
+        success: function (data1) { 
+            // alert(data1);
+            // $('.uploadImg').empty();
+           var ele = "\
+            <li class='img'>\
+                <img src='"+data1+"'>\
+                <i class='iconfont icon-delete2' onclick='remove(this)'></i>\
+            </li>";
+            //$('.imgBox').before(ele);
+            up.before(ele)
+            $('#mainForm').find('input[name=image]').val(data1);
+            imgarr.push(data1);
+        },  
+        error : function(){  
+            alert("数据加载失败！"); 
+        }  
+         });     
+
+
+    });
+     
+        $('#mainForm').submit(function(){
+        
+        $('.file').remove();
+    });
+</block>

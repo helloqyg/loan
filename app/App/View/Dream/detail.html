@@ -1,0 +1,303 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+<div class="detail">
+    <header class="header">
+        <p>
+            <i class="iconfont icon-fanhui"></i>
+            <span><{$itemInfo.title}></span>
+            <i class="iconfont icon-fenxiang"></i>
+        </p>
+    </header>
+    <style type="text/css"> .contt{display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6; overflow: hidden; height: 2.73rem; padding-bottom: 0.2rem; } .detail .reward {padding: 0.2rem; border-bottom: 1px solid #ccc; } .detail .reward span {color: red; } .detail .reward p {margin-top: 0.1rem; } .detail .reward:last-child {border: none; } .detail .comment {width: 100%; display: flex; margin-top: 0.1rem; flex-direction: column; background: #eee; justify-content: flex-end; } .detail .comment p {padding: 0.2rem; } .detail .comment span {color: #2ab2f6; } body{position: relative; } .cover{position:absolute; width: 100%; height:100%; left: 0; top:0; background:rgba(100,100,100,.5); display: flex; align-items: center; justify-content: center; } .cover>div{width: 5rem; height: 4rem; padding: 0.4rem; background: #eee; border-radius: 0.1rem; display: flex; flex-direction: column; align-items: flex-end; } .cover h5{width: 100%; } .cover textarea{width: 100%; padding: 0.15rem; background: #fff; margin: 0.1rem 0; } .cover .num{color: #999; font-size: 0.2rem; } .cover .btnBox{width: 100%; display: flex; } .cover .btnBox span{flex-grow: 1; text-align: center; padding: 0.2rem; } </style>
+    <main class="main">
+        <ul class="unifo">
+            <li>
+                <p class="img1">
+                    <img src="<{:get_user_img($itemInfo['user_id'])}>" alt="">
+                </p>
+               <{$personInfo.username}>
+            </li>
+            <li>
+                <i class="iconfont icon-shijian"></i>
+                剩余<b><{:overplus_time($itemInfo['date'])}></b>天
+            </li>
+        </ul>
+        <div class="top1">
+                <p class="tit"><{$itemInfo.title}></p>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <volist name='imgArray' id='i'>
+                        <div class="swiper-slide img2">
+                            <img src="<{$i.url}>" alt="">
+                        </div>
+                    </volist>
+                    </div>
+                </div>
+                <!--已经筹款-->
+                <div>
+                    <p class="jin">
+                        <span style="width: <{:get_money_ratio($itemInfo['id'],2)}>%"></span>
+                        <i class="iconfont icon-woniu" style="left:<{:get_money_ratio($itemInfo['id'],2)}>%;"></i>
+                    </p>
+                    <p class="tex1">
+                        <span>已筹款<{:get_sum_money($_GET['id'],2)}>元</span><span>需筹<{$itemInfo.target_money}>元</span>
+                    </p>
+                </div>
+                <!--已经帮助的-->
+                <div>
+                    <!--进度条-->
+                    <p class="jin">
+                        <span style="width: <{:get_money_ratio($itemInfo['id'],2)}>%"></span>
+                        <i class="iconfont icon-woniu" style="left:<{:get_money_ratio($itemInfo['id'],2)}>%;"></i>
+                    </p>
+                    <p class="nums"><span>已帮助<{:get_money_cont($_GET['id'],2)}>次</span></p>
+                </div>
+                <!--排行榜-->
+                <div class="ranking">
+                    <p class="left">
+                        <i class="iconfont icon-gushi"></i>
+                        爱心贡献榜
+                    </p>
+                    <p class="right">
+                        <volist name="top3" id="v">
+                        <span>
+                            <img src="<{:get_user_img($v['user_id'])}>" alt="">
+                            <i class="iconfont icon-guanjun"></i>
+                        </span>
+                        </volist>
+
+                        <a href="<{:U('rankList',array('id'=>$_GET['id']))}>"><i class="iconfont icon-xiangyoujiantou"></i></a>
+                    </p>
+                </div>
+            </div>
+        <div class="center">
+            <div class="top">
+                <p>
+                    <span>项目详情</span>
+                    <span>Project details</span>
+                </p>
+            </div>
+            <p class="cont contt">
+                <{$itemInfo.summary}>
+                 </p>
+        </div>
+        <div class="bottom" style="margin-bottom:0.15rem;">
+            <div class="top">
+                <p>
+                    <span>资金用途</span><span>Use of funds</span>
+                </p>
+            </div>
+            <div class="reward"
+                <p><{$itemInfo.money_purpose}></p>
+            </div>
+        </div>
+        <div class="bottom" style="margin-bottom:0.15rem;">
+            <div class="top">
+                <p>
+                    <span>回报内容</span><span>Reward content</span>
+                </p>
+            </div>
+            <div class="reward">
+                <p><span><{$itemInfo.return_money}></span>元</p>
+                <p><{$itemInfo.return_content}></p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="top">
+                <p>
+                    <span>TA的帮助</span><span>Help from Ta</span>
+                </p>
+            </div>
+
+
+
+               <volist name="donorList" id="v">
+                <ul>
+                    <li>
+                        <if condition="$v.is_anonymous eq 1">
+                            <img src="__HOME__/img/niming.jpg" alt="">
+                            <else />
+                        <img src="<{:get_user_img($v['user_id'])}>" alt="">
+                        </if>
+                    </li>
+                    <li>
+                        <div class="tot">
+                            <p>
+
+                                <if condition="$v.is_anonymous eq 1">
+                                 <span style="color:#f61353;">匿名用户</span>
+                                <else />
+                                    <span style="color:#f61353;"><{:get_username($v['user_id'])}></span>
+                                </if>
+
+
+
+
+                                支持了<span style="color:#7dffbe;"><{$v.price}>元</span></p>
+                            <p style="color:#939393;"><{:get_diff_time($v['date'])}></p>
+                        </div>
+                        <p class="bob">
+                            <span>
+                                <i class="iconfont icon-xin d1" style="display:none;"></i>
+                              <!--   <i class="iconfont icon-heart d2"></i>
+                                <span style="margin:0;">4789</span> -->
+                            </span>
+                            <span><i class="iconfont icon-pinglun" attr='<{$v.id}>' ></i><{:get_comments_cnt($v['id'],2)}></span>
+                        </p>
+                        <div class="comment">
+                            <volist name="v['comments']" id="c">
+                            <p><span><{:get_username($c['user_id'])}></span>: <{$c.content}></p >
+                            </volist>
+                            </div>
+                    </li>
+                </ul>
+
+                </volist>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="foot">
+             <a href="<{:U('index/report',array('id'=>$_GET['id'],'type'=>2))}>">
+                    <span>
+                        <i class="iconfont icon-jubao"></i>举报
+                    </span>
+            </a>
+            <a>
+                  <span>
+                        <if condition='$follow eq null'>
+                        <i class="iconfont icon-guanzhu"></i>
+
+                        <else />
+
+                        <i class="iconfont aa icon-guanzhu1" ></i>
+                    </if>
+
+
+                        <i class="iconfont icon-guanzhu" style=" display: none"></i>
+                        <i class="iconfont icon-guanzhu1" style="display: none" ></i>
+
+                        关注
+                    </span>
+            </a>
+          <a href="/Announce/toHelp.html">
+                    <span>
+                        <i class="iconfont icon-heart"></i>爱心
+                    </span>
+            </a>
+        </div>
+        <p>
+            <a href="<{:U('helpIt',array('id'=>$_GET['id']))}>">
+                帮助TA
+            </a>
+        </p>
+    </footer>
+</div>
+
+<div class="cover" style="display:none;">
+<div>
+<h5>发表评论</h5>
+<textarea name="iSay" id="" rows="5" placeholder="我也说一句……" maxlength="80"></textarea>
+<p class="btnBox">
+<span onclick="$('.cover').hide();" >取消</span>
+<span class="write">写好了</span>
+</p >
+</div>
+</div>
+</body>
+</block>
+    <block name='js'>
+// swiper
+var mySwiper = new Swiper ('.swiper-container', {
+loop: true,
+autoplay: {
+delay: 5000,//1秒切换一次
+}
+})
+
+// 评论
+var doc; 
+var id ;
+$('.icon-pinglun').click(function(){
+
+        id = $(this).attr('attr');
+        doc = $(this).parents('ul').find('.comment');
+        $('.cover').show();
+        $('textarea[name=iSay]').val('')
+
+
+    }) 
+
+    $('.write').click(function(){
+   
+     var text = $('textarea[name=iSay]').val();
+                $('.cover').hide();
+
+     $.ajax({
+                type:'POST',
+                url :"<{:U('index/comments')}>",
+                data:{'donor_id':id,'type':2,'content':text,'item_id':<{$_GET.id}>},
+                success:function(msg){
+                    console.log(msg)
+                if(msg == -1){
+                  showMsg('请先进行捐赠再来评论！')
+                }else{
+                    var ele = `<p><span><{:get_username(get_user_id())}></span>: ${text}</p >`;
+                    doc.prepend(ele)
+            }
+
+            }
+        })
+    
+
+}) 
+
+
+    // 点赞
+    $('.d2').click(function(){
+        var num = $(this).parent().find('span').text()*1;
+        $(this).parent().find('span').text(num+1)
+        $(this).hide().prev().show();
+    })
+    // 取消点赞
+    $('.d1').click(function(){
+        var num = $(this).parent().find('span').text()*1;
+        console.log(num)
+        $(this).parent().find('span').text(num-1);
+        $(this).hide().next().show();
+    })
+     // 关注
+    $('.icon-guanzhu').click(function(){
+        $(this).hide().parent().find('.icon-guanzhu1').show();
+        history.go(0) 
+         $.ajax({
+                type:'POST',
+                url :"<{:U('index/follow')}>",
+                data:{'item_id':<{$_GET.id}>,'flag':'add','type':2},
+                success:function(msg){
+                    console.log(msg)
+                    if(msg == -1){
+                        alert('请先进行捐赠才可以评论！')
+                    }
+
+            }
+        })
+
+    })
+    // 取消关注
+    $('.icon-guanzhu1').click(function(){
+        $(this).hide().parent().find('.icon-guanzhu').show();
+        history.go(0) 
+        $.ajax({
+                type:'POST',
+                url :"<{:U('index/follow')}>",
+                data:{'item_id':<{$_GET.id}>,'flag':'delete','type':2},
+                success:function(msg){
+                    console.log(msg)
+                if(msg != 0){
+                        //window.location.href='/release/step2/id/'+msg+'.html'
+                }
+
+            }
+    })
+      })
+    </block>

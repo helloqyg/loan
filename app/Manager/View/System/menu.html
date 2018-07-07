@@ -1,0 +1,106 @@
+<extend name="Public:base" />
+<block name="content">
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading question">
+				<ul class="nav nav-tabs">
+						<li <eq name="Think.ACTION_NAME" value="menu">class="active"</eq>>
+							<a href="<{:U('System/menu')}>" >
+								<span class="visible-xs"><i class="fa-home"></i></span>
+								<span class="hidden-xs">菜单管理</span>
+							</a>
+						</li>
+						<li <eq name="Think.ACTION_NAME" value="amenu">class="active"</eq> 
+							<eq name="Think.get.method" value="naire">class="active"</eq>
+							>
+							<a href="<{:U('System/amenu')}>">
+								<span class="visible-xs"><i class="fa-user"></i></span>
+								<span class="hidden-xs"><present name="info.id">修改<else/>添加</present>菜单</span>
+							</a>
+						</li>
+						<li <eq name="Think.ACTION_NAME" value="emenu">class="active"</eq>>
+							<a href="<{:U('System/emenu')}>">
+								<span class="visible-xs"><i class="fa-user"></i></span>
+								<span class="hidden-xs">二级菜单</span>
+							</a>
+						</li>
+					</ul>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-bordered table-striped table-hover">
+							<thead>
+								<tr>
+									<th>菜单序号</th>
+									<th>菜单名称</th>
+									<th>菜单类型</th>
+									<th>多级菜单</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<volist name="menu" id="m">
+								<tr>
+									<td><{$key+1}></td>
+									<td><a href="<{:U('System/menu',array('method'=>'sub','id'=>$key+1))}>"><{$m.name|default='未填'}></a></td>
+									<td><{:get_wechat_type($m['type'])}></td>
+									<td><if condition="count($m['sub_button']) neq 0" >是<else/>否</if></td>
+									<td>
+										<eq name="Think.get.method" value='sub'>
+											<a class="btn btn-info" href="<{:U('System/emenu',array('method'=>'edit','id'=>$key+1,'gid'=>I('get.id')))}>" role="button">修改</a>
+										<else/>
+											<a class="btn btn-info" href="<{:U('System/amenu',array('method'=>'edit','id'=>$key+1))}>" role="button">修改</a>
+										</eq>
+										
+										<!--<a class="btn btn-warning" href="javascript:void(0);" onClick="del(<{$key+1}>)" role="button">删除</a>-->
+									</td>
+								</tr>
+								</volist>
+							</tbody>
+						</table>			
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<button class="btn btn-info" href="javascript:void(0);" onClick="modify('update')" role="button">生成菜单</button>
+						<button class="btn btn-error" href="javascript:void(0);" onClick="modify('del')" role="button">删除全部</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+<script type="text/javascript">
+function myrefresh(){window.location.reload();}
+//删除
+function modify(type){
+	var opts = {
+			"closeButton": true,
+			"debug": false,
+			"positionClass": "toast-top-full-width",
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": "2000",
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+		};
+	$.get("<{:U('System/mupdate')}>",{method:type}, function(data){
+		if(data.status == 1){
+			toastr.success(data.info, opts);
+			setTimeout('myrefresh()',2000);
+		}else{
+			toastr.error(data.info, opts);
+		}
+
+	});
+}
+</script>
+</block>

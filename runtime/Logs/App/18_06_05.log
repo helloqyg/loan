@@ -1,0 +1,42 @@
+[ 2018-06-05T10:45:17+08:00 ] 127.0.0.1 /public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant API_KEY already defined D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\App\Conf\config.php 第 4 行.
+
+[ 2018-06-05T11:53:27+08:00 ] 127.0.0.1 /public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant API_KEY already defined D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\App\Conf\config.php 第 4 行.
+
+[ 2018-06-05T13:34:09+08:00 ] 127.0.0.1 /public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant API_KEY already defined D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\App\Conf\config.php 第 4 行.
+
+[ 2018-06-05T13:34:20+08:00 ] 127.0.0.1 /public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant API_KEY already defined D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\App\Conf\config.php 第 4 行.
+
+[ 2018-06-05T14:41:53+08:00 ] 127.0.0.1 /public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant API_KEY already defined D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\App\Conf\config.php 第 4 行.
+
+[ 2018-06-05T14:41:53+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant API_KEY already defined D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\App\Conf\config.php 第 4 行.
+
+[ 2018-06-05T15:38:12+08:00 ] 127.0.0.1 /public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Constant API_KEY already defined D:\phpStudy\PHPTutorial\WWW\crowdFunding\app\App\Conf\config.php 第 4 行.
+

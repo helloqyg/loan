@@ -1,0 +1,62 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="bulletin">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>互助公示</span>
+            </p>
+        </header>
+        <main class="main">
+            
+            <volist name='result' id='v'>
+
+            <div class="content">
+                <p class="top"><{:get_mutual_title($v['mutual_id'])}></p>
+                <div class="bottom">
+                    <div class="left">
+                        <div class="img">
+                            <img src="<{:get_user_img($v['user_id'])}>" alt="">    
+                        </div> 
+                        <div class="tex">
+                            <p>被救助人：<{$v.auth_name}></p>
+                            <span>公示时间：<{$v.create_date|date='Y-m-d H:i:s',###}></span>
+                        </div>
+                    </div>
+                    <!-- <i class="iconfont icon-xiangyoujiantou"></i> -->
+                </div>
+            </div>
+        </volist>
+          
+        </main>
+        <footer class="footer">
+            <ul>
+                <a href="index.html">
+                    <li>
+                        <i class="iconfont icon-jiaruqun"></i>
+                        <span>加入计划</span>
+                    </li>
+                </a>
+                <a href="bulletin.html">
+                    <li class="on">
+                        <i class="iconfont icon-bulletin"></i>
+                        <span>互助公示</span>
+                    </li>
+                </a>
+                <a href="personal_center.html">
+                    <li>
+                        <i class="iconfont icon-geren"></i>
+                        <span>个人中心</span>
+                    </li>
+                </a>
+            </ul>
+        </footer>
+    </div>
+</body>
+</block>
+</html>
+<script>
+    $('.icon-fanhui').click(function(){
+        window.history.go(-1);
+    })
+</script>

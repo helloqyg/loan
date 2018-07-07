@@ -1,0 +1,118 @@
+<extend name="Public:base" />
+<block name="main">
+<style type="text/css">
+	.xing{
+		width: auto;
+	}
+	#ad_show table{ font-size:12px; table-layout:fixed; empty-cells:show; border-collapse: collapse;margin:0 auto; } 
+td{ height:30px; text-align: center;} 
+h1,h2,h3{ font-size:12px; margin:0; padding:0; } 
+.table{ border:1px solid #cad9ea; color:#666; } 
+.table th { background-repeat:repeat-x; height:30px; } 
+.table td,.table th{ border:1px solid #cad9ea; padding:0 1em 0; } 
+.table tr.alter{ background-color:#f5fafe; } 
+#ad_notice{width:100%;height:100px;line-height:80px;float:left;text-align:center;color:#A59C9C;font-size:16px;font-weight:500;}
+</style>
+<div class="main" style="padding-top:8px; min-height:450px;">
+<div class="user_center">
+<include file="Public/left" />
+	<div class="user_right">
+		<div class="user_right_tit">申请合同</div>
+			<div class="user_right_con" style="padding-top:20px; height: 321px">
+					<div id="ad_show">
+					<table width="95%" class="table"> 
+						<tr> 
+							<th>付款类型</th> 
+							<th>展位号</th> 
+							<th>平米数</th> 
+							<th>付款方式</th> 
+							<th>订购时间</th> 
+							<th>合同申请</th> 
+						</tr> 
+						<volist name="receipt" id="info">
+						<tr class="alter"> 
+							<td><eq name="info.ad_type" value="1">展位定金<else/>广告订购</eq></td> 
+							<td><eq name="info.ad_type" value="1"><{$booth_num['booth_num']}><else/>广告</eq></td> 
+							<td><eq name="info.ad_type" value="1"><{$info['area']}><else/>展位定金</eq></td> 
+							<td><eq name="info.type" value="1">支付宝<else/>银行汇款</eq></td> 
+							<td><{$info['atime']|date="Y-m-d H:i:s",###}></td> 
+							<td ><if condition="$info['contract'] eq 0 "> <a href="javascript:void(0)"><span   class="md-trigger" data-modal="modal-1"  style="color:red;">申请合同</span></a><elseif condition="$info['contract'] eq 1"/><span style="color:blue;">申请中</span><else /> 申请成功</if></td> 
+
+							<!-- 曾经的申请合同功能 -->
+							<!-- <td ><if condition="$info['contract'] eq 0 "> <a href="de_apply/<{$info['url']}>"><span  style="color:red;">申请合同</span></a><elseif condition="$info['contract'] eq 1"/><span style="color:blue;">申请中</span><else /> 申请成功</if></td>  -->
+						</tr>  
+						</volist>
+					</table> 
+				</div>
+      		</div>
+    	</div>
+    	<div class="clear"></div>
+  	</div>
+</div>
+		<div class="md-modal md-effect-1" id="modal-1">
+
+			<div class="md-content" >
+
+				<h3 style="color: white">温馨提示：</h3>
+
+				<div>
+
+					<!-- <p>This is a modal window. You can do the following things with it:</p> -->
+
+					<ul >
+
+						<li style="color: white"><strong></strong>您申请的展位已受理，请耐心等待!</li>
+
+						<li style="color: white"><strong></strong> 展务人员会在48小时内将展位合同书发送至贵司邮箱，请注意查收！</li>
+
+						<li style="color: white"><strong></strong> 请确认合同书无误后签字盖章，将合同书原件（2份）邮寄至中国国际电梯展览会组委会。
+</li>
+
+					</ul>
+
+					<button class="md-close">关闭！</button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+		<!-- 弹出框插件开始	 -->
+
+		<script src="__HOME__/tanchu/js/classie.js"></script>
+
+		<script src="__HOME__/tanchu/js/modalEffects.js"></script>
+
+
+
+		<!-- for the blur effect -->
+
+		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+
+		<script>
+
+			// this is important for IEs
+
+			var polyfilter_scriptpath = '/public/home/tanchu/js/';
+
+		</script>
+
+		<script src="__HOME__/tanchu/js/cssParser.js"></script>
+
+		<script src="__HOME__/tanchu/js/css-filters-polyfill.js"></script>
+
+		<script src="http://www.jq22.com/js/jq.js"></script>
+
+
+		<!-- 弹出框插件结束	 -->
+</block>
+<block name="seajs">
+seajs.use('apply');
+
+</block>

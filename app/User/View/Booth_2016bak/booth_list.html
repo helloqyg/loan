@@ -1,0 +1,20 @@
+<extend name="Public:base" />
+<block name="main">
+<div class="main" style="padding-top:2px;">
+  <div class="weee_tit">以下是<{:get_chart_type($hid)}>馆，请选择：</div>
+  <div class="weee_con">
+  <volist name="hall" id="v">
+  	<notempty name="v.area">
+	  	<a href="<{:U('/user/booth/select',array('id'=>$v['id'],'status'=>1))}>">
+	  		<img src="__IMAGES__/<{$v['hall_num']}>.jpg" />
+	  	</a>
+  	<else/>
+  		<a href="<{:U('/user/booth/select',array('id'=>$v['id']))}>">
+	  		<img src="__IMAGES__/<{$v['hall_num']}>.jpg" />
+	  	</a>
+  	</notempty> 
+  </volist>
+  <div class="clear"></div> 
+  </div>
+</div>
+</block>

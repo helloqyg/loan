@@ -1,0 +1,144 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="which">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>您想和哪些明星一起做活动</span>
+            </p>
+        </header>
+        <main class="main">
+            <!--轮播图-->
+            <div class="loop swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <img src="__HOME__/img/banner-1@2x.png" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="__HOME__/img/banner-2@2x.png" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="__HOME__/img/banner-3@2x.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <!--进度条-->
+            <div style="background: #fff;">
+                <div class="jin_top">                
+                    <div>
+                        <label for=""><input type="radio" name="radio1" value="radio单选项1"/> 捐赠</label>
+                        <div class="jin">
+                            <span style="width: 10%;"></span>
+                            <i class="iconfont icon-woniu" style="left:10%;"></i>
+                        </div>
+                    </div>
+                    <p class="times"><span>已连续捐赠21天</span></p>                    
+                    <div class="dailog">
+                        <p>你想和哪些明星一起做活动？快去<span style="color:#ff7d26;">@</span>他（她）吧或者输入他（她）的名字</p>
+                        <input type="text">
+                    </div>                   
+                </div>
+                <div class="jin_bottom">
+                    <div>
+                        <label for=""><input type="radio" name="radio1" value="radio单选项1"/> 转发</label>
+                        <p class="jin">
+                            <span style="width: 40%;"></span>
+                            <i class="iconfont icon-woniu" style="left:40%;"></i>
+                        </p>
+                    </div>
+                    <p class="times"><span>已连续转发21天</span></p>
+                    <div class="dailog">
+                        <p>你想和哪些明星一起做活动？快去<span style="color:#ff7d26;">@</span>他（她）吧或者输入他（她）的名字</p>
+                        <input type="text">
+                    </div>                     
+                </div>
+            </div>
+            <!--活动介绍-->
+            <div class="activities">
+                <div class="top">
+                    <p>
+                        <span>活动介绍</span>
+                        <span>Activities</span>
+                    </p>
+                </div>
+                <p class="text">
+                    选择自己支持的明星签到选择自己支持的明星签到选择自己支持的明星签到，选择自己支持的明星签到选择自己支持的明星签到
+                </p>
+            </div>
+            <!--明星排名-->
+            <div class="starRanking">
+                <div class="top">
+                    <p>
+                        <span>明星排名</span>
+                        <span>Star ranking</span>
+                    </p>
+                    <div class="search">
+                        <i class="iconfont icon-sousuo"></i>
+                        <input type="text" placeholder="请搜索你想要支持的明星">
+                    </div>
+                </div>
+
+                <volist name='star' id='v' key='k'>
+                <div class="star">
+                    <span><{$k}>.</span>
+                    <div class="starRight">
+                        <div class="rightLeft">
+                            <div class="img">
+                                <img src="img/7.png" alt="">
+                            </div>
+                            <p><span><{$v.name}></span><span><{$v.en_name}></span></p>
+                        </div>
+                        <span>
+                            <i class="iconfont icon-xin" style="display:none;"></i>
+                            <i class="iconfont icon-heart"></i>
+                            <span>963258</span>
+                        </span>
+                    </div>
+                </div>
+</volist>
+
+
+
+                <p class="tit">选出自己支持的明星签到，坚持每天签到，年底会选出代表参加晚会</p>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>
+                <a href="myRank.html">我要排名</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+</block>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/swiper.min.js"></script>
+<block name='js'>    
+    var mySwiper = new Swiper ('.loop', {
+        loop : true,
+        autoplay:true
+    })
+    $('.dailog').hide()
+    $('input[type=radio]').each(function(index, ele){
+        $(ele).click(function(){
+            $('.dailog').each(function(ind,val){
+                if(index == ind){
+                    $(val).show()
+                } else {
+                    $(val).hide()
+                }
+            })
+        })
+    })
+    $('.icon-fanhui').click(function(){
+        window.history.go(-1);
+    })
+    $('.icon-heart').click(function(){
+        var num = $(this).parent().find('span').text()*1;
+        $(this).hide().parent().find('span').text(num+1).parent().find('.icon-xin').show();
+    })
+    $('.icon-xin').click(function(){
+        var num = $(this).parent().find('span').text()*1;
+        $(this).hide().parent().find('span').text(num-1).parent().find('.icon-heart').show();
+    })
+</block>

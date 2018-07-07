@@ -1,0 +1,22 @@
+<html>
+<div  style="height: 100px;">
+    <button style="height: 100px;" onclick="func()"></button>
+
+</div>
+
+</html>
+
+<script src="__HOME__/scripts/jquery.min.js"></script>
+
+<script>
+   function func(){
+       $.ajax({
+           type:'POST',
+           url :"<{:U('center/testClass')}>",
+           success:function(msg){
+               console.log(msg)
+
+           }
+       })
+    }
+</script>

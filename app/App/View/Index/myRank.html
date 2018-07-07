@@ -1,0 +1,60 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="myRank">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>您想和哪些明星一起做活动</span>
+            </p>
+        </header>
+        <main class="main">
+            <div class="banner">
+                <div class="d"></div>
+                <div class="unifo">
+                    <div class="img">
+                        <img src="__HOME__/img/my2.png" alt="">
+                    </div>
+                    <span>香草冰激凌</span>
+                    <p><span>我的排名：3</span><span>排名天数：120天</span></p>
+                </div>
+            </div>
+            <div class="top">
+                <p>
+                    <span>总排名列表</span>
+                    <span>Total ranking</span>
+                </p>
+            </div>
+            <ul>
+                <li>
+                    <div class="left">
+                        <span>1.</span>
+                        <div class="img1">
+                            <img src="img/my2.png" alt="">
+                        </div>
+                        <span>但合家</span>
+                    </div>
+                    <span>120days</span>
+                </li>
+                <li>
+                    <div class="left">
+                        <span>2.</span>
+                        <div class="img1">
+                            <img src="img/my2.png" alt="">
+                        </div>
+                        <span>但合家</span>
+                    </div>
+                    <span>120days</span>
+                </li>
+            </ul>
+        </main>
+        <footer class="footer"></footer>
+</body>
+</html>
+</block>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/swiper.min.js"></script>
+<script>    
+    $('.icon-fanhui').click(function(){
+        window.history.go(-1);
+    })
+</script>

@@ -1,0 +1,74 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="dream">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>梦想清单</span>
+            </p>
+        </header>
+        <main class="main">
+            <ul class="nav">
+                <li <if condition="$_GET['id'] eq ''"> class="blue"</if> >
+                     <a  href="<{:U('index',array('id'=>$t['id']))}>">全部</a>
+               </li>
+                <volist name='type' id='t'>  
+                    <li <if condition="$_GET['id'] eq $t['id']"> class="blue"</if> >
+                        <a href="<{:U('index',array('id'=>$t['id']))}>"><{$t.name}></a>
+                    </li> 
+                </volist>
+            </ul>
+            
+            <volist name='result' id='v'>
+                    <a href="<{:U('detail',array('id'=>$v['id']))}>">
+            <div class="container">
+                <div class="top">
+                    <div class="left">
+                        <div class="head">
+                            <img src="<{:get_user_img($v['user_id'])}>" alt="">
+                        </div>
+                        &nbsp;&nbsp;
+                        <!-- <i class="iconfont icon-nv"></i> -->
+                        <p><{:get_username($v['user_id'])}></p>
+                    </div>
+                    <span><{$v.date|date='Y-m-d',###}></span>
+                </div>
+                <div class="bottom">
+                    <div class="img">
+                        <img src="<{:get_first_img($v['img'])}>" alt="">
+                    </div>
+                    <div class="right">
+                        <h4><{$v.title}></h4>
+                        <p class="tit">
+                            <{$v.summary}>
+                        </p>
+                    </div>
+                </div>
+            </div>
+</a>
+</volist>
+
+
+        </main>
+        <footer class="footer">
+            <p>
+                <a href="<{:U('release')}>">
+                    我要发布
+                </a>
+            </p>
+        </footer>
+</body>
+</html>
+</block>
+<block name='js'>
+
+    $('.icon-fanhui').click(function(){window.location.href='/index/index.html'})
+    //梦想清单
+        $('.nav li').click(function(){
+        $(this).addClass('blue').siblings().removeClass('blue')
+    })
+
+   function click(a){
+    alert(123)
+}
+</block>

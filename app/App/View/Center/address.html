@@ -1,0 +1,59 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="address1">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>收件地址</span>
+                <a href="addAddress.html"><i class="iconfont icon-plus-bold" style="opacity: 1;"></i></a>
+            </p>
+        </header>
+        <main class="main">
+            <!--<div class="no">
+                <i class="iconfont icon-wunai"></i>
+                <span>暂无内容</span>
+            </div>-->
+            <ul class="container">
+                <li>
+                    <p>
+                        <span>张惠</span>
+                        <span>18410172331</span>                            
+                    </p>
+                    <p class="location">北京市昌平区天通苑北一区10号楼二单元1202</p>
+                    <div class="bot">
+                        <span><i class="iconfont icon-xuanzhong"></i>默认地址</span>
+                        <p>
+                            <a href="reviseAddress.html"><span><i class="iconfont icon-bianji"></i>编辑</span></a>
+                            <span><i class="iconfont icon-shanchu"></i>删除</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <span>张惠</span>
+                        <span>18410172331</span>                            
+                    </p>
+                    <p class="location">北京市昌平区天通苑北一区10号楼二单元1202</p>
+                    <div class="bot">
+                        <span><i class="iconfont icon-xuanzhong select"></i>默认地址</span>
+                        <p>
+                            <a href="reviseAddress.html"><span><i class="iconfont icon-bianji"></i>编辑</span></a>
+                            <span><i class="iconfont icon-shanchu"></i>删除</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </main>
+</block>
+    </div>
+</body>
+</html>
+
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/swiper.min.js"></script>
+    <block name='js'>
+
+    $('.icon-xuanzhong').click(function(){
+        $(this).addClass('select').parents('li').siblings().find('.icon-xuanzhong').removeClass('select');
+    })
+    </block>

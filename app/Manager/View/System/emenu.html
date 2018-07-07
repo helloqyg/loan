@@ -1,0 +1,127 @@
+<extend name="Public:base" />
+<block name="content">
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading question">
+				<ul class="nav nav-tabs">
+						<li <eq name="Think.ACTION_NAME" value="menu">class="active"</eq>>
+							<a href="<{:U('System/menu')}>" >
+								<span class="visible-xs"><i class="fa-home"></i></span>
+								<span class="hidden-xs">菜单管理</span>
+							</a>
+						</li>
+						<li <eq name="Think.ACTION_NAME" value="amenu">class="active"</eq> 
+							<eq name="Think.get.method" value="naire">class="active"</eq>
+							>
+							<a href="<{:U('System/amenu')}>">
+								<span class="visible-xs"><i class="fa-user"></i></span>
+								<span class="hidden-xs"><present name="id">修改<else/>添加</present>菜单</span>
+							</a>
+						</li>
+						<li <eq name="Think.ACTION_NAME" value="emenu">class="active"</eq>>
+							<a href="<{:U('System/emenu')}>">
+								<span class="visible-xs"><i class="fa-user"></i></span>
+								<span class="hidden-xs">二级菜单</span>
+							</a>
+						</li>
+					</ul>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="tab-content">
+						<div class="tab-pane active" id="home">
+							<form role="form" action="<{:U('')}>" class="form-horizontal" >
+								<div class="form-group">
+									<span class="col-sm-2 col-xs-3 control-label">菜单名称:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" name="name" class="form-control" value="<{$info.name|default=''}>">
+										<span class="help-block">
+											<if condition="!($submenu)">
+												填写中文标题如“测试”，用于管理使用
+											<else />
+												修改多级菜单名称
+											</if>
+											</span>
+									</div>
+								</div>					
+								<div class="form-group">
+									<span class="col-sm-2 col-xs-3 control-label">顶级菜单:</span>
+									<div class="col-sm-5 col-xs-8">
+										<select class="form-control" name="gid">
+											<volist name="menu" id="m">
+												<option value="<{$key}>" 
+												<eq name="Think.get.gid" value="$key+1">selected</eq>
+												><{$m.name}></option>
+											</volist>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<span class="col-sm-2 col-xs-3 control-label">事件类型:</span>
+									<div class="col-sm-5 col-xs-8">
+										<select class="form-control select_type" name="type">
+											<option value="click" 
+												<present name="info.type">
+													<eq name="info.type" value="click">selected</eq>
+												</present>
+											>单击菜单</option>
+											<option value="view" 
+												<present name="info.type">
+													<eq name="info.type" value="view">selected</eq>
+												</present>
+											>跳转网址</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<span class="col-sm-2 col-xs-3 control-label">菜 单 值:</span>
+									<div class="col-sm-5 col-xs-8">
+										<present name="info.type">
+											<eq name="info.type" value="view">
+												<input type="text" name="url" class="form-control type_select" value="<{$info.url|default=''}>">
+											<else/>
+												<input type="text" name="key" class="form-control type_select" value="<{$info.key|default=''}>">
+											</eq>
+										<else />
+											<input type="text" name="key" class="form-control type_select" value="<{$info.key|default=''}>">
+										</present>
+										<span class="help-block">单击菜单，填写英文单词，跳转网址直接填写“http://” 网址</span>
+									</div>
+								</div>
+								<present name="id">
+									<input type="hidden" name="id" value="<{$id}>" />
+								</present>
+								<present name="gid">
+									<input type="hidden" name="old_gid" value="<{$gid}>" />
+								</present>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-5 col-xs-8">
+										<button type="submit"  class="btn btn-primary ajax-post" target-form="form-horizontal"><present name="id">修改<else/>添加</present></button>
+									</div>
+								</div>
+							</form>	
+						</div>	
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+<script type="text/javascript">
+$(function(){
+	$(".select_type").change(function(){
+		var type = $(this).val();
+		if( type == 'click' ){
+			$(".type_select").attr('name','key');
+		}else{
+			$(".type_select").attr('name','url');
+		}
+	})
+});
+</script>
+</block>

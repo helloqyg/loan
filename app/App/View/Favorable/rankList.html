@@ -1,0 +1,42 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="aixin">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>爱心贡献榜单</span>
+            </p>
+        </header>
+        <main class="main">
+            <div class="top"></div>
+            <ul>
+
+                <volist name="data" id="v" key='k'>
+                <li>
+                    <div class="left">
+                        <span><{$k}></span>
+                        <div class="img">
+                            <img src="<{:get_user_img($v['user_id'])}>" alt="">
+                        </div>
+                        <span><{:get_username($v['user_id'])}></span>
+                    </div>
+                    <span><{$v.price}>元</span>
+                </li>
+
+                </volist>
+
+            </ul>
+        </main>
+        <!--底部导航-->
+        <footer class="footer"></footer>
+    </div>
+</body>
+</block>
+<script src="scripts/rem.js"></script>
+<script src="scripts/jquery.min.js"></script>
+</html>
+<script>
+    $('.icon-fanhui').click(function(){
+        window.history.go(-1);
+    })
+</script>

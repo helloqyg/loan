@@ -1,0 +1,109 @@
+<extend name="Public:base" />
+<block name="main">
+
+<div class="main_exhi">
+<div class="main_view">
+  <div class="main_view_top">
+    <div style="width:80px"><{$title}></div>
+  </div>
+  <div class="main_view_bot">
+    <div class="ad_select">
+      <div class="ad_search" id="ad_search_1">
+       <ul class="area_a">
+        <li>按区域查找：</li>
+               <li class="area_a" > <a href="javascript:void(0)" onclick="search_area(0)" flag="area" attr="0">全部</a></li>
+            <volist name="area" id="v">
+              <li class="area_a" ><a href="javascript:void(0)" onclick="search_area(<{$v.ae_id}>)" flag="area" attr="<{$v.ae_id}>" > <{$v.ae_name}></a></li>
+            </volist>
+        
+       </ul>
+
+      </div>
+      <div class="clear"></div>
+      <div class="ad_search" id="ad_search_2">
+       <ul class="type_a">
+          <li>按类型查找：</li>
+               <li class="type_a" > <a href="javascript:void(0)" onclick="search_type(0)" flag="type" attr="0">全部</a></li>
+        
+            <volist name='cat' id='v'>
+             <li class="type_a"><a href="javascript:void(0)" onclick="search_type(<{$v.tp_id}>)" flag="type" attr="<{$v.tp_id}>"> <{$v.tp_name}></a></li>
+            </volist>
+
+          
+       </ul>
+
+      </div>
+      <div class="clear"></div>
+      <div class="ad_place">
+
+       <volist name="goods" id="v">
+     <if condition="$v.get_ad_bot_count neq 0 " >
+       <div class="ad_booth">
+        <div class="exhi_img">
+          <img src="<{$v.goods_locale_logo}>">
+        </div>
+        <div class="detail_ad">
+          <p>名称：<{$v.goods_name|mb_substr=###,0,13,'utf-8'}>  </p>
+          <p>位置：<{$v.goods_address|mb_substr=###,0,13,'utf-8'}>  </p>
+          <p>数量：<{:get_ad_bot_count($v['goods_id'])}>/<{:get_ad_count($v['goods_id'])}></p>
+          <p>行式: <{:get_ad_cat($v['cat_id'])}></p>
+          <p>优势: <{$v.goods_introduce|mb_substr=###,0,10,'utf-8'}>...</p>
+        </div>
+        <div class="btn">
+          <a href="<{:U('user/adver/detail',array('goods_id'=>$v['goods_id']))}>">详细了解</a>
+        </div>
+      </div>
+    </if>
+      </volist>
+	  
+      </div>
+    </div>
+  </div>
+   <div class="clear"></div>
+  </div>
+     <div class="clear"></div>
+</div>
+</block>
+
+<block name="seajs">
+// <script type="text/javascript">
+  function search_area(ae_id){
+    //给当前选中的区域元素增加attr=select
+      $('.area_a>a').removeAttr('select');
+      $('[attr='+ae_id+'][flag=area]').attr('select','selected');
+      var area = $('[select=selected][flag=area]').attr('attr')
+      var type = $('[select=selected][flag=type]').attr('attr')
+      $('[flag=area]').parent().removeClass('ad_selected')
+      $('[attr='+ae_id+'][flag=area]').parent().addClass('ad_selected')
+      //组
+      $.ajax({
+        type:'post',
+        data:{'area':area,'type':type},
+        url: "<{:U('user/adver/ad_list')}>",
+        success:function(msg){
+          $('.ad_place').html(msg)
+        }
+      })
+
+
+  }
+  function search_type(tp_id){
+    //给当前选中的类型元素增加attr=select
+    $('.type_a>a').removeAttr('select');
+    $('[attr='+tp_id+'][flag=type]').attr('select','selected');
+    var area = $('[select=selected][flag=area]').attr('attr')
+      var type = $('[select=selected][flag=type]').attr('attr')
+      $('[flag=type]').parent().removeClass('ad_selected')
+      $('[attr='+tp_id+'][flag=type]').parent().addClass('ad_selected')
+      //组
+      $.ajax({
+        type:'post',
+        data:{'area':area,'type':type},
+        url: "<{:U('user/adver/ad_list')}>",
+        success:function(msg){
+          $('.ad_place').html(msg)
+        }
+      })
+  }
+</block>
+

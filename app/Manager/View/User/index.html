@@ -1,0 +1,123 @@
+<extend name="Public:base" />
+<block name="content">
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><{$header_title}></h3>		
+				<div class="panel-options">
+				<div class="vertical-top">
+				</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<!-- 搜索 -->
+					<style type="text/css"> form{display: flex; } form input{margin-right: 30px; height: 25px; } form select{height: 25px; margin-right: 30px; } form input,form select,form button{flex-grow: 1; } </style>
+					<div class="col-md-12 ">
+						<form class="form-search" id="search" method="get" action="">
+					 <input type="text" name="cu_id" value="<{$_GET.cu_id}>"  placeholder="ID">
+					 <input type="text" name="username" value="<{$_GET.username}>"  placeholder="昵称">
+					 <input type="text" name="phone" value="<{$_GET.phone}>"  placeholder="手机号">
+					 <input type="text" name="auth_id" value="<{$_GET.auth_id}>"  placeholder="身份证号">
+						  <!-- <input type="text" name="rep_money"  value="<{$_GET.rep_money}>" placeholder="已筹金额"> -->
+						  <select name="is_auth"  >
+										<option value="" >是否已认证</option>
+										<option value="0" >未认证</option>
+										<option value="1" >已认证</option>
+										
+									</select>
+						  <button type="submit" class="btn">搜索</button>
+						</form>
+					</div>
+
+
+					<div class="col-md-12">
+						<table class="table table-bordered table-striped table-hover">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>昵称</th>
+									<th>爱心值</th>
+									<th>绑定手机号</th>
+									<th>家乡省份</th>
+									<th>家乡城市</th>
+									<th>实名认证</th>
+									<th>邮箱</th>
+									<th>备注</th>
+									<th class="col-md-2 text-center">
+										操作
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<volist name="list" id="m">
+								<tr>
+									<td><{$m.cu_id|default='未填'}></td>
+									<td><{$m.username|default='未填'}></td>
+									<td><{$m.love_value}></td>
+									<td><{$m.phone|default='未填'}></td>
+									<td><{:get_province($m['home_province'])}></td>
+									<th><{:get_city($m['home_city'])}></th>
+									<td>
+										<if condition="$m['is_auth'] eq 1">
+										<span style="color: green">【已认证】</span>
+										<else /> 未认证
+									</if>
+
+									</td>
+									<td><{$m.email}></td>
+									<td><{$m.remark}></td>
+									<td>
+										<a class="btn btn-info" href="<{:U('User/edit',array('id'=>$m['id']))}>" role="button">修改</a>
+										<a class="btn btn-warning" href="javascript:void(0);" onClick="del(<{$m.cid}>)" role="button">删除</a>
+									</td>
+								</tr>
+								</volist>
+							</tbody>
+						</table>			
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<ul class="pagination">
+							<{$page}>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+<script type="text/javascript">
+function myrefresh(){window.location.reload();}
+//删除
+function del(aid){
+	var opts = {
+			"closeButton": true,
+			"debug": false,
+			"positionClass": "toast-top-full-width",
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": "2000",
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+		};
+	$.get("<{:U('User/del')}>", {id:aid},function(data){
+		if(data.status == 1){
+			toastr.success(data.info, opts);
+			setTimeout('myrefresh()',2000);
+		}else{
+			toastr.error(data.info, opts);
+		}
+
+	});
+}
+</script>
+</block>

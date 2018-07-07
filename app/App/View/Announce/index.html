@@ -1,0 +1,118 @@
+<extend name="Public:base" />
+<block name='main'>
+    <div class="heart">
+        <header class="header">
+            <p>
+                <span>爱心宣扬</span>
+            </p>
+        </header>
+        <main class="main">
+            <ul class="top">
+                <li>
+                    <i class="iconfont icon-xin"></i>爱心宣扬
+                </li>
+                <li><a href="<{:U('toHelp')}>"><span>去帮助</span></a></li>
+            </ul>
+            <volist name='result' id="v">
+            <div class="cont">
+                <div class="new">
+                    <div class="left">
+                        <div class="img">
+                            <img src="<{:get_user_img($v['user_id'])}>" alt="">
+                        </div>
+                        <div class="ri">
+                            <p class="name">
+                                <!--<i class="iconfont icon-nv"></i>-->
+                                <span><{:get_username($v['user_id'])}></span>
+                            </p>
+                            <p class="text">
+                                帮助了<{$v.item_count}>个家庭<span><{$v['item_count']*$v['single_price']}>元</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="right" attr="<{$v['id']}>">
+                        <i id="<{$v.id}>" class="iconfont 
+
+                            <if condition="get_current_good($v['id']) eq 0">
+
+                            icon-zan-copy-copy zan1 " onclick="greatClick(<{$v.id}>)"></i>
+
+                                <else />
+                        icon-zan zan2  " onclick="cancleClick(<{$v.id}>)"></i>
+                    </if>
+
+                            
+
+
+                        <span id="span_<{$v.id}>"><{:get_current_good_cnt($v['id'])}></span>
+                    </p>
+                </div>
+                <p><{$v.content}></p>
+            </div>
+
+            </volist>
+        </main>
+</block>
+
+<block name="js">
+
+    //点赞
+    function greatClick(id){
+    $('#'+id).removeClass('icon-zan-copy-copy')
+    $('#'+id).removeClass('zan1')
+    $('#'+id).addClass('icon-zan')
+    $('#'+id).addClass('zan2')
+    $('#'+id).removeAttr('onclick')
+    $('#'+id).attr('onclick','cancleClick('+id+')')
+
+
+   var num = $('#span_'+id).text()*1;
+        $('#span_'+id).text(num+1)
+
+
+
+     $.ajax({
+        type:'POST',
+        url :"<{:U('announce/good')}>",
+        data:{'announce_id':id,'flag':'good'},
+        success:function(msg){
+            if(msg != 0){
+            //window.location.href='/release/step2/id/'+msg+'.html'
+            }
+
+            }
+        })
+
+}
+
+    //取消点赞
+    function cancleClick(id){
+    $('#'+id).addClass('icon-zan-copy-copy')
+    $('#'+id).addClass('zan1')
+    $('#'+id).removeClass('icon-zan')
+    $('#'+id).removeClass('zan2')
+    $('#'+id).removeAttr('onclick')
+    $('#'+id).attr('onclick','greatClick('+id+')')
+
+
+   var num = $('#span_'+id).text()*1;
+        $('#span_'+id).text(num-1)
+
+         $.ajax({
+        type:'POST',
+        url :"<{:U('announce/good')}>",
+        data:{'announce_id':id,'flag':'cancel'},
+        success:function(msg){
+            if(msg != 0){
+            //window.location.href='/release/step2/id/'+msg+'.html'
+            }
+
+            }
+        })
+}
+
+
+
+
+
+    </block>

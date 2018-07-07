@@ -1,0 +1,56 @@
+/* CSS Document */
+.zw_select{ width:1031px; height:665px; margin:0 auto; background:url(../images/bg-1.png) no-repeat; position:relative;}
+.zw_select a{ display:block; width:100%; height:100%;}
+.zw_5201{ width:93px; height:85px; z-index:1; position:absolute; top:431px; left:79px; background:url(../images/zw/5201-1.png) no-repeat;}
+.zw_5202{ width:99px; height:87px; z-index:2; position:absolute; top:474px; left:141px; background:url(../images/zw/5202-1.png) no-repeat;}
+.zw_5203{ width:93px; height:87px; z-index:2; position:absolute; top:383px; left:147px; background:url(../images/zw/5203-1.png) no-repeat;}
+.zw_5205{ width:102px; height:92px; z-index:2; position:absolute; top:429px; left:211px; background:url(../images/zw/5205-1.png) no-repeat;}
+.zw_5206{ width:102px; height:81px; z-index:2; position:absolute; top:488px; left:291px; background:url(../images/zw/5206-1.png) no-repeat;}
+.zw_5207{ width:72px; height:49px; z-index:2; position:absolute; top:537px; left:377px; background:url(../images/zw/5207-1.png) no-repeat;}
+.zw_5208{ width:88px; height:82px; z-index:2; position:absolute; top:489px; left:430px; background:url(../images/zw/5208-1.png) no-repeat;}
+.zw_5209{ width:104px; height:90px; z-index:2; position:absolute; top:441px; left:359px; background:url(../images/zw/5209-1.png) no-repeat;}
+.zw_5210{ width:104px; height:90px; z-index:2; position:absolute; top:384px; left:279px; background:url(../images/zw/5210-1.png) no-repeat;}
+.zw_5211{ width:97px; height:87px; z-index:2; position:absolute; top:337px; left:215px; background:url(../images/zw/5211-1.png) no-repeat;}
+.zw_5212{ width:93px; height:86px; z-index:2; position:absolute; top:282px; left:303px; background:url(../images/zw/5212-1.png) no-repeat;}
+.zw_5213{ width:99px; height:91px; z-index:2; position:absolute; top:327px; left:366px; background:url(../images/zw/5213-1.png) no-repeat;}
+.zw_5215{ width:99px; height:91px; z-index:2; position:absolute; top:385px; left:449px; background:url(../images/zw/5215-1.png) no-repeat;}
+.zw_5216{ width:86px; height:80px; z-index:2; position:absolute; top:435px; left:516px; background:url(../images/zw/5216-1.png) no-repeat;}
+.zw_5217{ width:85px; height:78px; z-index:2; position:absolute; top:391px; left:587px; background:url(../images/zw/5217-1.png) no-repeat;}
+.zw_5218{ width:99px; height:91px; z-index:2; position:absolute; top:339px; left:518px; background:url(../images/zw/5218-1.png) no-repeat;}
+.zw_5219{ width:99px; height:91px; z-index:2; position:absolute; top:280px; left:436px; background:url(../images/zw/5219-1.png) no-repeat;}
+.zw_5220{ width:93px; height:84px; z-index:2; position:absolute; top:236px; left:373px; background:url(../images/zw/5220-1.png) no-repeat;}
+.zw_5221{ width:92px; height:85px; z-index:2; position:absolute; top:190px; left:443px; background:url(../images/zw/5221-1.png) no-repeat;}
+.zw_5222{ width:103px; height:96px; z-index:2; position:absolute; top:233px; left:505px; background:url(../images/zw/5222-1.png) no-repeat;}
+.zw_5223{ width:103px; height:96px; z-index:2; position:absolute; top:290px; left:585px; background:url(../images/zw/5223-1.png) no-repeat;}
+.zw_5225{ width:87px; height:81px; z-index:2; position:absolute; top:343px; left:657px; background:url(../images/zw/5225-1.png) no-repeat;}
+.zw_5226{ width:75px; height:72px; z-index:2; position:absolute; top:298px; left:739px; background:url(../images/zw/5226-1.png) no-repeat;}
+.zw_5227{ width:89px; height:84px; z-index:2; position:absolute; top:247px; left:669px; background:url(../images/zw/5227-1.png) no-repeat;}
+.zw_5228{ width:89px; height:84px; z-index:2; position:absolute; top:189px; left:588px; background:url(../images/zw/5228-1.png) no-repeat;}
+.zw_5229{ width:83px; height:77px; z-index:2; position:absolute; top:144px; left:524px; background:url(../images/zw/5229-1.png) no-repeat;}
+.zw_5230{ width:82px; height:80px; z-index:2; position:absolute; top:107px; left:578px; background:url(../images/zw/5230-1.png) no-repeat;}
+.zw_5231{ width:88px; height:83px; z-index:2; position:absolute; top:154px; left:641px; background:url(../images/zw/5231-1.png) no-repeat;}
+.zw_5232{ width:88px; height:83px; z-index:2; position:absolute; top:210px; left:724px; background:url(../images/zw/5232-1.png) no-repeat;}
+.zw_5233{ width:73px; height:74px; z-index:2; position:absolute; top:262px; left:794px; background:url(../images/zw/5233-1.png) no-repeat;}
+.zw_5235{ width:73px; height:72px; z-index:2; position:absolute; top:226px; left:848px; background:url(../images/zw/5235-1.png) no-repeat;}
+.zw_5236{ width:89px; height:82px; z-index:2; position:absolute; top:177px; left:778px; background:url(../images/zw/5236-1.png) no-repeat;}
+.zw_5237{ width:89px; height:82px; z-index:2; position:absolute; top:118px; left:696px; background:url(../images/zw/5237-1.png) no-repeat;}
+.zw_5238{ width:84px; height:82px; z-index:2; position:absolute; top:69px; left:632px; background:url(../images/zw/5238-1.png) no-repeat;}
+.zw_5239{ width:73px; height:73px; z-index:2; position:absolute; top:40px; left:692px; background:url(../images/zw/5239-1.png) no-repeat;}
+.zw_5250{ width:77px; height:78px; z-index:2; position:absolute;top:85px; left:756px; background:url(../images/zw/5250-1.png) no-repeat;}
+.zw_5251{ width:78px; height:77px; z-index:2; position:absolute; top:144px; left:837px; background:url(../images/zw/5251-1.png) no-repeat;}
+.zw_5252{ width:67px; height:66px; z-index:2; position:absolute; top:194px; left:906px; background:url(../images/zw/5252-1.png) no-repeat;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

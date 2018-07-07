@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>微信支付</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href="__PUBLIC__/addon/weixin/dist/style/weui.min.css" rel="stylesheet">
+	<link href="http://static.hongdayun.com/public/bootstrap/3.3.5/bootstrap.min.css" rel="stylesheet">
+	<link href="http://static.hongdayun.com/public/bootstrap/3.3.5/bootstrap.theme.min.css" rel="stylesheet">
+	<script src="http://static.hongdayun.com/public/jquery/2.1.4/jquery.min.js"></script>
+	<script src="http://static.hongdayun.com/public/bootstrap/3.3.5/bootstrap.min.js"></script>
+	<script src="http://static.hongdayun.com/public/simplecartjs/3.0.5/simpleCart.min.js"></script>
+	<script src="http://static.hongdayun.com/public/layer/2.2/layer.js"></script>
+
+		<if condition="$data.order_type eq 1">
+
+		<script >
+			$(document).ready(function(){
+					simpleCart.empty();
+				})
+				
+				</script >
+	<elseif condition="$data.order_type eq 2"/>
+
+	<else /> 
+
+	</if>
+<script >
+		//调用微信JS api 支付
+		function jsApiCall()
+		{
+			WeixinJSBridge.invoke(
+				'getBrandWCPayRequest',
+				{$order},
+				function(res){
+					WeixinJSBridge.log(res.err_msg);
+					if(res.err_msg == "get_brand_wcpay_request:ok" ) {
+					
+						$.ajax({
+							type:'post',
+							url:"__APP__/Home/Pay/Info/Addon/WeiXin.html",
+							data:{
+								"order_id":"{$data.order_id}",
+								
+								
+							},
+							success:function(data){	
+							
+								//notice(data);
+								if(data==1){
+									window.location.href='__APP__/';
+								}
+								
+							},
+							error:function(){
+								notice('支付错误，请联系客服');
+							}
+							
+						
+						});
+					}else if(res.err_msg == "get_brand_wcpay_request:cancel" ) {
+						notice('未完成付款！');
+					}
+					
+				}
+			);
+		}
+		
+			
+		//发送当前页面信息
+		function notice(msg){  
+			layer.msg(msg);
+		}	
+				
+							
+			
+
+		function callpay()
+		{
+			if (typeof WeixinJSBridge == "undefined"){
+				
+			    if( document.addEventListener ){
+					
+			        document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+			    }else if (document.attachEvent){
+					
+			        document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+			        document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+			    }
+			}else{
+			
+			  jsApiCall();
+			}
+		}
+</script >
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="weui_msg">
+		   <div class="weui_icon_area"><i class="weui_icon_safe weui_icon_safe_success"></i></div>
+		   <div class="weui_text_area">
+			   <h2 class="weui_msg_title">微信支付</h2>
+			   <p class="weui_msg_desc">支付金额：￥{$info.price}元</p>
+		   </div>
+		   <div class="weui_opr_area">
+			   <p class="weui_btn_area">
+				   <a onclick="callpay()" class="weui_btn weui_btn_primary">确定支付</a>
+				   <a href="__APP__/" class="weui_btn weui_btn_default">取消支付</a>
+			   </p>
+		   </div>
+		 
+		   
+		</div>
+		
+	</div>
+</div>
+</body>
+</html>

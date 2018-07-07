@@ -1,0 +1,444 @@
+ CSS Document */
+.zw_select{ width:1200px; height:773px; margin:0 auto; background:url(../images/bg.png) no-repeat; position:relative;}
+
+
+/*.zw_8905{ width:82px; height:80px; z-index:2; position:absolute; top:107px; left:578px; background:url(../images/zw/5230.png) no-repeat;}
+.zw_8905:hover{ background:url(../images/zw/5230-2.png) no-repeat;}
+*/
+/*2018年电梯展8.2号馆 区域F 开始*/
+.zw_8905{ top:196px; left:180px; }
+.zw_8906{ top:196px; left:228px; }
+.zw_8907{ top:196px; left:276px; }
+.zw_8908{ top:196px; left:324px; }
+.zw_8909{ top:196px; left:372px; }
+
+.zw_8910{ top:196px; left: 420px; }
+.zw_8911{ top:196px; left: 504px; }
+.zw_8912{ top:196px; left: 552px; }
+.zw_8913{ top:196px; left: 600px; }
+.zw_8915{ top:196px; left: 648px; }
+.zw_8916{ top:196px; left: 696px; }
+.zw_8917{ top:196px; left: 780px; }
+.zw_8918{ top:196px; left: 828px; }
+.zw_8919{ top:196px; left: 876px; }
+.zw_8920{ top:196px; left: 924px; }
+
+
+
+.zw_8903{ top: 272px; left:  185px ; }
+.zw_8890{ top:272px ; left:  263px; }
+.zw_8889{ top:272px ; left:  299px; }
+.zw_8877{ top:272px ; left:  377px; }
+.zw_8876{ top: 272px; left:  413px; }
+.zw_8863{ top: 272px; left:  491px; }
+.zw_8862{ top: 272px; left:  527px; }
+.zw_8850{ top:272px ; left:  605px; }
+.zw_8839{ top:272px ; left:  641px; }
+.zw_8827{ top: 272px; left:  719px; }
+.zw_8826{ top:272px ; left:  755px; }
+.zw_8813{ top: 272px; left:  833px; }
+.zw_8812{ top: 272px; left:  869px; }
+.zw_8802{ top:272px ; left:  948px; }
+
+.zw_8902{ top: 320px; left:185px  }
+.zw_8891{ top: 320px; left:263px; }
+.zw_8888{ top: 320px; left:299px; }
+.zw_8878{ top: 320px; left:377px; }
+.zw_8875{ top: 320px; left:413px; }
+.zw_8865{ top: 320px; left:491px; }
+.zw_8861{ top: 320px; left:527px; }
+.zw_8851{ top: 320px; left:605px; }
+.zw_8838{ top: 320px; left:641px; }
+.zw_8828{ top: 320px; left:719px; }
+.zw_8825{ top: 320px; left:755px; }
+.zw_8815{ top: 320px; left:833px; }
+.zw_8811{ top: 320px; left:869px; }
+.zw_8F09{ top: 320px; left:948px; }
+
+.zw_8901{ top: 368px ; left: 185px ; }
+.zw_8892{ top: 368px; left: 263px ; }
+.zw_8887{ top: 368px; left: 299px ; }
+.zw_8879{ top: 368px; left: 377px ; }
+.zw_8873{ top: 368px; left:413px  ; }
+.zw_8866{ top: 368px; left: 491px ; }
+.zw_8860{ top: 368px; left:  527px; }
+.zw_8852{ top: 368px; left:605px  ; }
+.zw_8837{ top: 368px; left: 641px ; }
+.zw_8829{ top: 368px; left: 719px ; }
+.zw_8823{ top: 368px; left: 755px ; }
+.zw_8816{ top: 368px; left:  833px; }
+.zw_8810{ top: 368px; left: 869px ; }
+
+.zw_8900{ top:456px ; left:185px  ; }
+.zw_8893{ top: 456px; left: 263px ; }
+.zw_8886{ top: 456px; left: 299px ; }
+.zw_8880{ top: 456px; left:  377px; }
+.zw_8872{ top: 456px; left: 413px ; }
+.zw_8867{ top: 456px; left:  491px; }
+.zw_8859{ top: 456px; left:  527px; }
+.zw_8853{ top: 456px; left: 605px ; }
+.zw_8836{ top: 456px; left: 641px ; }
+.zw_8830{ top: 456px; left:  719px; }
+.zw_8822{ top: 456px; left:  755px; }
+.zw_8817{ top: 456px; left:  833px; }
+.zw_8809{ top: 456px; left:  869px; }
+.zw_8803{ top: 456px; left:  948px; }
+.zw_8801{ top: 456px; left:  984px; }
+
+.zw_8899{ top: 504px; left:185px  ; }
+.zw_8895{ top: 504px; left: 263px ; }
+.zw_8885{ top: 504px; left:  299px; }
+.zw_8881{ top: 504px; left: 377px ; }
+.zw_8871{ top: 504px; left: 413px ; }
+.zw_8868{ top: 504px; left:  491px; }
+.zw_8858{ top: 504px; left: 527px ; }
+.zw_8855{ top: 504px; left:  605px; }
+.zw_8835{ top: 504px; left: 641px ; }
+.zw_8831{ top: 504px; left:  719px; }
+.zw_8821{ top: 504px; left:  755px; }
+.zw_8818{ top: 504px; left: 833px ; }
+.zw_8808{ top: 504px; left:  869px; }
+.zw_8805{ top: 504px; left:  948px; }
+
+.zw_8898{ top: 552px; left:185px  ; }
+.zw_8896{ top:552px; left: 263px ; }
+.zw_8883{ top:552px; left:  299px; }
+.zw_8882{ top:552px; left:  377px; }
+.zw_8870{ top:552px; left:  413px; }
+.zw_8869{ top:552px; left: 491px ; }
+.zw_8857{ top:552px; left:  527px; }
+.zw_8856{ top:552px; left:  605px; }
+.zw_8833{ top:552px; left: 641px ; }
+.zw_8832{ top:552px; left: 719px ; }
+.zw_8820{ top:552px; left: 755px ; }
+.zw_8819{ top:552px; left:  833px; }
+.zw_8807{ top:552px; left:  869px; }
+.zw_8806{ top:552px; left:  948px; }
+
+.zw_8897{ top: 600px; left: 185px ; }
+.zw_8F08{ top: 600px; left: 263px ; }
+.zw_8F07{ top: 600px; left: 377px ; }
+.zw_8F06{ top: 600px; left:  491px; }
+.zw_8F05{ top: 600px; left:  605px; }
+.zw_8F03{ top: 600px; left:  719px; }
+.zw_8F02{ top: 600px; left:  833px; }
+.zw_8F01{ top: 600px; left:  948px; }
+/*2018年电梯展8.2号馆 区域F 结束*/
+
+
+
+/*2018年电梯展8.2号馆 区域D 开始*/
+
+.zw_8565{top:196px; ;left:180px ;}
+.zw_8566{top:196px;left: 276px;}
+.zw_8567{top:196px;left: 324px;}
+.zw_8568{top:196px;left: 459px;}
+.zw_8569{top:196px;left: 555px;}
+.zw_8570{top:196px;left: 689px;}
+.zw_8571{top:196px;left: 781px;}
+.zw_8572{top:196px;left: 912px;}
+
+.zw_8561{top:272px ;left: 185px; }
+.zw_8560{top:272px ;left: 221px; }
+.zw_8555{top:272px ;left: 306px; }
+.zw_8553{top:272px ;left: 341px; }
+.zw_8538{top:272px ;left: 429px; }
+.zw_8537{top:272px ;left: 465px; }
+.zw_8531{top:272px ;left: 549px; }
+.zw_8530{top:272px ;left: 585px; }
+.zw_8525{top:272px ;left: 666px; }
+.zw_8523{top:272px ;left: 702px; }
+.zw_8518{top:272px ;left: 788px; }
+.zw_8517{top:272px ;left: 824px; }
+.zw_8511{top:272px ;left: 910px; }
+.zw_8510{top:272px ;left: 946px; }
+.zw_8505{top:272px ;left: 1028px;}
+.zw_8503{top:272px ;left: 1064px;}
+
+
+.zw_8562{top:368px;left: 185px; }
+.zw_8559{top:368px;left: 221px; }
+.zw_8556{top:368px;left: 306px; }
+.zw_8552{top:368px;left: 341px; }
+.zw_8539{top:368px;left: 429px; }
+.zw_8536{top:368px;left: 465px; }
+.zw_8532{top:368px;left: 549px; }
+.zw_8529{top:368px;left: 585px; }
+.zw_8526{top:368px;left: 666px; }
+.zw_8522{top:368px;left: 702px; }
+.zw_8519{top:368px;left: 788px; }
+.zw_8516{top:368px;left: 824px; }
+.zw_8512{top:368px;left: 910px; }
+.zw_8509{top:368px;left: 946px; }
+.zw_8506{top:368px;left: 1028px;}
+.zw_8502{top:368px;left: 1064px;;}
+
+
+.zw_8563{top:416px;left: 185px; }
+.zw_8558{top:416px;left: 221px; }
+.zw_8557{top:416px;left: 306px; }
+.zw_8551{top:416px;left: 341px; }
+.zw_8550{top:416px;left: 429px; }
+.zw_8535{top:416px;left: 465px; }
+.zw_8533{top:416px;left: 549px; }
+.zw_8528{top:416px;left: 585px; }
+.zw_8527{top:416px;left: 666px; }
+.zw_8521{top:416px;left: 702px; }
+.zw_8520{top:416px;left: 788px; }
+.zw_8515{top:416px;left: 824px; }
+.zw_8513{top:416px;left: 910px; }
+.zw_8508{top:416px;left: 946px; }
+.zw_8507{top:416px;left: 1028px;}
+.zw_8501{top:416px;left: 1064px;}
+
+
+.zw_8D10{top:464px ;left:185px;}
+.zw_8D11{top:464px;left: 306px ;}
+.zw_8D12{top:464px;left: 429px;}
+.zw_8D13{top:464px;left: 549px;}
+.zw_8D15{top:464px;left: 666px;}
+.zw_8D16{top:464px;left: 788px;}
+.zw_8D17{top:464px;left: 910px;}
+.zw_8D18{top:464px;left: 1028px;}
+
+.zw_8D09{top:600px ;left:185px;}
+.zw_8D08{top:600px ;left:293px;}
+.zw_8D07{top:600px ;left:429px;}
+.zw_8D06{top:600px ;left:513px;}
+.zw_8D05{top:600px ;left:666px;}
+.zw_8D03{top:600px ;left:750px;}
+.zw_8D02{top:600px ;left:910px;}
+.zw_8D01{top:600px ;left:994px;}
+/*2018年电梯展8.2号馆 区域D 结束*/
+
+/*2018年电梯展8.2号馆 区域E 开始*/
+
+.zw_8709{ top:196px ; left: 180px; }
+.zw_8E08{ top: 196px; left: 258px; }
+.zw_8E07{ top: 196px; left: 372px; }
+.zw_8E06{ top: 196px; left: 486px; }
+.zw_8E05{ top: 196px; left: 600px; }
+.zw_8E03{ top: 196px; left: 714px; }
+.zw_8E02{ top: 196px; left: 828px; }
+.zw_8E01{ top: 196px; left: 942px; }
+
+.zw_8710{ top: 292px; left: 180px ; }
+.zw_8708{ top: 292px; left: 258px ; }
+.zw_8693{ top: 292px; left: 294px; }
+.zw_8692{ top: 292px; left: 372px; }
+.zw_8678{ top: 292px; left: 408px; }
+.zw_8677{ top: 292px; left: 486px; }
+.zw_8662{ top: 292px; left: 522px; }
+.zw_8661{ top: 292px; left: 600px; }
+.zw_8637{ top: 292px; left: 636px; }
+.zw_8636{ top: 292px; left: 714px; }
+.zw_8621{ top: 292px; left: 750px; }
+.zw_8620{ top: 292px; left: 828px; }
+.zw_8606{ top: 292px; left: 864px; }
+.zw_8605{ top: 292px; left: 942px; }
+.zw_8601{ top: 292px; left: 978px; }
+
+.zw_8711{ top: 340px; left: 180px; }
+.zw_8707{ top: 340px; left: 258px; }
+.zw_8695{ top: 340px; left: 294px; }
+.zw_8691{ top: 340px; left: 372px; }
+.zw_8679{ top: 340px; left: 408px; }
+.zw_8676{ top: 340px; left: 486px; }
+.zw_8663{ top: 340px; left: 522px; }
+.zw_8660{ top: 340px; left: 600px; }
+.zw_8638{ top: 340px; left: 636px; }
+.zw_8635{ top: 340px; left: 714px; }
+.zw_8622{ top: 340px; left: 750px; }
+.zw_8619{ top: 340px; left: 828px; }
+.zw_8607{ top: 340px; left: 864px; }
+.zw_8603{ top: 340px; left: 942px; }
+
+.zw_8712{ top: 388px ;left:180px ; }
+.zw_8706{ top:388px; left:258px; }
+.zw_8696{ top:388px; left:294px; }
+.zw_8690{ top:388px; left:372px; }
+.zw_8680{ top:388px; left:408px; }
+.zw_8675{ top:388px; left:486px; }
+.zw_8665{ top:388px; left:522px; }
+.zw_8659{ top:388px; left:600px; }
+.zw_8639{ top:388px; left:636px; }
+.zw_8633{ top:388px; left:714px; }
+.zw_8623{ top:388px; left:750px; }
+.zw_8618{ top:388px; left:828px; }
+.zw_8608{ top:388px; left:864px; }
+.zw_8602{ top:388px; left:942px; }
+
+
+.zw_8713{ top:481px ; left: 180px; }
+.zw_8705{ top:481px ; left: 258px; }
+.zw_8697{ top:481px ; left: 294px; }
+.zw_8689{ top:481px ; left: 372px; }
+.zw_8681{ top:481px ; left: 408px; }
+.zw_8673{ top:481px ; left: 486px; }
+.zw_8666{ top:481px ; left: 522px; }
+.zw_8658{ top:481px ; left: 600px; }
+.zw_8650{ top:481px ; left: 636px; }
+.zw_8632{ top:481px ; left: 714px; }
+.zw_8625{ top:481px ; left: 750px; }
+.zw_8617{ top:481px ; left: 828px; }
+.zw_8609{ top:481px ; left: 864px; }
+.zw_8E09{ top:481px ; left: 942px; }
+
+.zw_8715{ top: 529px; left: 180px; }
+.zw_8703{ top: 529px; left: 258px }
+.zw_8698{ top: 529px; left: 294px }
+.zw_8688{ top: 529px; left:  372px}
+.zw_8682{ top: 529px; left: 408px }
+.zw_8672{ top: 529px; left: 486px }
+.zw_8667{ top: 529px; left: 522px }
+.zw_8657{ top: 529px; left:  600px}
+.zw_8651{ top: 529px; left: 636px }
+.zw_8631{ top: 529px; left: 714px }
+.zw_8626{ top: 529px; left: 750px }
+.zw_8616{ top: 529px; left: 828px }
+.zw_8610{ top: 529px; left:  864px}
+
+.zw_8716{ top: 577px; left:180px ; }
+.zw_8702{ top:577px ; left:258px  }
+.zw_8699{ top:577px ; left:294px  }
+.zw_8687{ top:577px ; left: 372px }
+.zw_8683{ top:577px ; left:408px  }
+.zw_8671{ top:577px ; left:486px  }
+.zw_8668{ top:577px ; left:522px  }
+.zw_8656{ top:577px ; left: 600px }
+.zw_8652{ top:577px ; left:636px  }
+.zw_8630{ top:577px ; left:714px  }
+.zw_8627{ top:577px ; left:750px  }
+.zw_8615{ top:577px ; left:828px  }
+.zw_8611{ top:577px ; left: 864px }
+.zw_8E10{ top:577px ; left: 942px; }
+
+.zw_8717{ top:625px ; left:180px ; }
+.zw_8701{ top:625px ; left: 258px; }
+.zw_8700{ top:625px ; left: 294px; }
+.zw_8686{ top:625px ; left: 372px; }
+.zw_8685{ top:625px ; left:408px ; }
+.zw_8670{ top:625px ; left:486px ; }
+.zw_8669{ top:625px ; left:522px ; }
+.zw_8655{ top:625px ; left: 600px; }
+.zw_8653{ top:625px ; left: 636px; }
+.zw_8629{ top:625px ; left: 714px; }
+.zw_8628{ top:625px ; left: 750px; }
+.zw_8613{ top:625px ; left:828px ; }
+.zw_8612{ top:625px ; left:864px ; }
+
+.zw_8718{ top:718px ; left:180px ; }
+.zw_8719{ top: 718px; left: 228px; }
+.zw_8720{ top: 718px; left: 276px; }
+.zw_8721{ top: 718px; left:354px ; }
+.zw_8722{ top: 718px; left: 402px; }
+.zw_8723{ top: 718px; left: 450px; }
+.zw_8725{ top: 718px; left: 498px; }
+.zw_8726{ top: 718px; left: 588px; }
+.zw_8727{ top: 718px; left: 636px; }
+.zw_8728{ top: 718px; left: 684px; }
+.zw_8729{ top: 718px; left: 732px; }
+.zw_8730{ top: 718px; left: 822px; }
+
+
+/*2018年电梯展8.2号馆 区域E 结束*/
+
+/*2018年电梯展8.2号馆 区域D 开始*/
+.zw_8C09{ top:196px ;left:180px ; }
+.zw_8C08{ top:196px ;left: 288px; }
+.zw_8C07{ top:196px;left: 414px; }
+.zw_8C06{ top:196px;left: 498px; }
+.zw_8C05{ top:196px;left: 648px; }
+.zw_8C03{ top:196px;left: 732px; }
+.zw_8C02{ top:196px;left: 882px; }
+.zw_8C01{ top:196px;left: 966px; }
+
+.zw_8C10{ top:337px ;left: 180px; }
+.zw_8C11{ top:337px ;left: 297px; }
+.zw_8C12{ top:337px ;left: 414px; }
+.zw_8C13{ top:337px ;left: 531px; }
+.zw_8C15{ top:337px ;left: 648px; }
+.zw_8C16{ top:337px ;left: 765px; }
+.zw_8C17{ top:337px ;left: 882px; }
+.zw_8C18{ top:337px ;left: 999px; }
+
+.zw_8381{ top:433px ;left:180px ; }
+.zw_8373{ top: 433px;left: 216px; }
+.zw_8372{ top: 433px;left: 297px; }
+.zw_8365{ top: 433px;left: 333px; }
+.zw_8363{ top: 433px;left:414px; }
+.zw_8356{ top: 433px;left: 450px; }
+.zw_8355{ top: 433px;left: 531px; }
+.zw_8337{ top: 433px;left: 567px; }
+.zw_8336{ top: 433px;left: 648px; }
+.zw_8328{ top: 433px;left: 684px; }
+.zw_8327{ top: 433px;left:765px ; }
+.zw_8319{ top: 433px;left: 801px; }
+.zw_8318{ top: 433px;left: 882px; }
+.zw_8310{ top: 433px;left: 918px; }	
+.zw_8309{ top: 433px;left: 999px; }
+.zw_8301{ top: 433px;left: 1035px; }
+
+.zw_8380{ top:481px ;left:180px ; }
+.zw_8375{ top:481px ;left: 216px;  }
+.zw_8371{ top:481px ;left: 297px;  }
+.zw_8366{ top:481px ;left: 333px;  }
+.zw_8362{ top:481px ;left:414px    }
+.zw_8357{ top:481px ;left: 450px;  }
+.zw_8353{ top:481px ;left: 531px;  }
+.zw_8338{ top:481px ;left: 567px;  }
+.zw_8335{ top:481px ;left: 648px;  }
+.zw_8329{ top:481px ;left: 684px;  }
+.zw_8326{ top:481px ;left:765px ;  }
+.zw_8320{ top:481px ;left: 801px;  }
+.zw_8317{ top:481px ;left: 882px;  }
+.zw_8311{ top:481px ;left: 918px;  }
+.zw_8308{ top:481px ;left: 999px;  }
+.zw_8302{ top:481px ;left: 1035px; }
+
+.zw_8379{ top:529px ;left:180px ; }
+.zw_8376{ top:529px ;left: 216px; }
+.zw_8370{ top:529px ;left:  297px;  }
+.zw_8367{ top:529px ;left:  333px;  }
+.zw_8361{ top:529px ;left: 414px    }
+.zw_8358{ top:529px ;left:  450px;  }
+.zw_8352{ top:529px ;left:  531px;  }
+.zw_8339{ top:529px ;left:  567px;  }
+.zw_8333{ top:529px ;left:  648px;  }
+.zw_8330{ top:529px ;left:  684px;  }
+.zw_8325{ top:529px ;left: 765px ;  }
+.zw_8321{ top:529px ;left:  801px;  }
+.zw_8316{ top:529px ;left:  882px;  }
+.zw_8312{ top:529px ;left:  918px;  }
+.zw_8307{ top:529px ;left:  999px;  }
+.zw_8303{ top:529px ;left:  1035px; }
+
+.zw_8378{ top:577px ;left: 180px; }
+.zw_8377{ top: 577px;left:  216px; }
+.zw_8369{ top: 577px;left:   297px;  }
+.zw_8368{ top: 577px;left:   333px;  }
+.zw_8360{ top: 577px;left:  414px    }
+.zw_8359{ top: 577px;left:   450px;  }
+.zw_8351{ top: 577px;left:   531px;  }
+.zw_8350{ top: 577px;left:   567px;  }
+.zw_8332{ top: 577px;left:   648px;  }
+.zw_8331{ top: 577px;left:   684px;  }
+.zw_8323{ top: 577px;left:  765px ;  }
+.zw_8322{ top: 577px;left:   801px;  }
+.zw_8315{ top: 577px;left:   882px;  }
+.zw_8313{ top: 577px;left:   918px;  }
+.zw_8306{ top: 577px;left:   999px;  }
+.zw_8305{ top: 577px;left:   1035px; }
+
+.zw_8382{ top:718px ;left: 165px; }
+.zw_8383{ top:718px;left:261px ; }
+.zw_8385{ top:718px;left:388px ; }
+.zw_8386{ top:718px;left: 484px; }
+.zw_8387{ top:718px;left: 532px; }
+.zw_8388{ top:718px;left:664px ; }
+.zw_8389{ top:718px;left: 760px; }
+.zw_8390{ top:718px;left: 890px; }
+.zw_8391{ top:718px;left: 986px; }
+
+
+/*2018年电梯展8.2号馆 区域D 结束*/

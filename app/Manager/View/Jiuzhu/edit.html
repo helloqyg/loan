@@ -1,0 +1,350 @@
+<extend name="Public:base" />
+<block name="content">
+<div class="row">
+	<div class="col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><notempty name="result.id">修改<else/>添加</notempty>-<{$header}></h3>
+			</div>
+		
+		<style type="text/css"> .imgBox {padding: 0.1rem 0.25rem; margin-bottom: 0.4rem; display: flex; align-items: center; flex-wrap: wrap; } .imgBox img {width: 70px; } .imgBox .icon-delete2 {color: red; font-size: 0.24rem; position: absolute; top: 0rem; right: 0.05rem; } .img, .up {height: 1.6rem; margin-bottom: 0.2rem; } .up {background: none; border-radius: 0.1rem; display: flex; justify-content: center; align-items: center; } .up span {border: 1px solid #ccc; width: 100%; height: 100%; background: #fff; border-radius: 0.1rem; display: flex; justify-content: center; align-items: center; }
+		</style>	
+		<div class="panel-body">
+				<form id="mainForm" role="form" class="form-horizontal" method="post" action="">
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="field-1">目标金额</label>	
+						<div class="col-sm-6">
+							<input type="text" class="form-control" name="target_money" id="target_money" value="<{$result.target_money|default=''}>" placeholder="">
+							<p class="help-block"></p>
+						</div>
+					</div>
+					<div class="form-group-separator"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="field-1">标题</label>	
+						<div class="col-sm-6">
+							<input type="text" class="form-control" name="title" id="title" value="<{$result.title|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+					</div>
+					
+					<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">描述信息</label>
+							<div class="col-sm-6">
+								<textarea class="form-control" cols="5" id="summary" name="summary"><{$result.summary|default=''}></textarea>
+							</div>
+						</div>
+
+					<div class="form-group-separator"></div>
+					<div style="height: 80px" class="form-group"><a style="color: red" href="<{:U('jiuzhu/img_detail',array('img_id'=>$result['id'],'type'=>2))}>">查看原图</a>
+						<label class="col-sm-2 control-label" for="field-1">个人病例图片</label>	
+						<div class="col-sm-6">
+							 <ul class="imgBox personBox" id="1">
+				                       <volist name="imgArray" id="v">
+				                    <li class="img">
+				                        <img src="<{$v.url}>" onclick="remove(this)" alt="">
+				                    </li>
+				                    </volist>
+				                <li class="up">
+				                    <span><i class="iconfont icon-plus-bold"></i></span>
+				                        <input  type="file" name="img" class="file">
+				                </li>
+				            </ul>
+
+						</div>
+					</div>
+
+					
+	<div class="form-group-separator"></div> 
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="field-5">组织机构认证</label>
+							<div class="col-sm-6">
+							 <volist name='organInfo' id='v'>
+								<label class="radio-inline">
+									  <input type="radio"<if condition = "$result['organization'] eq $v['id']"> checked </if> name="organization" value="<{$v.id}>"><{$v.name}>
+								</label>
+							</volist>
+						</div>
+					</div>
+	<div class="form-group-separator"></div> 
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="field-5">委员会人员职位</label>
+							<div class="col-sm-6">
+							 <volist name='commitInfo' id='v'>
+								<label class="radio-inline">
+									  <input type="radio"<if condition = "$result['committee'] eq $v['id']"> checked </if> name="committee" value="<{$v.id}>"><{$v.name}>
+								</label>
+							</volist>
+						</div>
+					</div>
+
+			<div class="form-group-separator"></div> 
+					<div style="height: 80px" class="form-group"> <a style="color: red" href="<{:U('jiuzhu/img_detail',array('img_id'=>$result['id'],'type'=>1))}>">查看原图</a>
+						<label class="col-sm-2 control-label" for="field-1">组织机构证明图片</label>	
+						<div class="col-sm-6">
+							 <ul class="imgBox orgImg" id="1">
+				                       <volist name="orgImgArray" id="v">
+				                    <li class="img">
+				                        <img src="<{$v.url}>" onclick="remove(this)" alt="">
+				                    </li>
+				                    </volist>
+				                <li class="up">
+				                    <span><i class="iconfont icon-plus-bold"></i></span>
+				                        <input  type="file" name="img" class="file">
+				                </li>
+				            </ul>
+
+						</div>
+					</div>
+			
+					<input type="hidden" id="id" name="id" value="<{$_GET.id}>">
+	<h2>个人信息</h2>
+
+					<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">身份证号</label>
+							<div class="col-sm-6">
+							<input type="text" class="form-control" name="me_id" id="me_id" value="<{$result.me_id|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+						</div>
+					<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">联系电话</label>
+							<div class="col-sm-6">
+							<input type="text" class="form-control" name="me_tel" id="me_tel" value="<{$result.me_tel|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+						</div>
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">电子邮箱</label>
+							<div class="col-sm-6">
+							<input type="text" class="form-control" name="me_email" id="me_email" value="<{$result.me_email|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+						</div>
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">银行卡号</label>
+							<div class="col-sm-6">
+							<input type="text" class="form-control" name="me_bank" id="me_bank" value="<{$result.me_bank|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+						</div>
+					<div class="form-group-separator"></div>
+					<h2>家人信息</h2>
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">身份证号</label>
+							<div class="col-sm-6">
+							<input type="text" class="form-control" name="family_id" id="family_id" value="<{$result.family_id|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+						</div>
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">联系电话</label>
+							<div class="col-sm-6">
+							<input type="text" class="form-control" name="family_tel" id="family_tel" value="<{$result.family_tel|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+						</div>  
+						<div class="form-group-separator"></div>
+				<volist name='witness' id='w' key='k'>
+							<h2>权威人士信息 <{$k}></h2>
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">名称</label>
+							<div class="col-sm-6">
+							<input type="text" class="form-control" disabled="" value="<{$w.name|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+						</div>
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">联系电话</label>
+							<div class="col-sm-6">
+							<input type="text" class="form-control" disabled="" value="<{$w.tel|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+						</div>  
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">职位</label>
+							<div class="col-sm-6">
+							<input type="text" class="form-control" disabled="" value="<{$w.title|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+						</div> 
+
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">可信度</label>
+							<div class="col-sm-6">
+							<input type="text" class="form-control" disabled="" value="<{$w.score|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+						</div> 
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">提交时间</label>
+							<div class="col-sm-6">
+							<input type="text" class="form-control" disabled="" value="<{$w.date|date='Y-m-d H:i:s',###}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+						</div> 
+			</volist>
+
+					<div class="form-group-separator"></div>
+						<h2>状态</h2>
+			<div class="form-group-separator"></div> 
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="field-5">状态</label>
+							<div class="col-sm-6">
+						
+				  <label class="radio-inline"><input type="radio" checkedname="organization" name="status" 	<if condition = "$result['status'] eq 1"> 	checked </if> value="1">权威人士正在认证中	</label>
+				  	<label class="radio-inline"><input type="radio" checkedname="organization" name="status" 	<if condition = "$result['status'] eq 2"> 	checked </if> value="2">未审核</label>
+
+				  	<label class="radio-inline"><input type="radio" checkedname="organization" name="status" 	<if condition = "$result['status'] eq 3"> 	checked </if> value="3">筹款中(审核成功)</label>
+				  	<label class="radio-inline"><input type="radio" checkedname="organization" name="status"	<if condition = "$result['status'] eq 4"> 	checked </if> value="4">已结束</label>
+						</div>
+					</div>
+						<div class="form-group-separator"></div> 
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="field-5">是否推荐到主页</label>
+							<div class="col-sm-6">
+						
+				  <label class="radio-inline"><input type="radio" checkedname="organization" name="recommend" 	<if condition = "$result['recommend'] eq 0"> 	checked </if> value="0">不推荐	</label>
+				  	<label class="radio-inline"><input type="radio" checkedname="organization" name="recommend" 	<if condition = "$result['recommend'] eq 1"> 	checked </if> value="1">推荐</label>
+
+				  		<p class="help-block"> 注意： 如果为推荐，状态必须为：筹款中、 否则不显示</p>
+						</div>
+					</div>
+				<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">标签</label>
+							<div class="col-sm-6">
+								<select name="tag" class="form-control" >
+									
+									<option value="0" <eq name="result.tag" value="0">selected</eq>>请选择</option>
+									<volist name='tag' id='t'>
+									<option value="<{$t.id}>" 
+										<if condition="$result['tag'] eq $t['id']"> selected
+										</if>
+
+										><{$t.name}></option>
+								</volist>
+								</select>
+							</div>
+						</div>
+					<div class="form-group-separator"></div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="field-5">是否展示到成功案例</label>
+							<div class="col-sm-6">
+						
+				  <label class="radio-inline"><input type="radio" checkedname="organization" name="is_success" 	<if condition = "$result['is_success'] eq 0"> 	checked </if> value="0">不展示	</label>
+				  	<label class="radio-inline"><input type="radio" checkedname="organization" name="is_success" 	<if condition = "$result['is_success'] eq 1"> 	checked </if> value="1">展示</label>
+
+				  		<p class="help-block"> 注意： 如果想要展示到成功案例，必须项目已经结束。否则无法展示出来</p>
+						</div>
+					</div>
+
+
+					<div class="form-group text-center">
+						<button type="button"  class="btn submit btn-info btn-single pull-center ajax-post"  target-form="form-horizontal"><notempty name="result.id">修改<else/>添加</notempty></button>
+
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+<link rel="stylesheet" href="__PUBLIC__/js/uploadify/uploadify.css">
+<script src="__PUBLIC__/js/uploadify/jquery.uploadify.min.js"></script>
+<script src="__PUBLIC__/admin/js/daterangepicker/daterangepicker.js"></script>
+<script src="__PUBLIC__/admin/js/datepicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript">
+ //=======================================================
+    var imgarr = [];
+    $('.file').on('change',function(e){
+       var inp = $(this);
+       var up = $(e.currentTarget).parents('li');
+        $("#mainForm").ajaxSubmit({
+        url : "<{:U('index/ajaxUpload')}>", // 请求的url  
+        type : "post", // 请求方式  
+        dataType : "json", // 响应的数据类型  
+        async :true, // 异步  
+        success: function (data1) { 
+            // alert(data1);
+            // $('.uploadImg').empty();
+           var ele = "\
+            <li class='img'>\
+                <img  onclick='remove(this)' src='"+data1+"'>\
+            </li>";
+            //$('.imgBox').before(ele);
+            up.before(ele)
+            $('#mainForm').find('input[name=image]').val(data1);
+            imgarr.push(data1);
+        },  
+        error : function(){  
+            alert("数据加载失败！"); 
+        }  
+         });     
+
+
+    });
+     
+        $('#mainForm').submit(function(){
+        
+        $('.file').remove();
+    });
+
+
+       function remove(obj){
+        var pid = $(obj).parents('.imgBox').attr('id');
+        $(obj).parents('li').remove();
+        console.log($('.imgBox[id='+pid+']').find('.img').length )
+        if($('.imgBox[id='+pid+']').find('.img').length < 5){
+            $('.imgBox[id='+pid+']').find('.up').show();
+        }
+    }
+
+
+      $('.submit').click(function(){
+        var len = $('.personBox li').length
+        var len_org = $('.orgImg li').length
+            var count = 0;
+	            var array= [];
+	            for(var i = 0; i<len-1;i++){
+	    			array.push($('.personBox li:eq('+i+') img').attr('src'))
+	                   // array +=  $('.imgBox li:eq('+i+') img').attr('src')+',';
+	            }
+
+	            var orgArray= [];
+	            for(var i = 0; i<len_org-1;i++){
+	    			orgArray.push($('.orgImg li:eq('+i+') img').attr('src'))
+	                   // array +=  $('.imgBox li:eq('+i+') img').attr('src')+',';
+	            }
+	            var formArr = [];
+	            var fromData = $("form").serialize()
+
+	            $.ajax({
+	                type:'POST',
+	                url :"<{:U('jiuzhu/edit')}>",
+	                data:$.param({'array':array,'orgArray':orgArray})+'&'+$('form').serialize(),
+	                success:function(msg){
+	                if(msg == 1){
+	                       toastr.success('修改成功')
+	                }else{
+	                	 toastr.error('失败')
+	                }
+
+	            }
+	        })
+	    })
+</script>
+</block>

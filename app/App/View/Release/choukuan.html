@@ -1,0 +1,372 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+   
+    <style>
+body{
+position: relative;
+}
+.prompt{
+position: absolute;
+left: 50%;
+top: 50%;
+transform:translate3d(-50%,-50%,0);
+background: #999;
+border-radius: 0.2rem;
+padding: 0.1rem 0.2rem;
+color: #fff;
+opacity: 0;
+z-index: 3;
+}
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+</style>
+    <div class="choukuan">
+        <form id="mainForm" action="" method="post">
+
+            <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>发起救助</span>
+            </p>
+        </header>
+
+        <main class="main">
+            <div class="fast">
+                <span>不会写？帮你快速智能填写筹款信息</span><i class="iconfont icon-xiangyoujiantou"></i>
+            </div>
+            <div class="container">
+                <p class="tex">目标金额</p>
+                <p class="inp"><input type="number" value="<{$result.target_money}>" id="target_money" name="target_money" placeholder="填写目标金额">元</p>
+            </div>
+            <div class="container">
+                <p class="tex">筹款标题<span class="consult">参考案例</span></p>
+                <p class="inp"><input type="text" value="<{$result.title}>" id="title" name="title" placeholder="好的标题筹款更快（不超过20个汉字）"></p>
+            </div>
+            <div class="container">
+                <p class="tex">求助内容<span class="consult">参考案例</span></p>
+                <textarea id="summary" rows="5"  name="summary" ><{$result.summary}></textarea>
+    </div>
+            <input type="hidden" id="id" name="id" value="<{$result.id}>">
+            <div class="container">
+                <p class="tex">添加图片<span>可以添加5张图片</span></p>
+                <ul class="imgBox" id="1">
+    <volist name="imgArray" id="v">
+                    <li class="img">
+                        <img src="<{$v.url}>" alt="">
+                        <i class="iconfont icon-delete2" onclick="remove(this)"></i>
+                    </li>
+
+                    </volist>
+
+                    <li class="up">
+                        <span><i class="iconfont icon-plus-bold"></i></span>
+                        <input  type="file" name="img" class="file">
+                    </li>
+                </ul>
+            </div>
+            <!-- <input type="hidden" name="img" value=""> -->
+            <p class="tit">
+                <input type="checkbox" name="check">
+                <span>我已阅读并同意《项目条款》及《发起人承诺书》</span>
+            </p>
+        </main>
+        <footer class="footer">
+            <p>
+                <input type="button" class="submit"  value="下一步" id="agreementSub" ></input>
+            </p>
+
+        </footer></form>
+        <div class="dailog" style="display:none">
+            <h4>参考案例</h4>
+            <p>这是一个参考案例这是一个参考案例这是一个参考案例这是一个参考案例这是一个参考案例这是一个参考案例</p>
+            <span class="know">知道了</span>
+        </div>
+    </div>
+
+ <div class="promulgate" style="display:none;">
+        <div class="box">
+            <div class="tit"><span>根据填写内容为你生成参考模板</span><i class="iconfont icon-delete2"></i></div>
+            <ul>
+                <li><span>您的姓名</span><input type="text" placeholder="填写您的姓名" name="username"></li>
+                <li><span>为谁筹款</span><input type="text" placeholder="请选择" name="who"></li>
+                <li><span>患者家乡</span><input type="text" class="select-value1 form-control" name="town" placeholder="请选择"><i class="iconfont icon-xiangyoujiantou"></i></li>
+                <li><span>疾病名称</span><input type="text" placeholder="填写疾病名称" name="illness"></li>
+                <li><span>确诊时间</span><input type="text" id="select_1" placeholder="请选择" name="time"><i class="iconfont icon-xiangyoujiantou"></i></li>
+                <li><span>所在医院</span><input type="text" placeholder="填写所在医院" name="hospital"></li>
+                <li><span>已花费金额</span><input type="text" placeholder="填写已花费金额" name="money"><span>元</span></li>
+            </ul>
+            <p class="create">
+                <span>确认生成</span>
+            </p>
+        </div>
+    </div>
+    <p class='prompt'>信息不能为空</p> 
+
+</block>
+</body>
+</html>
+<script src="__HOME__/scripts/jquery-form.js"></script>
+
+<block name="js">
+      $('.icon-fanhui').click(function(){window.location.href='/release/index.html'})
+    $('input[name=check]').change(function(){
+           $xieyi = $(this).prop('checked')
+             
+        })
+    $(function(){
+        $status = "<{$result.status}>";
+        if($status == 1){
+        showAlert('你尚未完成组织机构认证请在【个人中心->我发起的】转发给朋友帮忙认证 ','/release/index.html');
+        }
+         if($status == 2){
+          showAlert('你已提交，请耐心等待工作人员审核。【个人中心->我发起的】可以查看进展','/release/index.html');
+        }
+         if($status == 3){
+          showAlert('你的项目正在筹款中！在【个人中心->我发起的】可以查看  ','/release/index.html');
+        }
+    })
+
+
+    // $('.file').change(function(e){
+    //     var up = $(e.currentTarget).parents('li');
+    //     fn(this.files[0],up);
+    // })
+    // function fn(da, up){
+    //     var r = new FileReader();
+    //     r.readAsDataURL(da);
+    //     r.onload = function(e){
+    //         var src = this.result;
+    //         var ele = `
+    //         <li class="img">
+    //             <img src="${src}" alt="">
+    //             <i class="iconfont icon-delete2" onclick="remove(this)"></i>
+    //         </li>`;
+    //         up.before(ele)
+    //         if(up.parents('.imgBox').find('.img').length == 5){
+    //             up.hide();
+    //         }
+    //     }
+    // }
+    function remove(obj){
+        var pid = $(obj).parents('.imgBox').attr('id');
+        $(obj).parents('li').remove();
+        console.log($('.imgBox[id='+pid+']').find('.img').length )
+        if($('.imgBox[id='+pid+']').find('.img').length < 5){
+            $('.imgBox[id='+pid+']').find('.up').show();
+        }
+    }
+
+    var flag = 0;
+    $('.submit').click(function(){
+        //判断表单数据是否为空
+      var t = $('form').serializeArray();
+        $.each(t,function(i,item){
+            if(item['name'] != 'id'){
+
+                if(item['value'] == '') {
+                    console.log(item['name']+'信息不可为空') 
+                    showMsg('信息不可为空')
+                    flag = 1;
+                    return false
+                    } else {
+                    flag = 0;
+                }
+            }
+        })
+
+
+       
+
+
+
+
+        if(flag == 0){
+            //判断协议
+          $xieyi =  $('input[name=check]').prop('checked')
+           if(!$xieyi){
+                flag = 1;
+                showMsg('请阅读协议')
+                return false
+         }
+
+
+    var len = $('.imgBox li').length
+    var count = 0;
+    var target_money = document.getElementById('target_money').value;
+    var title =  document.getElementById('title').value;
+    var summary =  document.getElementById('summary').value;
+    var id =  document.getElementById('id').value;
+
+            var array= [];
+            for(var i = 0; i<len-1;i++){
+    array.push($('.imgBox li:eq('+i+') img').attr('src'))
+                   // array +=  $('.imgBox li:eq('+i+') img').attr('src')+',';
+            }
+            $.ajax({
+                type:'POST',
+                url :"<{:U('release/choukuan')}>",
+                data:{'array':array,'title':title,'summary':summary,'target_money':target_money,'id':id},
+                success:function(msg){
+                    console.log(msg)
+                if(msg != 0){
+                        window.location.href='/release/step2/id/'+msg+'.html'
+                }
+
+            }
+        })
+        }
+    })
+
+    //=======================================================
+    var imgarr = [];
+    $('.file').on('change',function(e){
+       var inp = $(this);
+       var up = $(e.currentTarget).parents('li');
+        $("#mainForm").ajaxSubmit({
+        url : "<{:U('Release/ajaxUpload')}>", // 请求的url  
+        type : "post", // 请求方式  
+        dataType : "json", // 响应的数据类型  
+        async :true, // 异步  
+        success: function (data1) { 
+            // alert(data1);
+            // $('.uploadImg').empty();
+           var ele = "\
+            <li class='img'>\
+                <img src='"+data1+"'>\
+                <i class='iconfont icon-delete2' onclick='remove(this)'></i>\
+            </li>";
+            //$('.imgBox').before(ele);
+            up.before(ele)
+            $('#mainForm').find('input[name=image]').val(data1);
+            imgarr.push(data1);
+        },  
+        error : function(){  
+            alert("数据加载失败！"); 
+        }  
+         });     
+
+
+    });
+     
+        $('#mainForm').submit(function(){
+        
+        $('.file').remove();
+    });
+
+
+
+    //------
+
+    $('.fast').click(function(){
+        $('.promulgate').show();
+        $('.promulgate .box').animate({'bottom': 0},500);
+    })
+    $('.icon-delete2').click(function(){
+        $('.promulgate').hide();
+        $('.promulgate .box').animate({'bottom': '-100%'});
+    })
+    $('.select-value1').mPicker({
+        //级别
+        level:2,
+        //需要渲染的json，二级联动的需要嵌套子元素，有一定的json格式要求
+        dataJson:dataJson,
+        //true:联动
+        Linkage:true,
+        //显示行数
+        rows:6,
+        //默认值填充
+        idDefault:true,
+        //分割符号
+        splitStr:'-',
+        //头部代码
+        // header:'<\div class="mPicker-header">两级联动选择插件<\/div>',
+        confirm:function(){
+            //更新json
+            this.container.data('mPicker').updateData(level3);
+            //console.info($('.select-value').data('value1')+'-'+$('.select-value').data('value2'));
+        },
+        cancel:function(){
+            //console.info($('.select-value').data('value1')+'-'+$('.select-value').data('value2'));
+        }
+    })
+    $('.select-value1').mPicker({
+        level: 2,
+        dataJson: dataJson,
+        Linkage: true,
+        rows: 6,
+        idDefault: true,
+        splitStr: '-',
+        // header: '<div class="mPicker-header">两级联动选择插件</div>',
+        confirm: function (json) {
+            console.info('当前选中json：', json);
+            var _this= this;
+            console.info('【json里有带value的情况】');
+            //更新json
+            console.info('3s后更新json...');
+            setTimeout(function(){
+                _this.container.data('mPicker').updateData.call(_this,level3);
+                var json = getVal();
+                var valArr = json.value;
+                console.info('更新成功!!');
+                console.info('更新后的value为空', valArr[0], valArr[1]);
+                console.info('更新后的value拼接值为空', json.result);
+            },3000);
+            
+        },
+        cancel: function (json) {
+        }
+    })
+    //获取value
+    function getVal(){
+        var value1 = $('.select-value1').data('value1');
+        var value2 = $('.select-value1').data('value2');
+        var result='';
+        value1 = value1 || '';
+        value2 = value2 || '';
+        if(value1){
+            result= value1;
+        }
+        if(value2){
+            result = result+'-'+ value2;
+        }
+        return {
+            value:[value1, value2],
+            result: result
+        };
+    }
+    var myDate = new Date();
+    $.selectDate("#select_1",{
+        start:2000,
+        end:2918,
+        select:[myDate.getFullYear(),myDate.getMonth()+1,myDate.getDate()],
+        title:''
+    },function (data) {
+        var time = data.year+'年'+data.month+'月'+data.day+'日';
+        $('input[name=time]').val(time)
+    });
+    var username,who,town,illness,time,hospital,money;
+    $('.create').click(function(){
+        username = $('input[name=username]').val();
+        who = $('input[name=who]').val();
+        town = $('input[name=town]').val();
+        illness = $('input[name=illness]').val();
+        time = $('input[name=time]').val();
+        hospital = $('input[name=hospital]').val();
+        money = $('input[name=money]').val();        
+        if(username != '' && who != '' && town != '' && illness != '' && time != '' && hospital != '' && money != ''){
+            var str = `大家好，我叫${username}，家住${town}，天有不测风云，原本幸福美满的家庭却被一场突如其来的大病拖垮。在${time}，突感不适，被送往${hospital}紧急救治，最后确诊为${illness}，如今已经花去${money}元，目前病情虽然已经控制住了，但后期治疗费用还需要很多资金，朋友亲戚该借的都借了，实在是无力承担这笔天大的费用。请大家帮帮我，多多转发，大家的恩情我一定会铭记在心，感恩，好人一生平安！`
+            $('textarea[name=summary]').val(str);
+            $('.promulgate').hide();
+            $('.promulgate .box').animate({'bottom': '-100%'});
+        } else {
+            $('.prompt').animate({'opacity':1},1000);
+            setTimeout(function() {
+                $('.prompt').animate({'opacity':0},1000);
+            }, 2500);
+        }
+    })
+</block>

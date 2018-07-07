@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="apple-mobile-web-app-capable" content="yes">  
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="__HOME__/font/iconfont.css">
+    <link rel="stylesheet" href="__HOME__/css/style.css">
+    <link rel="stylesheet" href="__HOME__/css/swiper.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <block name="main"></block>
+
+    <footer class="footer">
+        <ul>
+            <a href="<{:U('index/index')}>">
+                <li >
+                    <i class="iconfont icon-shouye"></i>
+                    <span>首页</span>
+                </li>
+            </a>
+            <a href="<{:U('announce/index')}>">
+                <li>
+                    <i class="iconfont icon-aixin"></i>
+                    <span>爱心宣扬</span>
+                </li>
+            </a>
+            <a href="<{:U('release/index')}>">
+                <li>
+                    <i class="iconfont icon-tianjia1"></i>
+                    <span>我要发起</span>
+                </li>
+            </a>
+            <a href="<{:U('center/index')}>">
+                <li>
+                    <i class="iconfont icon-geren"></i>
+                    <span>个人中心</span>
+                </li>
+            </a>
+        </ul>
+    </footer>
+</div>
+</body>
+<script src="__HOME__/scripts/swiper.min.js"></script>
+<script src="__HOME__/js/jweixin-1.2.0.js"></script>
+<script src="__HOME__/scripts/rem.js"></script>
+<script src="__HOME__/scripts/jquery.min.js"></script>
+<script src="__HOME__/scripts/jquery-form.js"></script>
+<script >
+    var url = location.href;
+
+    if (url.indexOf('/index/index') >= 1) {
+        $('.icon-shouye').parent().addClass('on');
+    }
+    if (url.indexOf('announce/index') >= 1) {
+        $('.icon-aixin').parent().addClass('on');
+    }
+    if (url.indexOf('release/index') >= 1) {
+        $('.icon-tianjia1').parent().addClass('on');
+    }
+    if (url.indexOf('center/index') >= 1) {
+        $('.icon-geren').parent().addClass('on');
+    }
+
+     $('.icon-fanhui').click(function(){window.history.go(-1)})
+    var mySwiper = new Swiper ('.seconed', {
+        loop: true,
+        autoplay: {
+            delay: 3500,//1秒切换一次
+        },
+        effect : 'coverflow',
+        slidesPerView: 2,
+        centeredSlides: true,
+        coverflowEffect: {
+            rotate: 30,
+            stretch: 10,
+            depth: 60,
+            modifier: 2,
+            slideShadows : true
+        },
+    })
+    var mySwiper = new Swiper ('.back', {
+        loop: true,
+        autoplay: {
+            delay: 5000,//1秒切换一次
+        }
+    })
+        <block name="js"></block>
+</script>
+</html>

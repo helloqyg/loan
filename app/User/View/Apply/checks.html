@@ -1,0 +1,22 @@
+<extend name="Public:base" />
+<block name="main">
+<div class="main" style="padding-top:8px; min-height:450px;">
+  <div class="pay_css">
+<div class="pay_succ"><span><img src="__IMAGES__/pay.jpg" /></span><label style="font-size:32px; float:left">凭证已提交，正在审核中！</label></div>
+<div class="clear"></div>
+<div class="pay_menu"><span>支付方式：</span><label>银行汇款</label></div>
+<div class="clear"></div>
+<notempty name="info.out_trade_no"><div class="pay_menu"><span>订单号：</span><label><{$info['out_trade_no']}></label></div></notempty>
+<div class="clear"></div>
+<div class="pay_menu"><span>支付金额：</span><label><font><{$info['price']}></font> 元</label></div>
+
+    <div class="clear"></div>
+<div class="reg_btn1" style="width:350px;">
+ <a href="/User/account/company" class="s_btn" style="margin-left:120px;">会员中心</a>
+<!--<a href="#" class="s_btn">查看订单</a>-->
+
+    </div>
+     <div class="clear"></div>
+  </div>
+</div>
+</block>

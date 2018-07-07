@@ -1,0 +1,99 @@
+<extend name="Public:base"/>
+<block name="main">
+    <style type="text/css">
+        .xing {
+            width: auto;
+        }
+    </style>
+    <div class="main" style="padding-top:8px; min-height:450px;">
+        <div class="user_center">
+            <include file="Public/left"/>
+            <div class="user_right">
+                <div class="user_right_tit">合同申请</div>
+                <div class="user_right_con" style="padding-top:20px;">
+                    <form method="post" action="" id="form" class="regform">
+                        <div class="item">
+                            <div class="label">发送方式：</div>
+                            <div class="input-box">
+                                <select id="pid" name="type" class="sipt">
+                                    <!--<option value="1" selected="selected">扫描件</option>-->
+                                    <option value="2">快递</option>
+                                </select>
+                            </div>
+                            <div class="xing"></div>
+                            <div class="error_msg"></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="item">
+                            <div class="label">企业名称：</div>
+                            <div class="input-box">
+                                <input onpaste="return false" type="text" placeholder="" id="company_name"
+                                       name="company_name" value="<{$company}>" class="ipt" readonly>
+                            </div>
+                            <div class="xing"></div>
+                            <div class="error_msg"></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="item">
+                            <div class="label">产品名称：</div>
+                            <div class="input-box">
+                                <if condition="$product['ad_type'] eq 1">
+                                    <input onpaste="return false" type="text" placeholder="" id="detail" name="detail"
+                                           value="<{$booth['booth_num']}>号<{$product['area']}>平米展位" class="ipt"
+                                           readonly>
+                                    <else/>
+                                    <input onpaste="return false" type="text" placeholder="" id="detail" name="detail"
+                                           value="<{:get_ad_name($adver)}> 【 <{$adver}>】 " class="ipt" readonly>
+
+                                </if>
+                            </div>
+                            <div class="xing"></div>
+                            <div class="error_msg"></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="item">
+                            <div class="label">邮箱：</div>
+                            <div class="input-box">
+                                <input onpaste="return false" type="text" placeholder="" id="email" name="email"
+                                       class="ipt" datatype="e" errormsg="邮箱格式错误!" nullmsg="邮箱不能为空">
+                            </div>
+                            <div class="xing"></div>
+                            <div class="error_msg"></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div id="zhuanpiao" style="display:block;">
+                            <div class="item">
+                                <div class="label">收件人：</div>
+                                <div class="input-box">
+                                    <input onpaste="return false" type="text" placeholder="" id="person" name="person"
+                                           class="ipt" nullmsg="收件人不能为空">
+                                </div>
+                                <div class="xing"></div>
+                                <div class="error_msg"></div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="item">
+                                <div class="label">地址：</div>
+                                <div class="input-box">
+                                    <input onpaste="return false" type="text" placeholder="" id="address" name="address"
+                                           class="ipt" nullmsg="地址不能为空">
+                                </div>
+                                <div class="xing"></div>
+                                <div class="error_msg"></div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="pass_btn" style="width:700px;">
+                            <input id="login_button" type="submit" value="提交申请" class="sub_btn">
+                        </div>
+                        <br/><br/>
+                    </form>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</block>
+<block name="seajs">
+    seajs.use('apply');
+</block>

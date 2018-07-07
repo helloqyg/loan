@@ -1,0 +1,281 @@
+<extend name="Public:base" />
+<block name="content">
+<div class="row">
+	<div class="col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><notempty name="result.id">修改<else/>添加</notempty></h3>
+			</div>
+		
+		<style type="text/css">
+			
+.imgBox {
+  padding: 0.1rem 0.25rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.imgBox img {
+ width: 110px;
+
+
+}
+.imgBox .icon-delete2 {
+  color: red;
+  font-size: 0.24rem;
+  position: absolute;
+  top: 0rem;
+  right: 0.05rem;
+}
+
+
+
+.img, .up {
+  height: 1.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.up {
+  background: none;
+  border-radius: 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.up span {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+		</style>	
+		<div class="panel-body">
+				<form id="mainForm" role="form" class="form-horizontal" method="post" action="">
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="field-1">昵称</label>	
+						<div class="col-sm-6">
+							<input type="text" class="form-control" name="username" id="username" value="<{$result.username|default=''}>" placeholder="">
+							<p class="help-block"></p>
+						</div>
+					</div>
+
+					
+					<div class="form-group-separator"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="field-1">签名</label>	
+						<div class="col-sm-6">
+							<input type="text" class="form-control" name="sign" id="sign" value="<{$result.sign|default=''}>" placeholder="">
+							<p class="help-block"></p>
+						</div>
+					</div>
+
+					<div class="form-group-separator"></div>
+						<div class="form-group">
+						<label class="col-sm-2 control-label" for="field-1">邮箱</label>	
+						<div class="col-sm-6">
+							<input type="text" class="form-control" name="email" id="email" value="<{$result.email|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+					</div>
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+						<label class="col-sm-2 control-label" for="field-1">爱心值</label>	
+						<div class="col-sm-6">
+							<input type="text" class="form-control" name="love_value" readonly  unselectable="on" id="love_value" value="<{$result.love_value|default=''}>" placeholder="">
+							<p class="help-block"> </p>
+						</div>
+					</div>
+
+					<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">ID</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" name="cu_id" readonly  unselectable="on" id="cu_id" value="<{$result.cu_id|default=''}>" placeholder="">
+							</div>
+						</div>
+
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">绑定手机号</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" name="phone" readonly  unselectable="on" id="phone" value="<{$result.phone|default=''}>" placeholder="">
+							</div>
+						</div>
+
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">家乡省份</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" name="" id="home_province" readonly  unselectable="on" value="<{:get_province($result['home_province'])}>" placeholder="">
+							</div>
+						</div>
+
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">家乡城市</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" name="" id="home_city" readonly  unselectable="on" value="<{:get_city($result['home_city'])}>" placeholder="">
+							</div>
+						</div>
+
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">收件地址</label>
+							<div class="col-sm-6">
+								<textarea class="form-control" cols="5" id="express_address" name="express_address"><{$result.express_address|default=''}></textarea>
+							</div>
+						</div>
+
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">是否实名认证</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" readonly  unselectable="on" name="" id="is_auth" value="
+								<if condition="$result['is_auth'] eq 1">
+									已认证
+								<else /> 未认证
+							</if>
+
+								" placeholder="">
+							</div>
+						</div>
+
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">姓名</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" readonly  unselectable="on" name="auth_name" id="auth_name" value="<{$result.auth_name|default=''}>" placeholder="">
+							</div>
+						</div>
+
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">身份证号</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" readonly  unselectable="on" name="auth_id" id="auth_id" value="<{$result.auth_id|default=''}>" placeholder="">
+							</div>
+						</div>
+
+						<div class="form-group-separator"></div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="field-5">备注</label>
+							<div class="col-sm-6">
+								<textarea class="form-control" cols="5" id="remark" name="remark"><{$result.remark|default=''}></textarea>
+							</div>
+						</div>
+			<!-- 	
+					<div class="form-group-separator"></div> 
+					<div style="height: 80px" class="form-group"> <a style="color: red" href="<{:U('jiuzhu/img_detail',array('img_id'=>$result['id'],'type'=>3))}>">查看原图（请保存后再查看）</a>
+						<label class="col-sm-2 control-label" for="field-1">证明图片</label>	
+						<div class="col-sm-6">
+							 <ul class="imgBox orgImg" id="1">
+				                       <volist name="imgArray" id="v">
+				                    <li class="img">
+				                        <img src="<{$v.url}>" onclick="remove(this)" alt="">
+				                    </li>
+				                    </volist>
+				                <li class="up">
+				                    <span><i class="iconfont icon-plus-bold"></i></span>
+				                        <input  type="file" name="img" class="file">
+				                </li>
+				            </ul>
+
+						</div>
+					</div>
+			 -->
+					
+				
+			
+					
+					<input type="hidden" id="id" name="id" value="<{$_GET.id}>">
+
+
+					<div class="form-group-separator"></div>
+					<div class="form-group text-center">
+						<button type="button"  class="btn submit btn-info btn-single pull-center ajax-post"  target-form="form-horizontal"><notempty name="result.id">修改<else/>添加</notempty></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+<link rel="stylesheet" href="__PUBLIC__/js/uploadify/uploadify.css">
+<script src="__PUBLIC__/js/uploadify/jquery.uploadify.min.js"></script>
+<script src="__PUBLIC__/admin/js/daterangepicker/daterangepicker.js"></script>
+<script src="__PUBLIC__/admin/js/datepicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript">
+ //=======================================================
+    var imgarr = [];
+    $('.file').on('change',function(e){
+       var inp = $(this);
+       var up = $(e.currentTarget).parents('li');
+        $("#mainForm").ajaxSubmit({
+        url : "<{:U('index/ajaxUpload')}>", // 请求的url  
+        type : "post", // 请求方式  
+        dataType : "json", // 响应的数据类型  
+        async :true, // 异步  
+        success: function (data1) { 
+            // alert(data1);
+            // $('.uploadImg').empty();
+           var ele = "\
+            <li class='img'>\
+                <img  onclick='remove(this)' src='"+data1+"'>\
+            </li>";
+            //$('.imgBox').before(ele);
+            up.before(ele)
+            $('#mainForm').find('input[name=image]').val(data1);
+            imgarr.push(data1);
+        },  
+        error : function(){  
+            alert("数据加载失败！"); 
+        }  
+         });     
+
+
+    });
+     
+        $('#mainForm').submit(function(){
+        
+        $('.file').remove();
+    });
+
+
+       function remove(obj){
+        var pid = $(obj).parents('.imgBox').attr('id');
+        $(obj).parents('li').remove();
+        console.log($('.imgBox[id='+pid+']').find('.img').length )
+        if($('.imgBox[id='+pid+']').find('.img').length < 5){
+            $('.imgBox[id='+pid+']').find('.up').show();
+        }
+    }
+
+
+      $('.submit').click(function(){
+	            $.ajax({
+	                type:'POST',
+	                url :"<{:U('/manager/user/edit')}>",
+	                data:$('form').serialize(),
+	                success:function(msg){
+	                	console.log(msg)
+	                if(msg == 1){
+	                       toastr.success('操作成功')
+	                         setTimeout(function(){window.location.href="<{:U('Relaxed/index')}>"},2000);
+	                       
+	                }else{
+	                	 toastr.error('操作失败')
+	                }
+
+	            }
+	        })
+	    })
+</script>
+</block>

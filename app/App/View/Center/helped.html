@@ -1,0 +1,181 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="helped">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>我帮助的</span>
+            </p>
+        </header>
+
+        <style type="text/css"> .helped .main {display: flex; flex-direction: column; } .helped .top {flex-shrink: 0; } .helped .main > div {flex-grow: 1; flex-shrink: 1; overflow-y: auto; } .helped .x {display: flex; align-items: center; } .helped .icon-xiangyoujiantou {opacity: 0.6; font-size: 0.25rem; } .helped .container1 {display: flex; align-items: center; padding: 0.2rem; border-bottom: 1px solid #eee; } .helped .cont1 {flex-grow: 1; } </style>
+        <main class="main">    
+        <div class="bigBox">
+               
+            <ul class="top">
+                <li ind='0' @click='help' class="h">已帮助人员  <span style="color: red"><{:get_donor_cont()}></span></li>
+                <li ind='1' @click='follow'>关注项目 <span style="color: red"><{:get_follow_cnt()}></span></li>
+                <li ind='2' @click='report' >举报人员 <span style="color: red"><{:get_report_cnt()}></span></li>
+            </ul>
+            <div>
+
+
+
+
+
+
+
+                <div class="box1">        
+                        <div v-for="v in help_data">
+                        
+<!-- 
+                             <a v-if="v.status == 1" :href="'/index/loveRelife/id/'+v.item_id">
+                           <a v-if="v.status == 2" :href="'/Dream/detail/id/'+v.item_id">
+                           <a v-if="v.status == 3" :href="'/Favorable/detail/id/'+v.item_id"> -->
+                        
+                    <ul  class="container">
+                        <li class="x">
+                            <div class="img">
+                                <img  v-bind:src=v.photo alt="">    
+                            </div>{{v.username}}
+                        </li>
+                        <li>{{v.price}}元</li>
+                        <li>{{v.date| time}}</li>
+                        <li>
+                            <i class="iconfont icon-xiangyoujiantou"></i>
+                        </li>
+                    </ul>
+                         </a> 
+                        </div>
+                </a>
+                </div>
+                <div class="box1" style='display:none;'>                    
+                        <div v-for="v in follow_data" >
+
+                      <!--          <div  v-if="v.type == 1"> <a :href="'/index/loveRelife/id/'+v.item_id"></div>
+                             <div v-if="v.type == 2"> <a :href="'/Dream/detail/id/'+v.item_id"></div>
+                             <div v-if="v.type == 3"> <a :href="'/1Favorable/detail/id/'+v.item_id"></div> -->
+
+                        <ul   class="container1">
+                            <li class="img">
+                                <img v-bind:src=v.photo alt="">
+                            </li>
+                            <li class="cont1">
+                                <h6>{{v.title}}---{{v.type}}</h6>
+                                <p v-if="v.status == 3" style="color:#2ab2f6;margin:0.1rem 0;">筹款中</p>
+                                <p v-if="v.status == 4" style="color:#2ab2f6;margin:0.1rem 0;">已结束</p>
+                                <p>  {{v.date| time}}</p>
+                            </li>
+                            <i class="iconfont icon-xiangyoujiantou"></i>
+                        </ul>
+                         </a>
+
+                        </div>
+
+                </div>
+                <div class="box1" style='display:none;'>
+                  
+                        <div  v-for="v in report_data">
+                        <ul   class="container1">
+                            <li class="img">
+                                <img v-bind:src=v.photo alt="">
+                            </li>
+                            <li class="cont1">
+                                <h6>{{v.username}}</h6>
+                                <p style="color:#2ab2f6;margin:0.1rem 0;">{{v.title}}</p>
+                                <p>{{v.date| time}}</p>
+                            </li>
+                            <!-- <i class="iconfont icon-xiangyoujiantou"></i> -->
+                        </ul>
+                        </div>
+                </div>
+            </div>
+        </div>     
+        </main>
+        <!--底部导航-->
+        <footer class="footer"></footer>
+    </div>
+</body>
+<script src="scripts/rem.js"></script>
+<script src="scripts/jquery.min.js"></script>
+</html>
+</block>
+    <block name='js'>
+          Vue.filter('time', function (value) {
+            return new Date(parseInt(value) * 1000).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ");
+        })
+    //vue=============
+    $(function(){
+    var vm = new Vue({
+        el:'.bigBox',
+        mounted(){
+            this.help();
+        },
+        data(){
+            return {
+                help_data: '',
+                follow_data: '',
+                report_data: '',
+            }
+        },
+        methods:{
+            help:function(e){
+                var that = this;
+                if(e){
+                var el = e.target;
+                var ind = $(el).attr('ind');
+                $('.box1').eq(ind).show().siblings().hide()
+                $('.top').find('li').removeClass('h')
+                $(el).addClass('h')
+                }
+           
+                 $.ajax({
+                    type:'POST',
+                    url :"<{:U('center/helped')}>",
+                    data:{param:0},
+                    success:function(msg){
+                    that.help_data = msg;
+                    console.log(that.help_data);
+
+                }
+            })
+        },
+            follow:function(e){
+            var that = this;
+                var el = e.target;
+                var ind = $(el).attr('ind');
+                $('.box1').eq(ind).show().siblings().hide()
+                $('.top').find('li').removeClass('h')
+                $(el).addClass('h')
+                 $.ajax({
+                        type:'POST',
+                        url :"<{:U('center/helped')}>",
+                        data:{param:1},
+                        success:function(msg){
+                        that.follow_data = msg;
+
+                    }
+                })
+        },
+            report:function(e){
+            var that = this;
+                var el = e.target;
+                var ind = $(el).attr('ind');
+                $('.box1').eq(ind).show().siblings().hide()
+                $('.top').find('li').removeClass('h')
+                $(el).addClass('h')
+                 $.ajax({
+                        type:'POST',
+                        url :"<{:U('center/helped')}>",
+                        data:{param:2},
+                        success:function(msg){
+                        that.report_data = msg;
+
+                    }
+                })
+        }
+        }
+    });
+    
+})
+</block>

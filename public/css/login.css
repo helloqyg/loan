@@ -1,0 +1,123 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;vertical-align:baseline;margin:0;padding:0}
+h2,h3,h4,h5,h6{font-weight:normal;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+
+
+.clearfix:after{content:" ";display:block;clear:both;height:0;font-size:0;visibility:hidden;}
+.clearfix{zoom:1;}
+.wrap{width:1200px;margin:0 auto}
+a{text-decoration:none;outline:none;}
+/*a:hover{color:#7faf2a;}*/
+a:active{noOutline:expression(this.onFocus=this.blur());}
+a:focus{outline:0;}
+.fl{float:left}
+.fr{float:right}
+.f12{font-size:12px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f18{font-size:18px;}
+.f20{font-size:20px;}
+.f22{font-size:20px;}
+.f24{font-size:24px;}
+.f26{font-size:26px;}
+.f28{font-size:28px;}
+.f30{font-size:30px;}
+.bold{font-weight:bold;}
+.mrt10{margin-top:10px;}
+.mrt20{margin-top:20px;}
+.mrt30{margin-top:30px;}
+.mr0{margin:0;}
+.c-white{color:#FFF;}
+.c-red{color:red;}
+.c-orange{color:#ff6b00;}
+.c-green{color:#7faf2a;}
+.c-yellow{color:#fff100;}
+.c-blue{color:#2989a4;}
+.c-333{color:#333;}
+.c-555{color:#555;}
+.c-666{color:#666;}
+.c-888{color:#888;}
+.tx-c{text-align:center;}
+.hide{display:none;}
+.show{display:block;}
+.relative{position:relative;}
+input,textarea{outline:none;}
+
+.ui-btn,a.ui-btn{cursor:pointer;border:none;transition:background-color 0.2s ease-out;text-decoration:none;text-align:center;font-family:Microsoft YaHei,Simsun,Arial,Helvetica,sans-serif;color:#FFF;display:block;}
+.btn-green{background:#7aa822;color:#FFF !important;}
+.btn-green:hover{background:#8bc026;}
+.btn-orange{background:#ff7417;color:#FFF !important;}
+.btn-orange:hover{background:#fea53d;}
+.btn-gray{background:#859ab4;}
+.btn-blue:hover{background:#3cb9dc;}
+.btn-blue{background:#38adce;}
+.btn-gray:hover{background:#738fb2;}
+.ui-btn.disabled,.ui-btn.disabled:hover{cursor:default !important;background:#999 !important;}
+.ui-input{font-family:Microsoft YaHei,Simsun,Arial,Helvetica,sans-serif;height:16px;line-height:16px;padding:8px 10px;}
+.ui-tip-cont,.ui-tab-item{display:none;}
+.ui-input{border:1px solid #CCC;font-size:12px;}
+.ui-input:hover{border-color:#7FAF2A;}
+.ui-input.error{border:1px solid #ff8e33 !important;background:#fef4eb;}
+
+.form .item{padding:0 0 25px;clear:both;zoom:1;}
+.reg-wrap .ui-btn{height:40px;line-height:40px;font-size:16px;}
+.reg-wrap .form .btn-box{padding:0 0 0 130px;}
+.reg-wrap .form .checkbox-box{padding:0 0 0 130px;overflow:hidden;height:42px;line-height:42px;margin:-15px 0 15px; overflow: hidden;}
+.reg-wrap .form .checkbox-box a:hover{color:#7faf2a; text-decoration:underline;}
+.form .item:after{content:" ";display:block;clear:both;height:0;font-size:0;visibility:hidden;}
+.form .label{font-size:16px;line-height:42px;width:130px;text-align:right;float:left;}
+.reg-wrap .input-box{margin:0 15px 0 0;overflow:hidden}
+.form .input-box{float:left;position:relative;border:1px solid #d2d2d2;}
+.form .input-box .ipt{padding:11px 10px;width:198px;border:none;font-size:14px;height:18px;line-height:18px;font-family:Microsoft YaHei,Simsun,Arial,Helvetica,sans-serif;float:left;}
+.form .input-box:hover{border-color:#7faf2a;}
+.form .icon{width:40px;height:40px;background:#f5f5f5;float:left;background:url(../images/icons.png) no-repeat #f5f5f5;}
+.form .icon-user{background-position:center 10px;}
+.form .icon-mobile{background-position:center -70px;}
+.form .icon-psw{background-position:center -150px;}
+.form .icon-id{background-position:center -230px;}
+.form .icon-mail{background-position:center -310px;}
+.form .error{border-color:#F00;}
+.form .error .icon-user{background-position:center -30px;}
+.form .error .icon-mobile{background-position:center -110px;}
+.form .error .icon-psw{background-position:center -190px;}
+.form .error .icon-mail{background-position:center -350px;}
+.form .error .icon-id{background-position:center -270px;}
+.form .level{clear:both;height:25px;overflow:hidden;padding:5px 0 0;width:395px;text-align:right;display:none;}
+.form .mobile{line-height:42px;padding:0 0 0 10px;float:left;}
+.form .level span{height:20px;width:45px;text-align:center;line-height:20px;float:right;margin:0 5px 0 0;border-radius:5px;color:#FFF;}
+.form .level-1 span{background:#e3e3e3;}
+.form .level-1 .n1{background:#F00;}
+.form .level-2 span{background:#fff100;}
+.form .level-2 .n3{background:#e3e3e3;}
+.form .level-3 span{background:#7faf2a;}
+.form .input-code{border:none;}
+.form .input-code .ipt{width:120px;border:1px solid #d2d2d2;float:left;margin:0 7px 0 0;}
+.form .input-code .ipt:hover{border-color:#7faf2a;}
+.form .input-code .ui-btn{float:left;width:110px;font-size:14px;}
+.form .input-code img{cursor:pointer;}
+.form .error .ipt{border-color:#F00;}
+.form .btn-box{overflow:hidden;}
+.form .btn-box label input{float:left;*margin:-4px 5px 0 0;}
+.form .btn-box a{color:#2989a4;}
+.form .btn-box a:hover{text-decoration:underline;}
+.form .btn-box .ui-btn{height:42px;line-height:42px;font-size:16px;color:#FFF;width:260px;margin:0 0 15px;}
+
+
+.pic{float:left;margin:10px 0 0;}
+.login1{width:350px;height:400px;float:right;background:#FFF;margin:40px 0;}
+.login1 .hd{height:40px;line-height:40px;font-size:22px;text-align:center;color:#000; padding-top:20px;}
+.login1 .tip-text{height:30px;line-height:30px;color:#f00;font-size: 12px}
+.login1 .bd{padding:0 30px 30px;}
+.login1 .item{padding:0 0 15px;}
+.login1 .form .input-box .ipt{width:220px}
+.login1 .form .input-box .yan{width:150px}
+.login1 .btn-box .labels{height:20px;line-height:20px;padding:0 0 15px;}
+.login1 .btn-box{font-size:14px;}
+.login1 .btn-box .ui-btn{width:290px}
+
+
+
+

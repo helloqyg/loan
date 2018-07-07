@@ -1,0 +1,112 @@
+<extend name="Public:base" />
+<block name="css">
+	<link type="text/css" href="__CSS__/usercenter.css"  rel="stylesheet" />
+<script type="text/javascript" src="__HOME__/js/jquery.reveal.js"></script>
+	<style type="text/css">
+		.attest-success .attest-seal{
+			position: absolute;
+		    top: 80px;
+		    left: 120px;
+		    width: 97px;
+		    height: 98px;
+		    overflow: hidden;
+		    background: url(__IMAGES__/<eq name="company_info.status" value='0'>z2.png<else/>z1.png</eq>) no-repeat;   
+		}
+	</style>
+</block>
+<block name="main">
+<div class="main_page">
+<div class="big_main">
+<include file="Public/left" />
+	<div class="side_right fr">
+		<div class="side_right_top">
+			<div class="name fl">下午好,<{$company_info['f_name']}>先生!</div>
+			<div class="timer fr">上次登录时间:<{$lastLogin['last_login']|date='Y-m-d H:i:s',###}></div>
+		</div>
+
+		<div class="side_left_bot fl">
+			<img src="__HOME__/images/person.jpg"> <br>
+			<a href="#" style="display:block; margin-left:50px;" class="big-link" data-reveal-id="myModal">修改信息</a>	
+		</div>
+		<div class="side_right_bot fl">
+			
+
+	
+
+
+		
+		 	<table >
+		 		<tr>
+		 			<td width="230">用户名: <{$username.username}></td>
+		 			<td width="240" >展位订单: <a href="<{:U('/user/apply/receipt')}>"> <span style="color: red"><{$exhi_count|default=0}>个</span></a></td>
+		 		</tr>
+		 		<tr  style=" height:60px; vertical-align:top;" >
+		 			<td  class="nott" style="color:#ff0000;"> <if condition="$company_info.status eq 0" ><img src="__HOME__/images/login_error.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 未审核<else /> <img src="__HOME__/images/success.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 已通过认证</if> </td>
+		 			<td  >广告订单:  <a href="<{:U('/user/apply/receipt')}>"> <span style="color: red"><{$ad_count | default=0}>个</span></a></td>
+		 		</tr>
+		 		
+		 		<tr>
+		 			<td>企业名称: <{$company_info['company_name']}></td>
+		 			<td >营业执照: <{$company_info['register_num']}></td>
+		 		</tr>
+		 		<tr>
+		 			<td>联系人: <{$company_info['f_name']}>  （ <{$company_info['f_duties']}>）</td>
+		 			<td>企业负责人: <{$company_info['c_name']}> （ <{$company_info['c_duties']}>）</td>
+		 		</tr>
+		 		<tr>
+		 			<td>联系人邮箱: <{$company_info['f_email']}></td>
+		 			<td>负责人邮箱: <{$company_info['c_email']}></td>
+		 		</tr>
+		 		<tr>
+		 			<td >联系人电话: <{$company_info['f_area_code']}>-<{$company_info['f_tel']}></td>
+		 			<td >负责人电话: <{$company_info['c_area_code']}>-<{$company_info['c_tel']}></td>
+		 		</tr>
+				<tr>
+		 			<td >联系人手机:<{$company_info['f_phone']}></td>
+		 			<td >负责人手机:<{$company_info['c_phone']}></td>
+		 		</tr>
+		 		<tr>
+		 			<td>展位类型: <{:get_chart_type($company_info['type'])}></td>
+		 			<td>经营范围: <{$company_info['scope']}></td>
+		 		</tr>
+		 		<tr>
+		 			<td>英文名称: <{$company_info['english']}></td>
+		 			<td>参展面积: <{$company_info['area']}></td>
+		 		</tr>
+				<tr>
+		 			<td>&nbsp;</td>
+		 			<td>&nbsp;</td>
+		 		</tr>
+		 	</table>
+
+		</div>
+	</div>
+</div>
+
+</div>
+<div id="myModal" class="reveal-modal">
+
+			<h1>请注意：</h1>
+
+			<p>介于安全问题，如贵公司有信息变动需要更改则可联系XX部：60886088</p>
+			<p>如不更改，或许会影响到展位/广告预订情况</p>
+
+			<a class="close-reveal-modal">&#215;</a>
+
+		</div>
+</block>
+
+<block name="seajs">
+//<script type="text/javascript">
+	//用户注册事件
+	var rtime = <{$rtime['rtime']}>;
+	var lastLogin =" <{$lastLogin['is_first_login']}>";
+	var count = <{$count}>;
+	//如果是2016年12月28日以前申请的账户  && 并且是2017年第一次登录 && 并且是本次刷新页面第一次。
+	// console.log(rtime)
+	// console.log(lastLogin)
+	// console.log(count)
+	if (rtime <1482854400 && lastLogin==1 && count == 1) {
+		$('.big-link').click();
+	}
+</block>

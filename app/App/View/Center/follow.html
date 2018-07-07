@@ -1,0 +1,51 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="follow">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>关注</span>
+            </p>
+        </header>
+        <main class="main">
+
+          <volist name="result" id="v">
+            <if condition="$v['type'] eq 2">  <a href="<{:U('Dream/detail',array('id'=>$v['item_id']))}>"> </if>
+            <if condition="$v['type'] eq 1">   <a href="<{:U('Index/loveRelife',array('id'=>$v['item_id']))}>"> </if>
+
+            
+           
+                <ul class="container1">
+                    <li class="img1">
+                        <img style="border-radius:50%" src="<{:get_user_img($v['user_id'])}>" alt="">
+                    </li>
+                    <li class="cont1">
+                        <h6><{:get_follow_detail($v['item_id'],$v['type'])['title']}></h6>
+                        <p style="color:#2ab2f6;">
+                            <if condition="get_follow_detail($v['item_id'],$v['type'])['status'] eq 3"> 筹款中</if>
+                            <if condition="get_follow_detail($v['item_id'],$v['type'])['status'] eq 4"> 已结束</if>
+                           
+                            
+                        </p>
+                        <p><{:get_diff_time(get_follow_detail($v['item_id'],$v['type'])['title'])}></p>
+                    </li>
+                    <i class="iconfont icon-xiangyoujiantou"></i>
+                </ul>
+            </a>
+
+          </volist>
+
+        </main>
+    </block>
+    </div>
+</body>
+</html>
+
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/json.js"></script>
+<script src="scripts/jsonExchange.js"></script>
+<script src="scripts/mPicker.min.js"></script>
+<block name="js">
+    
+
+</block>

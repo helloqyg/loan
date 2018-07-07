@@ -1,0 +1,224 @@
+<extend name="Public:base" />
+<block name="main">
+
+<div class="main_exhi" style="height: 990px">
+<div class="main_view" style="height: 990px">
+  <div class="main_view_top">
+    <div style="width:80px"><{$title}></div>
+  </div>
+  <div class="main_view_bot">
+    <div class="ad_select">
+      <div class="ad_search" id="ad_search_1">
+       <ul>
+        <li>按区域查找：</li>
+          <!-- 搜索某类型下的全部信息 -->
+         <if condition="$Think.get.tp_id eq 0" >
+           <li ><a href="<{:U('user/adver/ad_list',array('ae_id'=>0,'tp_id'=>0))}>"> 全部</a></li>
+         </if>
+         <if condition="$Think.get.tp_id eq 1" >
+           <li ><a href="<{:U('user/adver/ad_list',array('ae_id'=>0,'tp_id'=>1))}>"> 全部</a></li>
+         </if>
+         <if condition="$Think.get.tp_id eq 2" >
+           <li ><a href="<{:U('user/adver/ad_list',array('ae_id'=>0,'tp_id'=>2))}>"> 全部</a></li>
+         </if>
+         <if condition="$Think.get.tp_id eq 3" >
+           <li ><a href="<{:U('user/adver/ad_list',array('ae_id'=>0,'tp_id'=>3))}>"> 全部</a></li>
+         </if>
+         <if condition="$Think.get.tp_id eq 4" >
+           <li ><a href="<{:U('user/adver/ad_list',array('ae_id'=>0,'tp_id'=>4))}>"> 全部</a></li>
+         </if>
+         <if condition="$Think.get.tp_id eq 5" >
+           <li ><a href="<{:U('user/adver/ad_list',array('ae_id'=>0,'tp_id'=>5))}>"> 全部</a></li>
+         </if>
+         <if condition="$Think.get.tp_id eq 6" >
+           <li ><a href="<{:U('user/adver/ad_list',array('ae_id'=>0,'tp_id'=>6))}>"> 全部</a></li>
+         </if>
+         <if condition="$Think.get.tp_id eq 7" >
+           <li ><a href="<{:U('user/adver/ad_list',array('ae_id'=>0,'tp_id'=>7))}>"> 全部</a></li>
+         </if>
+         <if condition="$Think.get.tp_id eq 8" >
+           <li ><a href="<{:U('user/adver/ad_list',array('ae_id'=>0,'tp_id'=>8))}>"> 全部</a></li>
+         </if>
+         <!-- 搜索某类型下的全部信息 结束 -->
+         <if condition="$Think.get.tp_id eq 0" >
+            <volist name="area" id="v">
+              <li ><a href="<{:U('user/adver/ad_list',array('tp_id'=>0,'ae_id'=>$v['ae_id']))}>"> <{$v.ae_name}></a></li>
+            </volist>
+         </if>
+
+
+          <if condition="$Think.get.tp_id eq 1" >
+            <volist name="area" id="v">
+              <li><a href="<{:U('user/adver/ad_list',array('tp_id'=>1,'ae_id'=>$v['ae_id']))}>"> <{$v.ae_name}></a></li>
+            </volist>
+         </if>
+
+         <if condition="$Think.get.tp_id eq 2" >
+            <volist name="area" id="v">
+              <li><a href="<{:U('user/adver/ad_list',array('tp_id'=>2,'ae_id'=>$v['ae_id']))}>"> <{$v.ae_name}></a></li>
+            </volist>
+         </if>
+
+         <if condition="$Think.get.tp_id eq 3" >
+            <volist name="area" id="v">
+              <li><a href="<{:U('user/adver/ad_list',array('tp_id'=>3,'ae_id'=>$v['ae_id']))}>"> <{$v.ae_name}></a></li>
+            </volist>
+         </if>
+
+         <if condition="$Think.get.tp_id eq 4" >
+            <volist name="area" id="v">
+              <li><a href="<{:U('user/adver/ad_list',array('tp_id'=>4,'ae_id'=>$v['ae_id']))}>"> <{$v.ae_name}></a></li>
+            </volist>
+         </if>
+
+         <if condition="$Think.get.tp_id eq 5" >
+            <volist name="area" id="v">
+              <li><a href="<{:U('user/adver/ad_list',array('tp_id'=>5,'ae_id'=>$v['ae_id']))}>"> <{$v.ae_name}></a></li>
+            </volist>
+         </if>
+
+         <if condition="$Think.get.tp_id eq 6" >
+            <volist name="area" id="v">
+              <li><a href="<{:U('user/adver/ad_list',array('tp_id'=>6,'ae_id'=>$v['ae_id']))}>"> <{$v.ae_name}></a></li>
+            </volist>
+         </if>
+
+         <if condition="$Think.get.tp_id eq 7" >
+            <volist name="area" id="v">
+              <li><a href="<{:U('user/adver/ad_list',array('tp_id'=>7,'ae_id'=>$v['ae_id']))}>"> <{$v.ae_name}></a></li>
+            </volist>
+         </if>
+
+         <if condition="$Think.get.tp_id eq 8" >
+            <volist name="area" id="v">
+              <li><a href="<{:U('user/adver/ad_list',array('tp_id'=>8,'ae_id'=>$v['ae_id']))}>"> <{$v.ae_name}></a></li>
+            </volist>
+         </if>
+       </ul>
+
+      </div>
+      <div class="clear"></div>
+      <div class="ad_search" id="ad_search_2">
+       <ul>
+          <li>按类型查找：</li>
+
+          <!-- 搜索某类型下的全部信息 -->
+           <if condition="$Think.get.ae_id eq 0" >
+               <li  > <a href="<{:U('user/adver/ad_list',array('tp_id'=>0,'ae_id'=>0))}>">全部</a></li>
+           </if>
+            <if condition="$Think.get.ae_id eq 1" >
+               <li  > <a  href="<{:U('user/adver/ad_list',array('tp_id'=>0,'ae_id'=>1))}>">全部</a></li>
+           </if>
+           <if condition="$Think.get.ae_id eq 2" >
+               <li  > <a  href="<{:U('user/adver/ad_list',array('tp_id'=>0,'ae_id'=>2))}>">全部</a></li>
+           </if>
+           <if condition="$Think.get.ae_id eq 3" >
+               <li  > <a  href="<{:U('user/adver/ad_list',array('tp_id'=>0,'ae_id'=>3))}>">全部</a></li>
+           </if>
+           <if condition="$Think.get.ae_id eq 4" >
+               <li  > <a  href="<{:U('user/adver/ad_list',array('tp_id'=>0,'ae_id'=>4))}>">全部</a></li>
+           </if>
+           <if condition="$Think.get.ae_id eq 5" >
+               <li  > <a  href="<{:U('user/adver/ad_list',array('tp_id'=>0,'ae_id'=>5))}>">全部</a></li>
+           </if>
+           <if condition="$Think.get.ae_id eq 6" >
+               <li  > <a  href="<{:U('user/adver/ad_list',array('tp_id'=>0,'ae_id'=>6))}>">全部</a></li>
+           </if>
+           <if condition="$Think.get.ae_id eq 7" >
+               <li  > <a  href="<{:U('user/adver/ad_list',array('tp_id'=>0,'ae_id'=>7))}>">全部</a></li>
+           </if>
+           <if condition="$Think.get.ae_id eq 8" >
+               <li  > <a  href="<{:U('user/adver/ad_list',array('tp_id'=>0,'ae_id'=>8))}>">全部</a></li>
+           </if>
+          <!-- 搜索某类型下的全部信息 结束 -->
+           <if condition="$Think.get.ae_id eq 0" >
+            <volist name='cat' id='v'>
+             <li><a href="<{:U('user/adver/ad_list',array('ae_id'=>0,'tp_id'=>$v['tp_id']))}>"> <{$v.tp_name}></a></li>
+            </volist>
+          </if>
+
+          <if condition="$Think.get.ae_id eq 1" >
+            <volist name='cat' id='v'>
+             <li><a href="<{:U('user/adver/ad_list',array('ae_id'=>1,'tp_id'=>$v['tp_id']))}>"> <{$v.tp_name}></a></li>
+            </volist>
+          </if>
+
+           <if condition="$Think.get.ae_id eq 2" >
+            <volist name='cat' id='v'>
+             <li><a href="<{:U('user/adver/ad_list',array('ae_id'=>2,'tp_id'=>$v['tp_id']))}>"> <{$v.tp_name}></a></li>
+            </volist>
+          </if>
+
+           <if condition="$Think.get.ae_id eq 3" >
+            <volist name='cat' id='v'>
+             <li><a href="<{:U('user/adver/ad_list',array('ae_id'=>3,'tp_id'=>$v['tp_id']))}>"> <{$v.tp_name}></a></li>
+            </volist>
+          </if>
+
+           <if condition="$Think.get.ae_id eq 4" >
+            <volist name='cat' id='v'>
+             <li><a href="<{:U('user/adver/ad_list',array('ae_id'=>4,'tp_id'=>$v['tp_id']))}>"> <{$v.tp_name}></a></li>
+            </volist>
+          </if>
+
+           <if condition="$Think.get.ae_id eq 5" >
+            <volist name='cat' id='v'>
+             <li><a href="<{:U('user/adver/ad_list',array('ae_id'=>5,'tp_id'=>$v['tp_id']))}>"> <{$v.tp_name}></a></li>
+            </volist>
+          </if>
+
+           <if condition="$Think.get.ae_id eq 6" >
+            <volist name='cat' id='v'>
+             <li><a href="<{:U('user/adver/ad_list',array('ae_id'=>6,'tp_id'=>$v['tp_id']))}>"> <{$v.tp_name}></a></li>
+            </volist>
+          </if>
+
+           <if condition="$Think.get.ae_id eq 7" >
+            <volist name='cat' id='v'>
+             <li><a href="<{:U('user/adver/ad_list',array('ae_id'=>7,'tp_id'=>$v['tp_id']))}>"> <{$v.tp_name}></a></li>
+            </volist>
+          </if>
+
+           <if condition="$Think.get.ae_id eq 8" >
+            <volist name='cat' id='v'>
+             <li><a href="<{:U('user/adver/ad_list',array('ae_id'=>8,'tp_id'=>$v['tp_id']))}>"> <{$v.tp_name}></a></li>
+            </volist>
+          </if>
+       </ul>
+
+      </div>
+      <div class="clear"></div>
+      <div class="ad_place">
+
+       <volist name="goods" id="v">
+     <if condition="$v.get_ad_bot_count neq 0 " >
+       <div class="ad_booth">
+        <div class="exhi_img">
+          <img src="<{$v.goods_locale_logo}>">
+        </div>
+        <div class="detail_ad">
+          <p>名称：<{$v.goods_name|mb_substr=###,0,13,'utf-8'}>  </p>
+          <p>位置：<{$v.goods_address|mb_substr=###,0,13,'utf-8'}>  </p>
+          <p>数量：<{:get_ad_bot_count($v['goods_id'])}>/<{:get_ad_count($v['goods_id'])}></p>
+          <p>行式: <{:get_ad_cat($v['cat_id'])}></p>
+          <p>优势: <{$v.goods_introduce|mb_substr=###,0,10,'utf-8'}>...</p>
+        </div>
+        <div class="btn">
+          <a href="<{:U('user/adver/detail',array('goods_id'=>$v['goods_id']))}>">详细了解</a>
+        </div>
+      </div>
+    </if>
+      </volist>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+</block>
+
+<block name="seajs">
+// <script type="text/javascript">
+function search(id){
+}
+</block>

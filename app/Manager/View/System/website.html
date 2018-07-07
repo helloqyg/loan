@@ -1,0 +1,151 @@
+<extend name="Public:base" />
+<block name="content">
+<div class="row">
+<div class="col-sm-12">
+	<div class="panel panel-color panel-info">
+		<!--<div class="panel-heading">
+			系统信息
+		</div>-->
+		<div class="panel-body">
+			<div class="row">
+				<form  method="post" >
+					<table class="table table-striped">
+						<tbody>
+						<!-- <tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">网站名称:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input type="text" class="form-control" name="SITE_NAME" value="<{$webConfig['SITE_NAME']}>">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">网站简介:</span>
+									<div class="col-sm-5 col-xs-8">
+										<textarea class="form-control textarea" rows="4" name="SITE_DESCRIPTION"><{$webConfig['SITE_DESCRIPTION']}></textarea>
+									</div>
+								</div>
+							</td>
+						</tr> -->
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">帮助中心:</span>
+									<div class="col-sm-5 col-xs-8">
+										<textarea class="form-control textarea" rows="4" name="HELP_CENTER"><{$webConfig['HELP_CENTER']}></textarea>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<!-- <tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">网站 ICP 备案号:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input name="SITE_ICP" class="form-control" type="text" value="<{$webConfig['SITE_ICP']}>">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">项目人员邮箱:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input name="PRODUCT_EMAIL" class="form-control" type="text" value="<{$webConfig['PRODUCT_EMAIL']}>">
+										<span class="help-block">用户接收通知信息</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">财务人员邮箱:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input name="FINANCE_EMAIL" class="form-control" type="text" value="<{$webConfig['FINANCE_EMAIL']}>">
+										<span class="help-block">用户接收财务付款信息</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">限制开始时间:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input name="EXHI_BEGIN" class="form-control" type="text" value="<{$webConfig['EXHI_BEGIN']}>">
+										<span class="help-block">用于判断用户在这个区间内是否购买了展位</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="form-group">
+									<span class="col-sm-4 col-xs-3 control-label">限制结束时间:</span>
+									<div class="col-sm-5 col-xs-8">
+										<input name="EXHI_END" class="form-control" type="text" value="<{$webConfig['EXHI_END']}>">
+										<span class="help-block">用于判断用户在这个区间内是否购买了展位</span>
+									</div>
+								</div>
+							</td>
+						</tr> -->
+						<tr>
+							<td class="text-center">
+									<button class="btn btn-info">保存设置</button>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					</form>
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+</block>
+<block name="script">
+<script type="text/javascript">
+$("form").submit(function(){
+	var opts = {
+			"closeButton": true,
+			"debug": false,
+			"positionClass": "toast-top-full-width",
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": "5000",
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+		};
+
+	var self = $(this);
+	$.post(self.attr("action"), self.serialize(), success, "json");
+	return false;
+	//提交
+	function success(data){
+		show_loading_bar({
+			delay: .5,
+			pct: 100,
+			finish: function(){
+				if(data.status == 1)
+				{
+					toastr.success(data.info, opts);
+				}else{
+					toastr.error(data.info, opts);
+				}
+			}
+		});
+
+	}
+});
+</script>
+</block>

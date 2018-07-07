@@ -1,0 +1,116 @@
+<extend name="Public:base" />
+<block name="main">
+
+<div class="main_exhi" >
+<div class="main_view"  background-color:#f1f1f1">
+  <div class="main_v_t">
+    <div class="main_view_top_d" style="background-color: #ffffff; height: 50px ">
+      <div class="not_vt" style="width:80px"><{$title}></div>
+    </div>
+  </div>
+  <div class="datail_left fl">
+    <img src="<{$goods.goods_plane_logo}>"  width="797" height="503">
+  </div>
+  <div class="detail_right fr">
+      <div class="datail_rt"><img width="371" height="176" src="<{$goods.goods_locale_logo}>" width="371" height="176"></div>
+      <div class="detail_mid">
+        <ul>
+          <li class="d-title" style="border: 0">编号：</li>
+          <volist name="goods_detail" id="v" key='k'>
+          <li class=""  onclick="clickProduct(<{$v.ar_id}>)"> 
+          <if condition="$v.ar_status neq 0" >
+          <{$v.ar_encode}> 
+          <script type="text/javascript">
+           console.log(<{$key}>)
+		   var key = <{$key}>+1;
+		   $('.detail_mid ul li:eq('+key+')').css('background-color','gray')
+		   $('.detail_mid ul li:eq('+key+')').removeAttr('onclick')
+          </script>
+          <else/>
+          <{$v.ar_encode}>   
+          </if>
+
+           </li>
+          </volist>
+        </ul>
+        <div class="clear"></div>
+       <div class="dingjin"> 预定金：<{$goods_detail[0]['ar_price']}>元</div>
+      </div>
+      <div class="d-bottom">
+      <tbody>
+        
+         <input  type="button" value="确认支付" class="ad_detail_sub">
+      </tbody>
+
+      </div>
+  </div>
+    <div class="detail_de fl">
+	<h2> 详情介绍</h2>
+      <{$goods.content|default=''|htmlspecialchars_decode}>
+    </div>
+
+  </div>
+</div>
+<style type="text/css">
+  .detail_de{ width: 797px; }
+</style>
+
+</block>
+
+
+
+<block name="seajs">
+// <script type="text/javascript">
+$w  = $('.detail_de').css('height');
+
+$w = parseInt($w) + 583;
+$('.main_exhi').css('height',$w+'px');
+$m = $('.main_exhi').css('height')
+
+  var detail = <{$detail}>;
+  //选择的产品
+  function clickProduct(id){
+    $.each(detail,function(k,n){
+    if (n['ar_id'] == id) {
+      var k = k+1;
+      if ($('.detail_mid li:eq('+k+')').attr('flag') == 'select') {
+
+        $('.detail_mid li:eq('+k+')').removeClass('goods_select')
+        $('.detail_mid li:eq('+k+')').css('border','')
+        $('.detail_mid li:eq('+k+')').attr('flag','')
+        $('.detail_mid li:eq('+k+')').attr('address','')
+
+      }else{
+         $('.detail_mid li:eq('+k+')').attr('flag','select')
+         $('.detail_mid li:eq('+k+')').attr('address',''+id+'')
+        $('.detail_mid li:eq('+k+')').addClass('goods_select')
+        $('.detail_mid li:eq('+k+')').css('border','1px solid red')
+      }
+    
+     var b = $('.detail_mid li ').find('[flag=seect]')
+    }
+   })
+
+  }
+$('.ad_detail_sub').click(function(){
+  var len = $('.detail_mid li').length
+  var count = 0;
+  var address_array= '';
+  for(var i = 1; i<=len;i++){
+    if ($('.detail_mid li:eq('+i+')').attr('flag') == 'select') {
+        count++
+        address_array +=  $('.detail_mid li:eq('+i+')').attr('address')+',';
+       }
+  }
+  $.ajax({
+    type:'POST',
+    url :"<{:U('user/adver/detail')}>",
+    data:{'address_array':address_array,'goods_id':"<{$Think.get.goods_id}>"},
+    success:function(msg){
+      window.location.href='http://www.elevatorchina.com/user/booth/order/'+msg+'.html'
+    }
+  })
+})
+
+
+</block>

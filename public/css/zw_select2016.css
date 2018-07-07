@@ -1,0 +1,1231 @@
+/* CSS Document */
+.zw_select{ width:1031px; height:773px; margin:0 auto; background:url(../images/bg.png) no-repeat; position:relative;}
+.zw_select a{ display:block; width:100%; height:100%;}
+
+
+.zw_5230{ width:82px; height:80px; z-index:2; position:absolute; top:107px; left:578px; background:url(../images/zw/5230.png) no-repeat;}
+.zw_5230:hover{ background:url(../images/zw/5230-2.png) no-repeat;}
+
+
+
+/* 7 区域一 */
+.zw_7f33{ width:69px; height:57px; z-index:2; position:absolute; top:420px; left:71px; background:url(../images/zw1/7f33.png) no-repeat;}
+.zw_7f33:hover{ background:url(../images/zw1/7f33-2.png) no-repeat;}
+.zw_7f35{ width:69px; height:57px; z-index:2; position:absolute; top:378px; left:135px; background:url(../images/zw1/7f35.png) no-repeat;}
+.zw_7f35:hover{ background:url(../images/zw1/7f35-2.png) no-repeat;}
+.zw_7f36{ width:69px; height:57px; z-index:2; position:absolute; top:444px; left:106px; background:url(../images/zw1/7f36.png) no-repeat;}
+.zw_7f36:hover{ background:url(../images/zw1/7f36-2.png) no-repeat;}
+.zw_7f37{ width:69px; height:57px; z-index:2; position:absolute; top:467px; left:140px; background:url(../images/zw1/7f37.png) no-repeat;}
+.zw_7f37:hover{ background:url(../images/zw1/7f37-2.png) no-repeat;}
+.zw_7f38{ width:69px; height:57px; z-index:2; position:absolute; top:425px; left:203px; background:url(../images/zw1/7f38.png) no-repeat;}
+.zw_7f38:hover{ background:url(../images/zw1/7f38-2.png) no-repeat;}
+.zw_7f39{ width:69px; height:57px; z-index:2; position:absolute; top:402px; left:170px; background:url(../images/zw1/7f39.png) no-repeat;}
+.zw_7f39:hover{ background:url(../images/zw1/7f39-2.png) no-repeat;}
+.zw_7f50{ width:69px; height:57px; z-index:2; position:absolute; top:493px; left:176px; background:url(../images/zw1/7f50.png) no-repeat;}
+.zw_7f50:hover{ background:url(../images/zw1/7f50-2.png) no-repeat;}
+.zw_7f51{ width:69px; height:57px; z-index:2; position:absolute; top:516px; left:210px; background:url(../images/zw1/7f51.png) no-repeat;}
+.zw_7f51:hover{ background:url(../images/zw1/7f51-2.png) no-repeat;}
+.zw_7f52{ width:69px; height:57px; z-index:2; position:absolute; top:474px; left:273px; background:url(../images/zw1/7f52.png) no-repeat;}
+.zw_7f52:hover{ background:url(../images/zw1/7f52-2.png) no-repeat;}
+.zw_7f53{ width:69px; height:57px; z-index:2; position:absolute; top:451px; left:239px; background:url(../images/zw1/7f53.png) no-repeat;}
+.zw_7f53:hover{ background:url(../images/zw1/7f53-2.png) no-repeat;}
+.zw_7f55{ width:69px; height:57px; z-index:2; position:absolute; top:542px; left:247px; background:url(../images/zw1/7f55.png) no-repeat;}
+.zw_7f55:hover{ background:url(../images/zw1/7f55-2.png) no-repeat;}
+.zw_7f56{ width:69px; height:57px; z-index:2; position:absolute; top:565px; left:280px; background:url(../images/zw1/7f56.png) no-repeat;}
+.zw_7f56:hover{ background:url(../images/zw1/7f56-2.png) no-repeat;}
+.zw_7f57{ width:69px; height:57px; z-index:2; position:absolute; top:523px; left:344px; background:url(../images/zw1/7f57.png) no-repeat;}
+.zw_7f57:hover{ background:url(../images/zw1/7f57-2.png) no-repeat;}
+.zw_7f58{ width:69px; height:57px; z-index:2; position:absolute; top:500px; left:310px; background:url(../images/zw1/7f58.png) no-repeat;}
+.zw_7f58:hover{ background:url(../images/zw1/7f58-2.png) no-repeat;}
+
+
+.zw_7201{ width:164px; height:121px; z-index:2; position:absolute; top:375px; left:68px; background:url(../images/zw1/7201.png) no-repeat;}
+.zw_7201:hover{ background:url(../images/zw1/7201-2.png) no-repeat;}
+.zw_7202{ width:164px; height:121px; z-index:2; position:absolute; top:421px; left:136px; background:url(../images/zw1/7202.png) no-repeat;}
+.zw_7202:hover{ background:url(../images/zw1/7202-2.png) no-repeat;}
+.zw_7203{ width:186px; height:137px; z-index:2; position:absolute; top:467px; left:202px; background:url(../images/zw1/7203.png) no-repeat;}
+.zw_7203:hover{ background:url(../images/zw1/7203-2.png) no-repeat;}
+.zw_7205{ width:103px; height:83px;  z-index:2; position:absolute; top:609px; left:345px; background:url(../images/zw1/7205.png) no-repeat;}
+.zw_7205:hover{ background:url(../images/zw1/7205-2.png) no-repeat;}
+.zw_7g12{ width:69px; height:59px;  z-index:2; position:absolute; top:589px; left:317px; background:url(../images/zw1/7g12.png) no-repeat;}
+.zw_7g12:hover{ background:url(../images/zw1/7g12-2.png) no-repeat;}
+
+.zw_723b{ width:103px; height:83px; z-index:2; position:absolute; top:567px; left:412px; background:url(../images/zw1/723b.png) no-repeat;}
+.zw_723b:hover{ background:url(../images/zw1/723b-2.png) no-repeat;}
+.zw_7g11{  width:69px; height:59px; z-index:2; position:absolute; top:547px; left:383px; background:url(../images/zw1/7g11.png) no-repeat;}
+.zw_7g11:hover{ background:url(../images/zw1/7g11-2.png) no-repeat;}
+
+.zw_723n{ width:132px; height:98px; z-index:2; position:absolute; top:179px; left:702px; background:url(../images/zw1/723n.png) no-repeat;}
+.zw_723n:hover{ background:url(../images/zw1/723n-2.png) no-repeat;}
+.zw_7212{ width:98px; height:82px; z-index:2; position:absolute; top:304px; left:240px; background:url(../images/zw1/7212.png) no-repeat;}
+.zw_7212:hover{ background:url(../images/zw1/7212-2.png) no-repeat;}
+
+.zw_7a08{ width:47px; height:43px; z-index:2; position:absolute; top:309px; left:262px; background:url(../images/zw1/7a08.png) no-repeat;}
+.zw_7a08:hover{ background:url(../images/zw1/7a08-2.png) no-repeat;}
+.zw_7a07{ width:73px; height:63px; z-index:2; position:absolute; top:346px; left:205px; background:url(../images/zw1/7a07.png) no-repeat;}
+.zw_7a07:hover{ background:url(../images/zw1/7a07-2.png) no-repeat;}
+
+.zw_7211{ width:99px; height:82px; z-index:2; position:absolute; top:350px; left:306px; background:url(../images/zw1/7211.png) no-repeat;}
+.zw_7211:hover{ background:url(../images/zw1/7211-2.png) no-repeat;}
+
+.zw_7a06{ width:47px; height:43px; z-index:2; position:absolute; top:355px; left:329px; background:url(../images/zw1/7a06.png) no-repeat;}
+.zw_7a06:hover{ background:url(../images/zw1/7a06-2.png) no-repeat;}
+.zw_7a05{ width:73px; height:63px; z-index:2; position:absolute;  top:391px; left:271px; background:url(../images/zw1/7a05.png) no-repeat;}
+.zw_7a05:hover{ background:url(../images/zw1/7a05-2.png) no-repeat;}
+.zw_7a01{ width:106px; height:83px; z-index:2; position:absolute; top:397px; left:338px; background:url(../images/zw1/7a01.png) no-repeat;}
+.zw_7a01:hover{ background:url(../images/zw1/7a01-2.png) no-repeat;}
+.zw_7a02{ width:50px; height:47px; z-index:2; position:absolute; top:416px; left:366px; background:url(../images/zw1/7a02.png) no-repeat;}
+.zw_7a02:hover{ background:url(../images/zw1/7a02-2.png) no-repeat;}
+
+.zw_7a03{ width:50px; height:47px; z-index:2; position:absolute; top:397px; left:395px; background:url(../images/zw1/7a03.png) no-repeat;}
+.zw_7a03:hover{ background:url(../images/zw1/7a03-2.png) no-repeat;}
+
+.zw_7210{width:98px; height:78px; z-index:2; position:absolute; top:435px; left:362px; background:url(../images/zw1/7210.png) no-repeat;}
+.zw_7210:hover{ background:url(../images/zw1/7210-2.png) no-repeat;}
+.zw_7g01{width:66px; height:58px; z-index:2; position:absolute; top:417px; left:422px; background:url(../images/zw1/7g01.png) no-repeat;}
+.zw_7g01:hover{ background:url(../images/zw1/7g01-2.png) no-repeat;}
+
+.zw_7209{ width:115px; height:91px;  z-index:2; position:absolute; top:516px; left:458px; background:url(../images/zw1/7209.png) no-repeat;}
+.zw_7209:hover{ background:url(../images/zw1/7209-2.png) no-repeat;}
+.zw_7g10{ width:60px; height:53px;  z-index:2; position:absolute; top:493px; left:427px; background:url(../images/zw1/7g10.png) no-repeat;}
+.zw_7g10:hover{ background:url(../images/zw1/7g10-2.png) no-repeat;}
+
+.zw_723c{ width:115px; height:91px;  z-index:2; position:absolute; top:483px; left:506px; background:url(../images/zw1/723c.png) no-repeat;}
+.zw_723c:hover{ background:url(../images/zw1/723c-2.png) no-repeat;}
+.zw_7g09{ width:60px; height:53px; z-index:2; position:absolute; top:461px; left:475px; background:url(../images/zw1/7g09.png) no-repeat;}
+.zw_7g09:hover{ background:url(../images/zw1/7g09-2.png) no-repeat;}
+
+.zw_7213{ width:100px; height:80px; z-index:2; position:absolute; top:237px; left:342px; background:url(../images/zw1/7213.png) no-repeat;}
+.zw_7213:hover{ background:url(../images/zw1/7213-2.png) no-repeat;}
+.zw_7a22{ width:50px; height:46px; z-index:2; position:absolute; top:238px; left:365px; background:url(../images/zw1/7a22.png) no-repeat;}
+.zw_7a22:hover{ background:url(../images/zw1/7a22-2.png) no-repeat;}
+
+.zw_7a21{ width:73px; height:63px; z-index:2; position:absolute;top:277px; left:309px; background:url(../images/zw1/7a21.png) no-repeat;}
+.zw_7a21:hover{ background:url(../images/zw1/7a21-2.png) no-repeat;}
+.zw_7215{ width:98px; height:80px; z-index:2; position:absolute; top:282px; left:410px; background:url(../images/zw1/7215.png) no-repeat;}
+.zw_7215:hover{ background:url(../images/zw1/7215-2.png) no-repeat;}
+.zw_7a20{ width:49px; height:44px; z-index:2; position:absolute; top:286px; left:433px; background:url(../images/zw1/7a20.png) no-repeat;}
+.zw_7a20:hover{ background:url(../images/zw1/7a20-2.png) no-repeat;}
+.zw_7a19{ width:73px; height:63px; z-index:2; position:absolute;  top:321px; left:377px;background:url(../images/zw1/7a19.png) no-repeat;}
+.zw_7a19:hover{ background:url(../images/zw1/7a19-2.png) no-repeat;}
+
+.zw_7a16{ width:108px; height:86px; z-index:2; position:absolute; top:330px; left:445px; background:url(../images/zw1/7a16.png) no-repeat;}
+.zw_7a16:hover{ background:url(../images/zw1/7a16-2.png) no-repeat;}
+
+.zw_7a17{ width:49px; height:46px; z-index:2; position:absolute; top:348px; left:473px; background:url(../images/zw1/7a17.png) no-repeat;}
+.zw_7a17:hover{ background:url(../images/zw1/7a17-2.png) no-repeat;}
+.zw_7a18{ width:49px; height:46px; z-index:2; position:absolute; top:330px; left:502px; background:url(../images/zw1/7a18.png) no-repeat;}
+.zw_7a18:hover{ background:url(../images/zw1/7a18-2.png) no-repeat;}
+
+.zw_7216{ width:98px; height:78px; z-index:2; position:absolute; top:368px; left:470px; background:url(../images/zw1/7216.png) no-repeat;}
+.zw_7216:hover{ background:url(../images/zw1/7216-2.png) no-repeat;}
+.zw_7g02{ width:66px; height:58px; z-index:2; position:absolute; top:351px; left:530px; background:url(../images/zw1/7g02.png) no-repeat;}
+.zw_7g02:hover{ background:url(../images/zw1/7g02-2.png) no-repeat;}
+
+.zw_7217{ width:115px; height:91px; z-index:2; position:absolute; top:446px; left:562px; background:url(../images/zw1/7217.png) no-repeat;}
+.zw_7217:hover{ background:url(../images/zw1/7217-2.png) no-repeat;}
+.zw_7g08{ width:60px; height:53px; z-index:2; position:absolute; top:424px; left:533px; background:url(../images/zw1/7g08.png) no-repeat;}
+.zw_7g08:hover{ background:url(../images/zw1/7g08-2.png) no-repeat;}
+
+.zw_723d{ width:115px; height:91px; z-index:2; position:absolute; top:415px; left:609px; background:url(../images/zw1/723d.png) no-repeat;}
+.zw_723d:hover{ background:url(../images/zw1/723d-2.png) no-repeat;}
+.zw_7g07{ width:60px; height:53px; z-index:2; position:absolute; top:393px; left:580px; background:url(../images/zw1/7g07.png) no-repeat;}
+.zw_7g07:hover{ background:url(../images/zw1/7g07-2.png) no-repeat;}
+
+.zw_7230{ width:103px; height:79px; z-index:2; position:absolute; top:170px; left:445px; background:url(../images/zw1/7230.png) no-repeat;}
+.zw_7230:hover{ background:url(../images/zw1/7230-2.png) no-repeat;}
+
+
+.zw_7a23{ width:49px; height:45px; z-index:2; position:absolute; top:170px; left:472px; background:url(../images/zw1/7a23.png) no-repeat;}
+.zw_7a23:hover{ background:url(../images/zw1/7a23-2.png) no-repeat;}
+.zw_7a25{ width:73px; height:63px; z-index:2; position:absolute; top:208px; left:413px; background:url(../images/zw1/7a25.png) no-repeat;}
+.zw_7a25:hover{ background:url(../images/zw1/7a25-2.png) no-repeat;}
+.zw_7229{ width:100px; height:79px; z-index:2; position:absolute; top:215px; left:515px; background:url(../images/zw1/7229.png) no-repeat;}
+.zw_7229:hover{ background:url(../images/zw1/7229-2.png) no-repeat;}
+.zw_7a26{ width:49px; height:45px; z-index:2; position:absolute; top:215px; left:539px; background:url(../images/zw1/7a26.png) no-repeat;}
+.zw_7a26:hover{ background:url(../images/zw1/7a26-2.png) no-repeat;}
+.zw_7a27{ width:73px; height:63px; z-index:2; position:absolute; top:253px; left:482px; background:url(../images/zw1/7a27.png) no-repeat;}
+.zw_7a27:hover{ background:url(../images/zw1/7a27-2.png) no-repeat;}
+.zw_7a30{ width:106px; height:83px; z-index:2; position:absolute; top:262px; left:549px; background:url(../images/zw1/7a30.png) no-repeat;}
+.zw_7a30:hover{ background:url(../images/zw1/7a30-2.png) no-repeat;}
+
+.zw_7a29{ width:49px; height:45px; z-index:2; position:absolute; top:282px; left:578px; background:url(../images/zw1/7a29.png) no-repeat;}
+.zw_7a29:hover{ background:url(../images/zw1/7a29-2.png) no-repeat;}
+
+.zw_7a28{ width:49px; height:45px; z-index:2; position:absolute; top:262px; left:606px; background:url(../images/zw1/7a28.png) no-repeat;}
+.zw_7a28:hover{ background:url(../images/zw1/7a28-2.png) no-repeat;}
+
+.zw_7228{ width:98px; height:78px; z-index:2; position:absolute; top:300px; left:573px; background:url(../images/zw1/7228.png) no-repeat;}
+.zw_7228:hover{ background:url(../images/zw1/7228-2.png) no-repeat;}
+.zw_7g03{ width:66px; height:58px; z-index:2; position:absolute; top:282px; left:633px; background:url(../images/zw1/7g03.png) no-repeat;}
+.zw_7g03:hover{ background:url(../images/zw1/7g03-2.png) no-repeat;}
+
+.zw_7227{ width:115px; height:91px; z-index:2; position:absolute; top:377px; left:666px; background:url(../images/zw1/7227.png) no-repeat;}
+.zw_7227:hover{ background:url(../images/zw1/7227-2.png) no-repeat;}
+.zw_7g06{width:60px; height:53px; z-index:2; position:absolute; top:355px; left:639px; background:url(../images/zw1/7g06.png) no-repeat;}
+.zw_7g06:hover{ background:url(../images/zw1/7g06-2.png) no-repeat;}
+
+.zw_723e{  width:115px; height:91px; z-index:2; position:absolute; top:345px; left:714px; background:url(../images/zw1/723e.png) no-repeat;}
+.zw_723e:hover{ background:url(../images/zw1/723e-2.png) no-repeat;}
+.zw_7g05{ width:60px; height:53px;  z-index:2; position:absolute; top:324px; left:685px; background:url(../images/zw1/7g05.png) no-repeat;}
+.zw_7g05:hover{ background:url(../images/zw1/7g05-2.png) no-repeat;}
+
+.zw_7231{ width:162px; height:122px; z-index:2; position:absolute; top:83px; left:516px; background:url(../images/zw1/7231.png) no-repeat;}
+.zw_7231:hover{ background:url(../images/zw1/7231-2.png) no-repeat;}
+.zw_7232{ width:162px; height:122px; z-index:2; position:absolute; top:130px; left:584px; background:url(../images/zw1/7232.png) no-repeat;}
+.zw_7232:hover{ background:url(../images/zw1/7232-2.png) no-repeat;}
+
+.zw_7233{ width:114px; height:89px; z-index:2; position:absolute; top:225px; left:650px; background:url(../images/zw1/7233.png) no-repeat;}
+.zw_7233:hover{ background:url(../images/zw1/7233-2.png) no-repeat;}
+.zw_723f{ width:169px; height:128px; z-index:2; position:absolute; top:240px; left:792px; background:url(../images/zw1/723f.png) no-repeat;}
+.zw_723f:hover{ background:url(../images/zw1/723f-2.png) no-repeat;}
+
+.zw_7235{ width:152px; height:117px; z-index:2; position:absolute; top:286px; left:738px; background:url(../images/zw1/7235.png) no-repeat;}
+.zw_7235:hover{ background:url(../images/zw1/7235-2.png) no-repeat;}
+
+/* 7 区域一结束 */
+
+/* 7 区域二 */
+.zw_7e75{ width:75px; height:59px; z-index:2; position:absolute; top:413px; left:52px; background:url(../images/zw2/7e75.png) no-repeat;}
+.zw_7e75:hover{ background:url(../images/zw2/7e75-2.png) no-repeat;}
+
+.zw_7e77{ width:75px; height:59px; z-index:2; position:absolute; top:369px; left:119px; background:url(../images/zw2/7e77.png) no-repeat;}
+.zw_7e77:hover{ background:url(../images/zw2/7e77-2.png) no-repeat;}
+.zw_7e79{ width:75px; height:59px; z-index:2; position:absolute; top:442px; left:93px; background:url(../images/zw2/7e79.png) no-repeat;}
+.zw_7e79:hover{ background:url(../images/zw2/7e79-2.png) no-repeat;}
+.zw_7e80{ width:75px; height:59px; z-index:2; position:absolute; top:399px; left:160px; background:url(../images/zw2/7e80.png) no-repeat;}
+.zw_7e80:hover{ background:url(../images/zw2/7e80-2.png) no-repeat;}
+.zw_7257{ width:104px; height:80px; z-index:2; position:absolute; top:460px; left:118px; background:url(../images/zw2/7257.png) no-repeat;}
+.zw_7257:hover{ background:url(../images/zw2/7257-2.png) no-repeat;}
+.zw_7258{ width:104px; height:80px;  z-index:2; position:absolute; top:416px; left:185px; background:url(../images/zw2/7258.png) no-repeat;}
+.zw_7258:hover{ background:url(../images/zw2/7258-2.png) no-repeat;}
+.zw_725a{ width:165px; height:123px; z-index:2; position:absolute; top:529px; left:349px; background:url(../images/zw2/725a.png) no-repeat;}
+.zw_725a:hover{ background:url(../images/zw2/725a-2.png) no-repeat;}
+.zw_727e{ width:165px; height:123px; z-index:2; position:absolute; top:238px; left:803px; background:url(../images/zw2/727e.png) no-repeat;}
+.zw_727e:hover{ background:url(../images/zw2/727e-2.png) no-repeat;}
+
+
+.zw_7255{ width:166px; height:122px; z-index:2; position:absolute; top:573px; left:282px; background:url(../images/zw2/7255.png) no-repeat;}
+.zw_7255:hover{ background:url(../images/zw2/7255-2.png) no-repeat;}
+
+.zw_7e86{ width:75px; height:60px; z-index:2; position:absolute; top:117px; left:505px; background:url(../images/zw2/7e86.png) no-repeat;}
+.zw_7e86:hover{ background:url(../images/zw2/7e86-2.png) no-repeat;}
+.zw_7e87{ width:75px; height:60px; z-index:2; position:absolute; top:73px; left:573px; background:url(../images/zw2/7e87.png) no-repeat;}
+.zw_7e87:hover{ background:url(../images/zw2/7e87-2.png) no-repeat;}
+.zw_7e88{ width:73px; height:60px; z-index:2; position:absolute; top:147px; left:546px; background:url(../images/zw2/7e88.png) no-repeat;}
+.zw_7e88:hover{ background:url(../images/zw2/7e88-2.png) no-repeat;}
+.zw_7e89{ width:75px; height:60px; z-index:2; position:absolute; top:103px; left:614px; background:url(../images/zw2/7e89.png) no-repeat;}
+.zw_7e89:hover{ background:url(../images/zw2/7e89-2.png) no-repeat;}
+.zw_725d{ width:104px; height:80px; z-index:2; position:absolute; top:165px; left:572px; background:url(../images/zw2/725d.png) no-repeat;}
+.zw_725d:hover{ background:url(../images/zw2/725d-2.png) no-repeat;}
+.zw_725e{  width:104px; height:80px; z-index:2; position:absolute; top:120px; left:639px; background:url(../images/zw2/725e.png) no-repeat;}
+.zw_725e:hover{ background:url(../images/zw2/725e-2.png) no-repeat;}
+.zw_7e95{  width:74px; height:59px; z-index:2; position:absolute; top:212px; left:642px; background:url(../images/zw2/7e95.png) no-repeat;}
+.zw_7e95:hover{ background:url(../images/zw2/7e95-2.png) no-repeat;}
+.zw_7e96{   width:74px; height:59px; z-index:2; position:absolute; top:168px; left:708px; background:url(../images/zw2/7e96.png) no-repeat;}
+.zw_7e96:hover{ background:url(../images/zw2/7e96-2.png) no-repeat;}
+.zw_725b{   width:104px; height:80px; z-index:2; position:absolute; top:230px; left:666px; background:url(../images/zw2/725b.png) no-repeat;}
+.zw_725b:hover{ background:url(../images/zw2/725b-2.png) no-repeat;}
+.zw_725c{   width:104px; height:80px; z-index:2; position:absolute; top:185px; left:733px; background:url(../images/zw2/725c.png) no-repeat;}
+.zw_725c:hover{ background:url(../images/zw2/725c-2.png) no-repeat;}
+
+.zw_7256{ width:135px; height:104px; z-index:2; position:absolute; top:507px; left:187px; background:url(../images/zw2/7256.png) no-repeat;}
+.zw_7256:hover{ background:url(../images/zw2/7256-2.png) no-repeat;}
+
+.zw_723p{ width:113px; height:90px; z-index:2; position:absolute; top:470px; left:264px; background:url(../images/zw2/723p.png) no-repeat;}
+.zw_723p:hover{ background:url(../images/zw2/723p-2.png) no-repeat;}
+
+
+.zw_7a85{ width:82px; height:70px; z-index:2; position:absolute; top:315px; left:189px; background:url(../images/zw2/7a85.png) no-repeat;}
+.zw_7a85:hover{ background:url(../images/zw2/7a85-2.png) no-repeat;}
+.zw_7a86{ width:53px; height:49px; z-index:2; position:absolute; top:315px; left:222px; background:url(../images/zw2/7a86.png) no-repeat;}
+.zw_7a86:hover{ background:url(../images/zw2/7a86-2.png) no-repeat;}
+.zw_7a87{ width:82px; height:70px; z-index:2; position:absolute; top:273px; left:253px; background:url(../images/zw2/7a87.png) no-repeat;}
+.zw_7a87:hover{ background:url(../images/zw2/7a87-2.png) no-repeat;}
+.zw_7a88{ width:53px; height:49px; z-index:2; position:absolute; top:273px; left:285px; background:url(../images/zw2/7a88.png) no-repeat;}
+.zw_7a88:hover{ background:url(../images/zw2/7a88-2.png) no-repeat;}
+.zw_7a83{ width:82px; height:70px; z-index:2; position:absolute; top:344px; left:231px; background:url(../images/zw2/7a83.png) no-repeat;}
+.zw_7a83:hover{ background:url(../images/zw2/7a83-2.png) no-repeat;}
+.zw_7a82{ width:53px; height:49px; z-index:2; position:absolute; top:344px; left:263px; background:url(../images/zw2/7a82.png) no-repeat;}
+.zw_7a82:hover{ background:url(../images/zw2/7a82-2.png) no-repeat;}
+.zw_7a81{  width:82px; height:70px; z-index:2; position:absolute; top:303px; left:295px; background:url(../images/zw2/7a81.png) no-repeat;}
+.zw_7a81:hover{ background:url(../images/zw2/7a81-2.png) no-repeat;}
+.zw_7a80{ width:53px; height:49px; z-index:2; position:absolute; top:302px; left:328px; background:url(../images/zw2/7a80.png) no-repeat;}
+.zw_7a80:hover{ background:url(../images/zw2/7a80-2.png) no-repeat;}
+.zw_7259{ width:111px; height:88px; z-index:2; position:absolute; top:363px; left:257px; background:url(../images/zw2/7259.png) no-repeat;}
+.zw_7259:hover{ background:url(../images/zw2/7259-2.png) no-repeat;}
+.zw_7260{ width:111px; height:88px; z-index:2; position:absolute; top:322px; left:322px; background:url(../images/zw2/7260.png) no-repeat;}
+.zw_7260:hover{ background:url(../images/zw2/7260-2.png) no-repeat;}
+ 
+ .zw_7a76{ width:82px; height:70px; z-index:2; position:absolute; top:409px; left:322px; background:url(../images/zw2/7a76.png) no-repeat;}
+.zw_7a76:hover{ background:url(../images/zw2/7a76-2.png) no-repeat;}
+ 
+ .zw_7a77{ width:53px; height:49px; z-index:2; position:absolute; top:409px; left:355px; background:url(../images/zw2/7a77.png) no-repeat;}
+.zw_7a77:hover{ background:url(../images/zw2/7a77-2.png) no-repeat;}
+ 
+.zw_7a78{ width:82px; height:70px; z-index:2; position:absolute; top:365px; left:389px; background:url(../images/zw2/7a78.png) no-repeat;}
+.zw_7a78:hover{ background:url(../images/zw2/7a78-2.png) no-repeat;}
+
+.zw_7a79{ width:53px; height:49px; z-index:2; position:absolute; top:368px; left:420px; background:url(../images/zw2/7a79.png) no-repeat;}
+.zw_7a79:hover{ background:url(../images/zw2/7a79-2.png) no-repeat;}
+
+.zw_7262{ width:113px; height:94px; z-index:2; position:absolute; top:424px; left:348px; background:url(../images/zw2/7262.png) no-repeat;}
+.zw_7262:hover{ background:url(../images/zw2/7262-2.png) no-repeat;}
+.zw_7261{  width:113px; height:94px;  z-index:2; position:absolute; top:380px; left:412px; background:url(../images/zw2/7261.png) no-repeat;}
+.zw_7261:hover{ background:url(../images/zw2/7261-2.png) no-repeat;}
+.zw_7263{ width:164px; height:125px; z-index:2; position:absolute; top:486px; left:420px; background:url(../images/zw2/7263.png) no-repeat;}
+.zw_7263:hover{ background:url(../images/zw2/7263-2.png) no-repeat;}
+.zw_723u{ width:164px; height:125px; z-index:2; position:absolute; top:442px; left:489px; background:url(../images/zw2/723u.png) no-repeat;}
+.zw_723u:hover{ background:url(../images/zw2/723u-2.png) no-repeat;}
+
+.zw_7a89{ width:48px; height:46px; z-index:5; position:absolute; top:245px; left:328px; background:url(../images/zw2/7a89.png) no-repeat;}
+.zw_7a89:hover{ background:url(../images/zw2/7a89-2.png) no-repeat;}
+.zw_7g29{ width:48px; height:46px; z-index:4; position:absolute; top:225px; left:360px; background:url(../images/zw2/7g29.png) no-repeat;}
+.zw_7g29:hover{ background:url(../images/zw2/7g29-2.png) no-repeat;}
+.zw_7g30{ width:48px; height:46px; z-index:3; position:absolute; top:204px; left:394px; background:url(../images/zw2/7g30.png) no-repeat;}
+.zw_7g30:hover{ background:url(../images/zw2/7g30-2.png) no-repeat;}
+
+.zw_7a90{ width:52px; height:49px; z-index:2; position:absolute; top:224px; left:361px; background:url(../images/zw2/7a90.png) no-repeat;}
+.zw_7a90:hover{ background:url(../images/zw2/7a90-2.png) no-repeat;}
+.zw_7a91{ width:52px; height:49px; z-index:2; position:absolute; top:203px; left:394px; background:url(../images/zw2/7a91.png) no-repeat;}
+.zw_7a91:hover{ background:url(../images/zw2/7a91-2.png) no-repeat;}
+.zw_7a92{ width:84px; height:70px; z-index:2; position:absolute; top:160px; left:425px; background:url(../images/zw2/7a92.png) no-repeat;}
+.zw_7a92:hover{ background:url(../images/zw2/7a92-2.png) no-repeat;}
+.zw_7a93{ width:52px; height:49px; z-index:2; position:absolute; top:160px; left:458px; background:url(../images/zw2/7a93.png) no-repeat;}
+.zw_7a93:hover{ background:url(../images/zw2/7a93-2.png) no-repeat;}
+.zw_7b02{ width:82px; height:66px; z-index:2; position:absolute; top:256px; left:369px; background:url(../images/zw2/7b02.png) no-repeat;}
+.zw_7b02:hover{ background:url(../images/zw2/7b02-2.png) no-repeat;}
+.zw_7b01{ width:52px; height:49px; z-index:2; position:absolute; top:254px; left:402px; background:url(../images/zw2/7b01.png) no-repeat;}
+.zw_7b01:hover{ background:url(../images/zw2/7b01-2.png) no-repeat;}
+.zw_7a99{ width:82px; height:69px; z-index:2; position:absolute; top:212px; left:435px; background:url(../images/zw2/7a99.png) no-repeat;}
+.zw_7a99:hover{ background:url(../images/zw2/7a99-2.png) no-repeat;}
+.zw_7a98{ width:52px; height:49px; z-index:2; position:absolute; top:212px; left:467px; background:url(../images/zw2/7a98.png) no-repeat;}
+.zw_7a98:hover{ background:url(../images/zw2/7a98-2.png) no-repeat;}
+.zw_7a95{ width:52px; height:49px; z-index:2; position:absolute; top:193px; left:499px; background:url(../images/zw2/7a95.png) no-repeat;}
+.zw_7a95:hover{ background:url(../images/zw2/7a95-2.png) no-repeat;}
+.zw_7285{ width:112px; height:89px; z-index:2; position:absolute; top:271px; left:397px; background:url(../images/zw2/7285.png) no-repeat;}
+.zw_7285:hover{ background:url(../images/zw2/7285-2.png) no-repeat;}
+.zw_7283{ width:112px; height:89px;  z-index:2; position:absolute; top:230px; left:463px; background:url(../images/zw2/7283.png) no-repeat;}
+.zw_7283:hover{ background:url(../images/zw2/7283-2.png) no-repeat;}
+
+
+.zw_7a96{ width:52px; height:49px; z-index:2; position:absolute; top:212px; left:527px; background:url(../images/zw2/7a96.png) no-repeat;}
+.zw_7a96:hover{ background:url(../images/zw2/7a96-2.png) no-repeat;}
+.zw_7a97{ width:104px; height:85px; z-index:2; position:absolute; top:193px; left:499px; background:url(../images/zw2/7a97.png) no-repeat;}
+.zw_7a97:hover{ background:url(../images/zw2/7a97-2.png) no-repeat;}
+.zw_7b03{ width:82px; height:68px; z-index:2; position:absolute; top:317px; left:464px; background:url(../images/zw2/7b03.png) no-repeat;}
+.zw_7b03:hover{ background:url(../images/zw2/7b03-2.png) no-repeat;}
+.zw_7b05{ width:52px; height:49px; z-index:2; position:absolute; top:317px; left:496px; background:url(../images/zw2/7b05.png) no-repeat;}
+.zw_7b05:hover{ background:url(../images/zw2/7b05-2.png) no-repeat;}
+.zw_7b06{ width:82px; height:69px; z-index:2; position:absolute; top:276px; left:529px; background:url(../images/zw2/7b06.png) no-repeat;}
+.zw_7b06:hover{ background:url(../images/zw2/7b06-2.png) no-repeat;}
+
+.zw_7b07{ width:52px; height:49px; z-index:2; position:absolute; top:276px; left:561px; background:url(../images/zw2/7b07.png) no-repeat;}
+.zw_7b07:hover{ background:url(../images/zw2/7b07-2.png) no-repeat;}
+.zw_7b08{ width:52px; height:49px; z-index:2; position:absolute; top:255px; left:594px; background:url(../images/zw2/7b08.png) no-repeat;}
+.zw_7b08:hover{ background:url(../images/zw2/7b08-2.png) no-repeat;}
+
+.zw_7281{ width:111px; height:91px; z-index:2; position:absolute; top:334px; left:490px; background:url(../images/zw2/7281.png) no-repeat;}
+.zw_7281:hover{ background:url(../images/zw2/7281-2.png) no-repeat;}
+.zw_7282{width:111px; height:91px;  z-index:2; position:absolute; top:292px; left:554px; background:url(../images/zw2/7282.png) no-repeat;}
+.zw_7282:hover{ background:url(../images/zw2/7282-2.png) no-repeat;}
+.zw_7b09{ width:52px; height:49px; z-index:2; position:absolute; top:276px; left:619px; background:url(../images/zw2/7b09.png) no-repeat;}
+.zw_7b09:hover{ background:url(../images/zw2/7b09-2.png) no-repeat;}
+.zw_7b10{ width:103px; height:85px; z-index:2; position:absolute; top:255px; left:594px; background:url(../images/zw2/7b10.png) no-repeat;}
+.zw_7b10:hover{ background:url(../images/zw2/7b10-2.png) no-repeat;}
+
+.zw_7280{ width:182px; height:130px; z-index:2; position:absolute; top:382px; left:559px; background:url(../images/zw2/7280.png) no-repeat;}
+.zw_7280:hover{ background:url(../images/zw2/7280-2.png) no-repeat;}
+.zw_723v{ width:180px; height:134px; z-index:2; position:absolute; top:329px; left:644px; background:url(../images/zw2/723v.png) no-repeat;}
+.zw_723v:hover{ background:url(../images/zw2/723v-2.png) no-repeat;}
+
+.zw_7286{ width:167px; height:130px; z-index:2; position:absolute; top:68px; left:506px; background:url(../images/zw2/7286.png) no-repeat;}
+.zw_7286:hover{ background:url(../images/zw2/7286-2.png) no-repeat;}
+.zw_7287{  width:167px; height:130px; z-index:2; position:absolute; top:115px; left:575px; background:url(../images/zw2/7287.png) no-repeat;}
+.zw_7287:hover{ background:url(../images/zw2/7287-2.png) no-repeat;}
+.zw_7288{ width:113px; height:98px; z-index:2; position:absolute; top:222px; left:646px; background:url(../images/zw2/7288.png) no-repeat;}
+.zw_7288:hover{ background:url(../images/zw2/7288-2.png) no-repeat;}
+.zw_725r{ width:127px; height:96px; z-index:2; position:absolute; top:176px; left:703px; background:url(../images/zw2/725r.png) no-repeat;}
+.zw_725r:hover{ background:url(../images/zw2/725r-2.png) no-repeat;}
+.zw_7289{ width:162px; height:124px; z-index:2; position:absolute; top:281px; left:735px; background:url(../images/zw2/7289.png) no-repeat;}
+.zw_7289:hover{ background:url(../images/zw2/7289-2.png) no-repeat;}
+
+/* 7 区域二结束 */
+
+/* 7 区域三 */
+.zw_7f02{ width:96px; height:74px; z-index:2; position:absolute; top:407px; left:44px; background:url(../images/zw3/7f02.png) no-repeat;}
+.zw_7f02:hover{background:url(../images/zw3/7f02-2.png) no-repeat;}
+.zw_7f05{ width:96px; height:75px; z-index:2; position:absolute; top:357px; left:120px; background:url(../images/zw3/7f05.png) no-repeat;}
+.zw_7f05:hover{background:url(../images/zw3/7f05-2.png) no-repeat;}
+.zw_7f10{ width:96px; height:74px; z-index:2; position:absolute; top:438px; left:91px; background:url(../images/zw3/7f10.png) no-repeat;}
+.zw_7f10:hover{background:url(../images/zw3/7f10-2.png) no-repeat;}
+.zw_7f08{ width:96px; height:75px; z-index:2; position:absolute; top:388px; left:167px; background:url(../images/zw3/7f08.png) no-repeat;}
+.zw_7f08:hover{background:url(../images/zw3/7f08-2.png) no-repeat;}
+.zw_7f06{ width:96px; height:75px; z-index:2; position:absolute; top:412px; left:202px; background:url(../images/zw3/7f06.png) no-repeat;}
+.zw_7f06:hover{background:url(../images/zw3/7f06-2.png) no-repeat;}
+.zw_7f03{ width:96px; height:75px; z-index:2; position:absolute;  top:462px; left:126px;  background:url(../images/zw3/7f03.png) no-repeat;}
+.zw_7f03:hover{background:url(../images/zw3/7f03-2.png) no-repeat;}
+
+.zw_7f21{ width:96px; height:75px; z-index:2; position:absolute;  top:488px; left:166px;  background:url(../images/zw3/7f21.png) no-repeat;}
+.zw_7f21:hover{background:url(../images/zw3/7f21-2.png) no-repeat;}
+.zw_7f19{ width:96px; height:75px; z-index:2; position:absolute;  top:440px; left:244px;  background:url(../images/zw3/7f19.png) no-repeat;}
+.zw_7f19:hover{background:url(../images/zw3/7f19-2.png) no-repeat;}
+.zw_7f07{ width:96px; height:75px; z-index:2; position:absolute;  top:514px; left:202px;  background:url(../images/zw3/7f07.png) no-repeat;}
+.zw_7f07:hover{background:url(../images/zw3/7f07-2.png) no-repeat;}
+.zw_7f09{ width:96px; height:75px; z-index:2; position:absolute;  top:464px; left:276px;  background:url(../images/zw3/7f09.png) no-repeat;}
+.zw_7f09:hover{background:url(../images/zw3/7f09-2.png) no-repeat;}
+.zw_7f11{ width:96px; height:75px; z-index:2; position:absolute;  top:541px; left:242px;  background:url(../images/zw3/7f11.png) no-repeat;}
+.zw_7f11:hover{background:url(../images/zw3/7f11-2.png) no-repeat;}
+.zw_7f15{ width:96px; height:75px; z-index:2; position:absolute;  top:492px; left:318px;  background:url(../images/zw3/7f15.png) no-repeat;}
+.zw_7f15:hover{background:url(../images/zw3/7f15-2.png) no-repeat;}
+
+.zw_7f12{ width:96px; height:75px; z-index:2; position:absolute;  top:565px; left:278px;  background:url(../images/zw3/7f12.png) no-repeat;}
+.zw_7f12:hover{background:url(../images/zw3/7f12-2.png) no-repeat;}
+.zw_7f13{ width:96px; height:75px; z-index:2; position:absolute;  top:516px; left:353px;  background:url(../images/zw3/7f13.png) no-repeat;}
+.zw_7f13:hover{background:url(../images/zw3/7f13-2.png) no-repeat;}
+.zw_7f32{ width:96px; height:75px; z-index:2; position:absolute;  top:598px; left:323px;  background:url(../images/zw3/7f32.png) no-repeat;}
+.zw_7f32:hover{background:url(../images/zw3/7f32-2.png) no-repeat;}
+.zw_7f31{ width:96px; height:75px; z-index:2; position:absolute;  top:547px; left:400px;  background:url(../images/zw3/7f31.png) no-repeat;}
+.zw_7f31:hover{background:url(../images/zw3/7f31-2.png) no-repeat;}
+.zw_7299{ width:107px; height:82px; z-index:2; position:absolute;  top:620px; left:357px;  background:url(../images/zw3/7299.png) no-repeat;}
+.zw_7299:hover{background:url(../images/zw3/7299-2.png) no-repeat;}
+.zw_727d{width:107px; height:82px; z-index:2; position:absolute;  top:570px; left:434px;  background:url(../images/zw3/727d.png) no-repeat;}
+.zw_727d:hover{background:url(../images/zw3/727d-2.png) no-repeat;}
+
+.zw_7b76{width:46px; height:40px; z-index:2; position:absolute;  top:327px; left:202px;  background:url(../images/zw3/7b76.png) no-repeat;}
+.zw_7b76:hover{background:url(../images/zw3/7b76-2.png) no-repeat;}
+.zw_7b77{width:46px; height:40px; z-index:2; position:absolute;  top:302px; left:238px;  background:url(../images/zw3/7b77.png) no-repeat;}
+.zw_7b77:hover{background:url(../images/zw3/7b77-2.png) no-repeat;}
+.zw_7b78{width:46px; height:40px; z-index:2; position:absolute;  top:276px; left:278px;  background:url(../images/zw3/7b78.png) no-repeat;}
+.zw_7b78:hover{background:url(../images/zw3/7b78-2.png) no-repeat;}
+.zw_7b79{width:46px; height:40px; z-index:2; position:absolute;  top:254px; left:314px;  background:url(../images/zw3/7b79.png) no-repeat;}
+.zw_7b79:hover{background:url(../images/zw3/7b79-2.png) no-repeat;}
+
+.zw_7b75{width:46px; height:40px; z-index:2; position:absolute;  top:359px; left:249px;  background:url(../images/zw3/7b75.png) no-repeat;}
+.zw_7b75:hover{background:url(../images/zw3/7b75-2.png) no-repeat;}
+.zw_7b73{width:46px; height:40px; z-index:2; position:absolute;  top:335px; left:286px;  background:url(../images/zw3/7b73.png) no-repeat;}
+.zw_7b73:hover{background:url(../images/zw3/7b73-2.png) no-repeat;}
+.zw_7b72{width:46px; height:40px; z-index:2; position:absolute;  top:309px; left:327px;  background:url(../images/zw3/7b72.png) no-repeat;}
+.zw_7b72:hover{background:url(../images/zw3/7b72-2.png) no-repeat;}
+.zw_7b71{width:46px; height:40px; z-index:2; position:absolute;  top:286px; left:362px;  background:url(../images/zw3/7b71.png) no-repeat;}
+.zw_7b71:hover{background:url(../images/zw3/7b71-2.png) no-repeat;}
+
+.zw_7d95{ width:45px; height:40px; z-index:2; position:absolute;  top:358px; left:320px;  background:url(../images/zw3/7d95.png) no-repeat;}
+.zw_7d95:hover{background:url(../images/zw3/7d95-2.png) no-repeat;}
+.zw_7g33{ width:45px; height:40px; z-index:2; position:absolute;    top:382px; left:283px;  background:url(../images/zw3/7g33.png) no-repeat;}
+.zw_7g33:hover{background:url(../images/zw3/7g33-2.png) no-repeat;}
+
+
+.zw_7b67{width:46px; height:40px; z-index:2; position:absolute;  top:411px; left:327px;  background:url(../images/zw3/7b67.png) no-repeat;}
+.zw_7b67:hover{background:url(../images/zw3/7b67-2.png) no-repeat;}
+.zw_7b68{width:46px; height:40px; z-index:2; position:absolute;  top:387px; left:363px;  background:url(../images/zw3/7b68.png) no-repeat;}
+.zw_7b68:hover{background:url(../images/zw3/7b68-2.png) no-repeat;}
+.zw_7b69{width:46px; height:40px; z-index:2; position:absolute;  top:362px; left:403px;  background:url(../images/zw3/7b69.png) no-repeat;}
+.zw_7b69:hover{background:url(../images/zw3/7b69-2.png) no-repeat;}
+.zw_7b70{width:46px; height:40px; z-index:2; position:absolute;  top:338px; left:439px;  background:url(../images/zw3/7b70.png) no-repeat;}
+.zw_7b70:hover{background:url(../images/zw3/7b70-2.png) no-repeat;}
+
+.zw_7d88{width:45px; height:40px; z-index:2; position:absolute;  top:386px; left:438px;  background:url(../images/zw3/7d88.png) no-repeat;}
+.zw_7d88:hover{background:url(../images/zw3/7d88-2.png) no-repeat;}
+.zw_7g32{width:45px; height:40px; z-index:2; position:absolute;  top:362px; left:475px;  background:url(../images/zw3/7g32.png) no-repeat;}
+.zw_7g32:hover{background:url(../images/zw3/7g32-2.png) no-repeat;}
+.zw_7d89{width:45px; height:40px;  z-index:2; position:absolute;  top:435px; left:359px;  background:url(../images/zw3/7d89.png) no-repeat;}
+.zw_7d89:hover{background:url(../images/zw3/7d89-2.png) no-repeat;}
+.zw_7g31{width:45px; height:40px;  z-index:2; position:absolute;  top:411px; left:397px;  background:url(../images/zw3/7g31.png) no-repeat;}
+.zw_7g31:hover{background:url(../images/zw3/7g31-2.png) no-repeat;}
+
+.zw_7f17{ width:96px; height:75px; z-index:2; position:absolute;  top:437px; left:400px;  background:url(../images/zw3/7f17.png) no-repeat;}
+.zw_7f17:hover{background:url(../images/zw3/7f17-2.png) no-repeat;}
+.zw_7f20{ width:96px; height:75px; z-index:2; position:absolute;  top:388px; left:476px;  background:url(../images/zw3/7f20.png) no-repeat;}
+.zw_7f20:hover{background:url(../images/zw3/7f20-2.png) no-repeat;}
+.zw_7f16{ width:96px; height:75px; z-index:2; position:absolute;  top:462px; left:435px;  background:url(../images/zw3/7f16.png) no-repeat;}
+.zw_7f16:hover{background:url(../images/zw3/7f16-2.png) no-repeat;}
+.zw_7f18{ width:96px; height:75px; z-index:2; position:absolute;  top:412px; left:511px;  background:url(../images/zw3/7f18.png) no-repeat;}
+.zw_7f18:hover{background:url(../images/zw3/7f18-2.png) no-repeat;}
+.zw_7f30{width:45px; height:40px; z-index:2; position:absolute;  top:516px; left:482px;  background:url(../images/zw3/7f30.png) no-repeat;}
+.zw_7f30:hover{background:url(../images/zw3/7f30-2.png) no-repeat;}
+.zw_7g50{width:45px; height:40px; z-index:2; position:absolute;  top:493px; left:519px;  background:url(../images/zw3/7g50.png) no-repeat;}
+.zw_7g50:hover{background:url(../images/zw3/7g50-2.png) no-repeat;}
+
+.zw_7f29{width:45px; height:40px; z-index:2; position:absolute;  top:466px; left:558px;  background:url(../images/zw3/7f29.png) no-repeat;}
+.zw_7f29:hover{background:url(../images/zw3/7f29-2.png) no-repeat;}
+.zw_7g51{width:45px; height:40px; z-index:2; position:absolute;  top:443px; left:593px;  background:url(../images/zw3/7g51.png) no-repeat;}
+.zw_7g51:hover{background:url(../images/zw3/7g51-2.png) no-repeat;}
+
+.zw_721h{ width:107px; height:82px; z-index:2; position:absolute;  top:516px; left:516px;  background:url(../images/zw3/721h.png) no-repeat;}
+.zw_721h:hover{background:url(../images/zw3/721h-2.png) no-repeat;}
+.zw_725g{ width:107px; height:82px; z-index:2; position:absolute;  top:466px; left:592px;  background:url(../images/zw3/725g.png) no-repeat;}
+.zw_725g:hover{background:url(../images/zw3/725g-2.png) no-repeat;}
+
+.zw_7b80{width:46px; height:40px; z-index:2; position:absolute;  top:223px; left:359px;  background:url(../images/zw3/7b80.png) no-repeat;}
+.zw_7b80:hover{background:url(../images/zw3/7b80-2.png) no-repeat;}
+.zw_7b81{width:46px; height:40px; z-index:2; position:absolute;  top:199px; left:396px;  background:url(../images/zw3/7b81.png) no-repeat;}
+.zw_7b81:hover{background:url(../images/zw3/7b81-2.png) no-repeat;}
+.zw_7b82{width:46px; height:40px; z-index:2; position:absolute;  top:173px; left:435px;  background:url(../images/zw3/7b82.png) no-repeat;}
+.zw_7b82:hover{background:url(../images/zw3/7b82-2.png) no-repeat;}
+.zw_7b83{width:46px; height:40px; z-index:2; position:absolute;  top:149px; left:472px;  background:url(../images/zw3/7b83.png) no-repeat;}
+.zw_7b83:hover{background:url(../images/zw3/7b83-2.png) no-repeat;}
+
+.zw_7b85{width:46px; height:40px; z-index:2; position:absolute;  top:182px; left:520px;  background:url(../images/zw3/7b85.png) no-repeat;}
+.zw_7b85:hover{background:url(../images/zw3/7b85-2.png) no-repeat;}
+.zw_7b86{width:46px; height:40px; z-index:2; position:absolute;  top:207px; left:484px;  background:url(../images/zw3/7b86.png) no-repeat;}
+.zw_7b86:hover{background:url(../images/zw3/7b86-2.png) no-repeat;}
+.zw_7b87{width:46px; height:40px; z-index:2; position:absolute;  top:232px; left:443px;  background:url(../images/zw3/7b87.png) no-repeat;}
+.zw_7b87:hover{background:url(../images/zw3/7b87-2.png) no-repeat;}
+.zw_7b88{width:46px; height:40px; z-index:2; position:absolute;  top:256px; left:408px;  background:url(../images/zw3/7b88.png) no-repeat;}
+.zw_7b88:hover{background:url(../images/zw3/7b88-2.png) no-repeat;}
+
+.zw_7d91{ width:45px; height:40px; z-index:2; position:absolute;  top:256px; left:478px;  background:url(../images/zw3/7d91.png) no-repeat;}
+.zw_7d91:hover{background:url(../images/zw3/7d91-2.png) no-repeat;}
+.zw_7g36{ width:45px; height:40px; z-index:2; position:absolute;  top:280px; left:442px;  background:url(../images/zw3/7g36.png) no-repeat;}
+.zw_7g36:hover{background:url(../images/zw3/7g36-2.png) no-repeat;}
+
+.zw_7d90{ width:45px; height:40px; z-index:2; position:absolute;  top:206px; left:556px;  background:url(../images/zw3/7d90.png) no-repeat;}
+.zw_7d90:hover{background:url(../images/zw3/7d90-2.png) no-repeat;}
+.zw_7g37{ width:45px; height:40px; z-index:2; position:absolute;  top:230px; left:519px;  background:url(../images/zw3/7g37.png) no-repeat;}
+.zw_7g37:hover{background:url(../images/zw3/7g37-2.png) no-repeat;}
+
+.zw_7b89{width:46px; height:40px; z-index:2; position:absolute;  top:310px; left:484px;  background:url(../images/zw3/7b89.png) no-repeat;}
+.zw_7b89:hover{background:url(../images/zw3/7b89-2.png) no-repeat;}
+.zw_7b90{width:46px; height:40px; z-index:2; position:absolute;  top:282px; left:521px;  background:url(../images/zw3/7b90.png) no-repeat;}
+.zw_7b90:hover{background:url(../images/zw3/7b90-2.png) no-repeat;}
+.zw_7b91{width:46px; height:40px; z-index:2; position:absolute;  top:259px; left:560px;  background:url(../images/zw3/7b91.png) no-repeat;}
+.zw_7b91:hover{background:url(../images/zw3/7b91-2.png) no-repeat;}
+.zw_7b92{width:46px; height:40px; z-index:2; position:absolute;  top:235px; left:597px;  background:url(../images/zw3/7b92.png) no-repeat;}
+.zw_7b92:hover{background:url(../images/zw3/7b92-2.png) no-repeat;}
+
+.zw_7d87{ width:45px; height:40px; z-index:2; position:absolute;  top:308px; left:556px;  background:url(../images/zw3/7d87.png) no-repeat;}
+.zw_7d87:hover{background:url(../images/zw3/7d87-2.png) no-repeat;}
+.zw_7g39{ width:45px; height:40px; z-index:2; position:absolute;  top:332px; left:518px;  background:url(../images/zw3/7g39.png) no-repeat;}
+.zw_7g39:hover{background:url(../images/zw3/7g39-2.png) no-repeat;}
+
+.zw_7d86{ width:45px; height:40px; z-index:2; position:absolute;  top:259px; left:632px;  background:url(../images/zw3/7d86.png) no-repeat;}
+.zw_7d86:hover{background:url(../images/zw3/7d86-2.png) no-repeat;}
+.zw_7g38{ width:45px; height:40px; z-index:2; position:absolute;  top:282px; left:595px;  background:url(../images/zw3/7g38.png) no-repeat;}
+.zw_7g38:hover{background:url(../images/zw3/7g38-2.png) no-repeat;}
+
+.zw_7f23{ width:96px; height:75px; z-index:2; position:absolute;  top:335px; left:558px;  background:url(../images/zw3/7f23.png) no-repeat;}
+.zw_7f23:hover{background:url(../images/zw3/7f23-2.png) no-repeat;}
+.zw_7f26{ width:96px; height:75px; z-index:2; position:absolute;  top:285px; left:635px;  background:url(../images/zw3/7f26.png) no-repeat;}
+.zw_7f26:hover{background:url(../images/zw3/7f26-2.png) no-repeat;}
+.zw_7f22{ width:96px; height:75px; z-index:2; position:absolute;  top:359px; left:593px;  background:url(../images/zw3/7f22.png) no-repeat;}
+.zw_7f22:hover{background:url(../images/zw3/7f22-2.png) no-repeat;}
+.zw_7f25{ width:96px; height:75px; z-index:2; position:absolute;  top:310px; left:669px;  background:url(../images/zw3/7f25.png) no-repeat;}
+.zw_7f25:hover{background:url(../images/zw3/7f25-2.png) no-repeat;}
+.zw_7f28{ width:96px; height:75px; z-index:2; position:absolute;  top:390px; left:639px;  background:url(../images/zw3/7f28.png) no-repeat;}
+.zw_7f28:hover{background:url(../images/zw3/7f28-2.png) no-repeat;}
+.zw_7f27{ width:96px; height:75px; z-index:2; position:absolute;  top:340px; left:715px;  background:url(../images/zw3/7f27.png) no-repeat;}
+.zw_7f27:hover{background:url(../images/zw3/7f27-2.png) no-repeat;}
+
+.zw_721y{ width:107px; height:82px; z-index:2; position:absolute;  top:413px; left:673px;  background:url(../images/zw3/721y.png) no-repeat;}
+.zw_721y:hover{background:url(../images/zw3/721y-2.png) no-repeat;}
+.zw_725k{ width:107px; height:82px; z-index:2; position:absolute;  top:364px; left:749px;  background:url(../images/zw3/725k.png) no-repeat;}
+.zw_725k:hover{background:url(../images/zw3/725k-2.png) no-repeat;}
+
+.zw_7d85{ width:47px; height:42px; z-index:2; position:absolute;   top:115px; left:526px;  background:url(../images/zw3/7d85.png) no-repeat;}
+.zw_7d85:hover{background:url(../images/zw3/7d85-2.png) no-repeat;}
+.zw_7d75{ width:47px; height:42px; z-index:2; position:absolute;  top:91px; left:563px;  background:url(../images/zw3/7d75.png) no-repeat;}
+.zw_7d75:hover{background:url(../images/zw3/7d75-2.png) no-repeat;}
+.zw_7d73{ width:47px; height:42px; z-index:2; position:absolute;  top:68px; left:596px;  background:url(../images/zw3/7d73.png) no-repeat;}
+.zw_7d73:hover{background:url(../images/zw3/7d73-2.png) no-repeat;}
+.zw_7d70{ width:47px; height:42px; z-index:2; position:absolute;  top:152px; left:571px;  background:url(../images/zw3/7d70.png) no-repeat;}
+.zw_7d70:hover{background:url(../images/zw3/7d70-2.png) no-repeat;}
+.zw_7d69{ width:47px; height:42px; z-index:2; position:absolute;  top:132px; left:602px;  background:url(../images/zw3/7d69.png) no-repeat;}
+.zw_7d69:hover{background:url(../images/zw3/7d69-2.png) no-repeat;}
+.zw_7d72{ width:47px; height:42px; z-index:2; position:absolute;  top:101px; left:648px;  background:url(../images/zw3/7d72.png) no-repeat;}
+.zw_7d72:hover{background:url(../images/zw3/7d72-2.png) no-repeat;}
+.zw_7d67{ width:47px; height:42px; z-index:2; position:absolute;  top:186px; left:619px;  background:url(../images/zw3/7d67.png) no-repeat;}
+.zw_7d67:hover{background:url(../images/zw3/7d67-2.png) no-repeat;}
+.zw_7d68{ width:47px; height:42px; z-index:2; position:absolute;  top:166px; left:650px;  background:url(../images/zw3/7d68.png) no-repeat;}
+.zw_7d68:hover{background:url(../images/zw3/7d68-2.png) no-repeat;}
+.zw_7d71{ width:47px; height:42px; z-index:2; position:absolute;  top:135px; left:697px;  background:url(../images/zw3/7d71.png) no-repeat;}
+.zw_7d71:hover{background:url(../images/zw3/7d71-2.png) no-repeat;}
+
+.zw_7d65{ width:47px; height:42px; z-index:2; position:absolute;  top:225px; left:677px;  background:url(../images/zw3/7d65.png) no-repeat;}
+.zw_7d65:hover{background:url(../images/zw3/7d65-2.png) no-repeat;}
+.zw_7d66{ width:47px; height:42px; z-index:2; position:absolute;  top:205px; left:708px;  background:url(../images/zw3/7d66.png) no-repeat;}
+.zw_7d66:hover{background:url(../images/zw3/7d66-2.png) no-repeat;}
+.zw_7d63{ width:47px; height:42px; z-index:2; position:absolute;  top:253px; left:718px;  background:url(../images/zw3/7d63.png) no-repeat;}
+.zw_7d63:hover{background:url(../images/zw3/7d63-2.png) no-repeat;}
+.zw_7d62{ width:47px; height:42px; z-index:2; position:absolute;  top:233px; left:748px;  background:url(../images/zw3/7d62.png) no-repeat;}
+.zw_7d62:hover{background:url(../images/zw3/7d62-2.png) no-repeat;}
+.zw_7d61{ width:47px; height:42px; z-index:2; position:absolute;  top:260px; left:788px;  background:url(../images/zw3/7d61.png) no-repeat;}
+.zw_7d61:hover{background:url(../images/zw3/7d61-2.png) no-repeat;}
+.zw_7d60{ width:47px; height:42px; z-index:2; position:absolute;  top:281px; left:758px;  background:url(../images/zw3/7d60.png) no-repeat;}
+.zw_7d60:hover{background:url(../images/zw3/7d60-2.png) no-repeat;}
+.zw_7d59{ width:47px; height:42px; z-index:2; position:absolute;  top:312px; left:794px;  background:url(../images/zw3/7d59.png) no-repeat;}
+.zw_7d59:hover{background:url(../images/zw3/7d59-2.png) no-repeat;}
+.zw_7d58{ width:47px; height:42px; z-index:2; position:absolute;  top:285px; left:834px;  background:url(../images/zw3/7d58.png) no-repeat;}
+.zw_7d58:hover{background:url(../images/zw3/7d58-2.png) no-repeat;}
+.zw_7f82{ width:47px; height:42px; z-index:2; position:absolute;  top:174px; left:756px;  background:url(../images/zw3/7f82.png) no-repeat;}
+.zw_7f82:hover{background:url(../images/zw3/7f82-2.png) no-repeat;}
+.zw_7f83{ width:47px; height:42px; z-index:2; position:absolute;  top:199px; left:792px;  background:url(../images/zw3/7f83.png) no-repeat;}
+.zw_7f83:hover{background:url(../images/zw3/7f83-2.png) no-repeat;}
+
+.zw_7f85{ width:47px; height:42px; z-index:2; position:absolute;  top:223px; left:827px;  background:url(../images/zw3/7f85.png) no-repeat;}
+.zw_7f85:hover{background:url(../images/zw3/7f85-2.png) no-repeat;}
+.zw_7f86{ width:47px; height:42px; z-index:2; position:absolute;  top:247px; left:863px;  background:url(../images/zw3/7f86.png) no-repeat;}
+.zw_7f86:hover{background:url(../images/zw3/7f86-2.png) no-repeat;}
+.zw_7f87{ width:47px; height:42px; z-index:2; position:absolute;  top:271px; left:898px;  background:url(../images/zw3/7f87.png) no-repeat;}
+.zw_7f87:hover{background:url(../images/zw3/7f87-2.png) no-repeat;}
+.zw_7f88{ width:47px; height:42px; z-index:2; position:absolute;  top:296px; left:933px;  background:url(../images/zw3/7f88.png) no-repeat;}
+.zw_7f88:hover{background:url(../images/zw3/7f88-2.png) no-repeat;}
+.zw_7d56{ width:71px; height:58px; z-index:2; position:absolute;  top:335px; left:828px;  background:url(../images/zw3/7d56.png) no-repeat;}
+.zw_7d56:hover{background:url(../images/zw3/7d56-2.png) no-repeat;}
+.zw_7d57{ width:71px; height:58px; z-index:2; position:absolute;  top:308px; left:868px;  background:url(../images/zw3/7d57.png) no-repeat;}
+.zw_7d57:hover{background:url(../images/zw3/7d57-2.png) no-repeat;}
+
+
+
+
+
+
+/* 7 区域三结束 */
+
+/* 7 区域四 */
+.zw_7298{ width:95px; height:75px; z-index:2; position:absolute; top:390px; left:68px; background:url(../images/zw4/7298.png) no-repeat;}
+.zw_7298:hover{ background:url(../images/zw4/7298-2.png) no-repeat;}
+.zw_727c{ width:95px; height:75px; z-index:2; position:absolute; top:346px; left:135px; background:url(../images/zw4/727c.png) no-repeat;}
+.zw_727c:hover{ background:url(../images/zw4/727c-2.png) no-repeat;}
+
+.zw_7d26{ width:71px; height:58px; z-index:2; position:absolute; top:428px; left:122px; background:url(../images/zw4/7d26.png) no-repeat;}
+.zw_7d26:hover{ background:url(../images/zw4/7d26-2.png) no-repeat;}
+
+.zw_7d27{ width:38px; height:37px; z-index:2; position:absolute; top:405px; left:188px; background:url(../images/zw4/7d27.png) no-repeat;}
+.zw_7d27:hover{ background:url(../images/zw4/7d27-2.png) no-repeat;}
+.zw_7g70{ width:38px; height:37px; z-index:3; position:absolute; top:384px; left:220px; background:url(../images/zw4/7g70.png) no-repeat;}
+.zw_7g70:hover{ background:url(../images/zw4/7g70-2.png) no-repeat;}
+
+
+
+.zw_7297{ width:125px; height:96px; z-index:2; position:absolute; top:453px; left:158px; background:url(../images/zw4/7297.png) no-repeat;}
+.zw_7297:hover{ background:url(../images/zw4/7297-2.png) no-repeat;}
+.zw_727b{ width:95px; height:75px; z-index:2; position:absolute; top:409px; left:225px; background:url(../images/zw4/727b.png) no-repeat;}
+.zw_727b:hover{ background:url(../images/zw4/727b-2.png) no-repeat;}
+.zw_7e11{ width:38px; height:37px; z-index:2; position:absolute; top:468px; left:280px; background:url(../images/zw4/7e11.png) no-repeat;}
+.zw_7e11:hover{ background:url(../images/zw4/7e11-2.png) no-repeat;}
+.zw_7g69{ width:38px; height:37px; z-index:2; position:absolute; top:447px; left:310px; background:url(../images/zw4/7g69.png) no-repeat;}
+.zw_7g69:hover{ background:url(../images/zw4/7g69-2.png) no-repeat;}
+
+.zw_7296{ width:95px; height:75px; z-index:2; position:absolute; top:516px; left:250px; background:url(../images/zw4/7296.png) no-repeat;}
+.zw_7296:hover{ background:url(../images/zw4/7296-2.png) no-repeat;}
+.zw_727a{ width:95px; height:75px; z-index:2; position:absolute; top:472px; left:318px; background:url(../images/zw4/727a.png) no-repeat;}
+.zw_727a:hover{ background:url(../images/zw4/727a-2.png) no-repeat;}
+.zw_7e23{  width:38px; height:37px;  z-index:2; position:absolute; top:576px; left:304px; background:url(../images/zw4/7e23.png) no-repeat;}
+.zw_7e23:hover{ background:url(../images/zw4/7e23-2.png) no-repeat;}
+.zw_7g68{ width:38px; height:37px; z-index:2; position:absolute; top:555px; left:333px; background:url(../images/zw4/7g68.png) no-repeat;}
+.zw_7g68:hover{ background:url(../images/zw4/7g68-2.png) no-repeat;}
+
+.zw_7e21{   width:38px; height:37px;  z-index:2; position:absolute; top:531px; left:370px; background:url(../images/zw4/7e21.png) no-repeat;}
+.zw_7e21:hover{ background:url(../images/zw4/7e21-2.png) no-repeat;}
+.zw_7g67{  width:38px; height:37px;  z-index:2; position:absolute; top:512px; left:400px; background:url(../images/zw4/7g67.png) no-repeat;}
+.zw_7g67:hover{ background:url(../images/zw4/7g67-2.png) no-repeat;}
+
+.zw_7295{ width:95px; height:75px; z-index:2; position:absolute; top:577px; left:341px; background:url(../images/zw4/7295.png) no-repeat;}
+.zw_7295:hover{ background:url(../images/zw4/7295-2.png) no-repeat;}
+.zw_7293{ width:95px; height:75px; z-index:2; position:absolute; top:534px; left:408px; background:url(../images/zw4/7293.png) no-repeat;}
+.zw_7293:hover{ background:url(../images/zw4/7293-2.png) no-repeat;}
+.zw_7d08{ width:71px; height:58px; z-index:2; position:absolute; top:614px; left:396px; background:url(../images/zw4/7d08.png) no-repeat;}
+.zw_7d08:hover{ background:url(../images/zw4/7d08-2.png) no-repeat;}
+
+.zw_7d09{width:38px; height:37px; z-index:2; position:absolute; top:592px; left:461px; background:url(../images/zw4/7d09.png) no-repeat;}
+.zw_7d09:hover{ background:url(../images/zw4/7d09-2.png) no-repeat;}
+.zw_7g66{width:38px; height:37px; z-index:2; position:absolute; top:572px; left:488px; background:url(../images/zw4/7g66.png) no-repeat;}
+.zw_7g66:hover{ background:url(../images/zw4/7g66-2.png) no-repeat;}
+
+.zw_7b39{ width:40px; height:39px; z-index:2; position:absolute; top:663px; left:435px; background:url(../images/zw4/7b39.png) no-repeat;}
+.zw_7b39:hover{ background:url(../images/zw4/7b39-2.png) no-repeat;}
+.zw_7b50{ width:40px; height:39px; z-index:2; position:absolute; top:644px; left:468px; background:url(../images/zw4/7b50.png) no-repeat;}
+.zw_7b50:hover{ background:url(../images/zw4/7b50-2.png) no-repeat;}
+.zw_7b51{ width:40px; height:39px; z-index:2; position:absolute; top:619px; left:503px; background:url(../images/zw4/7b51.png) no-repeat;}
+.zw_7b51:hover{ background:url(../images/zw4/7b51-2.png) no-repeat;}
+.zw_7b52{  width:40px; height:39px; z-index:2; position:absolute; top:595px; left:535px; background:url(../images/zw4/7b52.png) no-repeat;}
+.zw_7b52:hover{ background:url(../images/zw4/7b52-2.png) no-repeat;}
+
+.zw_721j{ width:95px; height:75px; z-index:2; position:absolute; top:301px; left:206px; background:url(../images/zw4/721j.png) no-repeat;}
+.zw_721j:hover{ background:url(../images/zw4/721j-2.png) no-repeat;}
+.zw_725h{ width:95px; height:75px; z-index:2; position:absolute; top:257px; left:273px; background:url(../images/zw4/725h.png) no-repeat;}
+.zw_725h:hover{ background:url(../images/zw4/725h-2.png) no-repeat;}
+.zw_7d28{ width:71px; height:58px; z-index:2; position:absolute; top:338px; left:260px; background:url(../images/zw4/7d28.png) no-repeat;}
+.zw_7d28:hover{ background:url(../images/zw4/7d28-2.png) no-repeat;}
+.zw_7d29{  width:71px; height:58px; z-index:2; position:absolute; top:294px; left:327px; background:url(../images/zw4/7d29.png) no-repeat;}
+.zw_7d29:hover{ background:url(../images/zw4/7d29-2.png) no-repeat;}
+.zw_7d18{  width:71px; height:58px; z-index:2; position:absolute; top:364px; left:296px; background:url(../images/zw4/7d18.png) no-repeat;}
+.zw_7d18:hover{ background:url(../images/zw4/7d18-2.png) no-repeat;}
+.zw_7d20{  width:71px; height:58px; z-index:2; position:absolute; top:320px; left:505px; background:url(../images/zw4/7d20.png) no-repeat;}
+.zw_7d20:hover{ background:url(../images/zw4/7d20-2.png) no-repeat;}
+.zw_7d17{  width:71px; height:58px; z-index:2; position:absolute; top:385px; left:329px; background:url(../images/zw4/7d17.png) no-repeat;}
+.zw_7d17:hover{ background:url(../images/zw4/7d17-2.png) no-repeat;}
+.zw_7d19{ width:71px; height:58px; z-index:2; position:absolute; top:341px; left:397px; background:url(../images/zw4/7d19.png) no-repeat;}
+.zw_7d19:hover{ background:url(../images/zw4/7d19-2.png) no-repeat;}
+.zw_7e06{   width:38px; height:37px;  z-index:2; position:absolute; top:434px; left:370px; background:url(../images/zw4/7e06.png) no-repeat;}
+.zw_7e06:hover{ background:url(../images/zw4/7e06-2.png) no-repeat;}
+.zw_7g59{  width:38px; height:37px; z-index:2; position:absolute; top:413px; left:401px; background:url(../images/zw4/7g59.png) no-repeat;}
+.zw_7g59:hover{ background:url(../images/zw4/7g59-2.png) no-repeat;}
+.zw_7e01{   width:38px; height:37px;  z-index:2; position:absolute; top:390px; left:435px; background:url(../images/zw4/7e01.png) no-repeat;}
+.zw_7e01:hover{ background:url(../images/zw4/7e01-2.png) no-repeat;}
+.zw_7g60{   width:38px; height:37px;  z-index:5; position:absolute; top:367px; left:467px; background:url(../images/zw4/7g60.png) no-repeat;}
+.zw_7g60:hover{ background:url(../images/zw4/7g60-2.png) no-repeat;}
+
+.zw_7b66{ width:40px; height:39px; z-index:2; position:absolute; top:451px; left:396px; background:url(../images/zw4/7b66.png) no-repeat;}
+.zw_7b66:hover{ background:url(../images/zw4/7b66-2.png) no-repeat;}
+.zw_7b65{ width:40px; height:39px; z-index:2; position:absolute; top:431px; left:429px; background:url(../images/zw4/7b65.png) no-repeat;}
+.zw_7b65:hover{ background:url(../images/zw4/7b65-2.png) no-repeat;}
+.zw_7b63{ width:40px; height:39px; z-index:2; position:absolute; top:408px; left:464px; background:url(../images/zw4/7b63.png) no-repeat;}
+.zw_7b63:hover{ background:url(../images/zw4/7b63-2.png) no-repeat;}
+.zw_7b62{ width:40px; height:39px; z-index:2; position:absolute; top:387px; left:495px; background:url(../images/zw4/7b62.png) no-repeat;}
+.zw_7b62:hover{ background:url(../images/zw4/7b62-2.png) no-repeat;}
+.zw_7d10{width:38px; height:37px; z-index:2; position:absolute; top:476px; left:431px; background:url(../images/zw4/7d10.png) no-repeat;}
+.zw_7d10:hover{ background:url(../images/zw4/7d10-2.png) no-repeat;}
+.zw_7g63{width:38px; height:37px; z-index:2; position:absolute; top:456px; left:463px; background:url(../images/zw4/7g63.png) no-repeat;}
+.zw_7g63:hover{ background:url(../images/zw4/7g63-2.png) no-repeat;}
+.zw_7d11{width:38px; height:37px;  z-index:2; position:absolute; top:433px; left:496px; background:url(../images/zw4/7d11.png) no-repeat;}
+.zw_7d11:hover{ background:url(../images/zw4/7d11-2.png) no-repeat;}
+.zw_7g65{ width:38px; height:37px;  z-index:2; position:absolute; top:411px; left:531px; background:url(../images/zw4/7g65.png) no-repeat;}
+.zw_7g65:hover{ background:url(../images/zw4/7g65-2.png) no-repeat;}
+
+.zw_7b58{ width:40px; height:39px;  z-index:2; position:absolute; top:499px; left:466px; background:url(../images/zw4/7b58.png) no-repeat;}
+.zw_7b58:hover{ background:url(../images/zw4/7b58-2.png) no-repeat;}
+.zw_7b59{ width:40px; height:39px;  z-index:2; position:absolute; top:478px; left:496px; background:url(../images/zw4/7b59.png) no-repeat;}
+.zw_7b59:hover{ background:url(../images/zw4/7b59-2.png) no-repeat;}
+.zw_7b60{ width:40px; height:39px;  z-index:2; position:absolute; top:454px; left:532px; background:url(../images/zw4/7b60.png) no-repeat;}
+.zw_7b60:hover{ background:url(../images/zw4/7b60-2.png) no-repeat;}
+.zw_7b61{ width:40px; height:39px;  z-index:2; position:absolute; top:434px; left:564px; background:url(../images/zw4/7b61.png) no-repeat;}
+.zw_7b61:hover{ background:url(../images/zw4/7b61-2.png) no-repeat;}
+.zw_7e33{ width:40px; height:39px;  z-index:2; position:absolute;  top:526px; left:503px; background:url(../images/zw4/7e33.png) no-repeat;}
+.zw_7e33:hover{ background:url(../images/zw4/7e33-2.png) no-repeat;}
+.zw_7e37{ width:40px; height:39px;  z-index:2; position:absolute; top:504px; left:534px; background:url(../images/zw4/7e37.png) no-repeat;}
+.zw_7e37:hover{ background:url(../images/zw4/7e37-2.png) no-repeat;}
+.zw_7e38{ width:40px; height:39px;  z-index:2; position:absolute; top:481px; left:571px; background:url(../images/zw4/7e38.png) no-repeat;}
+.zw_7e38:hover{ background:url(../images/zw4/7e38-2.png) no-repeat;}
+.zw_7e51{ width:40px; height:39px;  z-index:2; position:absolute; top:460px; left:602px; background:url(../images/zw4/7e51.png) no-repeat;}
+.zw_7e51:hover{ background:url(../images/zw4/7e51-2.png) no-repeat;}
+.zw_7e35{ width:40px; height:39px;  z-index:2; position:absolute; top:546px; left:533px; background:url(../images/zw4/7e35.png) no-repeat;}
+.zw_7e35:hover{ background:url(../images/zw4/7e35-2.png) no-repeat;}
+.zw_7e36{ width:40px; height:39px;  z-index:2; position:absolute; top:525px; left:565px; background:url(../images/zw4/7e36.png) no-repeat;}
+.zw_7e36:hover{ background:url(../images/zw4/7e36-2.png) no-repeat;}
+.zw_7e39{ width:40px; height:39px;  z-index:2; position:absolute; top:502px; left:600px; background:url(../images/zw4/7e39.png) no-repeat;}
+.zw_7e39:hover{ background:url(../images/zw4/7e39-2.png) no-repeat;}
+.zw_7e50{ width:40px; height:39px;  z-index:2; position:absolute; top:482px; left:633px; background:url(../images/zw4/7e50.png) no-repeat;}
+.zw_7e50:hover{ background:url(../images/zw4/7e50-2.png) no-repeat;}
+.zw_7b53{ width:40px; height:39px;  z-index:2; position:absolute; top:569px; left:580px; background:url(../images/zw4/7b53.png) no-repeat;}
+.zw_7b53:hover{ background:url(../images/zw4/7b53-2.png) no-repeat;}
+.zw_7b55{ width:40px; height:39px;  z-index:2; position:absolute; top:549px; left:611px; background:url(../images/zw4/7b55.png) no-repeat;}
+.zw_7b55:hover{ background:url(../images/zw4/7b55-2.png) no-repeat;}
+.zw_7b56{ width:40px; height:39px;  z-index:2; position:absolute; top:525px; left:648px; background:url(../images/zw4/7b56.png) no-repeat;}
+.zw_7b56:hover{ background:url(../images/zw4/7b56-2.png) no-repeat;}
+.zw_7b57{ width:40px; height:39px;  z-index:2; position:absolute; top:505px; left:679px; background:url(../images/zw4/7b57.png) no-repeat;}
+.zw_7b57:hover{ background:url(../images/zw4/7b57-2.png) no-repeat;}
+
+
+.zw_721x{ width:95px; height:75px; z-index:2; position:absolute; top:211px; left:343px; background:url(../images/zw4/721x.png) no-repeat;}
+.zw_721x:hover{ background:url(../images/zw4/721x-2.png) no-repeat;}
+.zw_725j{ width:95px; height:75px; z-index:2; position:absolute; top:167px; left:411px; background:url(../images/zw4/725j.png) no-repeat;}
+.zw_725j:hover{ background:url(../images/zw4/725j-2.png) no-repeat;}
+.zw_7d30{ width:71px; height:58px; z-index:2; position:absolute; top:248px; left:398px; background:url(../images/zw4/7d30.png) no-repeat;}
+.zw_7d30:hover{ background:url(../images/zw4/7d30-2.png) no-repeat;}
+.zw_7d31{  width:71px; height:58px; z-index:2; position:absolute; top:203px; left:465px; background:url(../images/zw4/7d31.png) no-repeat;}
+.zw_7d31:hover{ background:url(../images/zw4/7d31-2.png) no-repeat;}
+.zw_7d22{ width:71px; height:58px; z-index:2; position:absolute; top:273px; left:435px; background:url(../images/zw4/7d22.png) no-repeat;}
+.zw_7d22:hover{ background:url(../images/zw4/7d22-2.png) no-repeat;}
+.zw_7d25{ width:71px; height:58px; z-index:2; position:absolute; top:229px; left:503px; background:url(../images/zw4/7d25.png) no-repeat;}
+.zw_7d25:hover{ background:url(../images/zw4/7d25-2.png) no-repeat;}
+.zw_7d21{ width:71px; height:58px; z-index:2; position:absolute; top:295px; left:467px; background:url(../images/zw4/7d21.png) no-repeat;}
+.zw_7d21:hover{ background:url(../images/zw4/7d21-2.png) no-repeat;}
+.zw_7d23{ width:71px; height:58px; z-index:2; position:absolute; top:251px; left:534px; background:url(../images/zw4/7d23.png) no-repeat;}
+.zw_7d23:hover{ background:url(../images/zw4/7d23-2.png) no-repeat;}
+.zw_7d98{ width:96px; height:75px; z-index:2; position:absolute;  top:310px; left:361px;  background:url(../images/zw3/7d98.png) no-repeat;}
+.zw_7d98:hover{background:url(../images/zw3/7d98-2.png) no-repeat;}
+.zw_7d93{ width:38px; height:37px; z-index:2; position:absolute; top:296px; left:570px; background:url(../images/zw4/7d93.png) no-repeat;}
+.zw_7d93:hover{ background:url(../images/zw4/7d93-2.png) no-repeat;}
+.zw_7g62{ width:38px; height:37px; z-index:2; position:absolute; top:274px; left:600px; background:url(../images/zw4/7g62.png) no-repeat;}
+.zw_7g62:hover{ background:url(../images/zw4/7g62-2.png) no-repeat;}
+
+.zw_7b97{ width:40px; height:39px; z-index:2; position:absolute; top:361px; left:533px; background:url(../images/zw4/7b97.png) no-repeat;}
+.zw_7b97:hover{ background:url(../images/zw4/7b97-2.png) no-repeat;}
+.zw_7b96{ width:40px; height:39px; z-index:2; position:absolute; top:341px; left:565px; background:url(../images/zw4/7b96.png) no-repeat;}
+.zw_7b96:hover{ background:url(../images/zw4/7b96-2.png) no-repeat;}
+.zw_7b95{ width:40px; height:39px; z-index:2; position:absolute; top:318px; left:601px; background:url(../images/zw4/7b95.png) no-repeat;}
+.zw_7b95:hover{ background:url(../images/zw4/7b95-2.png) no-repeat;}
+.zw_7b93{ width:40px; height:39px; z-index:2; position:absolute; top:297px; left:633px; background:url(../images/zw4/7b93.png) no-repeat;}
+.zw_7b93:hover{ background:url(../images/zw4/7b93-2.png) no-repeat;}
+.zw_7d15{ width:71px; height:58px; z-index:2; position:absolute; top:367px; left:571px; background:url(../images/zw4/7d15.png) no-repeat;}
+.zw_7d15:hover{ background:url(../images/zw4/7d15-2.png) no-repeat;}
+.zw_7d16{  width:71px; height:58px; z-index:2; position:absolute; top:325px; left:639px; background:url(../images/zw4/7d16.png) no-repeat;}
+.zw_7d16:hover{ background:url(../images/zw4/7d16-2.png) no-repeat;}
+
+
+.zw_7b98{ width:40px; height:39px;  z-index:2; position:absolute; top:408px; left:601px; background:url(../images/zw4/7b98.png) no-repeat;}
+.zw_7b98:hover{ background:url(../images/zw4/7b98-2.png) no-repeat;}
+.zw_7b99{ width:40px; height:39px;  z-index:2; position:absolute; top:388px; left:633px; background:url(../images/zw4/7b99.png) no-repeat;}
+.zw_7b99:hover{ background:url(../images/zw4/7b99-2.png) no-repeat;}
+.zw_7c01{ width:40px; height:39px;  z-index:2; position:absolute; top:364px; left:669px; background:url(../images/zw4/7c01.png) no-repeat;}
+.zw_7c01:hover{ background:url(../images/zw4/7c01-2.png) no-repeat;}
+.zw_7c02{ width:40px; height:39px;  z-index:2; position:absolute; top:344px; left:701px; background:url(../images/zw4/7c02.png) no-repeat;}
+.zw_7c02:hover{ background:url(../images/zw4/7c02-2.png) no-repeat;}
+.zw_7e53{ width:40px; height:39px;  z-index:2; position:absolute; top:435px; left:640px; background:url(../images/zw4/7e53.png) no-repeat;}
+.zw_7e53:hover{ background:url(../images/zw4/7e53-2.png) no-repeat;}
+.zw_7e55{ width:40px; height:39px;  z-index:2; position:absolute; top:415px; left:672px; background:url(../images/zw4/7e55.png) no-repeat;}
+.zw_7e55:hover{ background:url(../images/zw4/7e55-2.png) no-repeat;}
+.zw_7e58{ width:40px; height:39px;  z-index:2; position:absolute; top:391px; left:708px; background:url(../images/zw4/7e58.png) no-repeat;}
+.zw_7e58:hover{ background:url(../images/zw4/7e58-2.png) no-repeat;}
+.zw_7e59{ width:40px; height:39px;  z-index:2; position:absolute; top:371px; left:740px; background:url(../images/zw4/7e59.png) no-repeat;}
+.zw_7e59:hover{ background:url(../images/zw4/7e59-2.png) no-repeat;}
+.zw_7e52{ width:40px; height:39px;  z-index:2; position:absolute; top:455px; left:670px; background:url(../images/zw4/7e52.png) no-repeat;}
+.zw_7e52:hover{ background:url(../images/zw4/7e52-2.png) no-repeat;}
+.zw_7e56{ width:40px; height:39px;  z-index:2; position:absolute; top:435px; left:701px; background:url(../images/zw4/7e56.png) no-repeat;}
+.zw_7e56:hover{ background:url(../images/zw4/7e56-2.png) no-repeat;}
+.zw_7e57{ width:40px; height:39px;  z-index:2; position:absolute; top:411px; left:738px; background:url(../images/zw4/7e57.png) no-repeat;}
+.zw_7e57:hover{ background:url(../images/zw4/7e57-2.png) no-repeat;}
+.zw_7e60{ width:40px; height:39px;  z-index:2; position:absolute; top:391px; left:769px; background:url(../images/zw4/7e60.png) no-repeat;}
+.zw_7e60:hover{ background:url(../images/zw4/7e60-2.png) no-repeat;}
+.zw_7c07{ width:40px; height:39px;  z-index:2; position:absolute; top:474px; left:725px; background:url(../images/zw4/7c07.png) no-repeat;}
+.zw_7c07:hover{ background:url(../images/zw4/7c07-2.png) no-repeat;}
+.zw_7c06{ width:40px; height:39px;  z-index:2; position:absolute; top:454px; left:756px; background:url(../images/zw4/7c06.png) no-repeat;}
+.zw_7c06:hover{ background:url(../images/zw4/7c06-2.png) no-repeat;}
+.zw_7c05{ width:40px; height:39px;  z-index:2; position:absolute; top:430px; left:792px; background:url(../images/zw4/7c05.png) no-repeat;}
+.zw_7c05:hover{ background:url(../images/zw4/7c05-2.png) no-repeat;}
+.zw_7c03{ width:40px; height:39px;  z-index:2; position:absolute; top:410px; left:824px; background:url(../images/zw4/7c03.png) no-repeat;}
+.zw_7c03:hover{ background:url(../images/zw4/7c03-2.png) no-repeat;}
+
+
+
+.zw_7d33{ width:67px; height:57px;  z-index:2; position:absolute; top:138px; left:482px; background:url(../images/zw4/7d33.png) no-repeat;}
+.zw_7d33:hover{ background:url(../images/zw4/7d33-2.png) no-repeat;}
+.zw_7d36{ width:67px; height:57px;  z-index:2; position:absolute; top:114px; left:519px; background:url(../images/zw4/7d36.png) no-repeat;}
+.zw_7d36:hover{ background:url(../images/zw4/7d36-2.png) no-repeat;}
+.zw_7d32{ width:45px; height:41px;  z-index:2; position:absolute; top:175px; left:536px; background:url(../images/zw4/7d32.png) no-repeat;}
+.zw_7d32:hover{ background:url(../images/zw4/7d32-2.png) no-repeat;}
+.zw_7d35{width:45px; height:41px;  z-index:2; position:absolute; top:151px; left:573px; background:url(../images/zw4/7d35.png) no-repeat;}
+.zw_7d35:hover{ background:url(../images/zw4/7d35-2.png) no-repeat;}
+.zw_7d37{ width:42px; height:40px;  z-index:2; position:absolute; top:202px; left:581px; background:url(../images/zw4/7d37.png) no-repeat;}
+.zw_7d37:hover{ background:url(../images/zw4/7d37-2.png) no-repeat;}
+.zw_7d38{  width:42px; height:40px;   z-index:2; position:absolute; top:183px; left:611px; background:url(../images/zw4/7d38.png) no-repeat;}
+.zw_7d38:hover{ background:url(../images/zw4/7d38-2.png) no-repeat;}
+.zw_7d39{  width:42px; height:40px;   z-index:2; position:absolute; top:228px; left:620px; background:url(../images/zw4/7d39.png) no-repeat;}
+.zw_7d39:hover{ background:url(../images/zw4/7d39-2.png) no-repeat;}
+.zw_7d50{ width:42px; height:40px;   z-index:2; position:absolute; top:209px; left:650px; background:url(../images/zw4/7d50.png) no-repeat;}
+.zw_7d50:hover{ background:url(../images/zw4/7d50-2.png) no-repeat;}
+.zw_7d51{ width:42px; height:40px;   z-index:2; position:absolute; top:265px; left:673px; background:url(../images/zw4/7d51.png) no-repeat;}
+.zw_7d51:hover{ background:url(../images/zw4/7d51-2.png) no-repeat;}
+.zw_7d52{ width:42px; height:40px;   z-index:2; position:absolute; top:246px; left:703px; background:url(../images/zw4/7d52.png) no-repeat;}
+.zw_7d52:hover{ background:url(../images/zw4/7d52-2.png) no-repeat;}
+.zw_7d53{ width:42px; height:40px;   z-index:2; position:absolute; top:295px; left:712px; background:url(../images/zw4/7d53.png) no-repeat;}
+.zw_7d53:hover{ background:url(../images/zw4/7d53-2.png) no-repeat;}
+.zw_7d55{ width:42px; height:40px;   z-index:2; position:absolute; top:272px; left:742px; background:url(../images/zw4/7d55.png) no-repeat;}
+.zw_7d55:hover{ background:url(../images/zw4/7d55-2.png) no-repeat;}
+.zw_7d76{ width:42px; height:40px;   z-index:2; position:absolute; top:87px; left:569px; background:url(../images/zw4/7d76.png) no-repeat;}
+.zw_7d76:hover{ background:url(../images/zw4/7d76-2.png) no-repeat;}
+.zw_7d77{ width:42px; height:40px;   z-index:2; position:absolute; top:109px; left:601px; background:url(../images/zw4/7d77.png) no-repeat;}
+.zw_7d77:hover{ background:url(../images/zw4/7d77-2.png) no-repeat;}
+.zw_7d78{ width:42px; height:40px;   z-index:2; position:absolute; top:131px; left:633px; background:url(../images/zw4/7d78.png) no-repeat;}
+.zw_7d78:hover{ background:url(../images/zw4/7d78-2.png) no-repeat;}
+.zw_7d79{ width:42px; height:40px;   z-index:2; position:absolute; top:153px; left:665px; background:url(../images/zw4/7d79.png) no-repeat;}
+.zw_7d79:hover{ background:url(../images/zw4/7d79-2.png) no-repeat;}
+.zw_7d80{ width:42px; height:40px;   z-index:2; position:absolute; top:174px; left:696px; background:url(../images/zw4/7d80.png) no-repeat;}
+.zw_7d80:hover{ background:url(../images/zw4/7d80-2.png) no-repeat;}
+.zw_7d81{ width:42px; height:40px;   z-index:2; position:absolute; top:196px; left:728px; background:url(../images/zw4/7d81.png) no-repeat;}
+.zw_7d81:hover{ background:url(../images/zw4/7d81-2.png) no-repeat;}
+.zw_7d82{ width:42px; height:40px;   z-index:2; position:absolute; top:218px; left:760px; background:url(../images/zw4/7d82.png) no-repeat;}
+.zw_7d82:hover{ background:url(../images/zw4/7d82-2.png) no-repeat;}
+.zw_7d83{ width:42px; height:40px;   z-index:2; position:absolute; top:240px; left:792px; background:url(../images/zw4/7d83.png) no-repeat;}
+.zw_7d83:hover{ background:url(../images/zw4/7d83-2.png) no-repeat;}
+.zw_7e62{ width:42px; height:40px;   z-index:2; position:absolute; top:332px; left:771px; background:url(../images/zw4/7e62.png) no-repeat;}
+.zw_7e62:hover{ background:url(../images/zw4/7e62-2.png) no-repeat;}
+.zw_7e63{ width:42px; height:40px;   z-index:2; position:absolute; top:315px; left:801px; background:url(../images/zw4/7e63.png) no-repeat;}
+.zw_7e63:hover{ background:url(../images/zw4/7e63-2.png) no-repeat;}
+.zw_7e61{ width:42px; height:40px;   z-index:2; position:absolute; top:359px; left:810px; background:url(../images/zw4/7e61.png) no-repeat;}
+.zw_7e61:hover{ background:url(../images/zw4/7e61-2.png) no-repeat;}
+.zw_7e65{ width:42px; height:40px;   z-index:2; position:absolute; top:339px; left:839px; background:url(../images/zw4/7e65.png) no-repeat;}
+.zw_7e65:hover{ background:url(../images/zw4/7e65-2.png) no-repeat;}
+.zw_7e66{ width:42px; height:40px;   z-index:2; position:absolute; top:307px; left:889px; background:url(../images/zw4/7e66.png) no-repeat;}
+.zw_7e66:hover{ background:url(../images/zw4/7e66-2.png) no-repeat;}
+.zw_7e67{ width:42px; height:40px;   z-index:2; position:absolute; top:280px; left:850px; background:url(../images/zw4/7e67.png) no-repeat;}
+.zw_7e67:hover{ background:url(../images/zw4/7e67-2.png) no-repeat;}
+.zw_7c08{ width:42px; height:40px;   z-index:2; position:absolute; top:383px; left:865px; background:url(../images/zw4/7c08.png) no-repeat;}
+.zw_7c08:hover{ background:url(../images/zw4/7c08-2.png) no-repeat;}
+.zw_7c09{ width:42px; height:40px;   z-index:2; position:absolute; top:360px; left:901px; background:url(../images/zw4/7c09.png) no-repeat;}
+.zw_7c09:hover{ background:url(../images/zw4/7c09-2.png) no-repeat;}
+.zw_7c10{ width:42px; height:40px;   z-index:2; position:absolute; top:339px; left:932px; background:url(../images/zw4/7c10.png) no-repeat;}
+.zw_7c10:hover{ background:url(../images/zw4/7c10-2.png) no-repeat;}
+ .zw_721q{ width:103px; height:83px; z-index:2; position:absolute; top:502px; left:500px; background:url(../images/zw4/721q.png) no-repeat;}
+.zw_721q:hover{ background:url(../images/zw4/721q-2.png) no-repeat;}
+ 
+ 
+ 
+ 
+/* 7 区域四结束 */
+/* 7 区域五 */
+.zw_7253{ width:203px; height:153px; z-index:2; position:absolute; top:354px; left:63px; background:url(../images/zw5/7253.png) no-repeat;}
+.zw_7253:hover{ background:url(../images/zw5/7253-2.png) no-repeat;}
+
+
+.zw_7252{ width:122px; height:92px; z-index:2; position:absolute; top:470px; left:172px; background:url(../images/zw5/7252.png) no-repeat;}
+.zw_7252:hover{ background:url(../images/zw5/7252-2.png) no-repeat;}
+.zw_723r{ width:102px; height:80px; z-index:2; position:absolute; top:434px; left:247px; background:url(../images/zw5/723r.png) no-repeat;}
+.zw_723r:hover{ background:url(../images/zw5/723r-2.png) no-repeat;}
+
+.zw_7251{ width:123px; height:95px; z-index:2; position:absolute;  top:530px; left:260px; background:url(../images/zw5/7251.png) no-repeat;}
+.zw_7251:hover{ background:url(../images/zw5/7251-2.png) no-repeat;}
+.zw_723s{ width:104px; height:82px; z-index:2; position:absolute;  top:496px; left:333px; background:url(../images/zw5/723s.png) no-repeat;}
+.zw_723s:hover{ background:url(../images/zw5/723s-2.png) no-repeat;}
+
+.zw_7250{ width:157px; height:114px; z-index:2; position:absolute; top:554px; left:348px; background:url(../images/zw5/7250.png) no-repeat;}
+.zw_7250:hover{ background:url(../images/zw5/7250-2.png) no-repeat;}
+
+
+.zw_7a58{  width:76px; height:62px;  z-index:2; position:absolute; top:633px; left:410px; background:url(../images/zw5/7a58.png) no-repeat;}
+.zw_7a58:hover{ background:url(../images/zw5/7a58-2.png) no-repeat;}
+
+.zw_7a59{ width:49px; height:43px; z-index:2; position:absolute; top:633px; left:440px; background:url(../images/zw5/7a59.png) no-repeat;}
+.zw_7a59:hover{ background:url(../images/zw5/7a59-2.png) no-repeat;}
+.zw_7a60{ width:76px; height:62px;  z-index:2; position:absolute; top:594px; left:471px; background:url(../images/zw5/7a60.png) no-repeat;}
+.zw_7a60:hover{ background:url(../images/zw5/7a60-2.png) no-repeat;}
+.zw_7a61{ width:49px; height:43px; z-index:2; position:absolute; top:594px; left:502px; background:url(../images/zw5/7a61.png) no-repeat;}
+.zw_7a61:hover{ background:url(../images/zw5/7a61-2.png) no-repeat;}
+
+.zw_7265{ width:139px; height:105px; z-index:2; position:absolute; top:315px; left:195px; background:url(../images/zw5/7265.png) no-repeat;}
+.zw_7265:hover{ background:url(../images/zw5/7265-2.png) no-repeat;}
+.zw_723t{width:139px; height:105px;  z-index:2; position:absolute; top:274px; left:260px; background:url(../images/zw5/723t.png) no-repeat;}
+.zw_723t:hover{ background:url(../images/zw5/723t-2.png) no-repeat;}
+
+.zw_7266{ width:103px; height:83px; z-index:2; position:absolute; top:382px; left:301px; background:url(../images/zw5/7266.png) no-repeat;}
+.zw_7266:hover{ background:url(../images/zw5/7266-2.png) no-repeat;}
+.zw_7267{ width:103px; height:83px; z-index:2; position:absolute; top:346px; left:361px; background:url(../images/zw5/7267.png) no-repeat;}
+.zw_7267:hover{ background:url(../images/zw5/7267-2.png) no-repeat;}
+
+.zw_7a71{ width:76px; height:62px; z-index:2; position:absolute; top:419px; left:353px; background:url(../images/zw5/7a71.png) no-repeat;}
+.zw_7a71:hover{ background:url(../images/zw5/7a71-2.png) no-repeat;}
+.zw_7a72{ width:49px; height:43px; z-index:2; position:absolute; top:419px; left:384px; background:url(../images/zw5/7a72.png) no-repeat;}
+.zw_7a72:hover{ background:url(../images/zw5/7a72-2.png) no-repeat;}
+.zw_7a73{ width:76px; height:62px;  z-index:2; position:absolute; top:381px; left:414px; background:url(../images/zw5/7a73.png) no-repeat;}
+.zw_7a73:hover{ background:url(../images/zw5/7a73-2.png) no-repeat;}
+.zw_7a75{ width:49px; height:43px; z-index:2; position:absolute; top:381px; left:443px; background:url(../images/zw5/7a75.png) no-repeat;}
+.zw_7a75:hover{ background:url(../images/zw5/7a75-2.png) no-repeat;}
+
+.zw_7269{ width:103px; height:83px; z-index:2; position:absolute; top:443px; left:391px; background:url(../images/zw5/7269.png) no-repeat;}
+.zw_7269:hover{ background:url(../images/zw5/7269-2.png) no-repeat;}
+.zw_7268{ width:103px; height:83px; z-index:2; position:absolute; top:405px; left:451px; background:url(../images/zw5/7268.png) no-repeat;}
+.zw_7268:hover{ background:url(../images/zw5/7268-2.png) no-repeat;}
+
+.zw_7a70{ width:76px; height:62px; z-index:2; position:absolute; top:479px; left:438px; background:url(../images/zw5/7a70.png) no-repeat;}
+.zw_7a70:hover{ background:url(../images/zw5/7a70-2.png) no-repeat;}
+.zw_7a69{ width:49px; height:43px; z-index:2; position:absolute; top:479px; left:467px; background:url(../images/zw5/7a69.png) no-repeat;}
+.zw_7a69:hover{ background:url(../images/zw5/7a69-2.png) no-repeat;}
+.zw_7a68{  width:76px; height:62px; z-index:2; position:absolute; top:441px; left:497px; background:url(../images/zw5/7a68.png) no-repeat;}
+.zw_7a68:hover{ background:url(../images/zw5/7a68-2.png) no-repeat;}
+.zw_7a67{ width:49px; height:43px; z-index:2; position:absolute; top:441px; left:527px; background:url(../images/zw5/7a67.png) no-repeat;}
+.zw_7a67:hover{ background:url(../images/zw5/7a67-2.png) no-repeat;}
+
+
+.zw_7270{ width:103px; height:83px; z-index:2; position:absolute; top:502px; left:475px; background:url(../images/zw5/7270.png) no-repeat;}
+.zw_7270:hover{ background:url(../images/zw5/7270-2.png) no-repeat;}
+.zw_7271{ width:103px; height:83px; z-index:2; position:absolute; top:466px; left:536px; background:url(../images/zw5/7271.png) no-repeat;}
+.zw_7271:hover{ background:url(../images/zw5/7271-2.png) no-repeat;}
+
+.zw_7a62{ width:76px; height:62px; z-index:2; position:absolute; top:550px; left:541px; background:url(../images/zw5/7a62.png) no-repeat;}
+.zw_7a62:hover{ background:url(../images/zw5/7a62-2.png) no-repeat;}
+.zw_7a63{ width:49px; height:43px; z-index:2; position:absolute; top:550px; left:569px; background:url(../images/zw5/7a63.png) no-repeat;}
+.zw_7a63:hover{ background:url(../images/zw5/7a63-2.png) no-repeat;}
+.zw_7a65{ width:76px; height:62px; z-index:2; position:absolute; top:512px; left:599px; background:url(../images/zw5/7a65.png) no-repeat;}
+.zw_7a65:hover{ background:url(../images/zw5/7a65-2.png) no-repeat;}
+.zw_7a66{ width:49px; height:43px; z-index:2; position:absolute; top:512px; left:629px; background:url(../images/zw5/7a66.png) no-repeat;}
+.zw_7a66:hover{ background:url(../images/zw5/7a66-2.png) no-repeat;}
+
+.zw_7279{ width:153px; height:114px; z-index:2; position:absolute; top:221px; left:326px; background:url(../images/zw5/7279.png) no-repeat;}
+.zw_7279:hover{ background:url(../images/zw5/7279-2.png) no-repeat;}
+.zw_723w{ width:153px; height:114px; z-index:2; position:absolute; top:172px; left:406px; background:url(../images/zw5/723w.png) no-repeat;}
+.zw_723w:hover{ background:url(../images/zw5/723w-2.png) no-repeat;}
+
+.zw_7277{ width:103px; height:82px; z-index:2; position:absolute; top:300px; left:432px; background:url(../images/zw5/7277.png) no-repeat;}
+.zw_7277:hover{ background:url(../images/zw5/7277-2.png) no-repeat;}
+.zw_7278{ width:103px; height:82px; z-index:2; position:absolute; top:263px; left:491px; background:url(../images/zw5/7278.png) no-repeat;}
+.zw_7278:hover{ background:url(../images/zw5/7278-2.png) no-repeat;}
+
+.zw_7b18{ width:47px; height:46px; z-index:2; position:absolute; top:241px; left:552px; background:url(../images/zw5/7b18.png) no-repeat;}
+.zw_7b18:hover{ background:url(../images/zw5/7b18-2.png) no-repeat;}
+.zw_7b17{ width:47px; height:46px; z-index:2; position:absolute; top:257px; left:576px; background:url(../images/zw5/7b17.png) no-repeat;}
+.zw_7b17:hover{ background:url(../images/zw5/7b17-2.png) no-repeat;}
+.zw_7b11{ width:76px; height:63px; z-index:2; position:absolute; top:337px; left:482px; background:url(../images/zw5/7b11.png) no-repeat;}
+.zw_7b11:hover{ background:url(../images/zw5/7b11-2.png) no-repeat;}
+.zw_7b12{ width:47px; height:46px; z-index:2; position:absolute; top:335px; left:510px; background:url(../images/zw5/7b12.png) no-repeat;}
+.zw_7b12:hover{ background:url(../images/zw5/7b12-2.png) no-repeat;}
+.zw_7b13{ width:76px; height:63px; z-index:2; position:absolute; top:297px; left:541px; background:url(../images/zw5/7b13.png) no-repeat;}
+.zw_7b13:hover{ background:url(../images/zw5/7b13-2.png) no-repeat;}
+.zw_7b15{ width:47px; height:46px; z-index:2; position:absolute; top:294px; left:570px; background:url(../images/zw5/7b15.png) no-repeat;}
+.zw_7b15:hover{ background:url(../images/zw5/7b15-2.png) no-repeat;}
+.zw_7b16{ width:95px; height:78px; z-index:2; position:absolute;  top:241px; left:552px; background:url(../images/zw5/7b16.png) no-repeat;}
+.zw_7b16:hover{ background:url(../images/zw5/7b16-2.png) no-repeat;}
+
+.zw_7276{ width:103px; height:82px; z-index:2; position:absolute; top:360px; left:517px; background:url(../images/zw5/7276.png) no-repeat;}
+.zw_7276:hover{ background:url(../images/zw5/7276-2.png) no-repeat;}
+.zw_7275{ width:103px; height:82px; z-index:2; position:absolute; top:320px; left:576px; background:url(../images/zw5/7275.png) no-repeat;}
+.zw_7275:hover{ background:url(../images/zw5/7275-2.png) no-repeat;}
+
+
+.zw_7b19{ width:47px; height:46px; z-index:2; position:absolute; top:301px; left:638px; background:url(../images/zw5/7b19.png) no-repeat;}
+.zw_7b19:hover{ background:url(../images/zw5/7b19-2.png) no-repeat;}
+.zw_7b20{ width:47px; height:46px; z-index:2; position:absolute; top:318px; left:661px; background:url(../images/zw5/7b20.png) no-repeat;}
+.zw_7b20:hover{ background:url(../images/zw5/7b20-2.png) no-repeat;}
+.zw_7b26{ width:77px; height:64px; z-index:2; position:absolute; top:396px; left:565px; background:url(../images/zw5/7b26.png) no-repeat;}
+.zw_7b26:hover{ background:url(../images/zw5/7b26-2.png) no-repeat;}
+.zw_7b25{ width:47px; height:46px; z-index:2; position:absolute; top:393px; left:597px; background:url(../images/zw5/7b25.png) no-repeat;}
+.zw_7b25:hover{ background:url(../images/zw5/7b25-2.png) no-repeat;}
+.zw_7b23{ width:77px; height:64px;  z-index:2; position:absolute; top:354px; left:627px; background:url(../images/zw5/7b23.png) no-repeat;}
+.zw_7b23:hover{ background:url(../images/zw5/7b23-2.png) no-repeat;}
+.zw_7b22{ width:47px; height:46px; z-index:2; position:absolute; top:354px; left:657px; background:url(../images/zw5/7b22.png) no-repeat;}
+.zw_7b22:hover{ background:url(../images/zw5/7b22-2.png) no-repeat;}
+.zw_7b21{ width:94px; height:77px; z-index:2; position:absolute; top:301px; left:638px;  background:url(../images/zw5/7b21.png) no-repeat;}
+.zw_7b21:hover{ background:url(../images/zw5/7b21-2.png) no-repeat;}
+
+.zw_7272{ width:103px; height:82px; z-index:2; position:absolute; top:419px; left:606px; background:url(../images/zw5/7272.png) no-repeat;}
+.zw_7272:hover{ background:url(../images/zw5/7272-2.png) no-repeat;}
+.zw_7273{ width:103px; height:82px; z-index:2; position:absolute; top:381px; left:667px; background:url(../images/zw5/7273.png) no-repeat;}
+.zw_7273:hover{ background:url(../images/zw5/7273-2.png) no-repeat;}
+
+.zw_7b27{ width:47px; height:46px; z-index:2; position:absolute; top:362px; left:728px; background:url(../images/zw5/7b27.png) no-repeat;}
+.zw_7b27:hover{ background:url(../images/zw5/7b27-2.png) no-repeat;}
+.zw_7b28{ width:70px; height:59px; z-index:2; position:absolute; top:366px; left:730px; background:url(../images/zw5/7b28.png) no-repeat;}
+.zw_7b28:hover{ background:url(../images/zw5/7b28-2.png) no-repeat;}
+.zw_7b33{ width:105px; height:81px; z-index:2; position:absolute; top:446px; left:671px; background:url(../images/zw5/7b33.png) no-repeat;}
+.zw_7b33:hover{ background:url(../images/zw5/7b33-2.png) no-repeat;}
+.zw_7b32{ width:47px; height:46px; z-index:2; position:absolute; top:464px; left:701px; background:url(../images/zw5/7b32.png) no-repeat;}
+.zw_7b32:hover{ background:url(../images/zw5/7b32-2.png) no-repeat;}
+.zw_7b31{ width:47px; height:46px; z-index:2; position:absolute; top:446px; left:731px; background:url(../images/zw5/7b31.png) no-repeat;}
+.zw_7b31:hover{ background:url(../images/zw5/7b31-2.png) no-repeat;}
+.zw_7b30{ width:77px; height:62px; z-index:2; position:absolute; top:408px; left:761px; background:url(../images/zw5/7b30.png) no-repeat;}
+.zw_7b30:hover{ background:url(../images/zw5/7b30-2.png) no-repeat;}
+.zw_7b29{ width:47px; height:46px; z-index:2; position:absolute; top:408px; left:791px; background:url(../images/zw5/7b29.png) no-repeat;}
+.zw_7b29:hover{ background:url(../images/zw5/7b29-2.png) no-repeat;}
+
+.zw_7290{ width:136px; height:103px; z-index:2; position:absolute; top:130px; left:490px; background:url(../images/zw5/7290.png) no-repeat;}
+.zw_7290:hover{ background:url(../images/zw5/7290-2.png) no-repeat;}
+.zw_723z{ width:135px; height:102px; z-index:2; position:absolute; top:89px; left:553px; background:url(../images/zw5/723z.png) no-repeat;}
+.zw_723z:hover{ background:url(../images/zw5/723z-2.png) no-repeat;}
+
+.zw_7291{ width:89px; height:73px; z-index:2; position:absolute; top:197px; left:600px; background:url(../images/zw5/7291.png) no-repeat;}
+.zw_7291:hover{ background:url(../images/zw5/7291-2.png) no-repeat;}
+.zw_723y{ width:112px; height:89px; z-index:2; position:absolute; top:159px; left:662px; background:url(../images/zw5/723y.png) no-repeat;}
+.zw_723y:hover{ background:url(../images/zw5/723y-2.png) no-repeat;}
+.zw_7d12{ width:68px; height:56px; z-index:2; position:absolute; top:195px; left:712px; background:url(../images/zw5/7d12.png) no-repeat;}
+.zw_7d12:hover{ background:url(../images/zw5/7d12-2.png) no-repeat;}
+.zw_7d13{ width:68px; height:56px; z-index:2; position:absolute; top:234px; left:652px; background:url(../images/zw5/7d13.png) no-repeat;}
+.zw_7d13:hover{ background:url(../images/zw5/7d13-2.png) no-repeat;}
+
+.zw_7292{ width:90px; height:72px; z-index:2; position:absolute; top:259px; left:684px; background:url(../images/zw5/7292.png) no-repeat;}
+.zw_7292:hover{ background:url(../images/zw5/7292-2.png) no-repeat;}
+.zw_723x{ width:89px; height:73px; z-index:2; position:absolute; top:220px; left:745px; background:url(../images/zw5/723x.png) no-repeat;}
+.zw_723x:hover{ background:url(../images/zw5/723x-2.png) no-repeat;}
+.zw_7d06{width:68px; height:56px; z-index:2; position:absolute; top:295px; left:735px; background:url(../images/zw5/7d06.png) no-repeat;}
+.zw_7d06:hover{ background:url(../images/zw5/7d06-2.png) no-repeat;}
+.zw_7d07{ width:68px; height:56px; z-index:2; position:absolute; top:257px; left:795px; background:url(../images/zw5/7d07.png) no-repeat;}
+.zw_7d07:hover{ background:url(../images/zw5/7d07-2.png) no-repeat;}
+
+.zw_7d03{  width:68px; height:56px; z-index:2; position:absolute; top:284px; left:830px; background:url(../images/zw5/7d03.png) no-repeat;}
+.zw_7d03:hover{ background:url(../images/zw5/7d03-2.png) no-repeat;}
+.zw_7d02{ width:68px; height:56px; z-index:2; position:absolute; top:323px; left:771px; background:url(../images/zw5/7d02.png) no-repeat;}
+.zw_7d02:hover{ background:url(../images/zw5/7d02-2.png) no-repeat;}
+.zw_7d01{ width:68px; height:56px; z-index:2; position:absolute; top:342px; left:799px; background:url(../images/zw5/7d01.png) no-repeat;}
+.zw_7d01:hover{ background:url(../images/zw5/7d02-1.png) no-repeat;}
+.zw_7d05{ width:68px; height:56px; z-index:2; position:absolute; top:303px; left:858px; background:url(../images/zw5/7d05.png) no-repeat;}
+.zw_7d05:hover{ background:url(../images/zw5/7d05-2.png) no-repeat;}
+
+
+
+.zw_7b35{  width:77px; height:62px; z-index:2; position:absolute; top:364px; left:830px; background:url(../images/zw5/7b35.png) no-repeat;}
+.zw_7b35:hover{ background:url(../images/zw5/7b35-2.png) no-repeat;}
+.zw_7b36{ width:47px; height:46px; z-index:2; position:absolute; top:364px; left:860px; background:url(../images/zw5/7b36.png) no-repeat;}
+.zw_7b36:hover{ background:url(../images/zw5/7b36-2.png) no-repeat;}
+.zw_7b37{  width:77px; height:62px; z-index:2; position:absolute; top:325px; left:890px; background:url(../images/zw5/7b37.png) no-repeat;}
+.zw_7b37:hover{ background:url(../images/zw5/7b37-2.png) no-repeat;}
+.zw_7b38{ width:47px; height:46px; z-index:2; position:absolute; top:325px; left:920px; background:url(../images/zw5/7b38.png) no-repeat;}
+.zw_7b38:hover{ background:url(../images/zw5/7b38-2.png) no-repeat;}
+
+/* 7 区域五结束 */
+
+/* 7 区域六 */
+.zw_7206{ width:148px; height:98px; z-index:2; position:absolute; top:389px; left:83px; background:url(../images/zw6/7206.png) no-repeat;}
+.zw_7206:hover{ background:url(../images/zw6/7206-2.png) no-repeat;}
+.zw_7208{ width:100px; height:79px; z-index:2; position:absolute; top:358px; left:158px; background:url(../images/zw6/7208.png) no-repeat;}
+.zw_7208:hover{ background:url(../images/zw6/7208-2.png) no-repeat;}
+.zw_7g13{ width:53px; height:47px; z-index:999; position:absolute; top:407px; left:228px; background:url(../images/zw6/7g13.png) no-repeat;}
+.zw_7g13:hover{ background:url(../images/zw6/7g13-2.png) no-repeat;}
+.zw_723k{ width:100px; height:79px; z-index:2; position:absolute; top:327px; left:208px; background:url(../images/zw6/723k.png) no-repeat;}
+.zw_723k:hover{ background:url(../images/zw6/723k-2.png) no-repeat;}
+
+.zw_7g15{ width:53px; height:47px; z-index:5; position:absolute;  top:376px; left:277px; background:url(../images/zw6/7g15.png) no-repeat;}
+.zw_7g15:hover{ background:url(../images/zw6/7g15-2.png) no-repeat;}
+
+.zw_7207{ width:227px; height:94px; z-index:2; position:absolute; top:399px; left:239px; background:url(../images/zw6/7207.png) no-repeat;}
+.zw_7207:hover{ background:url(../images/zw6/7207-2.png) no-repeat;}
+.zw_7218{ width:100px; height:79px; z-index:2; position:absolute; top:290px; left:266px; background:url(../images/zw6/7218.png) no-repeat;}
+.zw_7218:hover{ background:url(../images/zw6/7218-2.png) no-repeat;}
+.zw_7g16{ width:53px; height:47px; z-index:5; position:absolute; top:339px; left:335px; background:url(../images/zw6/7g16.png) no-repeat;}
+.zw_7g16:hover{ background:url(../images/zw6/7g16-2.png) no-repeat;}
+
+
+.zw_723j{ width:100px; height:79px; z-index:2; position:absolute; top:260px; left:314px;  background:url(../images/zw6/723j.png) no-repeat;}
+.zw_723j:hover{ background:url(../images/zw6/723j-2.png) no-repeat;}
+.zw_7g17{ width:53px; height:47px; z-index:5; position:absolute; top:309px; left:383px;  background:url(../images/zw6/7g17.png) no-repeat;}
+.zw_7g17:hover{ background:url(../images/zw6/7g17-2.png) no-repeat;}
+
+.zw_7219{ width:125px; height:95px; z-index:2; position:absolute; top:334px; left:370px; background:url(../images/zw6/7219.png) no-repeat;}
+.zw_7219:hover{ background:url(../images/zw6/7219-2.png) no-repeat;}
+
+.zw_7a15{ width:100px; height:77px; z-index:2; position:absolute; top:365px; left:416px;  background:url(../images/zw6/7a15.png) no-repeat;}
+.zw_7a15:hover{ background:url(../images/zw6/7a15-2.png) no-repeat;}
+.zw_7a13{ width:50px; height:44px; z-index:2; position:absolute; top:384px; left:442px; background:url(../images/zw6/7a13.png) no-repeat;}
+.zw_7a13:hover{ background:url(../images/zw6/7a13-2.png) no-repeat;}
+.zw_7a12{ width:50px; height:44px; z-index:2; position:absolute; top:365px; left:469px; background:url(../images/zw6/7a12.png) no-repeat;}
+.zw_7a12:hover{ background:url(../images/zw6/7a12-2.png) no-repeat;}
+
+.zw_7220{ width:114px; height:90px; z-index:2; position:absolute; top:392px; left:495px; background:url(../images/zw6/7220.png) no-repeat;}
+.zw_7220:hover{ background:url(../images/zw6/7220-2.png) no-repeat;}
+
+.zw_7a11{ width:47px; height:45px; z-index:2; position:absolute; top:393px; left:512px; background:url(../images/zw6/7a11.png) no-repeat;}
+.zw_7a11:hover{ background:url(../images/zw6/7a11-2.png) no-repeat;}
+.zw_7a10{ width:47px; height:45px; z-index:2; position:absolute;  top:410px; left:537px; background:url(../images/zw6/7a10.png) no-repeat;}
+.zw_7a10:hover{ background:url(../images/zw6/7a10-2.png) no-repeat;}
+.zw_7a09{ width:95px; height:76px; z-index:2; position:absolute; top:425px; left:463px; background:url(../images/zw6/7a09.png) no-repeat;}
+.zw_7a09:hover{ background:url(../images/zw6/7a09-2.png) no-repeat;}
+.zw_7221{ width:159px; height:87px; z-index:2; position:absolute; top:455px; left:552px; background:url(../images/zw6/7221.png) no-repeat;}
+.zw_7221:hover{ background:url(../images/zw6/7221-2.png) no-repeat;}
+
+.zw_7226{ width:100px; height:79px; z-index:2; position:absolute; top:228px; left:364px; background:url(../images/zw6/7226.png) no-repeat;}
+.zw_7226:hover{ background:url(../images/zw6/7226-2.png) no-repeat;}
+.zw_7g18{ width:53px; height:47px; z-index:5; position:absolute; top:277px; left:433px; background:url(../images/zw6/7g18.png) no-repeat;}
+.zw_7g18:hover{ background:url(../images/zw6/7g18-2.png) no-repeat;}
+
+.zw_723h{ width:100px; height:79px; z-index:2; position:absolute; top:197px; left:411px; background:url(../images/zw6/723h.png) no-repeat;}
+.zw_723h:hover{ background:url(../images/zw6/723h-2.png) no-repeat;}
+.zw_7g19{ width:53px; height:47px; z-index:5; position:absolute; top:246px; left:481px; background:url(../images/zw6/7g19.png) no-repeat;}
+.zw_7g19:hover{ background:url(../images/zw6/7g19-2.png) no-repeat;}
+
+.zw_7225{ width:128px; height:97px; z-index:2; position:absolute; top:269px; left:470px; background:url(../images/zw6/7225.png) no-repeat;}
+.zw_7225:hover{ background:url(../images/zw6/7225-2.png) no-repeat;}
+.zw_7a31{ width:102px; height:78px; z-index:2; position:absolute; top:301px; left:518px; background:url(../images/zw6/7a31.png) no-repeat;}
+.zw_7a31:hover{ background:url(../images/zw6/7a31-2.png) no-repeat;}
+.zw_7a32{ width:49px; height:45px; z-index:2; position:absolute; top:319px; left:544px; background:url(../images/zw6/7a32.png) no-repeat;}
+.zw_7a32:hover{ background:url(../images/zw6/7a32-2.png) no-repeat;}
+
+.zw_7a33{ width:49px; height:45px; z-index:2; position:absolute; top:301px; left:573px; background:url(../images/zw6/7a33.png) no-repeat;}
+.zw_7a33:hover{ background:url(../images/zw6/7a33-2.png) no-repeat;}
+.zw_7223{ width:129px; height:99px; z-index:2; position:absolute; top:328px; left:557px; background:url(../images/zw6/7223.png) no-repeat;}
+.zw_7223:hover{ background:url(../images/zw6/7223-2.png) no-repeat;}
+.zw_7a37{ width:102px; height:78px; z-index:2; position:absolute; top:362px; left:607px; background:url(../images/zw6/7a37.png) no-repeat;}
+.zw_7a37:hover{ background:url(../images/zw6/7a37-2.png) no-repeat;}
+
+.zw_7a36{ width:49px; height:45px; z-index:2; position:absolute; top:380px; left:634px; background:url(../images/zw6/7a36.png) no-repeat;}
+.zw_7a36:hover{ background:url(../images/zw6/7a36-2.png) no-repeat;}
+
+.zw_7a35{ width:49px; height:45px; z-index:2; position:absolute; top:362px; left:661px; background:url(../images/zw6/7a35.png) no-repeat;}
+.zw_7a35:hover{ background:url(../images/zw6/7a35-2.png) no-repeat;}
+
+.zw_7222{ width:99px; height:78px; z-index:2; position:absolute; top:388px; left:677px; background:url(../images/zw6/7222.png) no-repeat;}
+.zw_7222:hover{ background:url(../images/zw6/7222-2.png) no-repeat;}
+ 
+ .zw_7a38{ width:49px; height:45px; z-index:2; position:absolute; top:390px; left:703px; background:url(../images/zw6/7a38.png) no-repeat;}
+.zw_7a38:hover{ background:url(../images/zw6/7a38-2.png) no-repeat;}
+
+.zw_7a39{ width:72px; height:59px; z-index:2; position:absolute; top:428px; left:647px; background:url(../images/zw6/7a39.png) no-repeat;}
+.zw_7a39:hover{ background:url(../images/zw6/7a39-2.png) no-repeat;}
+
+.zw_7a50{ width:102px; height:78px; z-index:2; position:absolute; top:434px; left:709px; background:url(../images/zw6/7a50.png) no-repeat;}
+.zw_7a50:hover{ background:url(../images/zw6/7a50-2.png) no-repeat;}
+ 
+
+.zw_7a51{ width:49px; height:45px; z-index:2; position:absolute; top:451px; left:737px; background:url(../images/zw6/7a51.png) no-repeat;}
+.zw_7a51:hover{ background:url(../images/zw6/7a51-2.png) no-repeat;}
+.zw_7a52{ width:49px; height:45px; z-index:2; position:absolute; top:434px; left:766px; background:url(../images/zw6/7a52.png) no-repeat;}
+.zw_7a52:hover{ background:url(../images/zw6/7a52-2.png) no-repeat;}
+
+.zw_7236{ width:129px; height:99px; z-index:2; position:absolute; top:160px; left:462px; background:url(../images/zw6/7236.png) no-repeat;}
+.zw_7236:hover{ background:url(../images/zw6/7236-2.png) no-repeat;}
+.zw_723g{ width:145px; height:109px; z-index:2; position:absolute; top:114px; left:516px; background:url(../images/zw6/723g.png) no-repeat;}
+.zw_723g:hover{ background:url(../images/zw6/723g-2.png) no-repeat;}
+
+.zw_7237{ width:107px; height:82px; z-index:2; position:absolute; top:235px; left:568px; background:url(../images/zw6/7237.png) no-repeat;}
+.zw_7237:hover{ background:url(../images/zw6/7237-2.png) no-repeat;}
+.zw_723l{ width:122px; height:92px; z-index:2; position:absolute; top:189px; left:622px; background:url(../images/zw6/723l.png) no-repeat;}
+.zw_723l:hover{ background:url(../images/zw6/723l-2.png) no-repeat;}
+
+.zw_7238{width:108px; height:85px; z-index:2; position:absolute; top:293px; left:654px; background:url(../images/zw6/7238.png) no-repeat;}
+.zw_7238:hover{ background:url(../images/zw6/7238-2.png) no-repeat;}
+.zw_723m{width:125px; height:95px; z-index:2; position:absolute; top:248px; left:707px; background:url(../images/zw6/723m.png) no-repeat;}
+.zw_723m:hover{ background:url(../images/zw6/723m-2.png) no-repeat;}
+
+.zw_7239{ width:157px; height:116px; z-index:2; position:absolute; top:310px; left:744px; background:url(../images/zw6/7239.png) no-repeat;}
+.zw_7239:hover{ background:url(../images/zw6/7239-2.png) no-repeat;}
+.zw_7a53{ width:75px; height:60px; z-index:2; position:absolute; top:390px; left:807px; background:url(../images/zw6/7a53.png) no-repeat;}
+.zw_7a53:hover{ background:url(../images/zw6/7a53-2.png) no-repeat;}
+.zw_7a55{ width:49px; height:45px; z-index:2; position:absolute; top:390px; left:835px; background:url(../images/zw6/7a55.png) no-repeat;}
+.zw_7a55:hover{ background:url(../images/zw6/7a55-2.png) no-repeat;}
+.zw_7a56{ width:75px; height:60px; z-index:2; position:absolute; top:353px; left:863px; background:url(../images/zw6/7a56.png) no-repeat;}
+.zw_7a56:hover{ background:url(../images/zw6/7a56-2.png) no-repeat;}
+.zw_7a57{ width:49px; height:45px; z-index:2; position:absolute; top:353px; left:893px; background:url(../images/zw6/7a57.png) no-repeat;}
+.zw_7a57:hover{ background:url(../images/zw6/7a57-2.png) no-repeat;}
+/* 7 新增 */
+
+
+
+
+
+
+
+
+
+/* 7 区域六结束 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,127 @@
+<extend name="Public:base" />
+<block name="css">
+	<link rel="stylesheet" href="__PUBLIC__/css/ui-dialog.css">
+</block>
+<block name="main">
+<script src="/public/admin/js/jquery-1.11.1.min.js"></script>
+<div class="main" style="padding-top:8px; min-height:450px;">
+    <div class="weee_tit">订单提交<span>* 请认真核对以下信息</span></div>
+	
+	<div class="paydetail" style="position:relative">
+			<!-- 协议条款 -->
+<div class="ks-dialog hide ks-dialog-focused ks-overlay-focused" id="J_AgreementDialog" aria-hidden="false" style="display: block; left: 120px; top: 5px;">
+    <div class="ks-dialog-content">
+        <a target="_top" href="javascript:(0)" onclick="history.go(-1)" class="ks-overlay-close" role="button">
+            <span class="iconfont ks-dialog-close-x ks-overlay-close-x">X</span>
+        </a>
+                    <div class="ks-dialog-header">
+            <h3>购买协议</h3>
+        </div>
+        <div class="ks-dialog-body">
+            <p><strong>【审慎阅读】</strong>您在申请注册流程中点击同意前，应当认真阅读以下协议。<strong style="text-decoration: underline">请您务必审慎阅读、充分理解协议中相关条款内容，其中包括：</strong></p>
+            <p>1、<strong style="text-decoration: underline">与您约定免除或限制责任的条款；</strong></p>
+            <p>2、<strong style="text-decoration: underline">与您约定法律适用和管辖的条款；</strong></p>
+            <p>3、<strong style="text-decoration: underline">其他以粗体下划线标识的重要条款。</strong></p>
+            <p>如您对协议有任何疑问，可向平台客服咨询。</p>
+            <p><strong>【特别提示】</strong>当您按照注册页面提示填写信息、阅读并同意协议且完成全部注册程序后，即表示您已充分阅读、理解并接受协议的全部内容。如您因平台服务与淘宝发生争议的，适用《淘宝平台服务协议》处理。如您在使用平台服务过程中与其他用户发生争议的，依您与其他用户达成的协议处理。</p>
+            <p><strong style="text-decoration: underline">阅读协议的过程中，如果您不同意相关协议或其中任何条款约定，您应立即停止注册程序。</strong></p>
+
+
+            <p><a href="http://terms.alicdn.com/legal-agreement/terms/TD/TD201609301342_19559.html?spm=a2145.7268393.0.0.r5mA8v" target="_blank" data-spm-anchor-id="a2145.7268393.0.0">《淘宝服务协议》</a></p>
+            <p><a href="http://www.taobao.com/go/chn/tb-fp/2014/law.php" target="_blank">《法律声明及隐私权政策》</a></p>
+            <p><a href="https://ds.alipay.com/fd-inhm9zcq/index.html" target="_blank">《支付宝服务协议》</a></p>
+
+            <p style="text-align: center; display: block; margin-top: 20px">
+                <button class="btn-xieyi btn-large" type="button" id="J_AgreementBtn">同意协议</button>
+            </p>
+        </div>
+            </div>
+</div>
+
+<!-- 协议条款 结束-->
+	<table>
+	<tr>
+	<td width="150"><strong>商品名称</strong></td>
+	<td width="219"><strong>广告名称</strong></td>
+	<td width="150"><strong>详情</strong></td>
+	<td width="98"><strong>价格（元）</strong></td>
+
+	</tr>
+	<tr>
+	<td width="150">2018中国国际电梯展览会广告订购</td>
+	<td width="219"><{$product['goods_name']}></td>
+	<td width="150"> 
+	<volist name="info" id="v" >
+	<{$v.ar_encode}>、
+	</volist>
+
+	</td>
+	<td width="98"><span id="price_2"><{$info['0']['ar_price']}></span></td>
+	
+	</tr>
+	</table>
+	<style>
+	.paydetail table{ width:1100px; margin:0 auto;border-collapse:collapse;}
+	.paydetail table tr{ height:36px;}
+	.paydetail table tr td{ font-size:16px; color: #000000; border-top:1px #666666 solid; padding-left:5px;}
+	</style>
+	<div class="alipay">
+		<span>支付方式：</span>
+			<label>
+				<input type="radio" name="type" value="1" style="margin:6px 10px 0px 11px;" id="alipay_bank" checked="checked">
+			</label>
+			<img src="__IMAGES__/pay_ico.jpg" />
+			<label>
+				<input type="radio" name="type" value="2" style="margin:6px 10px 0px 11px;" id="blank_select" > 银行汇款
+			</label>
+			
+	</div>
+	  <div class="clear"></div>
+	  <div class="alipay"><span>备注：</span> 
+	  	<textarea onpaste="return false" placeholder=""  cols="43" rows="3" name="remark" ></textarea>
+	  </div>
+	  <div class="clear"></div>
+	  <input type="hidden" name="aid" value="<{$base64}>" />
+	  <div class="pay_sl">实付款：<font><span id="price_3"><{$info['0']['ar_price']}></span></font> 元<p><input name="login_step1" id="order_trade" type="submit" value="确认支付" class="reg_next"></p></div>
+	</div>
+</div>
+<div id="info" style="display:none;"></div>
+<div id="hbg" ></div>
+</block>
+<block name="js">
+<script src="/public/admin/js/jquery-1.11.1.min.js"></script>
+<script src="/public/js/dialog.min.js"></script>
+<script type="text/javascript">
+$('#J_AgreementBtn').click(function(){
+	$('#J_AgreementDialog').hide();
+	$('#hbg').hide();
+})
+$(function(){
+	$('#blank_select').click(function(){ 
+		$("#alipay_bank").removeAttr("checked");
+		$("#blank_select").prop("checked", true);
+		var aid = $("input[name='aid']").val();
+		var d = dialog({
+			title: '汇款提示',
+		 	<php> $bank_info = get_bank($bank);</php>
+			content: '	收   款   方：<{$bank_info['name']}>（请将汇款凭证截图或者扫描，点击下一步上传凭证）<br/><br/>开户银行：<{$bank_info['bank']}><br/><br/>收款帐号：<font color="red"><{$bank_info['number']}></font>',
+			okValue: '下一步',
+			ok: function () {
+			    window.location.href="/user/booth/pay_up/"+aid+"?type=1"
+			    return false;
+			},
+			cancelValue: '取消',
+			cancel: function (){
+				$("#blank_select").removeAttr("checked");
+				$("#alipay_bank").prop("checked",true);  
+			}
+		});
+		d.show();
+	});
+	
+})
+</script>
+</block>
+<block name="seajs">
+seajs.use('order_ad');
+</block>

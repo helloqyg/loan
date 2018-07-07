@@ -1,0 +1,51 @@
+<extend name="Public:base" />
+<block name="css">
+	<link type="text/css" href="__CSS__/usercenter.css"  rel="stylesheet" />
+	<style type="text/css">
+		.attest-success .attest-seal{
+			position: absolute;
+		    top: 80px;
+		    left: 120px;
+		    width: 97px;
+		    height: 98px;
+		    overflow: hidden;
+		    background: url(__IMAGES__/<eq name="company_info.status" value='0'>z2.png<else/>z1.png</eq>) no-repeat;   
+		}
+	</style>
+</block>
+<block name="main">
+<div class="main_page">
+<div class="big_main">
+<include file="Public/left_1" />
+	<div class="side_right fr" style="height:480px">
+		
+
+      <!-- 右侧 start -->
+
+
+    <div class="infolist">
+              
+          
+    
+          <volist name="list" id="v">    
+      <dl>
+        <dt><img src="__HOME__/images/dot.jpg"><a href="<{:U('user/help/news_detail',array('id'=>$v['id']))}>" target="_blank" style="font-size:14px; font-weight:normal;" title="<{$v.title}>"> <{$v.title}></a></dt>
+        <dd><{$v.atime|date="Y-m-d",### }></dd>
+      </dl>
+	  </volist>
+              
+        <div class="clear"></div>
+		<div  class="pagelist">
+          <ul class="pagination">
+							<{$page}>
+						</ul>
+          
+             </div> 
+   
+    <div class="clear"></div>
+  </div>	
+	</div>
+</div>
+
+</div>
+</block>

@@ -1,0 +1,56 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <style>
+        .set .main{
+            background: #fff;
+        }
+        body{
+            position: relative;
+        }
+        .prompt{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform:translate3d(-50%,-50%,0);
+            background: #999;
+            border-radius: 0.2rem;
+            padding: 0.1rem 0.2rem;
+            color: #fff;
+            opacity: 0;
+            z-index: 3;
+        }
+    </style>
+
+    <div class="set">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>隐私设置</span>
+            </p>
+        </header>
+        <main class="main">
+            <ul class="conceal">
+                <li>
+                    <span>允许在爱心榜单显示</span>
+                    <p><span class="gray"></span></p>
+                </li>
+            </ul>
+        </main>
+</block>
+    </div>  
+    <p class='prompt'>修改成功</p>
+</body>
+</html>
+
+    <block name='js'>
+    $('.icon-fanhui').click(function(){
+        window.history.go(-1);
+    })
+    $('.gray').click(function(){
+        $(this).toggleClass('reveal');
+        $('.prompt').animate({'opacity':1},1000);
+        setTimeout(function() {
+            $('.prompt').animate({'opacity':0},1000);
+        }, 2000);
+    })
+    </block>

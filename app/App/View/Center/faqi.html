@@ -1,0 +1,67 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="faqi">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>我发起的</span>
+            </p>
+        </header>
+        <main class="main">
+            <ul class="top">
+                <li  <if condition="$_GET.id eq 1">   class="h"  </if>><a href="<{:U('faqi',array('id'=>1))}>">待认证  <span style="color: red"><{:get_launch_cnt(1)}></span></a></li>
+                 <li  <if condition="$_GET.id eq 2">   class="h"  </if>><a href="<{:U('faqi',array('id'=>2))}>">待审核 <span style="color: red"><{:get_launch_cnt(2)}></span></a></li>
+                 <li  <if condition="$_GET.id eq 3">   class="h"  </if>><a href="<{:U('faqi',array('id'=>3))}>">筹款中 <span style="color: red"><{:get_launch_cnt(3)}></span></a></li>
+                 <li  <if condition="$_GET.id eq 4">   class="h"  </if>><a href="<{:U('faqi',array('id'=>4))}>">已结束 <span style="color: red"><{:get_launch_cnt(4)}></span></a></li>
+            </ul>
+
+           <volist name="result" id="v">
+            <a href="
+            <if condition="$_GET.id eq 1">
+                <{:U('Release/share',array('id'=>$v['id']))}>
+            </if>
+
+            <if condition="$_GET.id neq 1">
+                <{:U('index/loveRelife',array('id'=>$v['id']))}>
+            </if>
+
+
+            ">
+            <ul class="container">
+                <li>
+                    <div class="img">
+                        <img src="<{:get_user_img($v['user_id'])}>" alt="">
+                    </div>
+                </li>
+                <li class="right">
+                    <p class="tit"><{$v.title}></p>
+                    <p style="color:#2ab2f6;">
+                <if condition="$_GET.id eq 1">     待提交认证  </if>
+                <if condition="$_GET.id eq 2">     待审核  </if>
+                <if condition="$_GET.id eq 3">     筹款中  </if>
+                <if condition="$_GET.id eq 4">     已结束  </if>
+
+
+                    </p>
+                    <p><{:get_diff_time($v['date'])}></p>
+                </li>
+            </ul>
+        </a>
+           </volist>
+
+        </main>
+</block>
+    </div>
+</body>
+<script src="scripts/rem.js"></script>
+<script src="scripts/jquery.min.js"></script>
+</html>
+<block name="js">
+      $('.top li').click(function(){
+        $(this).addClass('h').siblings().removeClass('h')
+    })
+    $('.top li').click(function(){
+        $(this).addClass('h').siblings().removeClass('h')
+    })
+
+</block>

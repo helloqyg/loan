@@ -1,0 +1,99 @@
+<extend name="Public:base" />
+<block name="css">
+<link rel="stylesheet" href="__PUBLIC__/admin/css/lightbox.css">
+</block>
+<block name="content">
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><{$header_title}></h3>		
+				<div class="panel-options">
+				<div class="vertical-top">
+					<button class="btn btn-success btn-icon add-single">
+						<i class="fa-pencil"></i>
+						<span>添加</span>
+					</button>
+				</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-12">
+					
+						<table class="table table-hover news-list">
+						  <thead>
+							<tr>
+							  <th class="col-md-3 text-center">名称</th>
+							  <th class="col-md-3 text-center">操  作</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<volist name="result" id="single">
+							<tr>
+							  <th scope="row" class="text-center"><{$single.name}></th>
+							 
+							  <td class="text-center">
+								<a class="btn btn-info" href="<{:U('dream/typeAdd',array('id'=>$single['id']))}>" role="button">修改</a>
+								<a class="btn btn-warning" href="javascript:void(0);" onClick="del(<{$single.id}>)" role="button">删除</a>
+							   </td>
+							</tr>
+							</volist>
+						  </tbody>
+						</table>			
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<ul class="pagination">
+							<!--<{$page}>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+<script src="__PUBLIC__/admin/js/lightbox.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".add-single").click(function(){
+		window.location.href="<{:U('dream/typeAdd')}>";
+	})
+})
+
+function myrefresh(){window.location.reload();}
+//删除
+function del(aid){
+	if (confirm("确认删除嘛？如果删除，分类下的文章也即将消失！")) {
+
+
+	var opts = {
+			"closeButton": true,
+			"debug": false,
+			"positionClass": "toast-top-full-width",
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": "2000",
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+		};
+	$.get("<{:U('Dream/del_type')}>", {id:aid},function(data){
+		if(data.status == 1){
+			toastr.success(data.info, opts);
+			setTimeout('myrefresh()',2000);
+		}else{
+			toastr.error(data.info, opts);
+		}
+
+	});
+	}
+}
+</script>
+</block>

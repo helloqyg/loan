@@ -1,0 +1,82 @@
+<extend name="Public:base" />
+<block name="main">
+<div class="main" style="padding-top:8px; min-height:450px;">
+<div class="user_center">
+<include file="Public/left" />
+	<div class="user_right">
+		<div class="user_right_tit">发票申请</div>
+			<div class="user_right_con" style="padding-top:20px;">
+				<div class="jine">可开具发票金额：<font><span id="price_show"><{$price}></span></font> 元</div>
+					<form method="post" action="" id="form">
+					<div class="item">
+				    	<div class="label">发票类型：</div>
+				      	<div class="input-box">
+				        	<select id="pid" name="type"  class="sipt">
+				         		<option value="1" selected="selected">普票</option>
+				         		<option value="2">专票</option>
+				        	</select>
+      					</div>
+					    <div class="xing">*</div>
+					    <div class="error_msg">请选择发票开具类型</div>
+					    <div class="clear"></div>
+    				</div>
+   					<div class="item">
+				    	<div class="label">企业名称：</div>
+				      	<div class="input-box">
+				        	<input onpaste="return false" type="text" placeholder="" id="company_name" name="company_name" class="ipt">
+				      	</div>
+					    <div class="xing">*</div>
+					    <div class="error_msg">请填写企业名称</div>
+					    <div class="clear"></div>
+    				</div>
+    				<div class="item">
+      					<div class="label">税号：</div>
+      					<div class="input-box">
+        					<input onpaste="return false" type="text" placeholder="" id="invoice" name="invoice" class="ipt">
+      					</div>
+				      	<div class="xing">*</div>
+				      	<div class="error_msg">请填写税号</div>
+				      	<div class="clear"></div>
+    				</div>
+   					<div id="zhuanpiao" style="display:none;">
+				    	<div class="item">
+				    	<div class="label">地址：</div>
+				    		<div class="input-box">
+				        		<input onpaste="return false" type="text" placeholder="" id="address" name="address" class="ipt">
+				      		</div>
+					      	<div class="xing">*</div>
+					      	<div class="error_msg">请填写地址</div>
+					      	<div class="clear"></div>
+    					</div>
+	 					<div class="item">
+						    <div class="label">开户银行：</div>
+						    <div class="input-box">
+        						<input onpaste="return false" type="text" placeholder="" id="blank" name="blank" class="ipt">
+      						</div>
+					      	<div class="xing">*</div>
+					      	<div class="error_msg">请填写开户银行</div>
+					      	<div class="clear"></div>
+    					</div>
+	 					<div class="item">
+					    	<div class="label">账号：</div>
+					    	<div class="input-box">
+        						<input onpaste="return false" type="text" placeholder="" id="blank_num" name="blank_num" class="ipt">
+      						</div>
+					      	<div class="xing">*</div>
+					      	<div class="error_msg">请填写账号</div>
+					      	<div class="clear"></div>
+    					</div>
+					</div>
+	 			<div class="pass_btn" style="width:700px;">
+      				<input id="login_button" type="submit" value="提交申请" class="sub_btn">
+    			</div><br /><br />
+    			</form>
+      		</div>
+    	</div>
+    	<div class="clear"></div>
+  	</div>
+</div>
+</block>
+<block name="seajs">
+seajs.use('invoice');
+</block>

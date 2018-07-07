@@ -1,0 +1,55 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="faqi">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>个人中心</span>
+            </p>
+        </header>
+        <main class="main">
+            <ul class="top">
+                <li  class="h"> 我的信息  </a></li>
+                
+            </ul>
+
+           <volist name="result" id="v">
+            <a href="
+         
+
+                <{:U('Mutual/detail',array('id'=>$v['mutual_id']))}>
+
+
+            ">
+            <ul class="container">
+                <li>
+                    <div class="img">
+                        <img src="<{:get_user_img($v['user_id'])}>" alt="">
+                    </div>
+                </li>
+                <li class="right">
+                    <p class="tit">项目名称：<{:get_mutual_title($v['mutual_id'])}></p>
+                   <p class="tit">被救助人：<{$v.auth_name}></p>
+                    <p style="color:#2ab2f6;">价格：<{$v.price}></p>
+                    <p><{$v.create_date|date='Y-m-d H:i:s',###}></p>
+                </li>
+            </ul>
+        </a>
+           </volist>
+
+        </main>
+</block>
+    </div>
+</body>
+<script src="scripts/rem.js"></script>
+<script src="scripts/jquery.min.js"></script>
+</html>
+<block name="js">
+      $('.top li').click(function(){
+        $(this).addClass('h').siblings().removeClass('h')
+    })
+    $('.top li').click(function(){
+        $(this).addClass('h').siblings().removeClass('h')
+    })
+
+</block>

@@ -1,0 +1,59 @@
+<extend name="Public:base" />
+<block name="css">
+<style type="text/css"> 
+#ad_show table{ font-size:12px; table-layout:fixed; empty-cells:show; border-collapse: collapse;margin:0 auto; } 
+td{ height:30px; text-align: center;} 
+h1,h2,h3{ font-size:12px; margin:0; padding:0; } 
+.table{ border:1px solid #cad9ea; color:#666; } 
+.table th { background-repeat:repeat-x; height:30px; } 
+.table td,.table th{ border:1px solid #cad9ea; padding:0 1em 0; } 
+.table tr.alter{ background-color:#f5fafe; } 
+#ad_notice{width:100%;height:100px;line-height:80px;float:left;text-align:center;color:#A59C9C;font-size:16px;font-weight:500;}
+</style>
+</block>
+<block name="main">
+<div class="main" style="padding-top:8px; min-height:450px;">
+<div class="user_center">
+<include file="Public/left" />
+	<div class="user_right">
+		<div class="user_right_tit">订单回执</div>
+			<div class="ad_div" style="height: 343px">
+				<div id="ad_notice">
+					您现在有<font color="red">(<{$count}>)</font>个订单
+				</div>
+				<div id="ad_show">
+					<table width="95%" class="table"> 
+						<tr> 
+							<th>付款类型</th> 
+							<th>产品名称</th> 
+							<th>详情</th> 
+							<th>付款方式</th> 
+							<th>订购时间</th> 
+							<th>交易状态</th> 
+							<th>操作</th> 
+						</tr> 
+						<volist name="receipt" id="info">
+						<tr class="alter"> 
+							<td><eq name="info.ad_type" value="1">展位定金<else/>广告订购</eq></td> 
+							<td><eq name="info.ad_type" value="1"><{:get_booth_num($info['bid'])}><else/><{:get_ad_name($info['bid'])}></eq></td> 
+							<td><eq name="info.ad_type" value="1"> 面积：<{$info['area']}><else/> 编号：<{:get_ad_encode($info['bid'])}></eq></td> 
+							<td><eq name="info.type" value="1">支付宝<else/>银行汇款</eq></td> 
+							<td><{$info['atime']|date="Y-m-d H:i:s",###}></td> 
+							<td style="color:red;"><if condition="$info['status'] eq 2"> 审核中<elseif condition="$info['status'] eq 4"/>已完成<else /> 未付款</if></td> 
+							<if condition="$info['status'] eq 4" >
+							<td><a href="<{:U('/user/apply/receipt_id2',array('id'=>$info['id']))}>">查看详细</a></td>  
+							<else/>
+							<td><a href="<{:U('/user/apply/receipt',array('id'=>$info['id']))}>">查看详细</a></td>  
+							</if>
+						</tr>  
+						</volist>
+					</table> 
+				</div>
+			</div>
+    </div>
+    	</div>
+    	<div class="clear"></div>
+  	</div>
+</div>
+</block>
+

@@ -1,0 +1,306 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="use">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>我要使用</span>
+            </p>
+        </header>
+
+        <style type="text/css"> .use .navTop {display: flex; justify-content: space-around; } .use .navTop li {text-align: center; padding: 0.2rem; } .use .on {border-bottom: 2px solid #3399fe; } .use .main > div {padding: 0.2rem; } .use .prompt {background: #eee; color: #999; padding: 0.2rem; border-radius: 0.1rem; } .use .btnBox {display: flex; justify-content: center; } .use .btnBox span {background: #fd9826; color: #fff; padding: 0.05rem 0.25rem; border-radius: 0.1rem; } </style>
+        <main class="main">
+            <ul class="navTop">
+                <li class="on" ind='0'>使用前</li>
+                <li ind='1'>使用后</li>
+            </ul>
+            <div>
+                <!--使用前-->
+                <div class="box1">
+                    <p class="prompt">一、资金使用人要向平台提出书面申请。<br/>
+                    二、资金使用人要提供费用使用明细单子。<br/>
+                    三、只有已结束的项目才可以申请资金使用。 <br>
+                     <span style="color: red">四、如果已提交过一次信息，再次提交将会覆盖。</span>  
+                    </p>
+                    <form action="" method="post" id='mainForm'>
+                    <select id="item_info">
+                        <option>请选择要使用哪个项目的资金</option>
+                    <foreach name='itemInfo' item='i'>
+                        <option  type='<{$i.type}>' value="<{$i.id}>"><{$i.title}></option>
+                    </foreach>
+                    </select>
+                    <ul class="imgBox before" id="1">
+                      
+
+                    <li class="up befo">
+                        <span><i class="iconfont icon-plus-bold"></i></span>
+                        <input  type="file" name="img" class="file">
+                    </li>
+                </ul>
+                    <p class="btnBox">
+                        <span class="submit_befor">上传</span>
+                    </p>
+                    </form>
+
+                    <h2>已提交信息</h2>
+                        <volist name='before' id='v'>
+                    <div>
+                           
+                            <if condition="$v['type'] eq 1"> 【爱心救助】 </if>
+                            <if condition="$v['type'] eq 2"> 【梦想清单】</if>
+                            <if condition="$v['type'] eq 3"> 【轻松公益】 </if>
+
+                            ---<{:get_item_title($v['item_id'],$v['type'])}> --<{$v.date|date='Y-m-d H:i:s',###}>
+                    </div>
+
+                        </volist>
+
+                </div>
+
+
+                <!--使用后-->
+                <div class="box1" style="display:none;">
+                    <p class="prompt">一、请确定使用单位收款依据单子 <br> 二、只有在【使用前】提交过资金，并且资金已到账，才需要在这里提交您的花费明细<br/>
+                     <span style="color: red">三、如果已提交过一次信息，再次提交将会覆盖。</span>   </p>
+                    <form action="" method="post" id="le_form">
+                     <select id="item_info_after">
+                        <option value="">请选择要提交哪个项目单据</option>
+                    <volist name='afterItem' id='i'>
+                        <option  type='<{$i.type}>' value="<{$i.id}>"><{$i.title}></option>
+                    </volist>
+                    </select>
+                    <ul class="imgBox after" id="1">
+                        <volist name="imgArray" id="v">
+                    <li class="img">
+                        <img src="<{$v.url}>" alt="">
+                        <i class="iconfont icon-delete2" onclick="remove(this)"></i>
+                    </li>
+
+                    </volist>
+
+                    <li class="up af">
+                        <span><i class="iconfont icon-plus-bold"></i></span>
+                        <input  type="file" name="img" class="file">
+                    </li>
+                </ul>
+                    <p class="btnBox">
+                        <span class="submit_after">上传</span>
+                    </p>
+
+                 <h2>已提交信息</h2>
+                        <volist name='after' id='v'>
+                    <div>
+                            <if condition="$v['type'] eq 1"> 爱心救助 </if>
+                            <if condition="$v['type'] eq 2"> 梦想清单</if>
+                            <if condition="$v['type'] eq 3"> 轻松公益 </if>
+
+
+                            ---<{:get_item_title($v['item_id'],$v['type'])}> --<{$v.date|date='Y-m-d H:i:s',###}>
+                    </div>
+                        </volist>
+
+                </div>
+            </form>
+
+            </div>
+            <!--<p style="padding-left:0.3rem;font-size:0.15rem;opacity: .7;margin-top:0.15rem;">可以添加5张图片</p>
+            <ul class="imgBox" id="2">
+                <li class="up">
+                    <span><i class="iconfont icon-plus-bold"></i></span>
+                    <input type="file" class="file">
+                </li>
+            </ul>-->
+            
+        </main>
+        <!--底部导航-->
+        <footer class="footer"></footer>
+    </div>
+</body>
+<script src="scripts/rem.js"></script>
+<script src="scripts/jquery.min.js"></script>
+</html>
+</block>
+<block name="js">
+
+//表单提交-使用前
+
+$('.submit_befor').click(function(){
+                $select = $('#item_info option:selected').attr('value');
+                var len = $('.before li').length
+              if(!$select){
+                showMsg('请选择要提交的项目')
+                return false
+            }
+             if(len == 1){
+                showMsg('请上传您的证明')
+                return false
+            }
+              
+
+            var array= [];
+            var len = $('.before li').length
+            for(var i = 0; i< len-1;i++){
+             array.push($('.before li:eq('+i+') img').attr('src'))
+                   // array +=  $('.imgBox li:eq('+i+') img').attr('src')+',';
+            }
+            console.log(array);
+            var item_id = $('#item_info option:selected').val();
+            var type = $('#item_info option:selected').attr('type');
+            var flag = 1;
+            var sd = 'before'
+            $.ajax({
+                type:'POST',
+                url :"<{:U('center/use_money')}>",
+                data:{item_id:item_id,type:type,flag:flag,array:array,sd:sd},
+                success:function(msg){
+                    if(msg == 1){
+                    showAlert('提交成功，后台人员将会进行审核！请耐心等待，请勿重复提交','/center/use_money')
+                }else{
+                    showMsg('操作失败！')
+            }
+
+            }
+        })
+})
+
+//表单提交-使用后
+$('.submit_after').click(function(){
+
+
+         $select = $('#item_info_after option:selected').attr('value');
+                var len = $('.after li').length
+              if(!$select){
+                showMsg('请选择要提交的项目')
+                return false
+            }
+             if(len == 1){
+                showMsg('请上传您的证明')
+                return false
+            }
+
+            var array= [];
+            var len = $('.after li').length
+            for(var i = 0; i< len-1;i++){
+             array.push($('.after li:eq('+i+') img').attr('src'))
+                   // array +=  $('.imgBox li:eq('+i+') img').attr('src')+',';
+            }
+            console.log(array);
+            var item_id = $('#item_info_after option:selected').val();
+            var type = $('#item_info_after option:selected').attr('type');
+            var flag = 2;
+            var sd = 'after'
+            $.ajax({
+                type:'POST',
+                url :"<{:U('center/use_money')}>",
+                data:{item_id:item_id,type:type,flag:flag,array:array,sd:sd},
+                success:function(msg){
+                    if(msg == 1){
+                    showAlert('提交成功，后台人员将会进行审核！请耐心等待，请勿重复提交','/center/use_money')
+                }else{
+                    showMsg('操作失败！')
+            }
+
+            }
+        })
+})
+
+    //=======================================================
+    $('.befo .file').on('change',function(e){
+       var inp = $(this);
+       var up = $(e.currentTarget).parents('li');
+        $("#mainForm").ajaxSubmit({
+        url : "<{:U('Release/ajaxUpload')}>", // 请求的url  
+        type : "post", // 请求方式  
+        dataType : "json", // 响应的数据类型  
+        async :true, // 异步  
+        success: function (data1) { 
+            // alert(data1);
+            // $('.uploadImg').empty();
+           var ele = "\
+            <li class='img'>\
+                <img src='"+data1+"'>\
+                <i class='iconfont icon-delete2' onclick='remove(this)'></i>\
+            </li>";
+            //$('.imgBox').before(ele);
+            up.before(ele)
+            $('#mainForm').find('input[name=image]').val(data1);
+        },  
+        error : function(){  
+            alert("数据加载失败！"); 
+        }  
+         });     
+
+
+    });
+     
+        $('#mainForm').submit(function(){
+        
+        $('.file').remove();
+    });
+//----------------------------
+    //=======================================================
+    $('.af .file').on('change',function(e){
+       var inp = $(this);
+       var up = $(e.currentTarget).parents('li');
+        $("#le_form").ajaxSubmit({
+        url : "<{:U('Release/ajaxUpload')}>", // 请求的url  
+        type : "post", // 请求方式  
+        dataType : "json", // 响应的数据类型  
+        async :true, // 异步  
+        success: function (data1) { 
+            // alert(data1);
+            // $('.uploadImg').empty();
+           var ele = "\
+            <li class='img'>\
+                <img src='"+data1+"'>\
+                <i class='iconfont icon-delete2' onclick='remove(this)'></i>\
+            </li>";
+            //$('.imgBox').before(ele);
+            up.before(ele)
+            $('#mainForm').find('input[name=image]').val(data1);
+        },  
+        error : function(){  
+            alert("数据加载失败！"); 
+        }  
+         });     
+
+
+    });
+     
+        $('#mainForm').submit(function(){
+        
+        $('.file').remove();
+    });
+//----------------------------
+
+    $('.navTop li').click(function(){
+        var ind = $(this).attr('ind');
+        $(this).addClass('on').siblings().removeClass('on');
+        $('.box1').eq(ind).show().siblings().hide()
+    })
+
+    function fn(da, up){
+        var r = new FileReader();
+        r.readAsDataURL(da);
+        r.onload = function(e){
+            var src = this.result;
+            var ele = `
+            <li class="img">
+                <img src="${src}" alt="">
+                <i class="iconfont icon-delete2" onclick="remove(this)"></i>             
+            </li>`;
+            up.before(ele)
+            if(up.parents('.imgBox').find('.img').length == 5){
+                up.hide();
+            }
+        }
+    }
+    function remove(obj){
+        var pid = $(obj).parents('.imgBox').attr('id');
+        $(obj).parents('li').remove();
+        console.log($('.imgBox[id='+pid+']').find('.img').length )
+        if($('.imgBox[id='+pid+']').find('.img').length < 5){
+            $('.imgBox[id='+pid+']').find('.up').show();
+        }
+    }
+</block>

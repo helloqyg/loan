@@ -1,0 +1,244 @@
+<extend name="Public:base" />
+<block name="css">
+	<link rel="stylesheet" href="__PUBLIC__/js/uploadify/uploadify.css">
+  <link rel="stylesheet" href="__PUBLIC__/css/style.css">
+	<style>
+  .xing{width: auto;}
+	.upload-pre-item{float:left;width:318px;height:auto;}
+	</style>
+</block>
+<block name="main">
+<form method="post" action="" id="form" class="regform">
+<div class="main" style="padding:20px 0 50px 0;">
+  <div class="reg_pro">
+    <div class="reg_company"><img src="__IMAGES__/01.png" /><span>填写企业基本信息</span></div>
+    <div class="reg_ge"><img src="__IMAGES__/reg_pro1.jpg" /></div>
+    <div class="reg_user"><img src="__IMAGES__/02.png" /><span>设置账户信息</span></div>
+    <div class="reg_ge"><img src="__IMAGES__/reg_pro2.jpg" /></div>
+    <div class="reg_suc"><img src="__IMAGES__/03.png" /><span>注册完成</span></div>
+    <div class="clear"></div>
+  </div>
+  <div class="reg_head"> 企业基本信息 </div>
+  <div class="reg_pro1">
+    <div class="item">
+      <div class="label">企业名称：</div>
+      <div class="input-box">
+        <input onpaste="return false" type="text" placeholder="" id="company_name" name="company_name" class="ipt" datatype="s" nullmsg="企业名称不能为空">
+      </div>
+      <div class="xing">*</div>
+      <div class="clear"></div>
+    </div>
+	<div class="item">
+      <div class="label">企业英文名称：</div>
+      <div class="input-box">
+        <input onpaste="return false" type="text" placeholder="" id="english" name="english" class="ipt" datatype="s" nullmsg="企业英文名称不能为空">
+      </div>
+      <div class="xing">*</div>
+      <div class="clear"></div>
+    </div>
+    <div class="item">
+      <div class="label">营业执照注册号：</div>
+      <div class="input-box">
+        <input onpaste="return false" type="text" placeholder="" id="register_num" name="register_num" class="ipt" datatype="s" nullmsg="营业执照注册号不能为空">
+      </div>
+      <div class="xing">*</div>
+      <div class="clear"></div>
+    </div>
+    <div class="item">
+      <div class="label">营业执照副本扫描件：</div>
+      <div style="border:none;" class="input-box">
+			<div id="queue"></div>
+			<input id="file_upload" name="scan_part1" type="file" class="ipt" multiple="true">
+			<div class="upload-pre-item" style="display:none;"></div>
+			<input type="hidden" id="scan_part" name="scan_part" value="" >
+      </div>
+      <div class="xing">*&nbsp;&nbsp;上传图片大小请控制在3M以内</div>
+      <div class="clear"></div>
+    </div>
+    <div class="item">
+      <div class="label">经营地址：</div>
+      <div  class="input-box" >
+        <input onpaste="return false" type="text" placeholder="" id="residence" name="residence" class="ipt" datatype="s" nullmsg="经营地址不能为空" >
+      </div>
+      <div class="xing">*</div>
+      <div class="clear"></div>
+    </div>
+    <div class="item">
+      <div class="label">通讯地址：</div>
+      <div class="input-box">
+        <input onpaste="return false" type="text" placeholder="" id="address" name="address" class="ipt" datatype="s" nullmsg="通讯地址不能为空">
+      </div>
+      <div class="xing">*</div>
+      <div class="clear"></div>
+    </div>
+    <div class="item">
+      <div class="label">经营范围：</div>
+      <div class="input-box">
+        <textarea onpaste="return false" placeholder="" id="scope" name="scope" cols="43" rows="6" class="tarea"  datatype="*" nullmsg="经营范围不能为空"></textarea>
+      </div>
+      <div class="xing">*</div>
+      <div class="clear"></div>
+    </div>
+    <div class="item">
+      <div class="label">企业参展类型：</div>
+      <div class="input-box">
+        <select id="type" name="type" onchange="" class="sipt" datatype="*" nullmsg="请选择企业参展类型">
+          <option value>请选择</option>
+          <!--<option value="2">整机</option>-->
+          <option value="2">部件</option>
+		  <!--<option value="2">其它</option>-->
+        </select>
+      </div>
+      <div class="xing">*</div>
+      <div class="clear"></div>
+    </div>
+	<div class="item">
+      <div class="label">参展面积：</div>
+      <div class="input-box">
+        <input  type="text" placeholder="" id="area" name="area" class="ipt" datatype="*" nullmsg="请填写预计参展面积">
+      </div>
+      <div class="xing">*</div>
+      <div class="error_msg"></div>
+      <div class="clear"></div>
+    </div>
+    <div class="reg_lx_tit"><span>联系方式：</span><b></b><div class="error_lx"></div></div>
+	      <div class="clear"></div>
+    <div class="reg_lx1">
+      <div class="reg_lx1_tit">公司负责人</div>
+      <div class="item" style="float:left; width:340px;">
+        <div class="label" style="width:120px;">姓名：</div>
+        <div class="input-box">
+          <input onpaste="return false" type="text" placeholder="" id="c_name" name="c_name" class="lx_input">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="item" style="float:left; width:340px;">
+        <div class="label" style="width:120px;">职务：</div>
+        <div class="input-box">
+          <input onpaste="return false" type="text" placeholder="" id="c_duties" name="c_duties" class="lx_input">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="item" style="float:left; width:340px;">
+        <div class="label" style="width:120px;">固定电话：</div>
+        <div class="input-box">
+          <input onpaste="return false" type="text" placeholder="区号" id="c_area_code" name="c_area_code" class="lx_input"  style="width: 40px; border-right: 1px solid #d2d2d2"> 
+
+
+          <input onpaste="return false" type="text" placeholder="电话号" id="c_tel" name="c_tel" class="lx_input" style=":1px solid red; width: 97px">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="item" style="float:left; width:340px;">
+        <div class="label" style="width:120px;">手机号码：</div>
+        <div class="input-box">
+          <input onpaste="return false" type="text" placeholder="" id="c_phone" name="c_phone" class="lx_input">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="item" style="float:left; width:340px;">
+        <div class="label" style="width:120px;">邮箱：</div>
+        <div class="input-box">
+          <input onpaste="return false" type="text" placeholder="" id="c_email" name="c_email" class="lx_input">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="item" style="float:left; width:340px;">
+        <div class="label" style="width:120px;">传真：</div>
+        <div class="input-box">
+          <input onpaste="return false" type="text" placeholder="" id="c_fax" name="c_fax" class="lx_input">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="reg_lx1">
+      <div class="reg_lx1_tit">展位联络人</div>
+      <div class="item" style="float:left; width:340px;">
+        <div class="label" style="width:120px;">姓名：</div>
+        <div class="input-box">
+          <input onpaste="return false" type="text" placeholder="" id="f_name" name="f_name" class="lx_input">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="item" style="float:left; width:340px;">
+        <div class="label" style="width:120px;">职务：</div>
+        <div class="input-box">
+          <input onpaste="return false" type="text" placeholder="" id="f_duties" name="f_duties" class="lx_input">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="item" style="float:left; width:340px;">
+        <div class="label" style="width:120px;">固定电话：</div>
+        <div class="input-box">
+          <input onpaste="return false" type="text" placeholder="区号" id="f_area_code" name="f_area_code" class="lx_input"  style="width: 40px; border-right: 1px solid #d2d2d2">
+          <input onpaste="return false" type="text" placeholder="电话号" id="f_tel" name="f_tel" class="lx_input" style=" width: 97px">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="item" style="float:left; width:340px;">
+        <div class="label" style="width:120px;">手机号码：</div>
+        <div class="input-box">
+          <input onpaste="return false" type="text" placeholder="" id="f_phone" name="f_phone" class="lx_input">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="item" style="float:left; width:340px;">
+        <div class="label" style="width:120px;">邮箱：</div>
+        <div class="input-box">
+          <input onpaste="return false" type="text" placeholder="" id="f_email" name="f_email" class="lx_input">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="item" style="float:left; width:340px;">
+        <div class="label" style="width:120px;">传真：</div>
+        <div class="input-box">
+          <input onpaste="return false" type="text" placeholder="" id="f_fax" name="f_fax" class="lx_input">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="reg_btn1">
+      <input name="login_step1" id="login_button" type="submit" value="返&nbsp;&nbsp;回" class="reg_back">
+      <input name="login_step1" id="login_button" type="submit" value="下一步" class="reg_next">
+    </div>
+  </div>
+  </form>
+</div>
+</block>
+<block name="seajs">
+seajs.use("register");
+</block>
+<block name="js">
+<script src="__PUBLIC__/admin/js/jquery-1.11.1.min.js"></script>
+<script src="__PUBLIC__/js/uploadify/jquery.uploadify.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	// image upload
+	$('#file_upload').uploadify({
+		"width"       : 318,
+		"height"	  : 36 ,
+		"fileObjName" : "upfile",
+		"swf"         : "__PUBLIC__/js/uploadify/uploadify.swf",
+		"uploader"    : "<{:U('Reg/upload')}>",
+		"buttonText"  : "上传扫描件",
+		"fileTypeExts": "*.jpeg;*.gif; *.jpg; *.png", 
+		"onUploadSuccess" : uploadPicturecover,
+	});
+
+	// upload success callback function
+	function uploadPicturecover(file,data){
+		var obj = eval( "(" + data + ")" );
+		if(obj.state == 'SUCCESS'){
+			$(".upload-pre-item").css('display','block');
+			var html = '<img src="/upload/' + obj.url + '" width="318px;" /></br>';
+			$(".upload-pre-item").append(html); 
+			$("#scan_part").val("/upload/"+obj.url);
+		}
+	}
+
+});
+</script>
+</block>

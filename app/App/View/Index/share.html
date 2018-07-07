@@ -1,0 +1,204 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+            <div class='head'>
+                <a href="{:U('Index/index')}"><img src="__PUBLIC__/statics/img/head2.png" alt="" /></a>
+            </div>
+            <div class='content'>
+                <div class='box'>
+                    <div class='title'>您关注公众号的日期为<span class='y'>{$time[0]}</span>年<span class='m'>{$time[1]}</span>月<span class='r'>{$time[2]}</span>日</div>
+                    <div class='c'>
+                        截止到参加活动时，您已经关注了<span id='year'>{$time1.nian}</span>年<span id='month'>{$time1.yue}</span>月<span id='day'>{$time1.ri}</span>日<span id='h'></span>时<span id='min'></span>分<span id='s'></span>秒
+                    </div>
+                    
+                </div>
+                <div class='center-box'>
+                    
+                    共有<span>{$res.people_num}</span>人在这天关注，占活动总人数的<span>{$res.percentage}%</span>
+                </div>
+                <div class='box' >
+                    <div class='abs'>
+                        <div><span class='m'>{$time[1]}</span>月</div>
+                        <div><span class='r'>{$time[2]}</span>日</div>
+                    </div>
+                    <img src="__PUBLIC__/statics/img/zi.png" alt="" style='position: absolute;top:0;left:0;'>
+                    <div class='c textcont'>                        
+                        <foreach name="event_list" item="vo">
+                        <div style='font-size: 16px;'>
+                                {$vo.title}
+                        </div>
+                        <div>
+                        {$vo.content}
+                        </div>
+                        
+                        </foreach>                      
+                    </div>
+                    </div>
+                </div>
+                <if condition="$type eq 0">
+                <a href="javascript:;" class='red-btn red-btn1'>立即分享</a>
+                <else />
+                <a href="{:U('Index/index')}" class='red-btn'>立即参与</a>
+                </if>
+                <style> .red-btn{display: block; margin:10px auto; width:120px; background:#F93E3C; color:#fff; font-size:14px; text-align: center; line-height: 30px; height:30px; border-radius: 5px; } .fu{position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(000,000,000,.6); z-index: 10; overflow: hidden; display: none; } .f1{position: absolute; top:10px; right:0; width:320px; } .f2{position: absolute; bottom:40%; left:50%; width:180px; margin-left:-90px; } </style>
+            </div>
+            <img src="__PUBLIC__/statics/img/foot.png" alt="" class='foot' />
+            <div class='fu' >
+                    <img src="__PUBLIC__/statics/img/f1.png" alt="" class='f1'>
+                    <img src="__PUBLIC__/statics/img/f2.png" alt="" class='f2'>
+            </div>
+    <body>
+    </body>
+</block>
+    <script>
+    $('.red-btn1').click(function(){
+            $('.fu').show();
+    });
+    $('.fu').click(function(){
+            $('.fu').hide();
+    });
+        // alert('{$share.link}');
+        wx.config({
+                debug: false,
+                appId: '{$weixin2.appId}',
+                timestamp: '{$weixin2.timestamp}',
+                nonceStr: '{$weixin2.nonceStr}',
+                signature: '{$weixin2.signature}',
+                jsApiList: [
+                  'onMenuShareTimeline','onMenuShareAppMessage','showOptionMenu'
+                ]
+              });
+              
+            wx.ready(function () {
+              // 1 判断当前版本是否支持指定 JS 接口，支持批量判断
+              
+                wx.checkJsApi({
+                    jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+                    success: function(res) {
+                    // 以键值对的形式返回，可用的api值true，不可用为false
+                    // alert(res)
+                    // alert(res.errMsg);
+                    // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+                }});
+                    
+                wx.onMenuShareTimeline({
+                    title: '{$share.title}', // 分享标题
+                    // desc: '{$share.description}', // 分享描述
+                    link: '{$share.link}', // 分享链接
+                    imgUrl: '{$share.img}', // 分享图标
+                    success: function () { 
+                        // $(document).ready(function(){
+                        // var type  = $('#canshu').attr('typea');
+                        // var id = $('#canshu').val();
+                        //  $.ajax({
+                        //      type:'post',
+                        //      data:{type:type,id:id},
+                        //      url:'__APP__/Mobile/Activity/ajaxshare',
+                        //      success:function(data){
+                        //          if(data==1){
+                        //              alert('分享成功');
+                        //          }
+                        //      }
+                        //  });
+                            
+                        // });
+                    },
+                    cancel: function () { 
+                        
+                    }
+                });
+                
+                wx.onMenuShareAppMessage({
+                    title: '{$share.title}', // 分享标题
+                    desc: '{$share.description}', // 分享描述
+                    link: '{$share.link}', // 分享链接
+                    imgUrl: '{$share.img}', // 分享图标
+                    type: '', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function () { 
+                        // var type  = $('#canshu').attr('typea');
+                        // var id = $('#canshu').val();
+                        //  $.ajax({
+                        //      type:'post',
+                        //      data:{type:type,id:id},
+                        //      url:'__APP__/Mobile/Activity/ajaxshare',
+                        //      success:function(data){
+                        //          if(data==1){
+                        //              alert('分享成功');
+                        //          }
+                        //      }
+                        //  });
+                        //window.location.href="__APP__/Stage/Index/share";
+                        // alert(111111);
+                    },
+                    cancel: function () { 
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+                
+                
+            });
+            // $('.erw img').click(function(e){
+            //  e.stopPropagation();
+            // })       
+    
+</script>
+    <script>
+        var y = $('.y').text();
+        var m = $('.m').eq(0).text()-1;
+        var r = $('.r').eq(0).text();
+
+        var date1 = new Date(); //开始时间
+            var date2 = new Date(y, m, r, 0, 0, 0); //结束时间
+
+            var date3 = date1.getTime() - date2.getTime() //时间差的毫秒数
+
+            //计算出相差天数
+            var days = Math.floor(date3 / (24 * 3600 * 1000))
+
+            //计算出小时数
+
+            var leave1 = date3 % (24 * 3600 * 1000) //计算天数后剩余的毫秒数
+            var hours = Math.floor(leave1 / (3600 * 1000))
+            //计算相差分钟数
+            var leave2 = leave1 % (3600 * 1000) //计算小时数后剩余的毫秒数
+            var minutes = Math.floor(leave2 / (60 * 1000))
+            //计算相差秒数
+            var leave3 = leave2 % (60 * 1000) //计算分钟数后剩余的毫秒数
+            var seconds = Math.round(leave3 / 1000)
+            // console.log(" 相差 " + hours + "小时 " + minutes + " 分钟" + seconds + " 秒")
+            $('#h').text(hours);
+            $('#min').text(minutes);
+            $('#s').text(seconds);
+            // $('#day').text(days);
+            
+            
+        setInterval(function() {
+            var date1 = new Date(); //开始时间
+            var date2 = new Date(y, m, r, 0, 0, 0); //结束时间
+            var date3 = date1.getTime() - date2.getTime() //时间差的毫秒数
+
+            //计算出相差天数
+            var days = Math.floor(date3 / (24 * 3600 * 1000))
+
+            //计算出小时数
+
+            var leave1 = date3 % (24 * 3600 * 1000) //计算天数后剩余的毫秒数
+            var hours = Math.floor(leave1 / (3600 * 1000))
+            //计算相差分钟数
+            var leave2 = leave1 % (3600 * 1000) //计算小时数后剩余的毫秒数
+            var minutes = Math.floor(leave2 / (60 * 1000))
+            //计算相差秒数
+            var leave3 = leave2 % (60 * 1000) //计算分钟数后剩余的毫秒数
+            var seconds = Math.round(leave3 / 1000)
+            // console.log(" 相差 " + days + "天 " + hours + "小时 " + minutes + " 分钟" + seconds + " 秒")
+            $('#h').text(hours);
+            $('#min').text(minutes);
+            $('#s').text(seconds);
+            // $('#day').text(days);
+        }, 1000);
+        
+        
+
+    </script>
+
+</html>

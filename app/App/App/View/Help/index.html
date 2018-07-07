@@ -1,0 +1,46 @@
+<extend name="Public:base" />
+<block name="css">
+<link rel="stylesheet" href="__PUBLIC__/css/help.css">
+</block>
+<block name="main">
+<div class="main" style="padding-top:8px; min-height:450px;background-color:#fff;">
+<div class="list_main">
+<!--内容信息-->
+<section class="art_main  w clearfix">
+<aside class="art_nav art_box clearfix Left">
+<h2 class="art_title"><span class="aside_txt">帮助中心</span></h2>
+<section id="JS_silde_menu">
+		<dl>
+			<dt><span class="dt_ico art_ico1"></span><span class="dt_txt">帮助中心</span></dt>
+			<volist name="list" id="v">
+			<dd><a href="/help/<{$v['id']}>.html" title="<{$v['title']}>"><{$v['title']}></a></dd>
+			</volist>
+		</dl>
+</section>
+</aside>
+<section class="art_content clearfix Right">
+  <h2 class="art_title">|&ensp; <a href="/">首页</a> <code>&gt;</code> 帮助中心</h2>
+  <article>
+    <header class="art_header">
+	<span class="header_box">
+	<span class="header_txt">帮助中心</span>
+	<span class="header_space">
+	</span>
+ </span> <span style="font-size:16px;padding-left:15px;"><{$info['title']}></span>
+ </header>
+    <article>
+	<div class="list" style="border-width: 0px 0px 0px; margin: 0px; outline: 0px; padding: 10px 20px; vertical-align: baseline; border-bottom-style: dashed; font-family: Arial, Helvetica, sans-serif, 宋体; ">
+		<{$info['content']|htmlspecialchars_decode}>
+	</div>         
+	</article>
+  </article>
+</section>
+</section>
+<!--endfooter-->
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</block>
+

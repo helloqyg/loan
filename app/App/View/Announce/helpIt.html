@@ -1,0 +1,124 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="true">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>确认发送爱心</span>
+            </p>
+        </header>
+        <main class="main">
+            <div class="banner">
+                <div class="absoult">
+                    <p>帮助金额：<{$_GET['item_count']*$_GET['single_price']}>元</p>
+                    <p>帮助区域：<{$address}></p>
+                    <p>项目个数：<{$_GET['item_count']}>个</p>
+                    <p>单个金额：<{$_GET['single_price']}>元</p>
+                    <span>祝福语：<{$_GET['content']}></span>
+                </div>
+            </div>
+            <form action="" method="post">
+
+            <input type="hidden" name="item_count" value="<{$_GET['item_count']}>">
+            <input type="hidden" name="single_price" value="<{$_GET['single_price']}>">
+            <input type="hidden" name="content" value="<{$_GET['content']}>">
+            <input type="hidden" name="province_love" value="<{$_GET['province']}>">
+            <input type="hidden" name="city_love" value="<{$_GET['city']}>">
+            <div class="top">
+                <p>
+                    <span>已匹配需要帮助的项目</span>
+                    <span>Matching needs hekp projects</span>
+                </p>
+            </div>
+
+                <volist name="selectItem" id="vv" >
+                <div class="container">
+                    <div class="left">
+                        <img src="<{:get_user_img($vv['user_id'])}>" alt="">
+                    </div>
+                    <div class="right">
+                        <ul class="center">
+                            <li class="text"><{$vv.title}></li>
+                            <li>
+                                <span><{:get_money_member($vv['id'],1)}>人帮助</span>
+                                <!-- <span>74人认证</span> -->
+                                <span><{:get_money_ratio($vv['id'],1)}>%进度</span>
+                            </li>
+                        </ul>
+                        <span class="ri">已审核</span>
+                    </div>
+                </div>
+                </volist>
+
+            <div class="top">
+                <p>
+                    <span>支付方式</span>
+                    <span>Payment menthod</span>
+                </p>
+            </div>
+            <div class="type">
+                <p>
+                    <input type="radio" value="weixin" checked="checked" name="">
+                    <i class="iconfont icon-weixinzhifu"></i>
+                    <span>微信支付</span>
+                </p>
+              <!--   <p>
+                    <input type="radio" value="qita" name="type">
+                    <i class="iconfont icon-qitafeiyong"></i>
+                    <span>其他支付</span>
+                </p> -->
+            </div>
+        </main>
+        <footer class="footer">
+            <p >
+                 <input  class="submit" type="button" value="确认帮助">
+            </p>
+
+            </form>
+        </footer>
+    </div>
+</body>
+</html>
+</block>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/swiper.min.js"></script>
+
+<block name='js'>
+      $('.icon-fanhui').click(function(){window.location.href='/Announce/toHelp.html'})
+    //匹配的项目个数
+    var select_item = <{$selectItemCount}>;
+    if(select_item < 5){
+        $(".submit").attr("disabled", true); 
+        showAlert('当前区域项目不足5个，请选择其它区域！','/Announce/toHelp');
+    }
+    console.log(select_item)
+
+
+
+//提交表单 调起支付
+//=====================
+var flag = 0;
+    $('.submit').click(function(){
+  
+           var ptrr = /^[1-9]+\d*$/
+            var string = $('input[name=price]').val();
+             var data =  ptrr.test(string)
+          
+            var total_price = $('input[name=single_price]').val()*$('input[name=item_count]').val()
+            var content = $('textarea[name=content]').val()
+            $.ajax({
+                type:'POST',
+                url :"<{:U('Order/create_order')}>",
+                data:$.param({'total_price':1,'type':4})+'&'+$('form').serialize(),  
+                success:function(msg){
+                    if(msg){
+                    window.location.href="/Order/request_pay/order_id/"+msg
+                }
+              
+
+            }
+        })
+        })
+
+
+    </block>

@@ -1,0 +1,88 @@
+<extend name="Public:noFoot" />
+<block name='main'>
+    <div class="toHelp">
+        <header class="header">
+            <p>
+                <i class="iconfont icon-fanhui"></i>
+                <span>实名认证</span>
+            </p>
+        </header>
+        <main class="main">
+             <if  condition='$is_auth eq 1'>
+            <ul class="list">
+                <li ><h1 style="color: red">您已认证成功</h1></li>
+                <li><span>真实姓名</span><span><{$auth.auth_name}></span></li>
+                <li><span>身份证号</span><span><{$auth.auth_id}></span></li>
+                <!-- <li><span>认证时间</span><span>2018-05-21  10:25:17</span></li> -->
+            </ul>
+        </if>
+                <if  condition='$is_auth eq 0'>
+
+                <ul class="attestation">
+                    <li><span>真实姓名</span><input type="text" placeholder="填写你的真实姓名" id="name" name="name"></li>
+                    <li><span>身份证号</span><input type="text" placeholder="填写你的身份证号" id="me_id" name="me_id"></li>
+                </ul>
+                <p class="submit">
+                    <input type="submit"  value="提交认证">
+                </p>
+            </if >
+        </main>
+</block>
+    </div>
+</body>
+</html>
+
+<script src="scripts/jquery.min.js"></script>
+    <block name='js'>
+
+
+
+
+
+       $('.submit').click(function(){
+        $me_id = $('#me_id').val();
+        $name = $('#name').val();
+
+        if($name == ''){
+            showMsg('请输真实姓名');
+                return false;
+        }
+            if($me_id == ''){
+            showMsg('请输入身份证号');
+                return false;
+        }
+     $.ajax({
+            type:'POST',
+            url :"<{:U('center/attestation')}>",
+            data:{
+                'me_id':$me_id,
+                'name':$name
+            },
+            success:function(msg){
+    console.log(msg)
+
+                if(msg == 0){
+                   showAlert('身份证认证成功！','/Center/attestation.html');
+                     
+                } else if(msg == 1){
+                       showMsg('身份证与姓名不匹配');
+                
+                 }else if(msg == 2){
+                       showMsg('请勿重复认证，请30秒后再来');
+                
+                 }else if(msg == 3){
+                       showMsg('没有此身份证号');
+                
+                 }else{
+                       showMsg('未知错误'.msg);
+                
+                 }
+
+                
+
+        }
+    })
+
+        
+    })
+    </block>
